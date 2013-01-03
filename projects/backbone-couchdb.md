@@ -5,8 +5,6 @@ repository : http://github.com/janmonschke/backbone-couchdb
 version: 1.2
 layout: project
 ---
-<!-- FORK ME BADGE -->
-<a href="http://github.com/janmonschke/backbone-couchdb"><img style="position: fixed; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
 #### Description {#description}
 
