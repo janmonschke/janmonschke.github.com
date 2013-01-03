@@ -1,0 +1,13 @@
+---
+layout : master
+---
+
+<div class="twelve columns offset-by-one">
+  <h2>{{ page.title }}</h2>
+  <div class="subheader">{{ page.date | date: "%B %d, %Y" }} - {{ page.author }}</div>
+  <article>
+    {{ content }}
+  </article>
+
+  {% include disqus_comments.html %}
+</div>
