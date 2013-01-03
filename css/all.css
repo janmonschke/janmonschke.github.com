@@ -150,7 +150,7 @@ label span,legend span{font-weight:normal;font-size:13px;color:#444}
 .row:after,.clearfix:after{clear:both}
 .row,.clearfix{zoom:1}
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
-@media only screen and (max-width: 959px){}@media only screen and (min-width: 768px) and (max-width: 959px){}@media only screen and (max-width: 767px){}@media only screen and (min-width: 480px) and (max-width: 767px){}@media only screen and (max-width: 479px){}body{font-family:Helvetica;background-color:#eee;color:#444}
+@media only screen and (max-width: 959px){}@media only screen and (min-width: 768px) and (max-width: 959px){}@media only screen and (max-width: 767px){}@media only screen and (min-width: 480px) and (max-width: 767px){}@media only screen and (max-width: 479px){}body{font-family:Helvetica;background-color:transparent;color:#444}
 h1{font-family:'Rambla',sans-serif;font-weight:bold;padding:5px 0;margin:10px 0}
 h2{font-family:'Rambla',sans-serif;font-weight:bold;padding:5px 0;margin:10px 0}
 h3{font-family:'Rambla',sans-serif;font-weight:bold;padding:5px 0;margin:10px 0}
