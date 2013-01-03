@@ -2,7 +2,7 @@
 title: JavaScript in University
 layout: post
 author: Jan Monschke
-published: true
+published: false
 ---
 
 When I started my Master's studies at HTW Berlin in 2011 I was already fully web-focused. All my side-projects and freelance jobs where web-related. Even my Bachelor Thesis was 100% web.
