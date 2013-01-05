@@ -5,7 +5,7 @@ title: Portfolio by Jan Monschke
 
 #### Posts
 {% for post in site.posts limit: 5 %}
-- [{{ post.title }}]({{post.url}}) - {{ post.date | date: "%a, %d %b %Y" }}
+- [{{ post.title }}]({{post.url}}) - {{ post.date | date: "%B %d, %Y" }}
 {% endfor %}
 
 #### Projects
