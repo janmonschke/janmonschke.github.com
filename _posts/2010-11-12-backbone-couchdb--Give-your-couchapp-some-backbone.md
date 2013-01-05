@@ -4,6 +4,8 @@ layout: post
 author: Jan Monschke
 ---
 
+__The code and information about the library in this article may be out of date since this article pretty old now and was written when it was first released. Check the [project page](/projects/backbone-couchdb.html) for a more updated desciption__
+
 Recently I read a lot about CouchDB, couchapps and Backbone.js and I really liked the way you can create apps with these tools. To combine them I created a connector for Backbone that syncs your Backbone app to your CouchDB. The source is available on [Github](https://github.com/janmonschke/backbone-couchdb) and an example couchapp is hosted at [couchone](http://backbone.couchone.com/backbone-couchapp/_design/backbone-couchapp/index.html).
  
 Vote it up on Hackernews if you like it: [vote](http://news.ycombinator.com/item?id=1898726).
