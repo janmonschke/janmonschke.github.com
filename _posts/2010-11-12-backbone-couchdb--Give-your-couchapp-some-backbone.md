@@ -27,18 +27,22 @@ like a perfect match for this problem.
 
 All Backbone apps should work normally without any changes. Simply include `backbone-couchdb.js` with its dependencies into your project and configure the connector with your database infos.
 
-    Backbone.couchConnector.databaseName = "backbone-couchapp";
-    Backbone.couchConnector.ddocName = "backbone-couchapp";
-    Backbone.couchConnector.viewName = "byCollection";
-    Backbone.couchConnector.enableChanges = true;
+{% highlight js %}
+Backbone.couchConnector.databaseName = "backbone-couchapp";
+Backbone.couchConnector.ddocName = "backbone-couchapp";
+Backbone.couchConnector.viewName = "byCollection";
+Backbone.couchConnector.enableChanges = true;
+{% endhighlight %}
 
 As you can see you also need to create a new database in your CouchDB and a new design document that contains the following view:
 
-    function(doc) {
-        if(doc.collection){
-            emit(doc.collection, doc);
-        }
+{% highlight js %}
+function(doc) {
+    if(doc.collection){
+        emit(doc.collection, doc);
     }
+}
+{% endhighlight %}
 
 If you set `Backbone.couchConnector.enableChanges` to true, the connector will update your models with remote changes in near real time.
 
