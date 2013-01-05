@@ -37,6 +37,46 @@ To test failing requests, set `navigator.geolocation.shouldFail` to `true`.
 #### Example {#example}
 Simple watchPosition() demo (<a href="http://janmonschke.com/GeoMock/example.html">http://janmonschke.com/GeoMock/example.html</a>)
 
+The code for the example:
+
+{% highlight js %}
+window.onload = function(){
+  // setting up Google Maps
+  var latlng =  new google.maps.LatLng(navigator.geolocation.waypoints[0].coords.latitude, 
+                navigator.geolocation.waypoints[0].coords.longitude);
+  
+  var myOptions = {
+    zoom: 18,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  
+  var map_elem = document.getElementById("map_canvas");
+  map_elem.style.height = window.innerHeight + "px";
+  
+  var map = new google.maps.Map(map_elem, myOptions);
+  var marker = new google.maps.Marker({position : latlng});
+  marker.setMap(map);
+  
+  // GeoMock example code
+  navigator.geolocation.shouldFail = false;
+  navigator.geolocation.delay = 2000;
+  
+  var basicSuccessHandler = function(location){
+    console.log("Received a location:", location);
+    latlng = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);
+    map.panTo(latlng);
+    marker.setPosition(latlng);
+  };
+
+  var basicErrorHandler = function(msg){
+    console.log("Geolocation error:", msg);
+  };
+
+  navigator.geolocation.watchPosition(basicSuccessHandler, basicErrorHandler);
+};
+{% endhighlight %}
+
 #### Dependencies {#dependencies}
 none
 
