@@ -64,7 +64,7 @@ If you happen to use the `initialize` function in your Collection, make sure tha
 You simply have to add this line as the first line of your initialize function:
 
 {% highlight js %}
-Backbone.Collection.prototype.set.call(this, attributes, options);
+Backbone.Collection.prototype.initialize.call(this, arguments);
 {% endhighlight %}
 
 #### Examples {#examples}

@@ -40,9 +40,9 @@ As you can see you also need to create a new database in your CouchDB and a new 
 
 {% highlight js %}
 function(doc) {
-    if(doc.collection){
-        emit(doc.collection, doc);
-    }
+  if(doc.collection){
+    emit(doc.collection, doc);
+  }
 }
 {% endhighlight %}
 
