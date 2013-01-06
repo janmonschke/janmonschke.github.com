@@ -150,7 +150,7 @@ label span,legend span{font-weight:normal;font-size:13px;color:#444}
 .row:after,.clearfix:after{clear:both}
 .row,.clearfix{zoom:1}
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
-@media only screen and (max-width: 959px){}@media only screen and (min-width: 768px) and (max-width: 959px){}@media only screen and (max-width: 767px){}@media only screen and (min-width: 480px) and (max-width: 767px){}@media only screen and (max-width: 479px){}.hll{background-color:#ffc}
+.hll{background-color:#ffc}
 .c{color:#09f;font-style:italic}
 .err{color:#a00;background-color:#faa}
 .k{color:#069;font-weight:bold}
@@ -239,3 +239,5 @@ ol,ul,ol li ul{margin-left:2em}
 #navigation li a:hover,#navigation li a.active{background:#ddd;-webkit-box-shadow:0 0 3px rgba(0,0,0,0.9);box-shadow:0 0 3px rgba(0,0,0,0.9);border-bottom-right-radius:5px;border-bottom-left-radius:5px}
 #navigation li a:hover{background:rgba(235,235,235,0.5)}
 .category{display:inline}
+@media only screen and (max-width: 767px){pre{overflow-x:scroll}
+}
