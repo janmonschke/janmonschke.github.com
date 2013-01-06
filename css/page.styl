@@ -33,22 +33,20 @@ p
 article 
   margin: 1em 0em
 
-code, pre
-  box-shadow 0 0 0 4px rgba(0, 0, 0, 0.03) inset, 0 0 0 1px rgba(0,0,0,0.15)
-  border-radius 3px
-  overflow-x scroll
-
 p code
   padding 1px
   margin 2px
 
 pre
-  background: #fff
-  padding: 5px
-  font-size: 12px
-  font-family: Monaco, "Courier New", monospace
-  font-weight: normal
-  line-height: 1.3
+  background-color rgba(0, 0, 0, .02)
+  border 1px solid rgba(0, 0, 0, .3)
+  border-radius 3px
+  overflow-x hidden
+  padding 5px
+  font-size 12px
+  font-family Monaco, "Courier New", monospace
+  font-weight normal
+  line-height 1.3
 
 pre code
   box-shadow none
@@ -59,22 +57,26 @@ a
   text-decoration: underline
   transition(color .2s linear)
 
+  img
+    padding-bottom .5em
+    border-bottom 1px solid MY_ORANGE
+    transition(border .2s linear)
+
 a:visited
   color: MY_ORANGE
 
 a:hover 
   color: darken(MY_ORANGE, 20)
 
+  img
+    border-bottom-color MY_GREY
+
 a.first 
   margin-left: 15px
 
-img 
-  border-left: 7px solid MY_ORANGE
+img
+  @extend img.scale-with-grid
 
-img:hover 
-  border-left: 7px solid MY_GREY
-  transition(border-left 0.3s linear)
-  
 ul
   list-style: square outside
 
