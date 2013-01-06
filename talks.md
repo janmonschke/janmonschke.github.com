@@ -16,4 +16,4 @@ A (almost complete) list of some of the talks I did in the past on various confe
 
 - __March 27th, 2011__ - __[Single Page Apps](https://speakerdeck.com/janmonschke/single-page-web-apps)__ - Together with [@toshiyori](https://twitter.com/toshiyori) I gave an introduction to Single Page Apps at Barcamp Ruhr 4. It was a pretty hot topic at that time but the slides may be outdated now ;)
 
-- __November 11th, 2010__ - __[Barcamps](http://www.slideshare.net/janmonschke/presentation-5747040)__ - At a local uni meetup in Düsseldorf I talked about Barcamps and specificially why students should attend them :) 
+- __November 11th, 2010__ - __[Barcamps](http://www.slideshare.net/janmonschke/presentation-5747040)__ - At a local uni meetup in Düsseldorf I talked about Barcamps and especially why students should attend them :) 
