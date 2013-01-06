@@ -232,7 +232,7 @@ ul{list-style:square outside}
 li p{margin:0;padding:0}
 ol li ul{margin:0}
 ol,ul,ol li ul{margin-left:2em}
-#navigation{margin-left:1em;margin-bottom:15px;width:100%;}
+#navigation{margin-left:1em;margin-bottom:15px;}
 #navigation li{display:inline;}
 #navigation li a{text-decoration:none;display:inline-block;padding:.8em;margin:0;color:#333;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;-ms-transition:all .3s linear;transition:all .3s linear;}
 #navigation li a:hover,#navigation li a.active{background:#ddd;-webkit-box-shadow:0 0 3px rgba(0,0,0,0.9);box-shadow:0 0 3px rgba(0,0,0,0.9);border-bottom-right-radius:5px;border-bottom-left-radius:5px}
