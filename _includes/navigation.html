@@ -1,7 +1,7 @@
 <ul id="navigation">
   <li><a href="/" {% if page.url == '/index.html' %} class="active" {% endif %}>Home</a></li>
   <li><a href="/blog" {% if page.url contains '/blog/' %} class="active" {% endif %}>Blog</a></li>
-  <li><a href="/talks" {% if page.url contains '/talk/' %} class="active" {% endif %}>Talks</a></li>
+  <li><a href="/talks" {% if page.url contains '/talks/' %} class="active" {% endif %}>Talks</a></li>
   <li><a href="/projects" {% if page.url contains '/projects' or page.url contains '/project/' %} class="active" {% endif %}>Projects</a></li>
-  <li><a href="/">Contact</a></li>
+  <li><a href="/contact" {% if page.url contains '/contact' or page.url contains '/contact/' %} class="active" {% endif %}>Contact</a></li>
 </ul>
