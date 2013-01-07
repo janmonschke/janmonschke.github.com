@@ -6,7 +6,9 @@ title: Portfolio by Jan Monschke
 <h4>Posts</h4>
 <ul>
 {% for post in site.posts limit: 5 %}
-  <li> <a href="{{post.url}}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+  {% unless post.draft %}
+    <li> <a href="{{post.url}}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+  {% endunless %}
 {% endfor %}
 </ul>
 

@@ -13,13 +13,15 @@ layout: none
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
 
     {% for post in site.posts %}
-    <item>
-      <title>{{ post.title }}</title>
-      <link>http://janmonschke.com{{ post.url }}</link>
-      <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-      <guid>http://janmonschke.com{{ post.id }}</guid>
-      <description>{{ post.content | xml_escape }}</description>
-    </item>
+      {% unless post.draft %}
+        <item>
+          <title>{{ post.title }}</title>
+          <link>http://janmonschke.com{{ post.url }}</link>
+          <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+          <guid>http://janmonschke.com{{ post.id }}</guid>
+          <description>{{ post.content | xml_escape }}</description>
+        </item>
+      {% endunless %}
     {% endfor %}
 
   </channel> 
