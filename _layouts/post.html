@@ -3,6 +3,10 @@ layout : master
 ---
 
 <div class="twelve columns offset-by-one">
+  {% if page.draft %}
+    Draft post, not yet published
+    <hr />
+  {% endif %}
   <h2>{{ page.title }}</h2>
   <div class="subheader">{{ page.date | date: "%B %d, %Y" }} - {{ page.author }}</div>
   <article>
