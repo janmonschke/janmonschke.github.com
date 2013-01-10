@@ -10,7 +10,7 @@ _If you experienced something completely different or if you are in the same sit
 
 --------
 
-When I started my Master's studies at HTW Berlin in 2011 I was already fully web-focused. All my side-projects and freelance jobs where web-related. Even my Bachelor Thesis was 100% web and I tried to do as many web courses.
+When I started my Master's studies at HTW Berlin in 2011 I was already fully web-focused. All my side-projects and freelance jobs where web-related. Even my [Bachelor Thesis](https://github.com/janmonschke/Bachelor-Thesis/raw/master/Design%20and%20Implementation%20of%20a%20web-based%20platform%20to%20present%20designer-portfolios_CP.pdf) was 100% web and I tried to do as many web courses.
 I came to HTW Berlin in order to focus even more on web technology since they're offering a web-specialization in their [Master's program](http://imi-master.htw-berlin.de/informieren/).
 
 Unluckily, the professor, who was mainly doing all the web courses, got an offer from another university and went away before I came to Berlin. As a result we had substitute professors in most of the web courses.
