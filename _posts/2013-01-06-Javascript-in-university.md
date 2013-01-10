@@ -2,7 +2,6 @@
 title: JavaScript in University
 layout: post
 author: Jan Monschke
-draft: true
 ---
 
 This is a post about my personal opinion of how underrated web development is in universities at the moment. It represents only what I experienced in my Bachelor (Düsseldorf, Germany) and Master (Berlin, Germany) studies. Maybe the status quo is different in other universities, maybe it is the same everywhere else, I simply don't know. But I don't want it to stay like that.
@@ -14,7 +13,7 @@ _If you experienced something completely different or if you are in the same sit
 When I started my Master's studies at HTW Berlin in 2011 I was already fully web-focused. All my side-projects and freelance jobs where web-related. Even my Bachelor Thesis was 100% web and I tried to do as many web courses.
 I came to HTW Berlin in order to focus even more on web technology since they're offering a web-specialization in their [Master's program](http://imi-master.htw-berlin.de/informieren/).
 
-Unluckily, the professor, who was mainly doing all the web courses, got an offer from another university and went away before I came to Berlin. So that I only had  substitutional profs in almost all web courses.
+Unluckily, the professor, who was mainly doing all the web courses, got an offer from another university and went away before I came to Berlin. As a result we had substitute professors in most of the web courses.
 
 In general I was surprised by how few we had to code in the web-courses. In half of them we even didn't have to code at all: Didactics and Media Engineering (I still don't understand why they chose these courses for web students…). So I ended up having to bring JavaScript and other Web Technologies into my studies on my own.
 
@@ -24,7 +23,7 @@ The non-web courses, on the other hand, were completely different. We had to cod
 
 In 'Programming' we started off with C++ and had to solve some maximum substring-matching problem in DNA-strings. I have to admit that I suck at C++. To me, all the pointer and referencing stuff always stands in the way and I find it hard to concentrate on the main problem.
 
-I was lucky to have [@mrflix](http://twitter.com/mrflix) in my team in that course (actually we were flat mates at that time) so that it was not only me suffering from C++ ;). Instead of struggling with the lack of C++-skills, both coming from a web-background, we immediately started to implement the algorithm in JavaScript and it took us just some hours to get very good results. Unfortunately we were forced to provide a C++ solution to the problem but it didn't take us long from a working JavaScript solution to a working C++ solution. Once we had an idea how to tackle the problem and we were able to formulate the problem in a language we were fluent in, it was all much easier for us.
+I was lucky to have Felix ([@mrflix](http://twitter.com/mrflix)) in my team in that course (actually we were flat mates at that time) so that it was not only me suffering from C++ ;). Instead of struggling with the lack of C++-skills, both coming from a web-background, we immediately started to implement the algorithm in JavaScript and it took us just some hours to get very good results. Unfortunately we were forced to provide a C++ solution to the problem but it didn't take us long from a working JavaScript solution to a working C++ solution. Once we had an idea how to tackle the problem and we were able to formulate the problem in a language we were fluent in, it was all much easier for us.
 
 It was not the last time we were using JavaScript in that course. The last task was to develop a GUI-project in C# and we came up with the idea of creating an Instapaper client. The Instapaper API was easy to use and also C# as a language wasn't as bad as we expected it to be (once we'd found out about delegates and all that nice stuff ;) ). But there was one thing that really simply refused to work: OAuth!
 
@@ -36,7 +35,7 @@ After trying to make it work with one of the bloated and complicated C# librarie
 
 ### Canvas > Java
 
-Two other courses in which the profs were open to JavaScript were 'Image Processing' and 'Computer Vision'. Typically all tasks would have been solved with Java and in some special cases in C#, but the prof never had students who wanted to solve it in JavaScript. Also he thought it could not be done in JavaScript completely since it needed a lot of CPU power and also access to raw image data (which he didn't know that this is possible with the canvas-API).
+Two other courses in which the profs were open to JavaScript were 'Image Processing' and 'Computer Vision'. Typically all tasks would have been solved with Java and in some special cases in C#, but the prof never had students who wanted to solve it in JavaScript. Also he thought it could not be done in JavaScript completely since it needed a lot of CPU power and also access to raw image data (he didn't know that you can now access raw image data using canvas).
 
 The goal of the 'Image Processing' course was to write a program that could vectorize an input image. Each task during the semester would add a new step to the process so that we'd have the complete algorithm by the end of the semester.
 
@@ -64,10 +63,10 @@ I don't want to repeat myself or rage about the negative parts here, they're all
 
 ## The good parts
 
-Despite my disappointment, my overall 'Master experience' is positive. I was able to learn new things by using JavaScript in fields which it wasn't (originally) designed for. I may not have been able to program web stuff in the web courses, but therefore I did it even more in the other courses and in project-courses, where students can choose projects on their own. Currently I'm working on a huge web project with @mrflix in cooperation with [Transparency International](http://transparency.org) and [HTW Berlin](http://htw-berlin.de). We were given the chance to completely decide on the development stack with maximum freedom which led to our first mid-scale node.js project with a Backbone.js frontend. (More info on the project when it's done ;) ). 
+Despite my disappointment, my overall 'Master experience' is positive. I was able to learn new things by using JavaScript in fields which it wasn't (originally) designed for. I may not have been able to program web stuff in the web courses, but therefore I did it even more in the other courses and in project-courses, where students can choose projects on their own. Currently I'm working on a huge web project with Felix in cooperation with [Transparency International](http://transparency.org) and [HTW Berlin](http://htw-berlin.de). We were given the chance to completely decide on the development stack with maximum freedom which led to our first mid-scale node.js project with a Backbone.js frontend. (More info on the project when it's done ;) ). 
 
-But still, the status quo is very unsatisfying and I don't want future-students to experience the same disappointing web courses. In summer 2012 I met [@sjockers](https://twitter.com/sjockers) who was at that time a Master student and Bachelor lecteror at the same time, teaching web development to Bachelor students. After some [Berlin.js](http://berlinjs.org) meetups, he came up with the idea to make an own uni course which should be specifically for all web-interested students.
+But still, the status quo is very unsatisfying and I don't want future-students to experience the same disappointing web courses. In summer 2012 I met Simon ([@sjockers](https://twitter.com/sjockers)), who was at that time a Master student and Bachelor lecteror at the same time, teaching web development to Bachelor students. After some [Berlin.js](http://berlinjs.org) meetups, he came up with the idea to make an own uni course which should be specifically for all web-interested students.
 
-The idea for the course spread quickly among the web students at my uni and in our first meeting, right before a Berlin.js meetup of course, we laid down the foundation for the course by [brainstorming topics](https://gist.github.com/4170211) and discussing organizational stuff. According to the great feedback we got after meeting, it looks like JavaScript will have a bright future at (our) university :)
+The idea for the course spread quickly among the web students at my uni and in our first meeting, right before a Berlin.js meetup of course, we laid down the foundation for the course by [brainstorming topics](https://gist.github.com/4170211) and discussing organizational stuff. Even though we did not announce anything in uni, 8 students showed up, who were all eager to change something. According to the great feedback we got after the meeting, it looks like JavaScript will have a bright future at (our) university. Simon convinced a professor to allow us to create an additional course in the next semester, the first step is done! :)
 
 The key is, that as a student you have the freedom to choose __what__ you learn and, more importantly, __how__ you learn it. Of course, it's always easier to just stick to the agenda and do what the profs say. But the benefits of going your own way are worth every extra-hour spent! There is so much more to learn which is not in the curriculum!
