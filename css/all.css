@@ -217,7 +217,7 @@ h2{font-family:'Rambla',sans-serif;font-weight:bold;padding:5px 0;margin:10px 0}
 h3{font-family:'Rambla',sans-serif;font-weight:bold;padding:5px 0;margin:10px 0}
 h4{font-family:'Rambla',sans-serif;font-weight:bold;padding:5px 0;margin:10px 0}
 h5{font-family:'Rambla',sans-serif;font-weight:bold;padding:5px 0;margin:10px 0}
-p{line-height:1.4;font-size:16px;margin:1em 0}
+p{line-height:1.6;font-size:16px;margin:1em 0}
 article{margin:1em 0}
 p code{padding:1px;margin:2px}
 p code,pre{background-color:rgba(0,0,0,0.02);border:1px solid rgba(0,0,0,0.3);-webkit-border-radius:3px;border-radius:3px}
@@ -233,6 +233,7 @@ ul{list-style:square outside}
 li p{margin:0;padding:0}
 ol li ul{margin:0}
 ol,ul,ol li ul{margin-left:2em}
+#disqus_thread{margin-bottom:50px}
 #navigation{margin-left:.5em;margin-bottom:15px;}
 #navigation li{display:inline;}
 #navigation li a{text-decoration:none;display:inline-block;padding:.8em;margin:0;color:#333;-webkit-transition:all .3s linear;-moz-transition:all .3s linear;-o-transition:all .3s linear;-ms-transition:all .3s linear;transition:all .3s linear;}
