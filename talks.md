@@ -11,7 +11,8 @@ A list of some of the talks I did in the past on various conferences & events:
 ### 2013
 
 - __[Making music with JavaScript and Gamepads](http://janmonschke.com/Music-with-JS-and-Gamepads)__ - A talk that explains the basic concepts of both the Web Audio API and the Gamepad API and shows how they can be combined in order to create music. I held this talk at [RejectJS 2013](http://rejectjs.org/) and at the [Google DevFest 2013](http://devfest-berlin.de/#/2013/about).
-- 
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/0MigafMWLh0?rel=0" frameborder="0" allowfullscreen></iframe> 
 
 ### 2012
 
