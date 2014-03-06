@@ -20,8 +20,6 @@ A list of some of the talks I did in the past on various conferences & events:
   </object>
 </div>
 
-[![Video of the talk at Reject.js](http://img.youtube.com/vi/0MigafMWLh0/hqdefault.jpg)](https://www.youtube.com/watch?v=0MigafMWLh0)
-
 ### 2012
 
 - __[Genetic Algorithms in JavaScript](http://janmonschke.com/Genetic-Algorithms/presentation)__ - I talked about my experiences with Genetic Algorithms and CoffeeScript / JavaScript at [BerlinJS](http://berlinjs.org). It also has a [demo](http://janmonschke.com/Genetic-Algorithms/) and is hosted on [Github](https://github.com/janmonschke/Genetic-Algorithms).
