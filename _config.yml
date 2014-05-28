@@ -1,2 +1,3 @@
 permalink: /blog/:year/:month/:day/:title.html
 highlighter: true
+markdown: kramdown
