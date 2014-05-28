@@ -11,7 +11,9 @@ A list of some of the talks I did in the past on various conferences & events:
 ### 2014
 - __[Building a collaborative audio editor based on the Web Audio API](http://janmonschke.com/Building-a-collaborative-web-audio-editor)__ - This talk is about the implementation of a fully collaborative web-based audio editor. It was held at ScotlandJS in Edinburgh on 9th of May 2014. The topic is described in more detail in my Master's Thesis which can be read found under: <http://cl.ly/1H111o1w1Z0T>.
 
-<iframe src="//player.vimeo.com/video/96477738" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/96477738">Jan Monschke: Building a collaborative audio editor based on the Web Audio API</a> from <a href="http://vimeo.com/edgecaseuk">Neo (UK)</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<div>
+  <iframe src="//player.vimeo.com/video/96477738" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 ### 2013
 
