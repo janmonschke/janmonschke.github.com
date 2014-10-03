@@ -47,7 +47,7 @@ Here's a list of all the projects that were presented if you don't have the time
 5. Chris Greeff ([twitter](https://twitter.com/greevz), [github](https://github.com/chrisgreeff)), Nick Lockhart ([twitter](https://twitter.com/nickolockhart), [github](https://github.com/N1ck)) – Beaty Bird, a Flappy Bird clone that can is controlled by various audio inputs. Super Fun! – [source code](https://github.com/N1ck/beaty-bird) __(Second prize)__
 6. Lisa Passing ([github](https://github.com/lislis), [twitter](https://twitter.com/lisapassing)) – One Hand Soundgame – [source code](https://github.com/lislis/onehandsoundgame) __(Third prize)__
 7. Thomas Fett ([twitter](https://twitter.com/FettThomas), [github](https://github.com/ThomasFett)) – Remix at once – [source code](https://github.com/kollektivpp/remix-at-once) __(Fourth prize)__
-8. Evan Sonderegger ([twitter](https://twitter.com/esonderegger), [github](https://github.com/esonderegger)) – Vector Scope in Web Audio API __(First prize)__
+8. Evan Sonderegger ([twitter](https://twitter.com/esonderegger), [github](https://github.com/esonderegger)) – Vector Scope in Web Audio API – [demo page](http://webaudiometers.rpy.xyz/#){:target="_blank"} __(First prize)__
 
 We had three hardware prizes that were sponsored by Mozilla ([Akai LPK25](http://www.amazon.de/gp/product/B002M8GBDI/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1), [Akai LPD8](http://www.amazon.de/gp/product/B002M8EEW8/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1), [KORG nanoPAD2](http://www.amazon.de/gp/product/B004M8YPKM/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)) and a special software price, a license for [Bitwig Studio](https://www.bitwig.com/en/bitwig-studio/overview.html) which was sponsored by Bitwig :)
 
