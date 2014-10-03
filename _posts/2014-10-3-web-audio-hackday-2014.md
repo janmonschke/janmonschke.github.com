@@ -2,7 +2,6 @@
 title: Web Audio Hackday 2014
 layout: post
 author: Jan Monschke
-draft: true
 ---
 
 Earlier this year [Jan Lehnardt](https://twitter.com/janl){:target="_blank"}, [Rin](https://twitter.com/rinpaku){:target="_blank"}, [Robin](https://twitter.com/rmehner){:target="_blank"}, [Tiffany](https://twitter.com/theophani){:target="_blank"} and me started to talk about making something special for the upcoming JSConf.eu (2014). Our idea was to organize a JSFest in Berlin around the three big conferences in September (Reject.JS, CSSConf.eu and JSConf.eu) which would host a range of web-related Meetups and Events.
