@@ -5,7 +5,7 @@ author: Jan Monschke
 draft: true
 ---
 
-Earlier this year [Jan Lehnardt](https://twitter.com/janl){:target="_blank"}, [Rin](https://twitter.com/rinpaku){:target="_blank"}, [Robin](https://twitter.com/rmehner){:target="_blank"}, [Tiffany](https://twitter.com/theophani){:target="_blank"} and me started to talk about making something special for the upcoming JSConf.eu (2014). Our idea was to organize a JSFest in Berlin around the three big conferences in September (Reject.JS, CSSConf.eu and JSConf.eu) which would host a range of web-related Meetups and Events. [Explain that we didnt want to have a big team but rather smaller independent groups that organize events]
+Earlier this year [Jan Lehnardt](https://twitter.com/janl){:target="_blank"}, [Rin](https://twitter.com/rinpaku){:target="_blank"}, [Robin](https://twitter.com/rmehner){:target="_blank"}, [Tiffany](https://twitter.com/theophani){:target="_blank"} and me started to talk about making something special for the upcoming JSConf.eu (2014). Our idea was to organize a JSFest in Berlin around the three big conferences in September (Reject.JS, CSSConf.eu and JSConf.eu) which would host a range of web-related Meetups and Events.
 
 For more than two years I am now obsessed with writing things with the Web Audio API which is becoming more and more stable and is supported by more and more browsers. I wanted to share my enthusiasm for this API by creating a Web Audio Hackathon during JSFest. Since I never organised an event before, Tiffany, who is familiar with all the processes that are needed to create big events like JSConf.eu, joined the organiser team and we started planning very soon.
 
