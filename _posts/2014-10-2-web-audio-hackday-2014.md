@@ -45,7 +45,7 @@ Here's a list of all the projects that were presented if you don't have the time
 2. Guillaume Marty ([github](https://github.com/gmarty), [twitter](https://twitter.com/g_marty)) – a BPM detection algorithm, using the OfflineAudioContext
 3. Erik Woitschig ([twitter](https://twitter.com/iam_bnz)) – Using SoundCloud as sample database
 4. Daniel Roth, Jonathan Lundin ([twitter](https://twitter.com/mr_lundis), [github](https://github.com/mrlundis)), Felix Niklas ([twitter](https://twitter.com/mrflix), [github](https://github.com/mrflix)) – Oscillator reacting to mobile phone gyroscope.
-5. Chris Greeff ([twitter](https://twitter.com/greevz), [github](https://github.com/chrisgreeff)), Nick Lockhart ([twitter](https://twitter.com/nickolockhart), [github](https://github.com/N1ck)) – Beaty Bird – source code __(Second prize)__
+5. Chris Greeff ([twitter](https://twitter.com/greevz), [github](https://github.com/chrisgreeff)), Nick Lockhart ([twitter](https://twitter.com/nickolockhart), [github](https://github.com/N1ck)) – Beaty Bird – [source code](https://github.com/N1ck/beaty-bird) __(Second prize)__
 6. Lisa Passing ([github](https://github.com/lislis), [twitter](https://twitter.com/lisapassing)) – One Hand Soundgame – [source code](https://github.com/lislis/onehandsoundgame) __(Third prize)__
 7. Thomas Fett ([twitter](https://twitter.com/FettThomas), [github](https://github.com/ThomasFett)) – Remix at once – [source code](https://github.com/kollektivpp/remix-at-once) __(Fourth prize)__
 8. Evan Sonderegger ([twitter](https://twitter.com/esonderegger), [github](https://github.com/esonderegger)) – Vector Scope in Web Audio API __(First prize)__
@@ -56,3 +56,8 @@ Before we announced the winners, the attendees had the chance to get their hands
 
 ### Post Scriptum
 
+- Judging from the feedback from attendees, coaches and speakers it was an event that is definitely worth to be repeated in the near future :)
+- One day after the Hackday in Berlin, there was the Web Music Hackday in Tokyo. We exchanged ideas when we were preparing the event and it looks like their event was a huge success and much bigger than the one in Berlin. You can see all demos and read about it in [Eiji Kitamura's blog post](http://blog.agektmr.com/2014/09/event-report-web-music-hackathon-3.html){:target="_blank"}.
+- I'm looking very much forward to the very first dedicated [Web Audio conference in January in Paris](http://wac.ircam.fr/). If you're a web audio developer or interested in the API, you should definitely join.
+- Soledad wrote a very good blog post about the event on [her blog as well](http://soledadpenades.com/2014/09/26/berlin-web-audio-hack-day-2014/){:target="_blank"}.
+- We semi-announced an "official" Web Audio (community) logo made by [Martin](https://twitter.com/woodworker): ![web audio logo](http://prolope.de/svg/webaudio-js.svg){:width="250px"}
