@@ -51,3 +51,8 @@ Here's a list of all the projects that were presented if you don't have the time
 8. Evan Sonderegger ([twitter](https://twitter.com/esonderegger), [github](https://github.com/esonderegger)) – Vector Scope in Web Audio API __(First prize)__
 
 We had three hardware prizes that were sponsored by Mozilla ([Akai LPK25](http://www.amazon.de/gp/product/B002M8GBDI/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1), [Akai LPD8](http://www.amazon.de/gp/product/B002M8EEW8/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1), [KORG nanoPAD2](http://www.amazon.de/gp/product/B004M8YPKM/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)) and a special software price, a license for [Bitwig Studio](https://www.bitwig.com/en/bitwig-studio/overview.html) which was sponsored by Bitwig :)
+
+Before we announced the winners, the attendees had the chance to get their hands on the amazing dinner that was provided by Google (while Martin and me were counting votes, almost starving ;)). Afterwards we still stayed in the classroom, having some drinks, talking about audio, web development. I was very excited to see another one of my Web Audio heroes popping by for the presentations: [Stuart Memo](https://twitter.com/stuartmemo) <3
+
+### Post Scriptum
+
