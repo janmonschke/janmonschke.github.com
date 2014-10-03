@@ -33,4 +33,21 @@ Some groups formed during lunch and people started hacking right away. People we
 
 [![Chris explaining audio](/images/webaudiohackday-2014/chriswilsonexplainingthings.jpg){:title='Chris explaining audio'}](/images/webaudiohackday-2014/chriswilsonexplainingthings.jpg)
 
+[![Attendees working](/images/webaudiohackday-2014/everybodyworking2.jpg){:title='Attendees working'}](/images/webaudiohackday-2014/everybodyworking2.jpg){:target="_blank"}
+
+After several hours of hacking it was time for the presentations! We had eight groups presenting their projects and here's the recording:
+
 <iframe width="560" height="315" src="//www.youtube.com/embed/atJgvEBn6qg" frameborder="0" allowfullscreen></iframe>
+
+Here's a list of all the projects that were presented if you don't have the time to watch the entire video. If you are an attendee and you want your project link on here, please contact me on [Twitter](https://twitter.com/thedeftone).
+
+1. Jelle Akkerman ([github](https://github.com/jellea), [twitter](https://twitter.com/jellea)) – NoOsc was an experiment using NoFlo, trying to build something very visual and cool, super suitable for live-acts.
+2. Guillaume Marty ([github](https://github.com/gmarty), [twitter](https://twitter.com/g_marty)) – a BPM detection algorithm, using the OfflineAudioContext
+3. Erik Woitschig ([twitter](https://twitter.com/iam_bnz)) – Using SoundCloud as sample database
+4. Daniel Roth, Jonathan Lundin ([twitter](https://twitter.com/mr_lundis), [github](https://github.com/mrlundis)), Felix Niklas ([twitter](https://twitter.com/mrflix), [github](https://github.com/mrflix)) – Oscillator reacting to mobile phone gyroscope.
+5. Chris Greeff ([twitter](https://twitter.com/greevz), [github](https://github.com/chrisgreeff)), Nick Lockhart ([twitter](https://twitter.com/nickolockhart), [github](https://github.com/N1ck)) – Beaty Bird – source code __(Second prize)__
+6. Lisa Passing ([github](https://github.com/lislis), [twitter](https://twitter.com/lisapassing)) – One Hand Soundgame – [source code](https://github.com/lislis/onehandsoundgame) __(Third prize)__
+7. Thomas Fett ([twitter](https://twitter.com/FettThomas), [github](https://github.com/ThomasFett)) – Remix at once – [source code](https://github.com/kollektivpp/remix-at-once) __(Fourth prize)__
+8. Evan Sonderegger ([twitter](https://twitter.com/esonderegger), [github](https://github.com/esonderegger)) – Vector Scope in Web Audio API __(First prize)__
+
+We had three hardware prizes that were sponsored by Mozilla ([Akai LPK25](http://www.amazon.de/gp/product/B002M8GBDI/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1), [Akai LPD8](http://www.amazon.de/gp/product/B002M8EEW8/ref=oh_aui_detailpage_o01_s00?ie=UTF8&psc=1), [KORG nanoPAD2](http://www.amazon.de/gp/product/B004M8YPKM/ref=oh_aui_detailpage_o00_s00?ie=UTF8&psc=1)) and a special software price, a license for [Bitwig Studio](https://www.bitwig.com/en/bitwig-studio/overview.html) which was sponsored by Bitwig :)
