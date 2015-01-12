@@ -1,27 +1,30 @@
 ---
 layout: master
 title: Portfolio by Jan Monschke
---- 
+---
 
-<h3>Hi</h3>
+<div class="row">
+  <h1>Hi</h1>
 
-<p>Welcome to the personal website of Jan Monschke, a freelance frontend developer and student from Berlin.</p>
+  <p>Welcome to the personal website of Jan Monschke, a freelance frontend developer and student from Berlin.</p>
 
-<p>I am available to work on frontend projects, <a href="/contact">contact</a> me if you're interested.</p>
+  <p>I am available to work on frontend projects, <a href="/contact">contact</a> me if you're interested.</p>
 
-<p><a href="https://twitter.com/thedeftone">@thedeftone</a> on Twitter, <a href="https://github.com/janmonschke">janmonschke</a> on Github</p>
+  <p><a href="https://twitter.com/thedeftone">@thedeftone</a> on Twitter, <a href="https://github.com/janmonschke">janmonschke</a> on Github</p>
 
-<h4>Posts</h4>
-<ul>
-{% for post in site.posts limit: 5 %}
-  {% unless post.draft %}
-    <li> <a href="{{post.url}}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
-  {% endunless %}
-{% endfor %}
-</ul>
+  <h2>Posts</h2>
+  <ul>
+  {% for post in site.posts limit: 5 %}
+    {% unless post.draft %}
+      <li> <a href="{{post.url}}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+    {% endunless %}
+  {% endfor %}
+  </ul>
 
-<h4>Projects</h4>
-<ul>
-  <li><a href="/projects/backbone-couchdb.html">backbone-couchdb.js</a> - Easily connect CouchDB and Backbone.js</li>
-  <li><a href="/projects/geomock.html">GeoMock</a> - Mock GPS data in your web apps</li>
-</ul>
+  <h2>Projects</h2>
+  <ul>
+    <li><a href="https://github.com/janmonschke/Web-Audio-Editor" target="_blank">Web Audio Editor</a> - A web-based real-time audio editor</li>
+    <li><a href="/projects/backbone-couchdb.html">backbone-couchdb.js</a> - Easily connect CouchDB and Backbone.js</li>
+    <li><a href="/projects/geomock.html">GeoMock</a> - Mock GPS data in your web apps</li>
+  </ul>
+</div>

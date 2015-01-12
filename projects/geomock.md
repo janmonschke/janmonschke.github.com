@@ -1,5 +1,5 @@
 ---
-name: GeoMock
+project_name: GeoMock
 title: Mock the Geolocation API
 repository_name : GeoMock
 version: 1.0
@@ -42,26 +42,26 @@ The code for the example:
 {% highlight js %}
 window.onload = function(){
   // setting up Google Maps
-  var latlng =  new google.maps.LatLng(navigator.geolocation.waypoints[0].coords.latitude, 
+  var latlng =  new google.maps.LatLng(navigator.geolocation.waypoints[0].coords.latitude,
                 navigator.geolocation.waypoints[0].coords.longitude);
-  
+
   var myOptions = {
     zoom: 18,
     center: latlng,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
-  
+
   var map_elem = document.getElementById("map_canvas");
   map_elem.style.height = window.innerHeight + "px";
-  
+
   var map = new google.maps.Map(map_elem, myOptions);
   var marker = new google.maps.Marker({position : latlng});
   marker.setMap(map);
-  
+
   // GeoMock example code
   navigator.geolocation.shouldFail = false;
   navigator.geolocation.delay = 2000;
-  
+
   var basicSuccessHandler = function(location){
     console.log("Received a location:", location);
     latlng = new google.maps.LatLng(location.coords.latitude, location.coords.longitude);

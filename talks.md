@@ -9,10 +9,17 @@ permalink: /talks/index.html
 A list of some of the talks I did in the past on various conferences & events:
 
 ### 2014
+
+- __[Using the web for music production and live performances](http://janmonschke.com/JSConf2014)__ - In this talk from JSConf 2014 I present the real-time web audio editor which I worked on in my [Master's Thesis](http://cl.ly/1H111o1w1Z0T) together with my flatmate and my brother which are connected via WebRTC (skip to 6:40 to see this demo). In addition to that demo I also show how the Web Audio API can be used for live music performances at 19:15.
+
+<div>
+  <iframe class="video-embed" width="560" height="315" src="//www.youtube.com/embed/cqtBpCqgOgM" frameborder="0" allowfullscreen></iframe>
+</div>
+
 - __[Building a collaborative audio editor based on the Web Audio API](http://janmonschke.com/Building-a-collaborative-web-audio-editor)__ - This talk is about the implementation of a fully collaborative web-based audio editor. It was held at ScotlandJS in Edinburgh on 9th of May 2014. The topic is described in more detail in my Master's Thesis which can be read found under: <http://cl.ly/1H111o1w1Z0T>.
 
 <div>
-  <iframe src="//player.vimeo.com/video/96477738" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <iframe class="video-embed" src="//player.vimeo.com/video/96477738" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
 ### 2013
@@ -20,11 +27,7 @@ A list of some of the talks I did in the past on various conferences & events:
 - __[Making music with JavaScript and Gamepads](http://janmonschke.com/Music-with-JS-and-Gamepads)__ - A talk that explains the basic concepts of both the Web Audio API and the Gamepad API and shows how they can be combined in order to create music. I held this talk at [RejectJS 2013](http://rejectjs.org/) and at the [Google DevFest 2013](http://devfest-berlin.de/#/2013/about). Check out a recording of the talk on YouTube:
 
 <div>
-  <object width="560" height="315">
-    <param name="movie" value="//www.youtube.com/v/0MigafMWLh0?hl=en_US&amp;version=3&amp;rel=0"></param>
-    <param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
-    <embed src="//www.youtube.com/v/0MigafMWLh0?hl=en_US&amp;version=3&amp;rel=0" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed>
-  </object>
+  <iframe class="video-embed" width="560" height="315" src="//www.youtube.com/embed/0MigafMWLh0" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ### 2012
@@ -41,4 +44,4 @@ A list of some of the talks I did in the past on various conferences & events:
 
 ### 2010
 
-- __[Barcamps](http://www.slideshare.net/janmonschke/presentation-5747040)__ - At a local uni meetup in Düsseldorf I talked about Barcamps and especially why students should attend them :) 
+- __[Barcamps](http://www.slideshare.net/janmonschke/presentation-5747040)__ - At a local uni meetup in Düsseldorf I talked about Barcamps and especially why students should attend them :)

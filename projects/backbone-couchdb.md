@@ -1,5 +1,5 @@
 ---
-name: backbone-couchdb
+project_name: backbone-couchdb
 title: backbone-couchdb -- Give your Couchapp some Backbone!
 repository : http://github.com/janmonschke/backbone-couchdb
 version: 1.2
@@ -60,7 +60,7 @@ function(doc, req){
 }
 {% endhighlight %}
 
-If you happen to use the `initialize` function in your Collection, make sure that you also call its super function because the changes-feed initialization happens in the connector's `initialize` function. 
+If you happen to use the `initialize` function in your Collection, make sure that you also call its super function because the changes-feed initialization happens in the connector's `initialize` function.
 You simply have to add this line as the first line of your initialize function:
 
 {% highlight js %}
@@ -95,7 +95,7 @@ The corresponding view (`not_done_tasks.js`) looks like this:
 function(doc){
   if (doc.collection == "tasks" && doc.done == false) {
     emit(doc.collection, doc);
-  } 
+  }
 }
 {% endhighlight %}
 

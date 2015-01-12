@@ -1,0 +1,52 @@
+img, iframe.video-embed{
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.article-subheader{
+  font-size: 2rem;
+}
+
+nav > ul{
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+nav li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.menu-opener{
+  display: none;
+}
+
+@media (max-width: 550px) {
+  .menu-opener{
+    color: rgba(0,0,0,.7);
+    display: inline-block;
+    font-size: 24px;
+    margin: 10px 0;
+    border: 1px solid rgba(0,0,0,.3);
+    padding: 4px 10px;
+    border-radius: 5px;
+  }
+
+  .navigation-list{
+    display: none;
+    margin-bottom: 0;
+  }
+
+  .navigation-list.visible{
+    display: block;
+  }
+
+  nav li{
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  nav .button{
+    margin-bottom: 5px;
+  }
+}

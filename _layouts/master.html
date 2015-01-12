@@ -1,8 +1,5 @@
 <!doctype html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html lang="en">
 <head>
 
   <!-- Basic Page Needs
@@ -13,6 +10,7 @@
   <meta name="author" content="Jan Monschke" />
   <meta name="google-site-verification" content="DIt15kNedGLODzo3iE20Tx6uJmyCLuJhQqTT_HE70ug" />
   <link rel="alternate" type="application/rss+xml" title="RSS Feed for janmonschke.com" href="/rss.xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -23,20 +21,25 @@
 
   <!-- CSS
   ================================================== -->
-  <link href='http://fonts.googleapis.com/css?family=Rambla' rel='stylesheet' type='text/css' />
-  <link rel="stylesheet" href="/css/all.css" />
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/normalize.css" />
+  <link rel="stylesheet" href="/css/skeleton.css" />
+  <link rel="stylesheet" href="/css/site.css" />
+
+  <!-- JS
+  ================================================== -->
+  <script src="/js/site.js"></script>
 
   <!-- Favicons
   ================================================== -->
   <link rel="shortcut icon" href="/images/favicon.ico" />
-  <!--link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png" /-->
 
 </head>
 <body>
-  {% include navigation.html %}
   <div class="container">
+    <div class="row">
+      {% include navigation.html %}
+    </div>
       {{ content }}
   </div>
 
