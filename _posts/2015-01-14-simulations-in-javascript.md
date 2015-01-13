@@ -5,12 +5,12 @@ author: Jan Monschke
 draft: true
 ---
 
-## Simon Swain
+## Deep Space
 
 https://www.youtube.com/watch?v=0HJPilemNns
 http://simonswain.com/deepspace/
 
-## Vince Allen
+## Complex Systems
 
 Vince Allen started his talk by introducing the audience to a very unique technique to render pixels onto a website. A technique which doesn't make use of canvas, images or SVG. He uses a `single DIV element` to program very complex animations by manipulating the element's `box-shadow` property. A box shadow can be manipulated in a way so that it has the `shape of a square` at an arbitrary position with arbitrary properties such as color and blur. In addition to that, DIV elements can have an arbitrary amount of box-shadow declarations which allows to display several squares on a webpage although the page's body only contains one DIV element.
 
@@ -22,13 +22,11 @@ Vince then shows two more demos: an alternative version of the sheep vs. wolf si
 
 Just as a reminder: The above demos are also rendered as multiple box-shadows of only a single div-element.
 
-![Photoshop and JS](/images/simulations/photoshop-and-js.jpg)
+[![Photoshop and JavaScript](/images/simulations/photoshop-and-js.jpg)](/images/simulations/photoshop-and-js.jpg)
+
+Another outstanding element of Vince's talk is that he uses Photoshop to render videos of his simulations. In this way he can create HD-quality videos with realistic motion blur and shallow depth of field. He uses node.js to feed Adobe Generator with positional data from each frame of the visualization. Adobe Generator then creates high-resolution Photoshop images from that data. Those images can then be concatenated into a video [(17:14)](https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1034). Oh, and did I mention that he uses the Web Audio API for atmospheric background noise generation? ;) His noise library is called Soundbed and can be found on [Github](https://github.com/vinceallenvince/soundbed).
 
 https://www.youtube.com/watch?v=mrxsD0mCpZ4
 http://vinceallenvince.github.io/jsasia2014/
 
-- awesome use of Photoshop for motion blur and hd rendering
-- sound in demos
 - zombie vs sheep equlibrium, beautiful visuals
-- termites-simulation
-- everything is still in one DIV!
