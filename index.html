@@ -3,28 +3,26 @@ layout: master
 title: Portfolio by Jan Monschke
 ---
 
-<div class="row">
-  <h1>Hi</h1>
+<h1>Hi</h1>
 
-  <p>Welcome to the personal website of Jan Monschke, a freelance frontend developer and student from Berlin.</p>
+<p>I'm Jan and I work as a frontend engineer for <a href="https://soundcloud.com">SoundCloud</a> in Berlin. On this website I publish my frontend-related <a href="/talks">talks</a>, <a href="/blog">articles</a> and <a href="#projects">projects</a>. Currently I'm very excited about the Web Audio API and visualizations and algorithms in JavaScript :)</p>
 
-  <p>I am available to work on frontend projects, <a href="/contact">contact</a> me if you're interested.</p>
+<p>You can also find me as <a href="https://twitter.com/thedeftone">@thedeftone</a> on Twitter or as <a href="https://github.com/janmonschke">janmonschke</a> on Github. If you want to get in touch via mail, simply head to my <a href="/contact">contact</a> page.</p>
 
-  <p><a href="https://twitter.com/thedeftone">@thedeftone</a> on Twitter, <a href="https://github.com/janmonschke">janmonschke</a> on Github</p>
+<h2>Posts</h2>
+<ul>
+{% for post in site.posts limit: 5 %}
+  {% unless post.draft %}
+    <li> <a href="{{post.url}}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+  {% endunless %}
+{% endfor %}
+</ul>
 
-  <h2>Posts</h2>
-  <ul>
-  {% for post in site.posts limit: 5 %}
-    {% unless post.draft %}
-      <li> <a href="{{post.url}}">{{ post.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
-    {% endunless %}
-  {% endfor %}
-  </ul>
-
-  <h2>Projects</h2>
-  <ul>
-    <li><a href="https://github.com/janmonschke/Web-Audio-Editor" target="_blank">Web Audio Editor</a> - A web-based real-time audio editor</li>
-    <li><a href="/projects/backbone-couchdb.html">backbone-couchdb.js</a> - Easily connect CouchDB and Backbone.js</li>
-    <li><a href="/projects/geomock.html">GeoMock</a> - Mock GPS data in your web apps</li>
-  </ul>
-</div>
+<h2 id="projects">Projects</h2>
+<ul>
+  <li><a href="https://github.com/janmonschke/Web-Audio-Editor" target="_blank">Web Audio Editor</a> - A web-based real-time audio editor</li>
+  <li><a href="http://janmonschke.com/Genetic-Algorithms
+" target="_blank">Genetic Algorithm in JS and in CS </a> - Showcasing the concept of Genetic Algorithms with the example of the Traveling Salesman Problem (in CoffeeScript and in JavaScript)</li>
+  <li><a href="/projects/backbone-couchdb.html">backbone-couchdb.js</a> - Easily connect CouchDB and Backbone.js</li>
+  <li><a href="/projects/geomock.html">GeoMock</a> - Mock GPS data in your web apps</li>
+</ul>
