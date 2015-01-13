@@ -7,12 +7,12 @@ img, iframe.video-embed{
   font-size: 2rem;
 }
 
-nav > ul{
+.navigation-list{
   list-style-type: none;
-  margin: 10px 0;
+  margin: 20px 0 10px 0;
 }
 
-nav li{
+.navigation-list li{
   display: inline-block;
   margin-right: 10px;
 }
@@ -35,18 +35,19 @@ nav li{
   .navigation-list{
     display: none;
     margin-bottom: 0;
+    margin: 10px 0 0 0;
   }
 
   .navigation-list.visible{
     display: block;
   }
 
-  nav li{
+  .navigation-list li{
     display: block;
     margin-bottom: 5px;
   }
 
-  nav .button{
+  .navigation-list li .button{
     margin-bottom: 5px;
   }
 }
