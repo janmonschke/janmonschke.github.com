@@ -2,16 +2,14 @@
 layout : master
 ---
 
-<div class="twelve columns">
-  {% if page.draft %}
-    Draft post, not yet published
-    <hr />
-  {% endif %}
-  <h1>{{ page.title }}</h1>
-  <h2 class="article-subheader">{{ page.date | date: "%B %d, %Y" }} - {{ page.author }}</h2>
-  <article>
-    {{ content }}
-  </article>
+{% if page.draft %}
+  Draft post, not yet published
+  <hr />
+{% endif %}
+<h1>{{ page.title }}</h1>
+<h2 class="article-subheader">{{ page.date | date: "%B %d, %Y" }} - {{ page.author }}</h2>
+<article>
+  {{ content }}
+</article>
 
-  {% include disqus_comments.html %}
-</div>
+{% include disqus_comments.html %}
