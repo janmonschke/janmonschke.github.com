@@ -4,6 +4,7 @@ layout: post
 author: Jan Monschke
 draft: true
 ---
+I recently came across the 2014's JSConf.asia videos on YouTube and found two remarkable presentation that only very few people started to talk about on Twitter or in Meetups. Both talks deal with different ways of simulating 'worlds' in JavaScript and involve interesting rendering techniques, useful algorithms and beautiful visualizations. First I will show Simon Swain's ([@simon_swain](https://twitter.com/simon_swain)) talk about Deep Space simulations ([YouTube](https://www.youtube.com/watch?v=0HJPilemNns)) and then Vince Allen's ([@vinceallenvince](https://twitter.com/vinceallenvince)) talk about Pixel Art and complex systems ([YouTube](https://www.youtube.com/watch?v=mrxsD0mCpZ4)).
 
 ## Deep Space
 
@@ -12,11 +13,13 @@ http://simonswain.com/deepspace/
 
 ## Complex Systems
 
-Vince Allen started his talk by introducing the audience to a very unique technique to render pixels onto a website. A technique which doesn't make use of canvas, images or SVG. He uses a `single DIV element` to program very complex animations by manipulating the element's `box-shadow` property. A box shadow can be manipulated in a way so that it has the `shape of a square` at an arbitrary position with arbitrary properties such as color and blur. In addition to that, DIV elements can have an arbitrary amount of box-shadow declarations which allows to display several squares on a webpage although the page's body only contains one DIV element.
+[(slides)[http://vinceallenvince.github.io/jsasia2014/]]
+
+Vince Allen started his talk by introducing the audience to a very unique technique to render pixels onto a website. A technique which doesn't make use of canvas, images or SVG. He uses a `single DIV element` to program very complex animations by manipulating the element's `box-shadow` property [(7:17) "bit-shadow machine"](https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=437). A box shadow can be manipulated in a way so that it has the `shape of a square` at an arbitrary position with arbitrary properties such as color and blur. In addition to that, DIV elements can have an arbitrary amount of box-shadow declarations which allows to display several squares on a webpage although the page's body only contains one DIV element.
 
 Vince doesn't stop there and uses this rendering technique to visualize various simulations he created.
 
-The first one is a simulation of a tornado that he creates from very simple core elements such as a base and a spine. The tornado's movement and the spine are both generated from the [Perlin noise](http://en.wikipedia.org/wiki/Perlin_noise) algorithm which creates 'natural' random values. Different variations of the simulation show how a very natural effect and truly beautiful visualizations can result from a simple rendering technique and a simple random number generator.
+The first one is a simulation of a tornado [(12:23)](https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=743) that he creates from very simple core elements such as a base and a spine. The tornado's movement and the spine are both generated from the [Perlin noise](http://en.wikipedia.org/wiki/Perlin_noise) algorithm which creates 'natural' random values. Different variations of the simulation show how a very natural effect and truly beautiful visualizations can result from a simple rendering technique and a simple random number generator.
 
 [![Tornado visualization](/images/simulations/tornado.jpg)](/images/simulations/tornado.jpg)
 
@@ -26,11 +29,11 @@ Vince then shows two more demos: an alternative version of the sheep vs. wolf si
 
 Just as a reminder: The above demos are also rendered as multiple box-shadows of only a single div-element.
 
-[![Photoshop and JavaScript](/images/simulations/photoshop-and-js.jpg)](/images/simulations/photoshop-and-js.jpg)
-
 Another outstanding element of Vince's talk is that he uses Photoshop to render videos of his simulations. In this way he can create HD-quality videos with realistic motion blur and shallow depth of field. He uses node.js to feed Adobe Generator with positional data from each frame of the visualization. Adobe Generator then creates high-resolution Photoshop images from that data. Those images can then be concatenated into a video [(17:14)](https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1034). Oh, and did I mention that he uses the Web Audio API for atmospheric background noise generation? ;) His noise library is called Soundbed and can be found on [Github](https://github.com/vinceallenvince/soundbed).
 
-https://www.youtube.com/watch?v=mrxsD0mCpZ4
-http://vinceallenvince.github.io/jsasia2014/
+[![Photoshop and JavaScript](/images/simulations/photoshop-and-js.jpg)](/images/simulations/photoshop-and-js.jpg)
 
-- zombie vs sheep equlibrium, beautiful visuals
+Both talks show that it can be really fun to work on algorithms and to visualize the results. In their cases, they created systems with agents which were acting based on simple rules. The visualizations of these systems can be mesmerizing for example when the sheep/wolves/zombies system creates a state of equilibrium [(26:13, Vince)](https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1563) or when introducing hyperspace travel to the deep space simulation which results in a minutes-long fight over solar systems [(23:41, Simon)](https://www.youtube.com/watch?v=0HJPilemNns#t=1421). Changes in those systems result in an immediate, sometimes very artistic, change in visualization and behavior.
+
+I hope we will see more simulations like these in the future. With people like Vince and Simon talking at various JS conferences all over the world I'm confident that we will see more of it very soon :)
+
