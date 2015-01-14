@@ -2,9 +2,13 @@ body{
   font-size: 1.5em;
 }
 
-img, iframe.video-embed{
+img, .video-embed{
   max-width: 100%;
   box-sizing: border-box;
+}
+
+video{
+  margin-bottom: 20px;
 }
 
 .article-subheader{
