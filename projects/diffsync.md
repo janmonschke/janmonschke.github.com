@@ -6,8 +6,6 @@ version: 2.0.1
 layout: project
 ---
 
-# diffsync
-
 Enables real-time collaborative editing of arbitrary JSON objects using the differential synchronization algorithm
 
 ## Table of contents
