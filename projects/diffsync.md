@@ -58,36 +58,36 @@ The following paragraphs will show you how to get started. If you want to jump r
 
 ### Client {#client}
 
-{% highlight js %}
-  // if installed from standalone script or browserify / webpack
-  var DiffSyncClient = diffsync.Client || require('diffsync').Client
+{% highlight JavaScript %}
+// if installed from standalone script or browserify / webpack
+var DiffSyncClient = diffsync.Client || require('diffsync').Client
 
-  // socket.io standalone or browserify / webpack
-  var socket = window.io || require('socket.io-client')
+// socket.io standalone or browserify / webpack
+var socket = window.io || require('socket.io-client')
 
-  // pass the connection and the id of the data you want to synchronize
-  var client = new DiffSyncClient(socket(), id);
+// pass the connection and the id of the data you want to synchronize
+var client = new DiffSyncClient(socket(), id);
 
-  var data;
+var data;
 
-  client.on('connected', function(){
-    // the initial data has been loaded,
-    // you can initialize your application
-    data = client.getData();
-  });
+client.on('connected', function(){
+  // the initial data has been loaded,
+  // you can initialize your application
+  data = client.getData();
+});
 
-  client.on('synced', function(){
-    // an update from the server has been applied
-    // you can perform the updates in your application now
-  });
+client.on('synced', function(){
+  // an update from the server has been applied
+  // you can perform the updates in your application now
+});
 
-  client.initialize();
+client.initialize();
 
-  /* --- somewhere in your code --- */
+/* --- somewhere in your code --- */
 
-  data.randomChange = Math.random();
-  // schedule a sync cycle - this will sync your changes to the server
-  client.sync();
+data.randomChange = Math.random();
+// schedule a sync cycle - this will sync your changes to the server
+client.sync();
 
 {% endhighlight %}
 
@@ -111,23 +111,23 @@ The [diffsync-todos app](https://github.com/janmonschke/diffsync-todos) provides
 
 Setting up the server in a very minimal way (with express):
 
-{% highlight js %}
-  // setting up express and socket.io
-  var app = require('express')();
-  var http = require('http').Server(app);
-  var io = require('socket.io')(http);
+{% highlight JavaScript %}
+// setting up express and socket.io
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-  // setting up diffsync's DataAdapter
-  var diffsync    = require('diffsync');
-  var dataAdapter = new diffSync.InMemoryDataAdapter();
+// setting up diffsync's DataAdapter
+var diffsync    = require('diffsync');
+var dataAdapter = new diffSync.InMemoryDataAdapter();
 
-  // setting up the diffsync server
-  var diffSyncServer = new DiffSync.Server(dataAdapter, io);
+// setting up the diffsync server
+var diffSyncServer = new DiffSync.Server(dataAdapter, io);
 
-  // starting the http server
-  http.listen(4000, function(){
-    console.log('ready to go');
-  });
+// starting the http server
+http.listen(4000, function(){
+  console.log('ready to go');
+});
 
 {% endhighlight %}
 
@@ -163,9 +163,3 @@ The Differential Synchronization algorithm was invented by Neil Fraser in 2009. 
 ## Socket.io independence {#socketio-independence}
 
 Neither client, nor server ship with a dependency of socket.io. This allows to replace the transportation layer with a completely different library which is compatible to the socket.io interface. This implementation relies on named-events, acknowledgments, rooms and it does not make any assumption about the underlying transportation protocol.
-
-#### Description {#description}
-
-backbone-couchdb is a plugin for Backbone.js that takes care of synching (Backbone-) Models and Collections automatically with a CouchDB instance. It makes heavy use of CouchDBs built-in Couchapp functionality. Normally it would be necessary to set up a webserver and a webapp (Rails, Sinatra, Django...) in order to persist Models. But with this plugin it is only needed to host Backbone Apps as Couchapp and the persistence layer is ready out of the box.
-
-Since the App runs as a Couchapp, it is also capable of using the CouchDB \_changes-feed which enables the App to receive real-time updates for Collections and Models. If this functionality is not needed it can be turned off easily.
