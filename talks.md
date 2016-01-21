@@ -10,6 +10,16 @@ A list of some of the talks I did in the past on various conferences & events:
 
 ## 2015
 
+### [JavaScript what are you](https://www.youtube.com/watch?v=lJ1kY-CSpBk)
+
+A very special `talk` on the state of JavaScript in 2015 together with [Kahlil Lechelt](https://twitter.com/kahliltweets) and [Boris Lechelt](https://twitter.com/bonotes).
+
+<div>
+  <iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/lJ1kY-CSpBk" frameborder="0" allowfullscreen></iframe>
+</div>
+
+The code and music for this performance can be found on GitHub: https://github.com/NestedLoops/jsconf-2015.
+
 ### [Building collaborative & realtime applications with diffsync](http://janmonschke.com/diffsync-presentation)
 
 I implemented the [Differential Synchonization](https://neil.fraser.name/writing/sync/) algorithm in JavaScript which allows to build highly collaborative realtime applications easily. I gave this talk at [BerlinJS](http://berlinjs.org) in Berlin and at [Frontend Union Conf](http://frontend-union.co/) in Moscow. The code is open source and can be found on [Github](https://github.com/janmonschke/diffsync).
