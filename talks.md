@@ -18,7 +18,7 @@ A very special `talk` on the state of JavaScript in 2015 together with [Kahlil L
   <iframe class="video-embed" width="560" height="315" src="https://www.youtube.com/embed/lJ1kY-CSpBk" frameborder="0" allowfullscreen></iframe>
 </div>
 
-The code and music for this performance can be found on GitHub: https://github.com/NestedLoops/jsconf-2015.
+The code and music for this performance can be found on GitHub: <https://github.com/NestedLoops/jsconf-2015>.
 
 ### [Building collaborative & realtime applications with diffsync](http://janmonschke.com/diffsync-presentation)
 
