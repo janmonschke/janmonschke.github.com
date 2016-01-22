@@ -1,6 +1,6 @@
 ---
 project_name: backbone-couchdb
-title: backbone-couchdb -- Give your Couchapp some Backbone!
+title: backbone-couchdb - Give your Couchapp some Backbone!
 repository : http://github.com/janmonschke/backbone-couchdb
 version: 1.2
 layout: project

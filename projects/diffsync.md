@@ -1,6 +1,6 @@
 ---
 project_name: diffsync
-title:  diffsync -- real-time collaborative editing of arbitrary JSON objects using the diferntial synchronization algorithm
+title:  diffsync - real-time collaborative editing of arbitrary JSON objects using the differntial synchronization algorithm
 repository : https://github.com/janmonschke/diffsync
 version: 2.0.1
 layout: project

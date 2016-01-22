@@ -5,7 +5,7 @@ author: Jan Monschke
 draft: true
 ---
 
-The story of how we created the web-based audiovisual perfomance for JSConf.eu 2015. 
+The story of how we created the web-based audiovisual performance for JSConf.eu 2015.
 
 [[VIDEO]]
 
@@ -19,7 +19,7 @@ In 2015 I formed the Web Audio Berlin meetup to gather Web Audio developers and 
 
 A few days later though, I saw a very interesting tweet in my timeline from Kahlil Lechelt, whom I met at JSConf.eu the year before and whom I knew from his various podcasts (Descriptive, Reactive). He shared a music video from the time before he was a full-time developer, where he was a full-time dancehall artist. I could not stop myself from inviting him to join Adam and me. It was the perfect timing! Now we had two music programmers and one rapper, ready to rock a stage! So we began to meet up on Slack and talk about potential performance ideas. It really felt like we just created a band and we were dicussing musical styles, music that influenced us and our musical background. Truly some of the best Skype calls I ever had :)
 
-This was XX months before JSConf.eu and we saw that we didn't have time to come up with a completely new song plus lyrics plus visuals so Kahlil proposed to use some of his brother's (Boris) beats to start with. Boris and Kahlil made music together before and while listening to the beats it was immediately obvious how well they would work together with Kahlil's raps, even though they sounded a bit too gloomy/dark to me in the beginning ;) 
+This was XX months before JSConf.eu and we saw that we didn't have time to come up with a completely new song plus lyrics plus visuals so Kahlil proposed to use some of his brother's (Boris) beats to start with. Boris and Kahlil made music together before and while listening to the beats it was immediately obvious how well they would work together with Kahlil's raps, even though they sounded a bit too gloomy/dark to me in the beginning ;)
 
 Sadly, Adam had to leave the group later on due to high workload but Kahlil convinced Boris to join our group. I still wonder now what Boris might have thought when he Kahlil asked him. I mean, his background is in architecture and I'm not talking about software architects here. I imagine it to be a rather ineresting request to perform music at a conference in a field that I don't know much about. Especially when you are not a full-time musician ;) It was fun to explain him the concept of JSConf.eu and to show him previous performances (Jed Schmidt, Jan Krutisch). I guess at that time it was still weird for him because conferences in architecture seem to have a pretty different vibe to them and normally don't open up with a hip hop act :D
 
