@@ -1,5 +1,5 @@
 ---
-title: Building a game with React Native: pt. 1 Let's get it started
+title: Building a game with React Native - 01 Getting started
 layout: post
 author: Jan Monschke
 draft: true
