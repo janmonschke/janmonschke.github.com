@@ -117,6 +117,3 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   rouge
-
-BUNDLED WITH
-   1.10.6
