@@ -42,7 +42,7 @@ Before we can start, you need to setup a new React Native project. The [official
 
 Oh, and I can highly recommend to also install `watchman`, one of the optional dependencies. It really sped up the development process a lot behind the scenes. `Flow` is not needed for this course as I'm not using it in my projects...yet 😉.
 
-Once everything is set up, create a new React Native project from the command line: `react-native init ReactNativeGame`. Enjoy your ☕️-break, this command takes ages to finish. If you feel like the command froze, abort it and rerun it with the `--verbose` flag.
+Once everything is set up, create a new React Native project from the command line: `react-native init ReactNativeGame`. Enjoy your ☕️ break, this command takes ages to finish. If you feel like the command froze, abort it and rerun it with the `--verbose` flag.
 
 When the install process has finished you can start the JavaScript packager (and watcher) with `react-native start`. Then you can run the example project in a phone simulator with either `react-native run-ios` or `react-native run-android`. Again, this command takes some time on first run, because it triggers the native compilation of the application shell (reminder: native compilation takes some time). Luckily this step only needs to be executed once. From then on, you will mostly only need to recompile the JavaScript part of your application. If you have set up the mobile simulators correctly, they should show this screen:
 
@@ -63,6 +63,8 @@ And yes, you might have guessed it already, you can style elements with a very C
 Now let's get familiar with the React Native workflow. Go ahead and change some of the strings on that screen. On iOS you can refresh the app with `CMD + r` and on Android via the developer menu (press the simulator's menu button). The files are compiled in the background and a refresh will load the new versions. That is pretty much the most basic web workflow. But navigating to the dev menu on Android and hitting `CMD + r` on iOS is already too much work if you're asking me. That's why there is also a live-reload mode in React Native that can be enabled via the dev menu as well (open it with `CMD + d` on iOS). Now the app gets refreshed every time we save a file. Now isn't that handy?
 
 There's one more thing, though. React Native also supports Hot Module Reloading! 🔥 One 'problem' with live-reload is, that every time it is refreshed , the app loses it's state and also navigates back to the index. Live-reloading is already a massive workflow-improvement but changing a component that is deeply nested in your app can become tedious. Hot Module Reloading (HMR), magically __(actually, it's not real magic ✨)__, injects your changed component into the live application. No need to refresh, no live-reload. The code is loaded into your live-components invisibly. Now compare this to the native mobile development workflow that I described above! It's magic...kind of! 😍 If you haven't found it yet, you can enable HMR from the device's dev menu as well.
+
+That's it for this post. Next time we'll build the first real screen for our app. In the meantime check out the official React Native documentation. Especially the part where they describe the available components and APIs. See you next time!
 
 ## Appendix: JS-style (we'll use classes and import and all that fancy stuff)
 
