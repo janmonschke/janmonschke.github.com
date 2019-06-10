@@ -1,5 +1,42 @@
 import React from 'react';
 import ExternalLink from './ExternalLink';
+import { rhythm } from '../utils/typography';
+
+export default function Talks() {
+  return (
+    <ul style={{ listStyle: 'none', margin: 0 }}>
+      {talks.map(({ name, conferences, slides }) => (
+        <li key={name} style={{ marginBottom: rhythm(1) }}>
+          <div style={{ fontSize: rhythm(0.7), fontWeight: 500 }}>
+            {name}{' '}
+            {slides && <ExternalLink href={slides}>(Slides)</ExternalLink>}
+          </div>
+          <ul style={{ marginTop: 0 }}>
+            {conferences.map(({ name, video, location }) => (
+              <li
+                key={name}
+                style={{
+                  marginBottom: rhythm(0.1)
+                }}
+              >
+                {video && (
+                  <ExternalLink href={video}>
+                    {name} · {location}
+                  </ExternalLink>
+                )}
+                {!video && (
+                  <React.Fragment>
+                    {name} · {location}
+                  </React.Fragment>
+                )}
+              </li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 const slidePrefix = 'https://janmonschke.com';
 const talks = [
@@ -47,7 +84,7 @@ const talks = [
     ]
   },
   {
-    name: 'Nested Loops: PEOPLE GOT MAD',
+    name: '🎶 Nested Loops: PEOPLE GOT MAD',
     conferences: [
       {
         name: 'JSConf EU 2017',
@@ -68,7 +105,7 @@ const talks = [
     ]
   },
   {
-    name: 'Nested Loops: JavaScript, what are you?',
+    name: '🎶 Nested Loops: JavaScript, what are you?',
     conferences: [
       {
         name: 'JSConf EU 2015',
@@ -121,34 +158,3 @@ const talks = [
     conferences: [{ name: 'BerlinJS 2012', location: 'Berlin, Germany' }]
   }
 ];
-
-export default function Talks() {
-  return (
-    <ul>
-      {talks.map(({ name, conferences, slides }) => (
-        <li key={name}>
-          <div>
-            {name}{' '}
-            {slides && <ExternalLink href={slides}>(Slides)</ExternalLink>}
-          </div>
-          <ul>
-            {conferences.map(({ name, video, location }) => (
-              <li key={name}>
-                {video && (
-                  <ExternalLink href={video}>
-                    {name} · {location}
-                  </ExternalLink>
-                )}
-                {!video && (
-                  <React.Fragment>
-                    {name} · {location}
-                  </React.Fragment>
-                )}
-              </li>
-            ))}
-          </ul>
-        </li>
-      ))}
-    </ul>
-  );
-}
