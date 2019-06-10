@@ -50,7 +50,8 @@ function IndexPost({ node }) {
     <div key={node.fields.slug}>
       <h3
         style={{
-          marginTop: rhythm(1.5)
+          marginTop: rhythm(1.5),
+          marginBottom: 0
         }}
       >
         <Link to={node.fields.slug}>{title}</Link>
