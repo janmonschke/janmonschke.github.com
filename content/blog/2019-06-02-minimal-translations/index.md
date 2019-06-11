@@ -1,7 +1,7 @@
 ---
-title: Building a minimal translation library
+title: Building a minimal i18n library
 type: blog
-path: building-a-minimal-translation-library
+path: building-a-minimal-i18n-library
 date: 2019-06-10
 pomodoros: 8
 keywords: ['JavaScript', 'i18n', 'library', 'tutorial']
@@ -11,7 +11,7 @@ I am currently building the website for [my wedding next year](https://twitter.c
 
 From work I know about the significance of internationalization (i18n) but also about the complexity of the topic. Which is why I started to look for libraries that were lightweight and easy to use. I quickly found myself in a deep rabbit hole, comparing the feature set of the big libraries like [Format.js](https://formatjs.io/), [i18next](https://github.com/i18next/i18next) and small ones like [polyglot.js](https://github.com/airbnb/polyglot.js). `Format.js` would be my go-to solution for a production app but I found that its setup and the translation format would be overkill for my tiny website. The same was true for `i18next`. Even `polyglot.js` offered too much functionality (e.g. support for all kinds of pluralizations that I knew I did not have to support) for what I needed.
 
-At that point I took a step back and began to formulate the structure for a translation library that would suit my minimal requirements. What I essentially needed was a function that, when given a translation key, would return a string translated in the users language.
+At that point I took a step back and began to formulate the structure for an i18n library that would suit my minimal requirements. What I essentially needed was a function that, when given a translation key, would return a string translated in the users language.
 
 ```js
 t('bus_tickets');
@@ -209,10 +209,10 @@ In order to use translations in your views, simply call the `t` function with yo
 
 You can use the library with any JavaScript framework that you like. In my case it's `React`, but it would work just as good with `Vue.js`, `Angular` or whichever hto new JS framework there is these days (`Backbone` anyone? 😉).
 
-Check out this [Glitch project](https://minimal-translation-library.glitch.me/) for an example project and find the code on GitHub: https://github.com/janmonschke/minimal-translations.
+Check out this [Glitch project](https://glitch.com/~minimal-i18n-library) for an example project and find the code on GitHub: https://github.com/janmonschke/minimal-i18n.
 
 ## Wrapping up
 
-Did I save time by skipping the setup of one of the established translation libraries by writing my own library? Most probably not 😄! But I did learn a lot about internationalization in general and feel like I have a lot more empathy now with users that use translated products and that have to deal with woring translations constantly. I feel like I will pay a lot more attention to how I use translations at work now.
+Did I save time by skipping the setup of one of the established i18n libraries by writing my own library? Most probably not 😄! But I did learn a lot about internationalization in general and feel like I have a lot more empathy now with users that use translated products and that have to deal with wrong translations constantly. I feel like I will pay a lot more attention to how I use translations at work now.
 
 Once more: the library was only built for a tiny website and mainly for educational purposes so please don't use it in your production projects. Depending on how you use the library, it's a potential source for XSS attacks and there are plenty of basic features that it does not support yet (e.g. multiple plurals in a single sentence).
