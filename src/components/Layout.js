@@ -1,7 +1,12 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
+
+import favicon from '../images/favicon.ico';
+import favicon16 from '../images/favicon-16x16.png';
+import favicon32 from '../images/favicon-32x32.png';
 
 class Layout extends React.Component {
   render() {
@@ -59,6 +64,27 @@ class Layout extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`
         }}
       >
+        <Helmet
+          link={[
+            {
+              rel: 'shortcut icon',
+              type: 'image/x-icon',
+              href: `${favicon}`
+            },
+            {
+              rel: 'icon',
+              type: 'image/png',
+              sizes: '16x16',
+              href: `${favicon16}`
+            },
+            {
+              rel: 'icon',
+              type: 'image/png',
+              sizes: '32x32',
+              href: `${favicon32}`
+            }
+          ]}
+        />
         {header}
         {children}
       </div>
