@@ -49,7 +49,8 @@ class BlogPostTemplate extends React.Component {
               marginBottom: rhythm(1 / 2)
             }}
           >
-            🍅 It took {pomodoros} pomodoros to write this post 🍅
+            🍅 It took {pomodoros} {pomodoros === 1 ? 'pomodoro' : 'pomodoros'}{' '}
+            to write this post 🍅
           </p>
         )}
         <hr
