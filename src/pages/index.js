@@ -38,7 +38,9 @@ export default function BlogIndex({ data, location }) {
         </a>
       </div>
       {posts.map(IndexPost)}
-      <h2 style={{ margin: 0, marginBottom: rhythm(1) }}>Talks</h2>
+      <h2 style={{ margin: 0, marginBottom: rhythm(1) }} id="talks">
+        Talks
+      </h2>
       <Talks />
     </Layout>
   );
