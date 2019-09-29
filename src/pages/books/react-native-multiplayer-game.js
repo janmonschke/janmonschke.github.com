@@ -78,7 +78,7 @@ export default function ReactNativeMultiplayerGame() {
             Enter your email address:
           </label>
           <input
-            type="text"
+            type="email"
             name="email"
             id="tlemail"
             className="reactNativeMGBook__email"
