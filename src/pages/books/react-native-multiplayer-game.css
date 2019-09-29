@@ -1,3 +1,14 @@
+.reactNativeMGBook {
+  padding: 1em;
+  margin-top: 1em;
+  max-width: 650px;
+  margin: 1em auto 0 auto;
+}
+
+.reactNativeMGBook__top {
+  text-align: center;
+}
+
 .reactNativeMGBook__bg {
   content: '';
   display: block;
@@ -11,4 +22,94 @@
   opacity: 0.1;
   z-index: -1;
   pointer-events: none;
+}
+
+.reactNativeMGBook__headline {
+  margin-top: 0;
+  margin-bottom: 0.3em;
+}
+
+.reactNativeMGBook__subHeadline {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.reactNativeMGBook__coverAndFacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.reactNativeMGBook__cover {
+  width: 220px;
+  margin-right: 1em;
+}
+
+.reactNativeMGBook__factsIntro {
+  margin-bottom: 0.5em;
+  display: none;
+}
+
+.reactNativeMGBook__factsList {
+  margin-bottom: 0.3em;
+}
+
+.reactNativeMGBook__newsletterLabel {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.reactNativeMGBook__email,
+.reactNativeMGBook__subscribe {
+  height: 2.3em;
+}
+
+.reactNativeMGBook__email {
+  padding-left: 0.5em;
+}
+
+.reactNativeMGBook__subscribe {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background-color: rgba(252, 136, 125, 1);
+}
+
+.reactNativeMGBook__subscribe:focus,
+.reactNativeMGBook__subscribe:hover {
+  background-color: rgb(212, 75, 66);
+}
+
+@media (max-width: 650px) {
+  .reactNativeMGBook {
+    margin-top: 2em;
+    max-width: 400px;
+  }
+
+  .reactNativeMGBook__headline {
+    font-size: 1.5em;
+  }
+
+  .reactNativeMGBook__subHeadline {
+    font-size: 1.1em;
+  }
+
+  .reactNativeMGBook__coverAndFacts {
+    flex-direction: column;
+  }
+
+  .reactNativeMGBook__factsIntro {
+    display: block;
+  }
+
+  .reactNativeMGBook__cover {
+    width: 300px;
+  }
+
+  .reactNativeMGBook__email,
+  .reactNativeMGBook__subscribe {
+    display: block;
+    width: 100%;
+  }
 }
