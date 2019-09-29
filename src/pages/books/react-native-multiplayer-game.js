@@ -2,10 +2,17 @@ import React from 'react';
 import cover from './assets/react-native-multiplayer-game-cover-v3.png';
 import Bio from '../../components/Bio';
 import './react-native-multiplayer-game.css';
+import SEO from '../../components/SEO';
 
 export default function ReactNativeMultiplayerGame() {
   return (
     <div className="reactNativeMGBook">
+      <SEO
+        title="Build a multiplayer game with React Native and Firebase"
+        description="Learn the basics of React Native and
+      Firebase that you will need to build a fun mobile
+      multiplayer puzzle game."
+      />
       <div className="reactNativeMGBook__bg"></div>
       <div className="reactNativeMGBook__top">
         <h1 className="reactNativeMGBook__headline">
@@ -24,7 +31,7 @@ export default function ReactNativeMultiplayerGame() {
         </h2>
       </div>
       <p>
-        The book teaches the basics of <strong>React Native</strong> and{' '}
+        This book teaches the basics of <strong>React Native</strong> and{' '}
         <strong>Firebase</strong> that you will need to build a fun mobile
         multiplayer puzzle game. You will also learn how to build your own{' '}
         <strong>server</strong> for your app.
