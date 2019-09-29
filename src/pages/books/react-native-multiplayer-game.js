@@ -1,5 +1,6 @@
 import React from 'react';
 import cover from './assets/react-native-multiplayer-game-cover-v3.png';
+import Bio from '../../components/Bio';
 import './react-native-multiplayer-game.css';
 
 export default function ReactNativeMultiplayerGame() {
@@ -90,6 +91,9 @@ export default function ReactNativeMultiplayerGame() {
           />
         </form>
       </div>
+
+      <hr />
+      <Bio />
     </div>
   );
 }

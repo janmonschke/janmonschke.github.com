@@ -67,12 +67,14 @@
 
 .reactNativeMGBook__email {
   padding-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .reactNativeMGBook__subscribe {
   cursor: pointer;
   border: none;
   color: #fff;
+  padding: 0 1.5em;
   background-color: rgba(252, 136, 125, 1);
 }
 
@@ -111,5 +113,9 @@
   .reactNativeMGBook__subscribe {
     display: block;
     width: 100%;
+  }
+
+  .reactNativeMGBook__email {
+    margin-right: 0;
   }
 }
