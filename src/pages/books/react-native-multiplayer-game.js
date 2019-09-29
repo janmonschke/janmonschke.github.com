@@ -12,6 +12,12 @@ export default function ReactNativeMultiplayerGame() {
         description="Learn the basics of React Native and
       Firebase that you will need to build a fun mobile
       multiplayer puzzle game."
+        meta={[
+          {
+            name: 'og:image',
+            content: cover
+          }
+        ]}
       />
       <div className="reactNativeMGBook__bg"></div>
       <div className="reactNativeMGBook__top">
