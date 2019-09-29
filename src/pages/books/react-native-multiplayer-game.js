@@ -4,6 +4,8 @@ import Bio from '../../components/Bio';
 import './react-native-multiplayer-game.css';
 import SEO from '../../components/SEO';
 
+const fullCoverUrl = location.origin + cover;
+
 export default function ReactNativeMultiplayerGame() {
   return (
     <div className="reactNativeMGBook">
@@ -15,7 +17,7 @@ export default function ReactNativeMultiplayerGame() {
         meta={[
           {
             name: 'og:image',
-            content: cover
+            content: fullCoverUrl
           }
         ]}
       />
