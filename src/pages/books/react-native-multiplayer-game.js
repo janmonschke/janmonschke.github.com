@@ -85,7 +85,7 @@ export default function ReactNativeMultiplayerGame() {
             <span aria-hidden role="presentation">
               🎉
             </span>{' '}
-            when the book is released by signing up for the newsletter:
+            when the book is released by subscribing to the newsletter:
           </p>
 
           <div>
@@ -110,7 +110,7 @@ export default function ReactNativeMultiplayerGame() {
               <input type="hidden" value="1" name="embed" />
               <input
                 type="submit"
-                value="Subscribe"
+                value="Receive book updates"
                 className="reactNativeMGBook__subscribe"
               />
             </form>
