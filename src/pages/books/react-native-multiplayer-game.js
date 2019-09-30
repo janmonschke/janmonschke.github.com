@@ -22,9 +22,7 @@ export default function ReactNativeMultiplayerGame() {
         <div className="reactNativeMGBook">
           <SEO
             title="Build a multiplayer game with React Native and Firebase"
-            description="Learn the basics of React Native and
-      Firebase that you will need to build a fun mobile
-      multiplayer puzzle game."
+            description="Learn how to use React Native and Firebase to build a fun mobile multiplayer puzzle game."
             meta={[
               {
                 name: 'og:image',
@@ -50,9 +48,9 @@ export default function ReactNativeMultiplayerGame() {
             </h2>
           </div>
           <p>
-            This book teaches the basics of <strong>React Native</strong> and{' '}
-            <strong>Firebase</strong> that you will need to build a fun mobile
-            multiplayer puzzle game. You will also learn how to build your own{' '}
+            This book teaches you how to use <strong>React Native</strong> and{' '}
+            <strong>Firebase</strong> to build a fun mobile multiplayer puzzle
+            game. You will also learn how to build your own{' '}
             <strong>server</strong> for your app.
           </p>
           <div className="reactNativeMGBook__coverAndFacts">
