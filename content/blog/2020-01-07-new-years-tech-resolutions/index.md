@@ -2,7 +2,7 @@
 title: Changes
 type: draft
 keywords: ['#deletefacebook', 'privacy', 'Firefox']
-date: 2020-01-05
+date: 2020-01-07
 pomodoros: 2
 ---
 
