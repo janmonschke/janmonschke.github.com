@@ -4,7 +4,7 @@ type: draft
 path: 2019-favorite-tech-podcasts
 keywords: ['podcasts', 'react', 'tech']
 date: 2019-10-09
-pomodoros: 2
+pomodoros: 3
 ---
 
 ## Tech podcasts
@@ -19,22 +19,19 @@ pomodoros: 2
 
   - Bonus podcast about cyber security topics: [Breach](https://www.carbonite.com/podcasts/breach/). A more narrative podcast that has currently two seasons, one in which they talk about the Yahoo hacks and one where they go into detail on the Equifax breach. The reporting in the 2nd season was so good, it actually shook me a lot.
 
-- **[Reply-All](https://gimletmedia.com/shows/reply-all)**
+- **[The Entrepreneurial Coder](https://www.ecpodcast.io/)** is the newest edition to my podcast list. On this interview-style podcast, the host interviews other developers about their journey into being self-employed or becoming educators in tech. I love this show because the guests are sharing in detail why they have their own businesses and how they got there. Guests range from developers that offer courses, that wrote books or developers that created their own products and companies and work on them full-time now. My favorite episodes are the ones with Chris Ferdinandi, the author of [GoMakeThings](https://gomakethings.com/) and [Vanilla JS academy](https://vanillajsacademy.com/) ([ep. Building an Audience by Being Consistent](https://www.ecpodcast.io/episodes/11-chris-ferdinandi-building-an-audience-by-being-consistent)), and the episode with Adam Wathan, the author of [Refactoring UI](https://refactoringui.com/) ([ep. Creating and Launching Courses for Developers](https://www.ecpodcast.io/episodes/adam-wathan-creating-and-launching-courses-for-developers)). Episodes are typically around an hour long.
 
-  - The founder: https://gimletmedia.com/shows/reply-all/dvhd9k/136-the-founder
-  - The SnapChat thief: https://gimletmedia.com/shows/reply-all/49ho5a/130-the-snapchat-thief
+## Non-tech podcasts
 
-- **[The Entrepreneurial Coder](https://www.ecpodcast.io/)**
+- **[Reply-All](https://gimletmedia.com/shows/reply-all)** is not a tech podcast in the sense of the other ones mentioned above but it still focuses on tech topics but not more the sociological side of tech. All topics are related to internet culture and in each episode, they take a deep dive into a news story or they run an experiment/investigation themselves. My favorite episodes are about the story of Paul Le Roux ([ep. The Founder](https://gimletmedia.com/shows/reply-all/dvhd9k/136-the-founder)), a SnapChat thief and modern ways to fish people ([ep. The SnapChat thief](https://gimletmedia.com/shows/reply-all/49ho5a/130-the-snapchat-thief)) and their investigation into why some podcasts crash modern car stereo systems ([ep. The Roman Mars Mazda Virus](https://gimletmedia.com/shows/reply-all/brh8jm/140-the-roman-mars-mazda-virus)). Episodes are half an hour to an hour long.
 
-  - https://www.ecpodcast.io/episodes/11-chris-ferdinandi-building-an-audience-by-being-consistent
-  - https://www.ecpodcast.io/episodes/adam-wathan-creating-and-launching-courses-for-developers
+- **[Planet Money](https://www.npr.org/podcasts/510289/planet-money)** a super well produced podcast about money, the economy and it's influence on society and each one of us individually. While economic topics might sound boring to a lot of people, this podcast makes these topics approachable with humor and great story-telling. Ever since my friend [Nik Graf](https://twitter.com/nikgraf) recommended this podcast to me at React Conf 2016, I've been a subscriber and listen to their newest episodes almost every week! My highlight episodes are the ones about India getting rid of most of their cash ([ep. 770](https://www.npr.org/2019/09/25/764433918/episode-770-when-indias-cash-disappeared)), the invention of Duty Free ([ep. 841](https://www.npr.org/sections/money/2018/05/11/610516972/episode-841-the-land-of-duty-free)) and their visit to the Libertarian summer camp ([ep. 286](https://www.npr.org/sections/money/2017/06/28/534735727/episode-286-libertarian-summer-camp)). Episodes are usually 20min to half an hour long.
 
-* List podcasts
+- List podcasts
   - Describe podcasts in a couple of sentences, link to their pages
   - non-tech
-    - planet money
     - the habitat
-* When do I listen to podcasts?
+- When do I listen to podcasts?
   - Cooking
   - Commute
-* Shoutout to Nik Graf and Carolyne Stransky
+- Shoutout to Nik Graf and Carolyne Stransky
