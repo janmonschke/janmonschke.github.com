@@ -1,11 +1,15 @@
 ---
 title: My favorite (tech) podcasts
-type: draft
-path: 2019-favorite-tech-podcasts
+type: blog
+path: favorite-tech-podcasts-2019
 keywords: ['podcasts', 'react', 'tech']
 date: 2019-10-09
-pomodoros: 3
+pomodoros: 4
 ---
+
+I noticed that I've been listening to podcasts more and more over the last years. Some of them I listen to for pure entertainment, some of them I use to learn new things and trends in software development. I often talk about my favorite podcasts with friends and coworkers and they always want to know about other podcasts that I could share with them which is why I want to share these podcasts with you all now. Below you'll find my current top 10 podcasts, enjoy! 🎉
+
+If your favorite podcast is missing on this list, I would love to [hear about it](/contact)!
 
 ## Tech podcasts
 
@@ -27,11 +31,6 @@ pomodoros: 3
 
 - **[Planet Money](https://www.npr.org/podcasts/510289/planet-money)** a super well produced podcast about money, the economy and it's influence on society and each one of us individually. While economic topics might sound boring to a lot of people, this podcast makes these topics approachable with humor and great story-telling. Ever since my friend [Nik Graf](https://twitter.com/nikgraf) recommended this podcast to me at React Conf 2016, I've been a subscriber and listen to their newest episodes almost every week! My highlight episodes are the ones about India getting rid of most of their cash ([ep. 770](https://www.npr.org/2019/09/25/764433918/episode-770-when-indias-cash-disappeared)), the invention of Duty Free ([ep. 841](https://www.npr.org/sections/money/2018/05/11/610516972/episode-841-the-land-of-duty-free)) and their visit to the Libertarian summer camp ([ep. 286](https://www.npr.org/sections/money/2017/06/28/534735727/episode-286-libertarian-summer-camp)). Episodes are usually 20min to half an hour long.
 
-- List podcasts
-  - Describe podcasts in a couple of sentences, link to their pages
-  - non-tech
-    - the habitat
-- When do I listen to podcasts?
-  - Cooking
-  - Commute
-- Shoutout to Nik Graf and Carolyne Stransky
+- **[Heaven's Gate](https://www.heavensgate.show/)** is a single season narrative podcast that is about the history of the Heaven's Gate cult. The host, Glynn Washington, who has also been part of another cult, explains the inner workings of this cult and interviews ex-members about their experiences. Each episode is told in a very captivating way and it once you start listening to it, it's hard to stop because you want to know how all the pieces come together at the end. This podcast was recommended to me by my dear friend [Jeremy](https://twitter.com/jypyk).
+
+- **[The Habitat](https://gimletmedia.com/shows/the-habitat)** was recommended to me by [Carolyn](https://twitter.com/carolstran) and I binged it in just a couple of days. The show follows people that lived in a real-world Mars habitat on planet earth for a year. Goal of this experiment was to find out how life on Mars might be like. It's only a single season of six episodes of which each is around 30min long.
