@@ -7,7 +7,7 @@ date: 2019-10-09
 pomodoros: 4
 ---
 
-Over the last years I've been listening to podcasts more and more podcastst. Some of them I listen to for pure entertainment, some of them I use to learn about new things and trends in software development.
+Over the last years I've been listening to podcasts more and more. Some of them I listen to for pure entertainment, some of them I use to learn about new things and trends in software development.
 
 I often talk about my favorite podcasts with friends and coworkers and they always want to know about other podcasts that I could share with them which is why I want to share these podcasts with you all now. Below you'll find my current top 10 podcasts, enjoy! 🎉
 
