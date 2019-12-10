@@ -83,7 +83,7 @@ What's worse though is that, imagine we want to use the `name` key again for sto
 
 ## Versioning local data
 
-One fix for this is to add a `version` field to our local data, either from the beginning or from the point on where you are writing your first migration. This field can be used to correctly identify the version of the local data and to split up the complexity of our migration function into multiple smaller functions.
+One fix for this is to add a `version` field to our local data, either from the beginning or from the point on where you are writing your first migration. This field can be used to correctly identify the version of the local data and to split up the complexity of our migration function into multiple smaller functions:
 
 ```js
 // An object with all available version identifiers
@@ -109,7 +109,7 @@ const migrations = {
   })
 };
 
-// Looks at the version of the data and recursivelu
+// Looks at the version of the data and recursively
 // calls `migrate` until there are no more migrations
 // available.
 function migrate(input) {
@@ -131,3 +131,13 @@ const oldData = {
 // Outputs the migrated data at version 3
 console.log('migrated', migrate(oldData));
 ```
+
+If you compare the complexity of the functions in the `migrations` object above to the `migrate` function that we were looking at before it becomes clear how much simpler it will be to maintain migrations over time because you will only ever have to think about the migration of one version to the next one and never two or mutliple ones at the same time.
+
+The `migrate` function executes each of these functions in the correct order, until there are no more migrations available and at that time your data is migrated.
+
+- have to maintain the versions obj and the migrations obj
+- easy to test functions in isolation
+- scales for indexed DB
+- bonus, here's the tyescript version (uses only one `any` and one `as` cast :D)
+- using this in side projects and has been working great so far
