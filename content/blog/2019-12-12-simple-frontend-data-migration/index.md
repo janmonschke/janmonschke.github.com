@@ -123,9 +123,9 @@ function migrate(input) {
 
   if (!migrationFn) {
     return input;
-  } else {
-    return migrate(migrations[input.version](input));
   }
+
+  return migrate(migrations[input.version](input));
 }
 
 const oldData = {
