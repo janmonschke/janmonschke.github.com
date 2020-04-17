@@ -1,0 +1,17 @@
+/* Code blocks */
+pre[class*='language-'] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f0a6;
+  margin: 1.2em 0;
+}
+
+/* Inline code */
+:not(pre) > code[class*='language-'] {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: rgba(255, 241, 186, 0.5);
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+}

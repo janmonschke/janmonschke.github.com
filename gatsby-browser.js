@@ -3,6 +3,7 @@ import 'typeface-source-serif-pro';
 
 // syntax highlighting theme
 require('prismjs/themes/prism.css');
+require('./src/base.css');
 
 /* global window, document */
 const scrollTo = id => () => {
