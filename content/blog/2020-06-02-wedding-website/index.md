@@ -109,29 +109,41 @@ export function EmailForm() {
     valid: false
   });
   const [emailSent, setEmailSent] = useState(false);
+```
 
-  const onUpdate = useCallback(event => {
-    const { value } = event.currentTarget;
-    setEmail({
-      value,
-      isValid: emailRegex.test(value)
-    });
-  }, []);
+The component keeps track of the user's input and if the form has been submitted. The user input is validated with a regular expression so that users cannot submit invalid email addresses.
 
-  const onSubmit = useCallback(
-    event => {
-      event.preventDefault();
-      if (email.isValid) {
-        sendSignInLinkToEmail(email)
-          .then(() => setEmailSent(true))
-          .catch(error => {
-            alert('Could not sign you in', error);
-          });
-      }
-    },
-    [email]
-  );
+```jsx
+const onUpdate = useCallback(event => {
+  const { value } = event.currentTarget;
+  setEmail({
+    value,
+    isValid: emailRegex.test(value)
+  });
+}, []);
+```
 
+`onUpdate` takes care of syncing the component state with the user's actual input and running the 'validation'.
+
+```jsx
+const onSubmit = useCallback(
+  event => {
+    event.preventDefault();
+    if (email.isValid) {
+      sendSignInLinkToEmail(email)
+        .then(() => setEmailSent(true))
+        .catch(error => {
+          alert('Could not sign you in', error);
+        });
+    }
+  },
+  [email]
+);
+```
+
+`onSubmit` checks if the e-mail is valid, starts the sign-in process and triggers a UI update when the e-mail has been sent.
+
+```jsx
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -149,9 +161,9 @@ export function EmailForm() {
 }
 ```
 
-The component keeps track of the user's input and if the form has been submitted. The user input is validated with a regular expression so that users cannot submit invalid email addresses. `onUpdate` takes care of syncing the component state with the user's actual input. It does so for `onChange` to update when the input blurs, for `onKeyUp` to update the button's disabled state while typing and for `onInput` to update when input comes in from the browser's autocompletion.
+`onUpdate` is executed for `onChange` to update when the input blurs, for `onKeyUp` to update the button's disabled state while typing and for `onInput` to update when input comes in from the browser's autocompletion.
 
-If you add a little bit of CSS and some custom copy, the form will look something like:
+If you add a little bit of CSS and some custom copy, the form will look like this:
 
 ![sign-in form](./signin-form.png)
 
@@ -164,14 +176,14 @@ export function sendSignInLinkToEmail(email) {
   // when they open the link on the same device.
   window.localStorage.setItem('emailForSignIn', email);
 
-  const actionCodeSettings = {
+  const options = {
     // The URL you want to redirect back to. The domain for this
     // URL must be whitelisted in the Firebase Console.
     url: `${window.location.origin}/email-link`,
     handleCodeInApp: true
   };
 
-  return firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings);
+  return firebase.auth().sendSignInLinkToEmail(email, options);
 }
 ```
 
