@@ -7,7 +7,7 @@ date: 2020-04-17
 pomodoros: 4
 ---
 
-I have started to use [TailwindCSS](https://tailwindcss.com/) in a couple of side projects now to try out utility-based styling. All of these projects are regular [create-react-app](https://create-react-app.dev/) projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project's webpack config without ['ejecting'](https://create-react-app.dev/docs/available-scripts#npm-run-eject) your app. In this post I want to show how I have added TailwindCSS to my projects withouth ejecting.
+I have started to use [TailwindCSS](https://tailwindcss.com/) in a couple of side projects now to try out utility-based styling. All of these projects are regular [create-react-app](https://create-react-app.dev/) projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project's webpack config without ['ejecting'](https://create-react-app.dev/docs/available-scripts#npm-run-eject) your app. In this post I want to show how I have added TailwindCSS to my projects without ejecting.
 
 Ejecting from a create-react-app means you will lose the ability to easily update to newer versions of `react-scripts` but you will gain the ability to change config files like the webpack config. For side projects I try to not eject for as long as I can because I know I would spend a lot of time tweaking configs for no real reason. I like that with create-react-app I can focus on what I am building and I don't have to worry about config file.
 
