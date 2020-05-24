@@ -1,6 +1,6 @@
 ---
 title: Building a wedding RSVP website in React and Firebase
-type: draft
+type: blog
 path: building-a-wedding-rsvp-website-in-react-and-firebase
 keywords:
   [
@@ -11,11 +11,11 @@ keywords:
     'wedding',
     'rsvp',
     'website',
-    'firebase authentication',
-    'firebase firestore',
+    'authentication',
+    'cloud firestore',
   ]
 date: 2020-06-02
-pomodoros: 3
+pomodoros: 9
 ---
 
 Titles:
@@ -35,7 +35,7 @@ I could have deployed my own database and server for this project but I decided 
 
 Secondly, it comes with authentication built right in. And that was probably the most important reason for me because I really did not want to have to write a super secure and battle-tested authentication system that stores all my relative's and my friend's passwords. Sure, I could have used an open source project for this, but then I would have still needed to spend time on that and then we would be back at my first point for using Firebase: not having to build a backend system.
 
-Thirdly, Firebase offers Firestore, a real-time database. At first this might sound like a nice gimmick and nothing more but this feature was crucial for me to build a room booking service for our guests without a server 🤯.
+Thirdly, Firebase offers Cloud Firestore, a real-time database. At first this might sound like a nice gimmick and nothing more but this feature was crucial for me to build a room booking service for our guests without a server 🤯.
 
 On top of all that, you get these features for free for small websites and their documentation gets you up to speed super quickly!
 
@@ -99,22 +99,35 @@ In the `<SignIn />` component we are asking for the user's e-mail address and pr
 // routes/SignIn.js
 import React, { useCallback, useState } from 'react';
 
+// A simplified e-mail RegEx, please don't use it in production.
+// Use a better one e.g. from https://emailregex.com/.
+const emailRegex = /.+@.+\.\w+/;
+
 export function EmailForm() {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState({
+    value: '',
+    valid: false
+  });
   const [emailSent, setEmailSent] = useState(false);
 
   const onUpdate = useCallback(event => {
-    setEmail(event.currentTarget.value);
+    const { value } = event.currentTarget;
+    setEmail({
+      value,
+      isValid: emailRegex.test(value)
+    });
   }, []);
 
   const onSubmit = useCallback(
     event => {
       event.preventDefault();
-      sendSignInLinkToEmail(email)
-        .then(() => setEmailSent(true))
-        .catch(error => {
-          alert('Could not sign you in', error);
-        });
+      if (email.isValid) {
+        sendSignInLinkToEmail(email)
+          .then(() => setEmailSent(true))
+          .catch(error => {
+            alert('Could not sign you in', error);
+          });
+      }
     },
     [email]
   );
@@ -124,12 +137,11 @@ export function EmailForm() {
       <form onSubmit={onSubmit}>
         <input
           type="email"
-          name="email"
           onChange={onUpdate}
           onKeyUp={onUpdate}
           onInput={onUpdate}
         />
-        <button>Sign in</button>
+        <button disabled={!email.isValid}>Sign in</button>
       </form>
       {emailSent && <p>Check your mailbox for your sign-in link</p>}
     </div>
@@ -137,40 +149,47 @@ export function EmailForm() {
 }
 ```
 
+The component keeps track of the user's input and if the form has been submitted. The user input is validated with a regular expression so that users cannot submit invalid email addresses. `onUpdate` takes care of syncing the component state with the user's actual input. It does so for `onChange` to update when the input blurs, for `onKeyUp` to update the button's disabled state while typing and for `onInput` to update when input comes in from the browser's autocompletion.
+
 If you add a little bit of CSS and some custom copy, the form will look something like:
 
 ![sign-in form](./signin-form.png)
 
-- Explain why so many handlers on input
-- Feedback important to tell the user that it worked and what they have to do next
+It is important to give the user instructions on what to do next, because not everyone has come across a sign-in form that works without passwords. When the form is submitted, the Firebase authentication module is called from the `sendSignInLinkToEmail` method.
 
 ```js
 // data/sign-in.js
 export function sendSignInLinkToEmail(email) {
+  // Save the email locally so you don't need to ask the user for it again
+  // when they open the link on the same device.
+  window.localStorage.setItem('emailForSignIn', email);
+
   const actionCodeSettings = {
-    // URL you want to redirect back to. The domain for this
+    // The URL you want to redirect back to. The domain for this
     // URL must be whitelisted in the Firebase Console.
     url: `${window.location.origin}/email-link`,
     handleCodeInApp: true
   };
 
-  // Save the email locally so you don't need to ask the user for it again
-  // when they open the link on the same device.
-  localStorage.setItem('emailForSignIn', email);
-
   return firebase.auth().sendSignInLinkToEmail(email, actionCodeSettings);
 }
 ```
 
-- Explain code above
+This method does two import things:
 
-- Now talk about signinlink component
+1. It stores the user's email in local storage, which is important for identifying the user when they open the site from the sign-in link that they receive via e-mail
+2. It initiates the Firebase sign-in link authentication. For that, it tells Firebase the url of this website that the link should lead to. In our case that is `/email-link`. It is important that the domain for that URL is whitelisted in the Firebase console!
+
+You might wonder about the content of the e-mail that has been sent to the user because we have not provided neither an e-mail title, nor an e-mail text. And this is where this sign-in method falls short a bit because you cannot change the e-mail text. You can see the content of that e-mail in your Firebase console and you can change the sender's e-mail address but the text os off-limits for you. I am not sure why Firebase does not give you control over this text but I assume it has to do with spam-protection.
+
+The user should now have received a sign-in link e-mail via e-mail that leads them to `/email-link`, the final piece of the Firebase authentication puzzle.
 
 ```jsx
-// routes/SignInLink.js
+// routes/EmailLink.js
 import React, { useEffect, useState } from 'react';
+import { signInWithEmail } from '../data/sign-in';
 
-export function EmailRedirect() {
+export function EmailLink() {
   const [signedIn, setSignedIn] = useState(false);
 
   useEffect(() => {
@@ -185,25 +204,37 @@ export function EmailRedirect() {
         pathname: '/rsvp'
       }}
     />
-  ) : null;
+  ) : (
+    'Loading...'
+  );
 }
 ```
+
+The component for the `/email-link` route is pretty simple because all of the sign-in-related logic is abstracted within `signInWithEmail`. The main purpose of this component is to render a loading screen while the Firebase SDK authenticates the user and when the user is signed in, to redirect to the `/rsvp` route (that we have not built yet ;)).
 
 ```jsx
 // data/sign-in.js
 import { getOrCreateUser } from './user';
 
 export function signInWithEmail() {
-  const email = localStorage.getItem('emailForSignIn');
+  const email = window.localStorage.getItem('emailForSignIn');
 
   return firebase
     .auth()
     .signInWithEmailLink(email, window.location.href)
-    .then(function(result) {
-      return getOrCreateUser(result.user);
-    });
+    .then(result => getOrCreateUser(result.user));
 }
 ```
+
+In `signInWithEmail` we read out the email address the user has entered. We then pass it along with the current URL to the `signInWithEmailLink` method of the Firebase SDK. That method will then take care of checking of signing the user in. It is not explained how Firebase does this but I suspect they look at cookies that are set from the redirected sign-in link and compare them to query params that are passed to the current route.
+
+If all goes well, Firebase then returns a user object and the user is redirected to the actual RSVP website 🎉.
+
+## Firebase Cloud Firestore basics
+
+Before I talk about how I built the RSVP website, I would like to go over some of the basics for Firebase's Cloud Firestore database. The `user` object that we just received from the auth SDK is not actually stored in that database and its main purpose is to [represent a user's metadata](https://firebase.google.com/docs/reference/js/firebase.User#updateprofile) (e.g. a `displayName` or a `photoURL`). That information is not suitable to build our website so we need to transfer the user session object into our database.
+
+If you look at the previous code sample, you might notice the `getOrCreateUser` method. It takes the user session and creates a new user object in our database or it returns the user object for this session if a user with that id already exists. Let's have a closer look at how it does that:
 
 ```js
 // data/user.js
@@ -212,11 +243,19 @@ import firebase from './firebase';
 function usersCollection() {
   return firebase.firestore().collection('users');
 }
+```
 
+All users will be stored in a `collection` that we call `users`. You can think of a Firebase `collection` as a remote [Set](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Set) that maps user IDs to JSON objects. Collections also offer methods to search for objects and to return real-time updates about changes.
+
+```js
 function userDoc(userId) {
   return usersCollection().doc(userId);
 }
+```
 
+Objects that are stored in a `collection` are called `documents`. Think of them as `JSON Objects` for now. A document can be read from a collection by calling the `doc(id)` method.
+
+```js
 export function getOrCreateUser({ id, email }) {
   const userDocRef = userDoc(id);
   return userDocRef.get().then(user => {
@@ -229,6 +268,10 @@ export function getOrCreateUser({ id, email }) {
 }
 ```
 
+The `getOrCreateUser` method tries to fetch the user object with the provided id. The first time this method is executed, `user.exists` will be `false` because the user has just signed in and it did not exist in the database before. In that case the method then executes `userDocRef.set({ email })` which will create a new user document in the collection for the provided id. That document's content will only be the user's email address for now but we can use it later to attach more information to it.
+
+> If you have never worked with document-based databases before or your background is mainly in relational-databases, this might all look strange because at no point have we set up a database or defined a table structure. Cloud Firestore is a flexible database, meaning that it does not need a pre-defined structure. You can create collections on-the-fly and documents within a collection can have very different shapes.
+
 ## Building the RSVP form
 
 Now that our users are authenticated
@@ -238,6 +281,7 @@ show form, show code, explain, cool
 ## TODO:
 
 - shoot video of auth- and user-input-flow and attach to the beginning of the post
+- add e-mail list sign-up form?
 
 ## Next posts
 
