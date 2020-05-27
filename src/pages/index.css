@@ -1,0 +1,7 @@
+.contentContainer {
+  overflow: hidden;
+}
+
+.content {
+  transition: margin-top 300ms ease-in-out;
+}
