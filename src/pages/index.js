@@ -19,6 +19,7 @@ export default function BlogIndex({ data, location }) {
     talks: 0
   });
   const [contentMargin, setContentMargin] = useState(0);
+  const [current, setCurrent] = useState('posts');
 
   useLayoutEffect(() => {
     const talks = talksRef.current.offsetTop;
@@ -31,10 +32,12 @@ export default function BlogIndex({ data, location }) {
 
   const onTalksClicked = useCallback(() => {
     setContentMargin(elementPositions.talks);
+    setCurrent('talks');
   }, [elementPositions]);
 
   const onBlogPostsClicked = useCallback(() => {
     setContentMargin(0);
+    setCurrent('posts');
   }, []);
 
   return (
@@ -42,16 +45,32 @@ export default function BlogIndex({ data, location }) {
       <SEO title="Blog" keywords={keywords} />
       <div
         style={{
-          marginBottom: rhythm(1.5)
+          marginBottom: rhythm(0.8)
         }}
       >
         <Bio />
       </div>
-      <button onClick={onBlogPostsClicked}>Blog posts</button>
-      <button onClick={onTalksClicked}>Talks</button>
-      <div className="contentContainer">
+      <nav
+        className="index__nav"
+        aria-hidden={true}
+        style={{ marginBottom: rhythm(0.8), fontSize: rhythm(0.7) }}
+      >
+        <button
+          className={`${current === 'posts' ? 'm-current' : ''} index__navBtn`}
+          onClick={onBlogPostsClicked}
+        >
+          <span>Blog posts</span>
+        </button>
+        <button
+          className={`${current === 'talks' ? 'm-current' : ''} index__navBtn`}
+          onClick={onTalksClicked}
+        >
+          <span>Talks</span>
+        </button>
+      </nav>
+      <div className="index__contentContainer">
         <div
-          className="content"
+          className="index__content"
           style={{ transform: `translateY(${-contentMargin}px)` }}
         >
           <div className="posts">
@@ -116,7 +135,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { type: { eq: "blog" } } }
-      limit: 5
+      limit: 10
     ) {
       edges {
         node {

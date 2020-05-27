@@ -1,7 +1,38 @@
-.contentContainer {
+.index__nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.index__navBtn {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  color: #007acc;
+  padding: 0.5rem 1rem 0.2rem;
+}
+
+.index__navBtn span {
+  padding-bottom: 0.2rem;
+  border-bottom: 1.5px solid transparent;
+}
+
+.index__navBtn:first-child {
+  padding-left: 0;
+}
+
+.index__navBtn.m-current span {
+  border-bottom-color: #007acc;
+}
+
+.index__navBtn:hover {
+  color: #000;
+}
+
+.index__contentContainer {
   overflow: hidden;
 }
 
-.content {
+.index__content {
   transition: transform 300ms ease-in-out;
 }
