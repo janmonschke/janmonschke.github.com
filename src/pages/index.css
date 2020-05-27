@@ -25,7 +25,7 @@
   border-bottom-color: #007acc;
 }
 
-.index__navBtn:hover {
+.index__navBtn:not(.m-current):hover {
   color: #000;
 }
 
