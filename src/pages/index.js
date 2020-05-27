@@ -14,27 +14,23 @@ export default function BlogIndex({ data, location }) {
   const { title, keywords } = data.site.siteMetadata;
   const posts = data.allMarkdownRemark.edges;
   const talksRef = useRef();
-  const contentRef = useRef();
   const [elementPositions, setElementPositions] = useState({
-    content: 0,
     posts: 0,
     talks: 0
   });
   const [contentMargin, setContentMargin] = useState(0);
 
   useLayoutEffect(() => {
-    const content = contentRef.current.offsetTop;
     const talks = talksRef.current.offsetTop;
 
     setElementPositions({
-      content,
       talks,
       posts
     });
-  }, [talksRef, contentRef]);
+  }, [talksRef]);
 
   const onTalksClicked = useCallback(() => {
-    setContentMargin(elementPositions.talks - elementPositions.content);
+    setContentMargin(elementPositions.talks);
   }, [elementPositions]);
 
   const onBlogPostsClicked = useCallback(() => {
@@ -56,8 +52,7 @@ export default function BlogIndex({ data, location }) {
       <div className="contentContainer">
         <div
           className="content"
-          ref={contentRef}
-          style={{ marginTop: -contentMargin }}
+          style={{ transform: `translateY(${-contentMargin}px)` }}
         >
           <div className="posts">
             <div
