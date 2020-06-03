@@ -15,7 +15,7 @@ keywords:
     'cloud firestore',
   ]
 date: 2020-06-02
-pomodoros: 10
+pomodoros: 12
 ---
 
 Titles:
@@ -390,11 +390,71 @@ function RSVPForm({ user }) {
 }
 ```
 
-The form itself is kept rather simple. First we need to check if the user has already responded which, as described above, is the case when their `isComing` value is undefined. There are two radio inputs representing the RSVP options. When the user has not replied, none of them will be checked and if they have replied, the correct one will be checked by default. The form's `onChange` is responsible for calling the `setIsComing` callback which then updates the value in our Firestore database. Et voilà, the RSVP form is done!
+> In Firestore, a document's values can be read by calling it's `data()` method.
+
+The form itself is kept rather simple. First, we need to check if the user has already responded which, as described above, is the case when their `isComing` value is undefined. There are two radio inputs representing the RSVP options. When the user has not replied, none of them will be checked and if they have replied, the correct one will be checked by default. The form's `onChange` is responsible for calling the `setIsComing` callback which then updates the value in our Firestore database. Et voilà, the RSVP form is done!
 
 > The update of the RSVP will feel instantaneous to the user, because Firestore uses optimistic updates. That means that it will apply the change locally right after the interaction and then send the change request to the database. If the update fails, it will reset the local value to what it was before. `update` and `set` return `Promises` that you can use to react to database failures.
 
 ### Rendering the guest form
+
+As described before, we also want to ask our guests for all members of their party. We therefore need to implement two components. One to list a user's guests and one to add a new guest.
+
+```jsx
+// components/GuestList.jsx
+
+function GuestList({ user }) {
+  const [guests, setGuests] = useState([]);
+
+  useEffect(() =>
+    guestsCollection(user.id).onSnapshot({ docs } => setGuests(docs))
+  , [user]);
+```
+
+```jsx
+<ul>
+  {guests.map(guestRef => {
+    const { firstName, lastName, diet } = guestRef.data();
+
+    const name = `${firstName} ${lastName}`;
+    const display = `${name} - ${diet}`;
+
+    return (
+      <li key={guestRef.id}>
+        <span>{display}</span>
+        <button onClick={() => removeGuest(user.id, guestRef.id)}>X</button>
+      </li>
+    );
+  })}
+</ul>
+```
+
+```jsx
+<form onSubmit={this.addGuest} ref={form => (this.form = form)}>
+  <input
+    type="text"
+    ref={firstNameInput =>
+      (this.firstNameInput = firstNameInput && firstNameInput.input)
+    }
+    placeholder="First name"
+    required
+  />
+  <input
+    type="text"
+    ref={lastNameInput =>
+      (this.lastNameInput = lastNameInput && lastNameInput.input)
+    }
+    placeholder="Last name"
+    required
+  />
+  <input
+    type="text"
+    ref={dietInput => (this.dietInput = dietInput && dietInput.input)}
+    placeholder="Dietary requirements"
+  />
+  <input type="submit">Add guest</input>
+</form>
+```
 
 show form, show code, explain, cool
 
