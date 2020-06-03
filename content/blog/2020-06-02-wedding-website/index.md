@@ -15,7 +15,7 @@ keywords:
     'cloud firestore',
   ]
 date: 2020-06-02
-pomodoros: 9
+pomodoros: 10
 ---
 
 Titles:
@@ -354,10 +354,12 @@ In order to remove a guest, we first get a reference to the guest document from 
 // components/RSVPForm.jsx
 
 function RSVPForm({ user }) {
-  const setIsComing = useCallback(event =>
+  const setIsComing = useCallback(event => {
+    event.preventDefault();
     user.ref.update({
       isComing: event.target.value === 'coming';
-    })
+    });
+  }
   , [user]);
 ```
 
@@ -366,6 +368,8 @@ function RSVPForm({ user }) {
 > Document references also have a `set()` method but that one will change the structure of the document to whatever you are passing in as the first parameter and it's easy to accidentally override a document like that. If you wanted to achieve the above result with `set` you would have to call it with all values: `set({ ...user.data(), isComing: true })`.
 
 ```jsx
+  const { isComing } = user.data();
+  const hasRSVPed = isComing !== undefined;
   return (
     <form onChange={setIsComing}>
       <label>
@@ -385,6 +389,10 @@ function RSVPForm({ user }) {
   );
 }
 ```
+
+The form itself is kept rather simple. First we need to check if the user has already responded which, as described above, is the case when their `isComing` value is undefined. There are two radio inputs representing the RSVP options. When the user has not replied, none of them will be checked and if they have replied, the correct one will be checked by default. The form's `onChange` is responsible for calling the `setIsComing` callback which then updates the value in our Firestore database. Et voilà, the RSVP form is done!
+
+> The update of the RSVP will feel instantaneous to the user, because Firestore uses optimistic updates. That means that it will apply the change locally right after the interaction and then send the change request to the database. If the update fails, it will reset the local value to what it was before. `update` and `set` return `Promises` that you can use to react to database failures.
 
 ### Rendering the guest form
 
