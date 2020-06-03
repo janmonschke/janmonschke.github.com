@@ -280,13 +280,113 @@ export function getOrCreateUser({ id, email }) {
 }
 ```
 
-The `getOrCreateUser` method tries to fetch the user object with the provided id. The first time this method is executed, `user.exists` will be `false` because the user has just signed in and it did not exist in the database before. In that case the method then executes `userDocRef.set({ email })` which will create a new user document in the collection for the provided id. That document's content will only be the user's email address for now but we can use it later to attach more information to it.
+The `getOrCreateUser` method tries to fetch the user object with the id that is associated to the user's session. The first time this method is executed, `user.exists` will be `false` because the user has just signed in and it did not exist in the database before. In that case the method then executes `userDocRef.set({ email })` which will create a new user document in the collection for the provided id. That document's content will only be the user's email address for now but we can use it later to attach more information to it.
 
 > If you have never worked with document-based databases before or your background is mainly in relational-databases, this might all look strange because at no point have we set up a database or defined a table structure. Cloud Firestore is a flexible database, meaning that it does not need a pre-defined structure. You can create collections on-the-fly and documents within a collection can have very different shapes.
 
 ## Building the RSVP form
 
-Now that our users are authenticated
+Now that our guests are authenticated, we can build the actual RSVP form. This section is less about how to build a great looking website and is more focused on how to capture the user details and store them in Firebase.
+
+### Which data to capture
+
+So far we have managed to enable users to sign in and we can create and read user objects. The next step is to make a list of all the information that we need to know from our guests. In our case we want to know who is able to attend and who is not able to attend. For the guests that are able to attend we need to know about all the guests of their party. For each guest in their party we need to know their name and about food requirements that we need to accommodate for.
+
+On that basis, I came up with the following data structure:
+
+```json
+{
+  "id": "398heirfue8f7347fhe4fh8394hf",
+  "email": "johnathan@doe.com",
+  "isComing": true, // undefined -> unanswered
+  "guests": {
+    // sub-collection
+    "93283498h34r9384hr": {
+      "firstName": "John",
+      "lastName": "Doe",
+      "foodReq": "nut allergy"
+    }
+  }
+}
+```
+
+For each user account I am storing the user's email address and the `isComing` property that indicates if the user has replied to the RSVP (`isComing !== undefined`) and their RSVP response (`isComing === true/false`). It is important to not default `isComing` to `false` because that would result in many false-negative RSVP responses in the admin interface that we will build later.
+
+In addition to their RSVP response, we are storing our guest's `guests` in a sub-collection. In Firestore, each document is part of a collection but each document can also have collections of their own. This makes deleting and changing documents a lot easier than managing an array of guests. The guest document itself then is made up of a `firstName`, a `lastName` and an optional string explaining food requirements.
+
+### Creating and deleting users
+
+Before we implement the interface, let's quickly add some Firestore helpers to add an remove guests.
+
+```js
+// data/guests.js
+function guestsCollection(userId) {
+  return userDoc(userId).collection('guests');
+}
+```
+
+`userDoc` we already defined in an example above and we can reuse it here to get a reference to the `guests` collection of a user.
+
+```js
+export function addGuestToUser(guest, userId) {
+  return guestsCollection(userId).add({
+    ...guest,
+    userId
+  });
+}
+```
+
+Adding a guest to that collection can be done using the `add` method. Again, no schema is enforced here and we could add arbitrary objects to that collection.
+
+```js
+export function removeGuest(userId, guestId) {
+  return guestsCollection(userId)
+    .doc(guestId)
+    .delete();
+}
+```
+
+In order to remove a guest, we first get a reference to the guest document from the `guestsCollection` by calling the `doc(id)` method. That reference object has a `delete` function that we can then use to remove the guest.
+
+### Rendering the RSVP form
+
+```jsx
+// components/RSVPForm.jsx
+
+function RSVPForm({ user }) {
+  const setIsComing = useCallback(event =>
+    user.ref.update({
+      isComing: event.target.value === 'coming';
+    })
+  , [user]);
+```
+
+`setIsComing` is called when the `form` changes and it sets the user's `isComing` value based on the current value of the form. It does that by calling the `update` function of the user's document reference that is passed in to this component.
+
+> Document references also have a `set()` method but that one will change the structure of the document to whatever you are passing in as the first parameter and it's easy to accidentally override a document like that. If you wanted to achieve the above result with `set` you would have to call it with all values: `set({ ...user.data(), isComing: true })`.
+
+```jsx
+  return (
+    <form onChange={setIsComing}>
+      <label>
+        <input type="radio" name="isComing" value="coming" checked={isComing} />
+        Would love to come
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="isComing"
+          value="notComing"
+          checked={hasRSVPed && !isComing}
+        />
+        Can't make it
+      </label>
+    </form>
+  );
+}
+```
+
+### Rendering the guest form
 
 show form, show code, explain, cool
 
@@ -299,7 +399,7 @@ show form, show code, explain, cool
 
 1. Admin interface
 1. Using Firebase and React to build a hotel room booking system
-1. Managing Firebase database access with INSERT ACCESS SYSTEM NAME HERE
+1. Security: Managing Firebase database access, Routes that are only accessible by signed-in users
 
 - use playlist feature as example?
   - don't want to expose user's music taste to other users?
