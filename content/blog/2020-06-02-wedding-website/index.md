@@ -282,7 +282,7 @@ export function getOrCreateUser({ id, email }) {
 
 The `getOrCreateUser` method tries to fetch the user object with the id that is associated to the user's session. The first time this method is executed, `user.exists` will be `false` because the user has just signed in and it did not exist in the database before. In that case the method then executes `userDocRef.set({ email })` which will create a new user document in the collection for the provided id. That document's content will only be the user's email address for now but we can use it later to attach more information to it.
 
-> If you have never worked with document-based databases before or your background is mainly in relational-databases, this might all look strange because at no point have we set up a database or defined a table structure. Cloud Firestore is a flexible database, meaning that it does not need a pre-defined structure. You can create collections on-the-fly and documents within a collection can have very different shapes.
+> If you have never worked with document-based databases before or your background is mainly in relational-databases, this might all look strange because at no point have we set up a database or defined a table structure.<br/>Cloud Firestore is a flexible database, meaning that it does not need a pre-defined structure. You can create collections on-the-fly and documents within a collection can have very different shapes.
 
 ## Building the RSVP form
 
@@ -365,7 +365,7 @@ function RSVPForm({ user }) {
 
 `setIsComing` is called when the `form` changes and it sets the user's `isComing` value based on the current value of the form. It does that by calling the `update` function of the user's document reference that is passed in to this component.
 
-> Document references also have a `set()` method but that one will change the structure of the document to whatever you are passing in as the first parameter and it's easy to accidentally override a document like that. If you wanted to achieve the above result with `set` you would have to call it with all values: `set({ ...user.data(), isComing: true })`.
+> Document references also have a `set()` method but that one will change the structure of the document to whatever you are passing in as the first parameter and it's easy to accidentally override a document like that.<br/>If you wanted to achieve the above result with `set` you would have to call it with all values: `set({ ...user.data(), isComing: true })`.
 
 ```jsx
   const { isComing } = user.data();
@@ -411,6 +411,8 @@ function GuestList({ user }) {
   , [user]);
 ```
 
+The `GuestList` fetches the user's guest by calling `onSnapshot` on the `guestsCollection`. `onSnapshot` invokes a fetch from Firestore and will call the passed in function with the result. In our case, we are only interested in the `docs` of that result which will be stored in the component's state. `onSnapshot` is also called when the `guestsCollection` changes locally or remotely. I will go into more detail on remote real-time updates in the next posts.
+
 ```jsx
 <ul>
   {guests.map(guestRef => {
@@ -428,6 +430,10 @@ function GuestList({ user }) {
   })}
 </ul>
 ```
+
+For the actual rendering of the `GuestList` we are mapping over the guests and use the `data()` method to extract the information that we want to render. In this case we are rendering the full name and the dietary requirements in a list. Each guest also has a button next to them that allows our user to remove the guest. The button is using the `removeGuest()` function that we had defined before.
+
+//TODO: useReducer?
 
 ```jsx
 <form onSubmit={this.addGuest} ref={form => (this.form = form)}>
