@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Jan Monschke]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 24 May 2020 20:10:53 GMT</lastBuildDate><item><title><![CDATA[Setting up TailwindCSS in create-react-app]]></title><description><![CDATA[I have started to use TailwindCSS in a couple of side projects now to try out utility-based styling. All of these projects are regular…]]></description><link>https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</link><guid isPermaLink="false">https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</guid><pubDate>Fri, 17 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have started to use &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;TailwindCSS&lt;/a&gt; in a couple of side projects now to try out utility-based styling. All of these projects are regular &lt;a href=&quot;https://create-react-app.dev/&quot;&gt;create-react-app&lt;/a&gt; projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project’s webpack config without &lt;a href=&quot;https://create-react-app.dev/docs/available-scripts#npm-run-eject&quot;&gt;‘ejecting’&lt;/a&gt; your app. In this post I want to show how I have added TailwindCSS to my projects without ejecting.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[All blog posts]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 11 Jan 2021 22:29:11 GMT</lastBuildDate><item><title><![CDATA[Setting up TailwindCSS in create-react-app]]></title><description><![CDATA[I have started to use TailwindCSS in a couple of side projects now to try out utility-based styling. All of these projects are regular…]]></description><link>https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</link><guid isPermaLink="false">https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</guid><pubDate>Fri, 17 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have started to use &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;TailwindCSS&lt;/a&gt; in a couple of side projects now to try out utility-based styling. All of these projects are regular &lt;a href=&quot;https://create-react-app.dev/&quot;&gt;create-react-app&lt;/a&gt; projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project’s webpack config without &lt;a href=&quot;https://create-react-app.dev/docs/available-scripts#npm-run-eject&quot;&gt;‘ejecting’&lt;/a&gt; your app. In this post I want to show how I have added TailwindCSS to my projects without ejecting.&lt;/p&gt;
 &lt;p&gt;Ejecting from a create-react-app means you will lose the ability to easily update to newer versions of &lt;code class=&quot;language-text&quot;&gt;react-scripts&lt;/code&gt; but you will gain the ability to change config files like the webpack config. For side projects I try to not eject for as long as I can because I know I would spend a lot of time tweaking configs for no real reason. I like that with create-react-app I can focus on what I am building and I don’t have to worry about config file.&lt;/p&gt;
 &lt;p&gt;Now, adding TailwindCSS to a create-react-app project is not as straight forward as adding it to an existing webpack config, but it’s also not super complicated. I have seen several ways to do it and I am using a combination of two approaches that I have seen in other blog posts (linked to at the &lt;a href=&quot;#sources&quot;&gt;bottom of this article&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;First, you have to install TailwindCSS and PostCSS. PostCSS will be used to generate the actual TailwindCSS classes.&lt;/p&gt;
@@ -9,7 +9,7 @@
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; tailwindcss &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;tailwindcss&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  plugins&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;tailwindcss&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./tailwind.config.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;tailwindcss&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;./tailwind.config.js&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Next, we will create our TailwindCSS entry file (&lt;code class=&quot;language-text&quot;&gt;src/tailwind.css&lt;/code&gt;). In that file we can define which parts of TailwindCSS we want to use and how we want them to be configured. For now, we will use the basic setup which will include all of Tailwind’s utility classes:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token atrule&quot;&gt;&lt;span class=&quot;token rule&quot;&gt;@tailwind&lt;/span&gt; base&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/span&gt;
@@ -33,62 +33,63 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;
 &lt;p&gt;In addition to that, I can also advise you to set up &lt;code class=&quot;language-text&quot;&gt;purgecss&lt;/code&gt; for your project because the generated &lt;code class=&quot;language-text&quot;&gt;base.css&lt;/code&gt; is around 800 KB and you really don’t want to ship all of that CSS to your users. &lt;code class=&quot;language-text&quot;&gt;purgecss&lt;/code&gt; analyzes which CSS classes you’re using in your project and removes all unused class definitions from the generated CSS. This &lt;a href=&quot;https://tailwindcss.com/docs/controlling-file-size/#setting-up-purgecss&quot;&gt;great tutorial on the TailwindCSS website explains how to set it up in just a couple lines of code&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I hope you found my little tutorial helpful and I wish you lots of fun building your React apps with TailwindCSS 😊.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a name=&quot;example&quot;&gt;&lt;/a&gt;Example:&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/714aab83697dd98c3881174e9373bb69/31f8d/example-component.jpg&quot;
+    href=&quot;/static/714aab83697dd98c3881174e9373bb69/75474/example-component.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 98.29683698296837%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAIFAQMEBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHfw+izFSuVRBIH/8QAGxAAAgEFAAAAAAAAAAAAAAAAAQIDABMgITH/2gAIAQEAAQUCmDsxuJUErFD3eP8A/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFREBAQAAAAAAAAAAAAAAAAAAESD/2gAIAQIBAT8BI//EABsQAAEEAwAAAAAAAAAAAAAAAAABAhEhEiAi/9oACAEBAAY/AqyJ6LR2/wD/xAAaEAACAwEBAAAAAAAAAAAAAAABEQAQITGx/9oACAEBAAE/ISn2MM/dHG9hcXnAfBgADKWxV//aAAwDAQACAAMAAAAQtA8A/8QAFhEAAwAAAAAAAAAAAAAAAAAAESAh/9oACAEDAQE/EDE//8QAFhEAAwAAAAAAAAAAAAAAAAAAESAx/9oACAECAQE/EKKf/8QAHxABAQACAgEFAAAAAAAAAAAAAREAITFRcUFhgaGx/9oACAEBAAE/EFl0M0BL6TISHpL5p1gERY270dmVGnhckh939w42TENbvlyPfm8uDc//2Q==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 97.97297297297297%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAEFAgMEBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHfw+imKtbqiAyB/8QAGRABAQEAAwAAAAAAAAAAAAAAAgEDACAh/9oACAEBAAEFAtQ0rNRzBuiz3r//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAgEBPwEj/8QAGhAAAgIDAAAAAAAAAAAAAAAAABECIQEgMf/aAAgBAQAGPwKmNSLjnu//xAAbEAACAgMBAAAAAAAAAAAAAAABEQAhEDFRof/aAAgBAQABPyEyX3Cqnutw5VPTjNIAQKwg4hj/2gAMAwEAAgADAAAAEDQHAP/EABYRAAMAAAAAAAAAAAAAAAAAABEgIf/aAAgBAwEBPxAxP//EABYRAAMAAAAAAAAAAAAAAAAAABEgMf/aAAgBAgEBPxCin//EABsQAQADAAMBAAAAAAAAAAAAAAEAESExQWFx/9oACAEBAAE/EFPl1dgq+qmQwqo1zmoyHUNBeG6S0W/uyvAD7OtyLWTfs8u75hP/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Example component&quot;
-        title=&quot;&quot;
-        src=&quot;/static/714aab83697dd98c3881174e9373bb69/c739e/example-component.jpg&quot;
-        srcset=&quot;/static/714aab83697dd98c3881174e9373bb69/8ee9c/example-component.jpg 148w,
-/static/714aab83697dd98c3881174e9373bb69/ebbe7/example-component.jpg 295w,
-/static/714aab83697dd98c3881174e9373bb69/c739e/example-component.jpg 590w,
-/static/714aab83697dd98c3881174e9373bb69/31f8d/example-component.jpg 822w&quot;
+        title=&quot;Example component&quot;
+        src=&quot;/static/714aab83697dd98c3881174e9373bb69/1c72d/example-component.jpg&quot;
+        srcset=&quot;/static/714aab83697dd98c3881174e9373bb69/a80bd/example-component.jpg 148w,
+/static/714aab83697dd98c3881174e9373bb69/1c91a/example-component.jpg 295w,
+/static/714aab83697dd98c3881174e9373bb69/1c72d/example-component.jpg 590w,
+/static/714aab83697dd98c3881174e9373bb69/75474/example-component.jpg 822w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;&lt;/p&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; ReactDOM &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react-dom&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./base.css&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;render&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;max-w-sm rounded overflow-hidden shadow-lg&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+  &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;max-w-sm rounded overflow-hidden shadow-lg&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;img&lt;/span&gt;
-      &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;w-full&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;//placekitten.com/400/210&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
-      &lt;span class=&quot;token attr-name&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Sunset in the mountains&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;w-full&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;//placekitten.com/400/210&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token attr-name&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;Sunset in the mountains&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;px-6 py-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;font-bold text-xl mb-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;The Coldest Sunset&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text-gray-700 text-base&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;px-6 py-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;font-bold text-xl mb-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;The Coldest Sunset&lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;p&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;text-gray-700 text-base&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
         nihil.
       &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;p&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;px-6 py-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;px-6 py-4&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
         #photography
       &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
         #travel
       &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
-      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
+      &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;span&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;&lt;span class=&quot;token punctuation attr-equals&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700&lt;span class=&quot;token punctuation&quot;&gt;&quot;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
         #winter
       &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;span&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
     &lt;/span&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;/&lt;/span&gt;div&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token plain-text&quot;&gt;
@@ -104,15 +105,15 @@ ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;p&gt;Let’s look at an example to show you what I mean.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// This is the initial shape of your data&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; v0 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  firstName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  lastName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;
+  firstName&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  lastName&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;// At some point you change it to this shape&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; v1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    first&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    last&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;
+  name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    first&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    last&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
@@ -121,8 +122,8 @@ ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; newData &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;oldData &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
   &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;oldData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
     newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      first&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      last&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName
+      first&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      last&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName
     &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;delete&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;delete&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -132,9 +133,9 @@ ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;p&gt;So far so good, you have successfully migrated your client data from &lt;code class=&quot;language-text&quot;&gt;v0&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;v1&lt;/code&gt;. Now let’s add a &lt;code class=&quot;language-text&quot;&gt;v2&lt;/code&gt; to make things interesting.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// We rename `name` to `info`&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; v2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  info&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    first&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    last&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;
+  info&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    first&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    last&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
@@ -149,8 +150,8 @@ ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
     &lt;span class=&quot;token comment&quot;&gt;// v2 data is passed&lt;/span&gt;
     &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
       newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;info &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-        first&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-        last&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName
+        first&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+        last&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName
       &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;token keyword&quot;&gt;delete&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
       &lt;span class=&quot;token keyword&quot;&gt;delete&lt;/span&gt; newData&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
@@ -170,9 +171,9 @@ ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;p&gt;One fix for this is to add a &lt;code class=&quot;language-text&quot;&gt;version&lt;/code&gt; field to our local data, either from the beginning or from the point on where you are writing your first migration. We will use this field to correctly identify the version of the local data and to split up the complexity of our migration function into smaller functions:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// An object with all available version identifiers&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Versions &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  one&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  two&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  three&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;
+  one&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  two&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  three&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;// An object containing all available migrations&lt;/span&gt;
@@ -181,13 +182,13 @@ ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;span class=&quot;token comment&quot;&gt;// Each value is a function that migrates a version to&lt;/span&gt;
 &lt;span class=&quot;token comment&quot;&gt;// the next higher version.&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; migrations &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;one&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;v1Data&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; first&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; v1Data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; last&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; v1Data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    version&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;two
+  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;one&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;v1Data&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    name&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; first&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; v1Data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; last&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; v1Data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    version&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;two
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;two&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;v2Data&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    info&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;v2Data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    version&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;three
+  &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;two&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;v2Data&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    info&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;v2Data&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    version&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;three
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
@@ -205,9 +206,9 @@ ReactDOM&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; oldData &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  version&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;one&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  firstName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  lastName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;
+  version&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Versions&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;one&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  firstName&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Test&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  lastName&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;User&apos;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token comment&quot;&gt;// Outputs the migrated data at version 3&lt;/span&gt;
@@ -220,39 +221,23 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;If your favorite podcast is missing on this list, I would love to &lt;a href=&quot;/contact&quot;&gt;hear about it&lt;/a&gt;!&lt;/p&gt;
 &lt;h2&gt;Tech podcasts&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://changelog.com/podcast&quot;&gt;The Changelog&lt;/a&gt;&lt;/strong&gt; was probably the first podcast that I listened to back from when I was still studying in 2010 and I still listen to it to this day. Adam and Jared produce a high quality podcast with a wide variety of topics in their episodes. They invite guests of a popular open source project and they interview them about the background of the project and how it can be useful for listeners. They also create episodes on important current topics like &lt;a href=&quot;https://twitter.com/KimCrayton1&quot;&gt;Kim Crayton&lt;/a&gt;’s &lt;a href=&quot;https://hashtagcauseascene.com/&quot;&gt;#causeascene&lt;/a&gt; movement (&lt;a href=&quot;https://changelog.com/podcast/334&quot;&gt;ep. #334&lt;/a&gt;) or they talked to &lt;a href=&quot;https://twitter.com/dominictarr&quot;&gt;Dominic Tarr&lt;/a&gt; about the &lt;code class=&quot;language-text&quot;&gt;event-stream&lt;/code&gt; compromise (&lt;a href=&quot;https://changelog.com/podcast/326&quot;&gt;ep. #326&lt;/a&gt;). Episodes are usually 1h to 1.5h long.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://changelog.com/jsparty&quot;&gt;JS Party&lt;/a&gt;&lt;/strong&gt; is a spin-off of The Changelog that focuses on JavaScript- and Frontend-related topics. It’s also super well produced and you can feel the hosts are well-prepared for their interview partners. The show features a lot of recurring hosts which is refreshing to hear since podcasts are usually hosted by the same people. Episodes range from 1h to 1.5h, just like The Changelog. Full disclosure: I was a guest on one of their episodes where I talked about the Nested Loops project 😊 (&lt;a href=&quot;https://changelog.com/jsparty/52&quot;&gt;ep. 52&lt;/a&gt;).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://reactpodcast.com/&quot;&gt;React Podcast&lt;/a&gt;&lt;/strong&gt; is a podcast that, you might have guessed it from the name already, specializes on React and its ecosystem. The hosts invite authors of popular libraries, they discuss new trends and they talk about experiences of working in tech. I can especially recommend the episodes about Gatsby (&lt;a href=&quot;https://reactpodcast.com/28&quot;&gt;ep. 28&lt;/a&gt;) and The Future of Work (&lt;a href=&quot;https://reactpodcast.com/65&quot;&gt;ep. 65&lt;/a&gt;).&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://changelog.com/podcast&quot;&gt;The Changelog&lt;/a&gt;&lt;/strong&gt; was probably the first podcast that I listened to back from when I was still studying in 2010 and I still listen to it to this day. Adam and Jared produce a high quality podcast with a wide variety of topics in their episodes. They invite guests of a popular open source project and they interview them about the background of the project and how it can be useful for listeners. They also create episodes on important current topics like &lt;a href=&quot;https://twitter.com/KimCrayton1&quot;&gt;Kim Crayton&lt;/a&gt;’s &lt;a href=&quot;https://hashtagcauseascene.com/&quot;&gt;#causeascene&lt;/a&gt; movement (&lt;a href=&quot;https://changelog.com/podcast/334&quot;&gt;ep. #334&lt;/a&gt;) or they talked to &lt;a href=&quot;https://twitter.com/dominictarr&quot;&gt;Dominic Tarr&lt;/a&gt; about the &lt;code class=&quot;language-text&quot;&gt;event-stream&lt;/code&gt; compromise (&lt;a href=&quot;https://changelog.com/podcast/326&quot;&gt;ep. #326&lt;/a&gt;). Episodes are usually 1h to 1.5h long.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://changelog.com/jsparty&quot;&gt;JS Party&lt;/a&gt;&lt;/strong&gt; is a spin-off of The Changelog that focuses on JavaScript- and Frontend-related topics. It’s also super well produced and you can feel the hosts are well-prepared for their interview partners. The show features a lot of recurring hosts which is refreshing to hear since podcasts are usually hosted by the same people. Episodes range from 1h to 1.5h, just like The Changelog. Full disclosure: I was a guest on one of their episodes where I talked about the Nested Loops project 😊 (&lt;a href=&quot;https://changelog.com/jsparty/52&quot;&gt;ep. 52&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://reactpodcast.com/&quot;&gt;React Podcast&lt;/a&gt;&lt;/strong&gt; is a podcast that, you might have guessed it from the name already, specializes on React and its ecosystem. The hosts invite authors of popular libraries, they discuss new trends and they talk about experiences of working in tech. I can especially recommend the episodes about Gatsby (&lt;a href=&quot;https://reactpodcast.com/28&quot;&gt;ep. 28&lt;/a&gt;) and The Future of Work (&lt;a href=&quot;https://reactpodcast.com/65&quot;&gt;ep. 65&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://podcasts.apple.com/us/podcast/cyber/id1441708044&quot;&gt;Cyber by Motherboard&lt;/a&gt;&lt;/strong&gt; is a podcast about hacks, breaches, security-vulnerabilities and their impact on modern society. The hosts provide great background-reporting on hacks that you might have heard about on the news and the hacks that you have probably not heard about. My favorite episodes are the ones about a &lt;a href=&quot;https://podcasts.apple.com/us/podcast/the-spyware-sting-operation/id1441708044?i=1000429241547&quot;&gt;spyware sting operation&lt;/a&gt; and where they report about &lt;a href=&quot;https://podcasts.apple.com/us/podcast/how-hackers-break-into-icloud-locked-iphones/id1441708044?i=1000430212873&quot;&gt;how hackers break into iCloud-locked iPhones&lt;/a&gt;. Their episodes are usually around half an hour long.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Bonus podcast about cyber security: &lt;a href=&quot;https://www.carbonite.com/podcasts/breach/&quot;&gt;Breach&lt;/a&gt;. A more narrative podcast that currently has two seasons, one in which they talk about the Yahoo hacks and one where they go into detail on the Equifax breach. The reporting in the 2nd season was especially good.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.ecpodcast.io/&quot;&gt;The Entrepreneurial Coder&lt;/a&gt;&lt;/strong&gt; is the newest edition to my podcasts list. On this interview-style podcast, the host interviews other developers about their journey into being self-employed or becoming educators in tech. I love this show because the guests are sharing in detail why they have their own businesses and how they got there. Guests range from developers that offer courses, that wrote books or developers that created their own products and companies and work on them full-time now. My favorite episodes are the ones with Chris Ferdinandi, the author of &lt;a href=&quot;https://gomakethings.com/&quot;&gt;GoMakeThings&lt;/a&gt; and &lt;a href=&quot;https://vanillajsacademy.com/&quot;&gt;Vanilla JS academy&lt;/a&gt; (&lt;a href=&quot;https://www.ecpodcast.io/episodes/11-chris-ferdinandi-building-an-audience-by-being-consistent&quot;&gt;ep. Building an Audience by Being Consistent&lt;/a&gt;), and the episode with Adam Wathan, the author of &lt;a href=&quot;https://refactoringui.com/&quot;&gt;Refactoring UI&lt;/a&gt; (&lt;a href=&quot;https://www.ecpodcast.io/episodes/adam-wathan-creating-and-launching-courses-for-developers&quot;&gt;ep. Creating and Launching Courses for Developers&lt;/a&gt;). Episodes are typically around an hour long.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.ecpodcast.io/&quot;&gt;The Entrepreneurial Coder&lt;/a&gt;&lt;/strong&gt; is the newest edition to my podcasts list. On this interview-style podcast, the host interviews other developers about their journey into being self-employed or becoming educators in tech. I love this show because the guests are sharing in detail why they have their own businesses and how they got there. Guests range from developers that offer courses, that wrote books or developers that created their own products and companies and work on them full-time now. My favorite episodes are the ones with Chris Ferdinandi, the author of &lt;a href=&quot;https://gomakethings.com/&quot;&gt;GoMakeThings&lt;/a&gt; and &lt;a href=&quot;https://vanillajsacademy.com/&quot;&gt;Vanilla JS academy&lt;/a&gt; (&lt;a href=&quot;https://www.ecpodcast.io/episodes/11-chris-ferdinandi-building-an-audience-by-being-consistent&quot;&gt;ep. Building an Audience by Being Consistent&lt;/a&gt;), and the episode with Adam Wathan, the author of &lt;a href=&quot;https://refactoringui.com/&quot;&gt;Refactoring UI&lt;/a&gt; (&lt;a href=&quot;https://www.ecpodcast.io/episodes/adam-wathan-creating-and-launching-courses-for-developers&quot;&gt;ep. Creating and Launching Courses for Developers&lt;/a&gt;). Episodes are typically around an hour long.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Non-tech podcasts&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://gimletmedia.com/shows/reply-all&quot;&gt;Reply-All&lt;/a&gt;&lt;/strong&gt; is not a tech podcast in the sense of the other ones mentioned above but it still focuses on tech topics but more on the sociological side of tech. All topics are related to internet culture and in each episode, they take a deep dive into a news story or they run an experiment/investigation themselves. My favorite episodes are about the story of Paul Le Roux (&lt;a href=&quot;https://gimletmedia.com/shows/reply-all/dvhd9k/136-the-founder&quot;&gt;ep. The Founder&lt;/a&gt;), the one about a SnapChat thief and modern ways to fish people (&lt;a href=&quot;https://gimletmedia.com/shows/reply-all/49ho5a/130-the-snapchat-thief&quot;&gt;ep. The SnapChat thief&lt;/a&gt;) and their investigation into why some podcasts crash modern car stereo systems (&lt;a href=&quot;https://gimletmedia.com/shows/reply-all/brh8jm/140-the-roman-mars-mazda-virus&quot;&gt;ep. The Roman Mars Mazda Virus&lt;/a&gt;). Episodes are half an hour to an hour long.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.npr.org/podcasts/510289/planet-money&quot;&gt;Planet Money&lt;/a&gt;&lt;/strong&gt; is a super well produced podcast about money, the economy and it’s influence on society and each one of us individually. While economic topics might sound boring to a lot of people, this podcast makes these topics approachable with humor and great story-telling. Ever since my friend &lt;a href=&quot;https://twitter.com/nikgraf&quot;&gt;Nik Graf&lt;/a&gt; recommended this podcast to me at React Conf 2016, I’ve been a subscriber and listen to their newest episodes almost every week! My highlight episodes are the ones about India getting rid of most of their cash (&lt;a href=&quot;https://www.npr.org/2019/09/25/764433918/episode-770-when-indias-cash-disappeared&quot;&gt;ep. 770&lt;/a&gt;), the invention of Duty Free (&lt;a href=&quot;https://www.npr.org/sections/money/2018/05/11/610516972/episode-841-the-land-of-duty-free&quot;&gt;ep. 841&lt;/a&gt;) and their visit to the Libertarian summer camp (&lt;a href=&quot;https://www.npr.org/sections/money/2017/06/28/534735727/episode-286-libertarian-summer-camp&quot;&gt;ep. 286&lt;/a&gt;). Episodes are usually 20min to half an hour long.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.heavensgate.show/&quot;&gt;Heaven’s Gate&lt;/a&gt;&lt;/strong&gt; is a single season narrative podcast that is about the history of the Heaven’s Gate cult. The host, Glynn Washington, who has also been part of another cult, explains the inner workings of this cult and interviews ex-members about their experiences. Each episode is told in a very captivating way and once you start listening, it’s hard to stop because you want to know how all the pieces come together in the end. This podcast was recommended to me by my dear friend &lt;a href=&quot;https://twitter.com/jypyk&quot;&gt;Jeremy&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://gimletmedia.com/shows/the-habitat&quot;&gt;The Habitat&lt;/a&gt;&lt;/strong&gt; was recommended to me by &lt;a href=&quot;https://twitter.com/carolstran&quot;&gt;Carolyn&lt;/a&gt; and I binged it in just a couple of days. The show follows people that lived in a real-world Mars habitat on planet earth for a year. Goal of this experiment was to find out how life on Mars might be like. It’s only a single season of six episodes of which each is around 30min long.&lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://gimletmedia.com/shows/reply-all&quot;&gt;Reply-All&lt;/a&gt;&lt;/strong&gt; is not a tech podcast in the sense of the other ones mentioned above but it still focuses on tech topics but more on the sociological side of tech. All topics are related to internet culture and in each episode, they take a deep dive into a news story or they run an experiment/investigation themselves. My favorite episodes are about the story of Paul Le Roux (&lt;a href=&quot;https://gimletmedia.com/shows/reply-all/dvhd9k/136-the-founder&quot;&gt;ep. The Founder&lt;/a&gt;), the one about a SnapChat thief and modern ways to fish people (&lt;a href=&quot;https://gimletmedia.com/shows/reply-all/49ho5a/130-the-snapchat-thief&quot;&gt;ep. The SnapChat thief&lt;/a&gt;) and their investigation into why some podcasts crash modern car stereo systems (&lt;a href=&quot;https://gimletmedia.com/shows/reply-all/brh8jm/140-the-roman-mars-mazda-virus&quot;&gt;ep. The Roman Mars Mazda Virus&lt;/a&gt;). Episodes are half an hour to an hour long.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.npr.org/podcasts/510289/planet-money&quot;&gt;Planet Money&lt;/a&gt;&lt;/strong&gt; is a super well produced podcast about money, the economy and it’s influence on society and each one of us individually. While economic topics might sound boring to a lot of people, this podcast makes these topics approachable with humor and great story-telling. Ever since my friend &lt;a href=&quot;https://twitter.com/nikgraf&quot;&gt;Nik Graf&lt;/a&gt; recommended this podcast to me at React Conf 2016, I’ve been a subscriber and listen to their newest episodes almost every week! My highlight episodes are the ones about India getting rid of most of their cash (&lt;a href=&quot;https://www.npr.org/2019/09/25/764433918/episode-770-when-indias-cash-disappeared&quot;&gt;ep. 770&lt;/a&gt;), the invention of Duty Free (&lt;a href=&quot;https://www.npr.org/sections/money/2018/05/11/610516972/episode-841-the-land-of-duty-free&quot;&gt;ep. 841&lt;/a&gt;) and their visit to the Libertarian summer camp (&lt;a href=&quot;https://www.npr.org/sections/money/2017/06/28/534735727/episode-286-libertarian-summer-camp&quot;&gt;ep. 286&lt;/a&gt;). Episodes are usually 20min to half an hour long.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.heavensgate.show/&quot;&gt;Heaven’s Gate&lt;/a&gt;&lt;/strong&gt; is a single season narrative podcast that is about the history of the Heaven’s Gate cult. The host, Glynn Washington, who has also been part of another cult, explains the inner workings of this cult and interviews ex-members about their experiences. Each episode is told in a very captivating way and once you start listening, it’s hard to stop because you want to know how all the pieces come together in the end. This podcast was recommended to me by my dear friend &lt;a href=&quot;https://twitter.com/jypyk&quot;&gt;Jeremy&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://gimletmedia.com/shows/the-habitat&quot;&gt;The Habitat&lt;/a&gt;&lt;/strong&gt; was recommended to me by &lt;a href=&quot;https://twitter.com/carolstran&quot;&gt;Carolyn&lt;/a&gt; and I binged it in just a couple of days. The show follows people that lived in a real-world Mars habitat on planet earth for a year. Goal of this experiment was to find out how life on Mars might be like. It’s only a single season of six episodes of which each is around 30min long.&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Garbage Collection in Redux Applications]]></title><description><![CDATA[The topic that I focused on a lot in my recent conference talks was garbage collection in Redux applications. At work we built a full…]]></description><link>https://janmonschke.com/garbage-collection-in-redux-applications</link><guid isPermaLink="false">https://janmonschke.com/garbage-collection-in-redux-applications</guid><pubDate>Wed, 02 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;The topic that I focused on a lot in my &lt;a href=&quot;/#talks&quot;&gt;recent conference talks&lt;/a&gt; was garbage collection in Redux applications. At &lt;a href=&quot;https://soundcloud.com&quot;&gt;work&lt;/a&gt; we built a full-fledged Xbox application in React with Redux.&lt;/p&gt;
 &lt;p&gt;Building for the Xbox runtime is a tricky business for web apps that should run in the background when games are playing because they available memory for your app is very limited and your web app shares the memory with the browser process that needs to be active. When your app is over the maximum budget of 128 MB, the OS might decide to just kill your app, even when it’s playing music. This is not a lot of memory when you consider that the browser process eats most of it.&lt;/p&gt;
 &lt;p&gt;Usually, memory is not a big concern when building web apps, but in our case we were dealing with an application that is often running for several hours in the background and might not even be closed for several days in some cases. We noticed that our Redux store kept on growing and growing while the user was listening to more music and especiall when searching for new songs a lot.&lt;/p&gt;
@@ -290,10 +275,10 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;h2&gt;Getting static translations&lt;/h2&gt;
 &lt;p&gt;Great, now we have the user’s locale! In order to get a translated string, we now have to set up a data structure for our translations. The structure that I selected does purposely not adhere to a standard like the gettext format (&lt;a href=&quot;https://www.gnu.org/software/gettext/manual/html_node/PO-Files.html&quot;&gt;PO files&lt;/a&gt;) or the &lt;a href=&quot;http://userguide.icu-project.org/formatparse/messages&quot;&gt;ICU message format&lt;/a&gt;. Those formats are great, but I did not want to integrate a parser or a runtime for my translation system. (Again, if you build a real product, you should use those formats, I can’t stress that enough 😅).&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; translations &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  bus_tickets&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    en&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Your bus tickets&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    de&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Deine Bustickets&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    fr&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Tes billets pour le bus&apos;&lt;/span&gt;
+  bus_tickets&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    en&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Your bus tickets&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    de&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Deine Bustickets&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    fr&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Tes billets pour le bus&apos;&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The only thing missing to get translated strings is the translation function itself. That function takes the user’s locale and looks up the translation from our &lt;code class=&quot;language-text&quot;&gt;translations&lt;/code&gt; object.&lt;/p&gt;
@@ -321,10 +306,10 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;To keep things simple, I used JavaScript &lt;a href=&quot;https://developer.mozilla.org/docs/Web/JavaScript/Reference/Template_literals&quot;&gt;template literals&lt;/a&gt; for interpolation which from a developer’s perspective is pretty neat, but from a security perspective is pretty bad since it might allow for &lt;a href=&quot;https://en.wikipedia.org/wiki/Cross-site_scripting&quot;&gt;XSS attacks&lt;/a&gt; if not used correctly. I debated the risk and came to the conclusion that the risk is very low in my case since I am rendering the translations as children of React nodes, which does have XSS protection built in.&lt;/p&gt;
 &lt;p&gt;Leveraging functionality of template literals, interpolated strings are defined as follows in my translations object:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; translations &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  signed_in_as&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token function-variable function&quot;&gt;en&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`Signed in as: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;user&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token function-variable function&quot;&gt;de&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`Eingeloggt als: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;user&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;token function-variable function&quot;&gt;fr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`Connecté en tant que: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;user&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
+  signed_in_as&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;en&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Signed in as: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;user&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;de&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Eingeloggt als: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;user&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;fr&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Connecté en tant que: &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;user&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Plurals&lt;/h2&gt;
@@ -332,29 +317,29 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;span class=&quot;token comment&quot;&gt;// =&gt; You have booked 2 tickets&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Adding support for pluralization was a bit more tricky than adding interpolations because it requires you to take the pluralization rules of each language into account. In English and German for example you use the singular form when the quantity is exactly one and then you use the plural form for zero quantiries and for quantities that are bigger than one. However, different rules apply for French. There you use the singular form for quantities of zero and one and then the plural for everything that is more than one.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; translations &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  bus_tickets_booked&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    en&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;pluralize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+  bus_tickets_booked&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    en&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;pluralize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
       &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;You have booked one ticket&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`You have booked &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;num&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; tickets`&lt;/span&gt;&lt;/span&gt;
+      &lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;You have booked &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;num&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; tickets&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-    fr&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;pluralize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
-      &lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`Tu as réservé &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;num&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; ticket`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-      &lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token string&quot;&gt;`Tu as réservé &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;num&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; tickets`&lt;/span&gt;&lt;/span&gt;
+    fr&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;pluralize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+      &lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Tu as réservé &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;num&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; ticket&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Tu as réservé &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;num&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt; tickets&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;
     &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Translations that require pluralization, are wrapped with the &lt;code class=&quot;language-text&quot;&gt;pluralize&lt;/code&gt; helper that selects the correct plural/singular form for the user’s language.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;indexEN&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;indexFR&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; pluralIndex &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  en&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; indexEN&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  de&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; indexEN&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
-  fr&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; indexFR
+  en&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; indexEN&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  de&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; indexEN&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  fr&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; indexFR
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
 
 &lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;pluralize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;translationArr&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
@@ -410,23 +395,23 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;h2&gt;Deep Space&lt;/h2&gt;
 &lt;p&gt;Simon Swain starts his talk off with an example implementation of &lt;a href=&quot;http://en.wikipedia.org/wiki/Conway%27s_Game_of_Life&quot;&gt;Conway’s Game of Life&lt;/a&gt; which is a simulation of ‘cells’. In each cycle a cell either dies, is born or lives based on four rules which depend on the neighboring cells. This system looks rather uncomplicated but it can create complex structures of cells that form bigger cell mechanisms which move across the field as a whole. Like for many people that studied CS, Game of Life was probably one of the first assignments in university and it is great to see the beauty of Simon’s visualizations, whereas I for example only built a version of Life that ran in the console. I especially liked his variation of Life which includes rabbit and wolf cells. When Swain adds the ability for rabbits to breed and for wolves to kill rabbits, the occurring populations of animals are similar to the populations in biological systems.&lt;/p&gt;
 &lt;video controls loop&gt;
-  &lt;source src=&quot;/gol-b01aafa49e8d23b2477b9331d6fd6704.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;/b01aafa49e8d23b2477b9331d6fd6704/gol.webm&quot; type=&quot;video/webm&quot; /&gt;
 &lt;/video&gt;
 &lt;p&gt;Simon goes on by showing a custom economy simulation which is based upon four main properties: population, agriculture, industry and pollution. They all influence each other and those dependencies are created in a way so that, even if they influence each other in a bad way, after a certain amount of time a balance is recreated. In addition to an economy simulation Simon then adds the ability to create imaginary space ships which fly a certain amount of the population to a new world.&lt;/p&gt;
 &lt;video controls loop&gt;
-  &lt;source src=&quot;/economy-e175de41791369e8b4afd1c941c04cef.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;/e175de41791369e8b4afd1c941c04cef/economy.webm&quot; type=&quot;video/webm&quot; /&gt;
 &lt;/video&gt;
 &lt;p&gt;After introducing his basic render-loop, Simon introduces the concept of &lt;a href=&quot;http://en.wikipedia.org/wiki/Boids&quot;&gt;Boids&lt;/a&gt;. Boids were created to simulate the moving behavior of animals that travel in flocks. Each object moves depending on three main concepts which involves looking at the position at other Boids in a flock. In this way, a very natural flocking and moving behavior can be achieved. The resulting flock movement looks astonishing and bears a resemblance to a shark swimming in the ocean.&lt;/p&gt;
 &lt;video controls loop&gt;
-  &lt;source src=&quot;/boids-c2382e2f4e8773aee6a9493c116a5af1.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;/c2382e2f4e8773aee6a9493c116a5af1/boids.webm&quot; type=&quot;video/webm&quot; /&gt;
 &lt;/video&gt;
 &lt;p&gt;But Simon’s goal is not to recreate the biologically correct behavior of animals. He creates space ships from boids that have the ability to fight with other space ships. In addition to that he adds the economy simulation so that in combination he has planets of different parties that are able to create spaceships and to populate planets around their home planet. Unless those planets are guarded by other space ships. In this case they have to fight their enemies. Again: each planet in the animation below is running it’s own economy!&lt;/p&gt;
 &lt;video controls loop&gt;
-  &lt;source src=&quot;/spaceships-2431dc1a8bf3ec338f6cbd8154b2adc1.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;/2431dc1a8bf3ec338f6cbd8154b2adc1/spaceships.webm&quot; type=&quot;video/webm&quot; /&gt;
 &lt;/video&gt;
 &lt;p&gt;The natural evolution of this system is, of course, hyperspace travel! Simon creates seven of the systems like seen above and lets three parties start in a different system simultaneously. When a party has created enough resources it can send populations to other systems to grow across solar systems. This leads to very interesting interaction between parties and simulations can last for several minutes until one party dominates all others.&lt;/p&gt;
 &lt;video controls loop&gt;
-  &lt;source src=&quot;/hyperspace-81623123811e169ccea3ea6908cd77fa.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;/81623123811e169ccea3ea6908cd77fa/hyperspace.webm&quot; type=&quot;video/webm&quot; /&gt;
 &lt;/video&gt;
 &lt;p&gt;You can play around with Simon’s space simulation &lt;a href=&quot;http://simonswain.com/deepspace/&quot;&gt;here&lt;/a&gt;. It surely is great fun to see this war of the worlds play out in a browser!&lt;/p&gt;
 &lt;h2&gt;Complex Systems&lt;/h2&gt;
@@ -435,202 +420,196 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;Vince doesn’t stop there and uses this rendering technique to visualize various simulations he created.&lt;/p&gt;
 &lt;p&gt;The first one is a simulation of a tornado &lt;a href=&quot;https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=743&quot;&gt;(12:23)&lt;/a&gt; that he creates from very simple core elements such as a base and a spine. The tornado’s movement and the spine are both generated from the &lt;a href=&quot;http://en.wikipedia.org/wiki/Perlin_noise&quot;&gt;Perlin noise&lt;/a&gt; algorithm which creates ‘natural’ random values. Different variations of the simulation show how a very natural effect and truly beautiful visualizations can result from a simple rendering technique and a simple random number generator.&lt;/p&gt;
 &lt;video controls loop&gt;
-  &lt;source src=&quot;/tornado-e218a3a50547aab3c1b6d8599723c426.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;/e218a3a50547aab3c1b6d8599723c426/tornado.webm&quot; type=&quot;video/webm&quot; /&gt;
 &lt;/video&gt;
 &lt;p&gt;Vince then shows two more demos: an alternative version of the sheep vs. wolf simulation &lt;a href=&quot;https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1341&quot;&gt;(22:21)&lt;/a&gt; which Simon showed as well and a termite simulation &lt;a href=&quot;https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1632&quot;&gt;(27:12)&lt;/a&gt;. Both of them are based on the concept of &lt;a href=&quot;http://en.wikipedia.org/wiki/Braitenberg_vehicle&quot;&gt;Braitenberg vehicles&lt;/a&gt;, ‘vehicles’ that only consist of a sensor and a motor. Stimulation of the sensor (or alternatively the sensors) leads to a reaction of the motor. The resulting new position towards other objects then creates a new stimulation of the sensor which will again create a reaction of the motor. These two elementary concepts lead in interesting visualizations. Especially when the sheep/wolf demo is enhanced by another entity, Zombies &lt;a href=&quot;https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1435&quot;&gt;(23:55)&lt;/a&gt;:&lt;/p&gt;
 &lt;video controls loop&gt;
-  &lt;source src=&quot;/wolvessheepzombies-8b50b2855db865048fe15435ade2f146.webm&quot; type=&quot;video/webm&quot; /&gt;
+  &lt;source src=&quot;/8b50b2855db865048fe15435ade2f146/wolvessheepzombies.webm&quot; type=&quot;video/webm&quot; /&gt;
 &lt;/video&gt;
 &lt;p&gt;Just as a reminder: The demos above are also rendered as multiple box-shadows of only a single div element.&lt;/p&gt;
 &lt;p&gt;Another outstanding element of Vince’s talk is that he uses Photoshop to render videos of his simulations. In this way he can create HD-quality videos with realistic motion blur and shallow depth of field. He uses node.js to feed Adobe Generator with positional data from each frame of the visualization. Adobe Generator then creates high-resolution Photoshop images from that data. Those images can then be concatenated into a video &lt;a href=&quot;https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1034&quot;&gt;(17:14)&lt;/a&gt;. Oh, and did I mention that he uses the Web Audio API for atmospheric background noise generation? ;) His noise library is called Soundbed and can be found on &lt;a href=&quot;https://github.com/vinceallenvince/soundbed&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/94497/photoshop-and-js.jpg&quot;
+    href=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/a8a02/photoshop-and-js.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 54.75910693301997%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFAf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAYRjCFIP/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAECERAh/9oACAEBAAEFAp5gm0T7eI//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAXEAADAQAAAAAAAAAAAAAAAAAAECEx/9oACAEBAAY/AsKo/wD/xAAbEAEAAwADAQAAAAAAAAAAAAARAAEhMUFRgf/aAAgBAQABPyFFi+SispsXlx1DzMr3Cn//2gAMAwEAAgADAAAAEPDP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHBAAAgMAAwEAAAAAAAAAAAAAAREAITFBcZHx/9oACAEBAAE/EGBGafJQTXWLq58aDBoVTQ3DOu1+TIAQOzP/2Q==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.72972972972974%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFAf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAYRjCFIP/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAECESH/2gAIAQEAAQUCkRgm0T28R//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAAMBAAAAAAAAAAAAAAAAAAAQITH/2gAIAQEABj8Cwqj/AP/EABoQAQADAQEBAAAAAAAAAAAAABEAASFBMVH/2gAIAQEAAT8hWigrKbF8uOofZlewuT//2gAMAwEAAgADAAAAEPDP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHRAAAwEAAQUAAAAAAAAAAAAAAREhADFBcZHB8f/aAAgBAQABPxBgEJp8NYDWtZd8bdMio5DfrGSba+MZAQHc7//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Photoshop and JavaScript&quot;
-        title=&quot;&quot;
-        src=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/c739e/photoshop-and-js.jpg&quot;
-        srcset=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/8ee9c/photoshop-and-js.jpg 148w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/ebbe7/photoshop-and-js.jpg 295w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/c739e/photoshop-and-js.jpg 590w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/5413e/photoshop-and-js.jpg 885w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/4efde/photoshop-and-js.jpg 1180w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/94497/photoshop-and-js.jpg 1702w&quot;
+        title=&quot;Photoshop and JavaScript&quot;
+        src=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/1c72d/photoshop-and-js.jpg&quot;
+        srcset=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/a80bd/photoshop-and-js.jpg 148w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/1c91a/photoshop-and-js.jpg 295w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/1c72d/photoshop-and-js.jpg 590w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/a8a14/photoshop-and-js.jpg 885w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/fbd2c/photoshop-and-js.jpg 1180w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/a8a02/photoshop-and-js.jpg 1702w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;
-  &lt;/a&gt;&lt;/p&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Both talks show that it can be really fun to work on algorithms and to visualize the results. In their cases, they created systems with agents which were acting based on simple rules. The visualizations of these systems can be mesmerizing for example when the sheep/wolves/zombies system creates a state of equilibrium &lt;a href=&quot;https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1563&quot;&gt;(26:13, Vince)&lt;/a&gt; or when introducing hyperspace travel to the deep space simulation which results in a minutes-long fight over solar systems &lt;a href=&quot;https://www.youtube.com/watch?v=0HJPilemNns#t=1421&quot;&gt;(23:41, Simon)&lt;/a&gt;. Changes in those systems result in an immediate, sometimes very artistic, change in visualization and behavior.&lt;/p&gt;
 &lt;p&gt;I hope we will see more simulations like these in the future. With people like Vince and Simon talking at various JS conferences all over the world I’m confident that we will see more of it very soon :)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Web Audio Hackday 2014]]></title><description><![CDATA[Earlier this year Jan Lehnardt, Rin, Robin, Tiffany and me started to talk about making something special for the upcoming JSConf.eu (201…]]></description><link>https://janmonschke.com/blog/2014/10/03/web-audio-hackday-2014.html</link><guid isPermaLink="false">https://janmonschke.com/blog/2014/10/03/web-audio-hackday-2014.html</guid><pubDate>Fri, 03 Oct 2014 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Earlier this year &lt;a href=&quot;https://twitter.com/janl&quot;&gt;Jan Lehnardt&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/rinpaku&quot;&gt;Rin&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/rmehner&quot;&gt;Robin&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/theophani&quot;&gt;Tiffany&lt;/a&gt; and me started to talk about making something special for the upcoming JSConf.eu (2014). Our idea was to organize a JSFest in Berlin around the three big conferences in September (Reject.JS, CSSConf.eu and JSConf.eu) which would host a range of web-related Meetups and Events.&lt;/p&gt;
 &lt;p&gt;For more than two years I have been obsessed with writing things with the Web Audio API which is becoming more and more stable and is supported by more and more browsers. I wanted to share my enthusiasm for this API by creating a Web Audio Hackathon during JSFest. Since I never organised an event before, Tiffany, who is familiar with all the processes that are needed to create big events like JSConf.eu, joined the organiser team and we started planning very soon.&lt;/p&gt;
 &lt;p&gt;The event took place at the SoundCloud HQ in Berlin in the wonderful classroom :)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;everybodyworking3.jpg&quot;&gt;&lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 26.171875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFwABAAMAAAAAAAAAAAAAAAAAAAEDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAC/9oADAMBAAIQAxAAAAHPklcD/8QAGRABAQADAQAAAAAAAAAAAAAAAQIABBET/9oACAEBAAEFAnYV9Xk3V5//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPwFZ/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQIBAT8BCf/EABoQAAAHAAAAAAAAAAAAAAAAAAABAhARITH/2gAIAQEABj8CtJNOD//EABkQAQACAwAAAAAAAAAAAAAAAAEAIRFRYf/aAAgBAQABPyEaprFxNu4K14Cf/9oADAMBAAIAAwAAABCMP//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxBFsv/EABURAQEAAAAAAAAAAAAAAAAAAAEA/9oACAECAQE/EAJW/8QAGBABAQEBAQAAAAAAAAAAAAAAAREAITH/2gAIAQEAAT8QhISYeBheSoAwOajbs8Xhv//Z&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.351351351351354%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAc8SpB//xAAYEAEBAAMAAAAAAAAAAAAAAAABAgMEE//aAAgBAQABBQJ2KXshN1kP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BWf/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AQn/xAAZEAABBQAAAAAAAAAAAAAAAAABABARITH/2gAIAQEABj8CsBpxf//EABkQAQADAQEAAAAAAAAAAAAAAAEAESExUf/aAAgBAQABPyESrytiq+xhc3wJ/9oADAMBAAIAAwAAABD8P//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxBFsL//xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAgBAgEBPxACVv/EABgQAQEBAQEAAAAAAAAAAAAAAAERIQAx/9oACAEBAAE/EEIsmHA4qjqAMDO2jI8xh3//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;The SoundCloud classroom&quot;
-        title=&quot;&quot;
-        src=&quot;/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/c739e/everybodyworking3.jpg&quot;
-        srcset=&quot;/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/8ee9c/everybodyworking3.jpg 148w,
-/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/ebbe7/everybodyworking3.jpg 295w,
-/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/c739e/everybodyworking3.jpg 590w,
-/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/5413e/everybodyworking3.jpg 885w,
-/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/1f853/everybodyworking3.jpg 1024w&quot;
+        title=&quot;The SoundCloud classroom&quot;
+        src=&quot;/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/1c72d/everybodyworking3.jpg&quot;
+        srcset=&quot;/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/a80bd/everybodyworking3.jpg 148w,
+/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/1c91a/everybodyworking3.jpg 295w,
+/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/1c72d/everybodyworking3.jpg 590w,
+/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/a8a14/everybodyworking3.jpg 885w,
+/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/72e01/everybodyworking3.jpg 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;We were able to have three amazing speakers from Mozilla and Google which introduced attendees to the Web Audio API and the Web Midi API. To be honest, I was &lt;a href=&quot;https://twitter.com/thedeftone/status/498877909525090304&quot;&gt;pretty&lt;/a&gt; &lt;a href=&quot;https://twitter.com/thedeftone/status/497779074585329664&quot;&gt;stoked&lt;/a&gt; to have the three of them talking at the event because they have always been my Web Audio Heroes &amp;#x3C;3&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/supersole&quot;&gt;Soledad Penadés&lt;/a&gt; gave a very insightful introduction to the Web Audio API that was suited for both beginners and more advanced users. Since most of the 30 attendees were novice users this was perfect. I especially liked her very creative way of explaining the core features of the Web Audio API as &lt;a href=&quot;http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/#38&quot;&gt;Super Powers&lt;/a&gt; and her description and demonstration of LFOs as &lt;a href=&quot;http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/#54&quot;&gt;spooky sounds&lt;/a&gt; :) The slides can be found &lt;a href=&quot;http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/&quot;&gt;here&lt;/a&gt; and a recording of her talk from a Mozilla event can be found &lt;a href=&quot;https://air.mozilla.org/introduction-to-web-audio/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;soletalking.jpg&quot;&gt;&lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQCBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHLh0xYiH//xAAbEAEAAQUBAAAAAAAAAAAAAAABAgADERITIf/aAAgBAQABBQK3bGGsNQ8HFdKJmP/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB0QAAECBwAAAAAAAAAAAAAAAAEAEBESISIxQVH/2gAIAQEABj8CNwjxEzChWi2G/8QAGhABAQEBAAMAAAAAAAAAAAAAAQARIUFhgf/aAAgBAQABPyFF3LNkagZsIO+yVWR8oHQ/L//aAAwDAQACAAMAAAAQpy//xAAYEQACAwAAAAAAAAAAAAAAAAAAASExUf/aAAgBAwEBPxBUTp//xAAXEQADAQAAAAAAAAAAAAAAAAAAASFR/9oACAECAQE/EGqTD//EAB0QAQACAgIDAAAAAAAAAAAAAAEAESExQcFhgZH/2gAIAQEAAT8Qp7kCxZ93Am+ol3WfXUBsm2jrOoSp5FgjgLclHUMAU8J//9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQCBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHLiURYiH//xAAbEAEAAgIDAAAAAAAAAAAAAAABAAIREgMTIf/aAAgBAQABBQKnGNNaah4OJ2QuY//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABwQAAEDBQAAAAAAAAAAAAAAAAEAEDEREiJBUf/aAAgBAQAGPwI5CvETcJWi0N//xAAaEAEBAQADAQAAAAAAAAAAAAABEQAhQWGB/9oACAEBAAE/IW65csi4CXRHPpnRpHtgCj83/9oADAMBAAIAAwAAABDHL//EABgRAAIDAAAAAAAAAAAAAAAAAAABITFR/9oACAEDAQE/EFROn//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFR/9oACAECAQE/EGrJWH//xAAdEAEAAwACAwEAAAAAAAAAAAABABEhMVGRocHw/9oACAEBAAE/ECWZAss88wJLxkEa391Dp2S6PqUI8IsEcjdw+Q4Ch0qf/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Soledad giving an introduction to Web Audio&quot;
-        title=&quot;&quot;
-        src=&quot;/static/13072ab6397e62d71e797fda6445871e/c739e/soletalking.jpg&quot;
-        srcset=&quot;/static/13072ab6397e62d71e797fda6445871e/8ee9c/soletalking.jpg 148w,
-/static/13072ab6397e62d71e797fda6445871e/ebbe7/soletalking.jpg 295w,
-/static/13072ab6397e62d71e797fda6445871e/c739e/soletalking.jpg 590w,
-/static/13072ab6397e62d71e797fda6445871e/5413e/soletalking.jpg 885w,
-/static/13072ab6397e62d71e797fda6445871e/1f853/soletalking.jpg 1024w&quot;
+        title=&quot;Soledad giving an introduction to Web Audio&quot;
+        src=&quot;/static/13072ab6397e62d71e797fda6445871e/1c72d/soletalking.jpg&quot;
+        srcset=&quot;/static/13072ab6397e62d71e797fda6445871e/a80bd/soletalking.jpg 148w,
+/static/13072ab6397e62d71e797fda6445871e/1c91a/soletalking.jpg 295w,
+/static/13072ab6397e62d71e797fda6445871e/1c72d/soletalking.jpg 590w,
+/static/13072ab6397e62d71e797fda6445871e/a8a14/soletalking.jpg 885w,
+/static/13072ab6397e62d71e797fda6445871e/72e01/soletalking.jpg 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Then, &lt;a href=&quot;https://twitter.com/jsantell&quot;&gt;Jordan Santell&lt;/a&gt; introduced us to the Web Audio debugging tools that he wrote for Firefox. I can still remember my first steps with the Web Audio API. My computer was making all these weird noises and my typical &lt;code class=&quot;language-text&quot;&gt;debugger-driven&lt;/code&gt; development work flow didn’t work because audio is processed in its own thread and won’t stop for debuggers. His tools would’ve made debugging much much easier! &lt;a href=&quot;http://jsantell.github.io/web-audio-tools-presentation/&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;jordantalking.jpg&quot;&gt;&lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAX/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABZch5ZCoJ/8QAHBAAAgICAwAAAAAAAAAAAAAAARIAAwIEERMh/9oACAEBAAEFAlrNY602Ver2OBMjyf/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABwQAAEEAwEAAAAAAAAAAAAAAAEAAhExEBIhIv/aAAgBAQAGPwIav6nexIpDUzxVWf/EABoQAQADAQEBAAAAAAAAAAAAAAEAESExQZH/2gAIAQEAAT8hsJ50vs1VPog5UllrYaXbLj2zwCb5P//aAAwDAQACAAMAAAAQOO//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAgBAgEBPxBH/8QAHhABAAICAQUAAAAAAAAAAAAAAQARITFRQXGBscH/2gAIAQEAAT8QVbZ34ruor1LLoMXju1ANconObIl2FY0arzKYg0ewqCpIJpr5P//Z&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgAEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAFHko12WR//xAAdEAABBAIDAAAAAAAAAAAAAAABAAMREgITBCEj/9oACAEBAAEFAob1+dOTXY12rgLIyf/EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EAB0QAAEEAgMAAAAAAAAAAAAAAAEAAhExEiEQIkH/2gAIAQEABj8Cbi/fqd3EikMTOlVc/wD/xAAaEAEAAwEBAQAAAAAAAAAAAAABABEhMUGB/9oACAEBAAE/IVkPOL7Deon0Q8ETs6YaXbNnbPAJvk//2gAMAwEAAgADAAAAEJjf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAIAQIBAT8QR//EAB4QAQACAQQDAAAAAAAAAAAAAAEAESExQVGBcbHB/9oACAEBAAE/EMONq8VrTHroRtg28wa2rRzm4nH0oOK7guwdD2FQVJB2a+T/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Jordan talking about Web Audio debugging&quot;
-        title=&quot;&quot;
-        src=&quot;/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/c739e/jordantalking.jpg&quot;
-        srcset=&quot;/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/8ee9c/jordantalking.jpg 148w,
-/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/ebbe7/jordantalking.jpg 295w,
-/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/c739e/jordantalking.jpg 590w,
-/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/5413e/jordantalking.jpg 885w,
-/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/1f853/jordantalking.jpg 1024w&quot;
+        title=&quot;Jordan talking about Web Audio debugging&quot;
+        src=&quot;/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/1c72d/jordantalking.jpg&quot;
+        srcset=&quot;/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/a80bd/jordantalking.jpg 148w,
+/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/1c91a/jordantalking.jpg 295w,
+/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/1c72d/jordantalking.jpg 590w,
+/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/a8a14/jordantalking.jpg 885w,
+/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/72e01/jordantalking.jpg 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/cwilso&quot;&gt;Chris Wilson&lt;/a&gt; did the last talk and he introduced us to the Web Midi API. It took some time to set this talk up because he took a ton of devices to showcase the capabilities of the API (as you can see on the picture underneath). It was like as if he was the secret 4th member of &lt;a href=&quot;https://soundcloud.com/theglitchmob&quot;&gt;The Glitch Mob&lt;/a&gt;! His &lt;a href=&quot;http://webaudiodemos.appspot.com/slides/webmidi.html&quot;&gt;Slides&lt;/a&gt; are full of demos and are perfectly suitable if you want to get started with Midi on the web right away :)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;christalking.jpg&quot;&gt;&lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAIBAwQF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAFd3BvzWJD/xAAaEAADAAMBAAAAAAAAAAAAAAABAgMAERME/9oACAEBAAEFAlYTq/oU52cHno6lglM5/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8BiP/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/Aar/xAAfEAACAAUFAAAAAAAAAAAAAAAAAQIREjGBISIyQZH/2gAIAQEABj8CqhfViGUsj1RufhdrByP/xAAaEAEBAQADAQAAAAAAAAAAAAABEQAhUWGR/9oACAEBAAE/IX/qYM7V5qZEDc95t5XrLAUe1hKH47//2gAMAwEAAgADAAAAEIff/8QAFhEBAQEAAAAAAAAAAAAAAAAAABFR/9oACAEDAQE/EKVj/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERUf/aAAgBAgEBPxBoTp//xAAcEAEAAgIDAQAAAAAAAAAAAAABESEAUTFhgXH/2gAIAQEAAT8QF/YWuTU+Y1RVaW4d4bcHzEOi7ML4pGvXBMkubBqRxRFqpXn/2Q==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAgMAAAAAAAAAAAAAAAAAAAIDBAX/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAVvYM+VwC//EABoQAAMAAwEAAAAAAAAAAAAAAAECAwAREwT/2gAIAQEAAQUCVxKr+hTnZweejqWCU8//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPwGI/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8Bqv/EAB0QAAIBBAMAAAAAAAAAAAAAAAABAhEiMYEyQZH/2gAIAQEABj8CcovrBGlNjuRc/DLWjkf/xAAaEAEBAQADAQAAAAAAAAAAAAABEQAhUWGR/9oACAEBAAE/IfakytuLzU0QJz3kryvWWAo9rKKH47//2gAMAwEAAgADAAAAEIT/AP/EABYRAQEBAAAAAAAAAAAAAAAAAAARUf/aAAgBAwEBPxClY//EABcRAAMBAAAAAAAAAAAAAAAAAAABEVH/2gAIAQIBAT8QaE6f/8QAHRABAAIBBQEAAAAAAAAAAAAAAQARITFBUWGBcf/aAAgBAQABPxACdIW3OL8hSuBV8lQgPWtdHU7ikHHrBMCdcg4sY2o1Uxz/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Chris talking about Web Midi&quot;
-        title=&quot;&quot;
-        src=&quot;/static/abecf33a5d7bbdee5ac06f06d95cd95c/c739e/christalking.jpg&quot;
-        srcset=&quot;/static/abecf33a5d7bbdee5ac06f06d95cd95c/8ee9c/christalking.jpg 148w,
-/static/abecf33a5d7bbdee5ac06f06d95cd95c/ebbe7/christalking.jpg 295w,
-/static/abecf33a5d7bbdee5ac06f06d95cd95c/c739e/christalking.jpg 590w,
-/static/abecf33a5d7bbdee5ac06f06d95cd95c/5413e/christalking.jpg 885w,
-/static/abecf33a5d7bbdee5ac06f06d95cd95c/1f853/christalking.jpg 1024w&quot;
+        title=&quot;Chris talking about Web Midi&quot;
+        src=&quot;/static/abecf33a5d7bbdee5ac06f06d95cd95c/1c72d/christalking.jpg&quot;
+        srcset=&quot;/static/abecf33a5d7bbdee5ac06f06d95cd95c/a80bd/christalking.jpg 148w,
+/static/abecf33a5d7bbdee5ac06f06d95cd95c/1c91a/christalking.jpg 295w,
+/static/abecf33a5d7bbdee5ac06f06d95cd95c/1c72d/christalking.jpg 590w,
+/static/abecf33a5d7bbdee5ac06f06d95cd95c/a8a14/christalking.jpg 885w,
+/static/abecf33a5d7bbdee5ac06f06d95cd95c/72e01/christalking.jpg 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;After all the talks we had time for a little lunch altogether before we started the hack sessions. In addition to providing the location and drinks, SoundCloud sponsored tasty and healthy lunch snacks for all of us :)&lt;/p&gt;
 &lt;p&gt;Some groups formed during lunch and people started hacking right away. People were really focused and it was the perfect working atmosphere in the room. Sometimes there were weird noises coming from several computers when the attendees were trying out oscillators and audio parameters :) I did not really have time to work on a project on my own because I was still preparing my &lt;a href=&quot;http://janmonschke.com/JSConf2014/&quot;&gt;slides&lt;/a&gt; for &lt;a href=&quot;http://2014.jsconf.eu/speakers/#/speakers/jan-monschke-using-the-web-for-music-production-and-for-live-performances&quot;&gt;JSConf.eu&lt;/a&gt;. In addition to the speakers, we also had coaches (&lt;a href=&quot;https://github.com/chrisguttandin&quot;&gt;Chris&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/woodworker&quot;&gt;Martin&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/halfbyte&quot;&gt;Jan&lt;/a&gt;) helping the attendees with their projects. My favourite moment was when Chris Wilson was explaining details about audio, in the old fashioned way on a white board and people were gathering around him, listening closely:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;chriswilsonexplainingthings.jpg&quot;&gt;&lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABKg+MrbhUf//EABoQAAIDAQEAAAAAAAAAAAAAAAABAgMSESH/2gAIAQEAAQUCRnokK6tRjbqfp//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AUf/xAAdEAABBAIDAAAAAAAAAAAAAAABABARIQISIjFR/9oACAEBAAY/ApDUVqQTj4uNCOm//8QAGxABAQACAwEAAAAAAAAAAAAAAREAITFhgVH/2gAIAQEAAT8hJAo3zJPIdBhTbDvDYQe37iSriVcd9rn/2gAMAwEAAgADAAAAEAf/AP/EABgRAAIDAAAAAAAAAAAAAAAAAAARASFB/9oACAEDAQE/EJrWM//EABYRAQEBAAAAAAAAAAAAAAAAABEQQf/aAAgBAgEBPxAcI//EABsQAQADAAMBAAAAAAAAAAAAAAEAESExQVGR/9oACAEBAAE/EL2kRWW+wsrOOO77slyFREGbNEhAAex9lIrATk62owxSc7P/2Q==&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EABYBAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEAMQAAABKg+MrbhUf//EABoQAAEFAQAAAAAAAAAAAAAAAAEAAgMSIRH/2gAIAQEAAQUCCr1AYJow0S2fq//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AUf/xAAcEAACAgIDAAAAAAAAAAAAAAABIQAQAhESMVH/2gAIAQEABj8C2KRnEgnHyJLqv//EAB0QAQACAgIDAAAAAAAAAAAAAAEAETFhIUFRgaH/2gAIAQEAAT8hJQVPyV7hoIWTRuCwg93zGqucLXGjys//2gAMAwEAAgADAAAAEAf/AP/EABgRAAIDAAAAAAAAAAAAAAAAAAARASFB/9oACAEDAQE/EJrWM//EABcRAAMBAAAAAAAAAAAAAAAAAAEQEUH/2gAIAQIBAT8QAuRP/8QAHBABAAMAAgMAAAAAAAAAAAAAAQARITFRQXGR/9oACAEBAAE/EDOkUrLfYFtTjju/NkfQqJjNnCFdAOw9xhuQ3JXdRsEPuf/Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Chris explaining audio&quot;
-        title=&quot;&quot;
-        src=&quot;/static/69d89d3110363aa4cbbc462f95eb11bc/c739e/chriswilsonexplainingthings.jpg&quot;
-        srcset=&quot;/static/69d89d3110363aa4cbbc462f95eb11bc/8ee9c/chriswilsonexplainingthings.jpg 148w,
-/static/69d89d3110363aa4cbbc462f95eb11bc/ebbe7/chriswilsonexplainingthings.jpg 295w,
-/static/69d89d3110363aa4cbbc462f95eb11bc/c739e/chriswilsonexplainingthings.jpg 590w,
-/static/69d89d3110363aa4cbbc462f95eb11bc/5413e/chriswilsonexplainingthings.jpg 885w,
-/static/69d89d3110363aa4cbbc462f95eb11bc/1f853/chriswilsonexplainingthings.jpg 1024w&quot;
+        title=&quot;Chris explaining audio&quot;
+        src=&quot;/static/69d89d3110363aa4cbbc462f95eb11bc/1c72d/chriswilsonexplainingthings.jpg&quot;
+        srcset=&quot;/static/69d89d3110363aa4cbbc462f95eb11bc/a80bd/chriswilsonexplainingthings.jpg 148w,
+/static/69d89d3110363aa4cbbc462f95eb11bc/1c91a/chriswilsonexplainingthings.jpg 295w,
+/static/69d89d3110363aa4cbbc462f95eb11bc/1c72d/chriswilsonexplainingthings.jpg 590w,
+/static/69d89d3110363aa4cbbc462f95eb11bc/a8a14/chriswilsonexplainingthings.jpg 885w,
+/static/69d89d3110363aa4cbbc462f95eb11bc/72e01/chriswilsonexplainingthings.jpg 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;everybodyworking2.jpg&quot;&gt;&lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAIGAwX/xAAVAQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEAMQAAAB7T48xoGbECgP/8QAGxAAAwEAAwEAAAAAAAAAAAAAAQIDABESEyD/2gAIAQEAAQUC9ohS8jmvFcl2UPTtuSfj/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAGxAAAgIDAQAAAAAAAAAAAAAAABEBMQISIEH/2gAIAQEABj8CqzGF6LUVwUuf/8QAGxABAQEBAAMBAAAAAAAAAAAAAREAIRAxQaH/2gAIAQEAAT8hEakXGYu8Tr9y3Zh8yN9n0uppw+XWXBdJ4//aAAwDAQACAAMAAAAQ5x88/8QAFxEAAwEAAAAAAAAAAAAAAAAAABAhEf/aAAgBAwEBPxCYR//EABcRAAMBAAAAAAAAAAAAAAAAAAAQESH/2gAIAQIBAT8Q2kf/xAAbEAEBAQADAQEAAAAAAAAAAAABEQAhMUFRYf/aAAgBAQABPxCvmSpkZ29Z0rLQik/X2YeI7kTAVyig7768fmQwESKyhRgTchce44N//9k=&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 100%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGQABAAMBAQAAAAAAAAAAAAAAAAECBgMF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAe1fHpGhZsUkqAf/xAAcEAADAAEFAAAAAAAAAAAAAAABAgMABBESEyD/2gAIAQEAAQUC7pBC8jjaiIKXZQ9OZ3J8f//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABsQAAICAwEAAAAAAAAAAAAAAAARATECEiAh/9oACAEBAAY/AqsxhL0Worgpc//EABwQAQADAAIDAAAAAAAAAAAAAAEAESExQVFhgf/aAAgBAQABPyEctouam/0a94zTDXiI/mWaHB1csXAuJUJ//9oADAMBAAIAAwAAABC0GDz/xAAXEQADAQAAAAAAAAAAAAAAAAAAECER/9oACAEDAQE/EJhH/8QAFxEAAwEAAAAAAAAAAAAAAAAAABARIf/aAAgBAgEBPxDaR//EABsQAQEBAAMBAQAAAAAAAAAAAAERACExQVFx/9oACAEBAAE/EKQ5lmRnb17qsxNER+n2YkSkLwMhSqtR3314/MgEEBFZarEm4EB7uBv/2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Attendees working&quot;
-        title=&quot;&quot;
-        src=&quot;/static/ad9cfbf948c710d809dd32fcbcfcd8f5/c739e/everybodyworking2.jpg&quot;
-        srcset=&quot;/static/ad9cfbf948c710d809dd32fcbcfcd8f5/8ee9c/everybodyworking2.jpg 148w,
-/static/ad9cfbf948c710d809dd32fcbcfcd8f5/ebbe7/everybodyworking2.jpg 295w,
-/static/ad9cfbf948c710d809dd32fcbcfcd8f5/c739e/everybodyworking2.jpg 590w,
-/static/ad9cfbf948c710d809dd32fcbcfcd8f5/5413e/everybodyworking2.jpg 885w,
-/static/ad9cfbf948c710d809dd32fcbcfcd8f5/1f853/everybodyworking2.jpg 1024w&quot;
+        title=&quot;Attendees working&quot;
+        src=&quot;/static/ad9cfbf948c710d809dd32fcbcfcd8f5/1c72d/everybodyworking2.jpg&quot;
+        srcset=&quot;/static/ad9cfbf948c710d809dd32fcbcfcd8f5/a80bd/everybodyworking2.jpg 148w,
+/static/ad9cfbf948c710d809dd32fcbcfcd8f5/1c91a/everybodyworking2.jpg 295w,
+/static/ad9cfbf948c710d809dd32fcbcfcd8f5/1c72d/everybodyworking2.jpg 590w,
+/static/ad9cfbf948c710d809dd32fcbcfcd8f5/a8a14/everybodyworking2.jpg 885w,
+/static/ad9cfbf948c710d809dd32fcbcfcd8f5/72e01/everybodyworking2.jpg 1024w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;After several hours of hacking it was time for the presentations! We had eight groups presenting their projects and here’s the recording:&lt;/p&gt;
-
-          &lt;div
-            class=&quot;gatsby-resp-iframe-wrapper&quot;
-            style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
-          &gt;
-            &lt;iframe class=&quot;video-embed&quot; src=&quot;//www.youtube.com/embed/atJgvEBn6qg&quot; frameborder=&quot;0&quot; allowfullscreen style=&quot;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-          &quot;&gt;&lt;/iframe&gt;
-          &lt;/div&gt;
-          
+&lt;div class=&quot;gatsby-resp-iframe-wrapper&quot; style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden; margin-bottom: 1.0725rem&quot; &gt; &lt;iframe class=&quot;video-embed&quot; src=&quot;//www.youtube.com/embed/atJgvEBn6qg&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot; style=&quot; position: absolute; top: 0; left: 0; width: 100%; height: 100%; &quot;&gt;&lt;/iframe&gt; &lt;/div&gt;
 &lt;p&gt;Here’s a list of all the projects that were presented if you don’t have the time to watch the entire video. If you are an attendee and you want your project link on here, please contact me on &lt;a href=&quot;https://twitter.com/thedeftone&quot;&gt;Twitter&lt;/a&gt;.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Jelle Akkerman (&lt;a href=&quot;https://github.com/jellea&quot;&gt;github&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/jellea&quot;&gt;twitter&lt;/a&gt;) – NoOsc was an experiment using NoFlo, trying to build something very visual and cool, super suitable for live-acts.&lt;/li&gt;
@@ -670,53 +649,55 @@ I came to HTW Berlin in order to focus even more on web technology since they’
 &lt;p&gt;Two other courses in which the profs were open to JavaScript were ‘Image Processing’ and ‘Computer Vision’. Typically all tasks would have been solved with Java and in some special cases in C#, but the prof never had students who wanted to solve it in JavaScript. Also he thought it could not be done in JavaScript completely since it needed a lot of CPU power and also access to raw image data (he didn’t know that you can now access raw image data using canvas).&lt;/p&gt;
 &lt;p&gt;The goal of the ‘Image Processing’ course was to write a program that could vectorize an input image. Each task during the semester would add a new step to the process so that we’d have the complete algorithm by the end of the semester.&lt;/p&gt;
 &lt;p&gt;&lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 33.85731559854897%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAABIElEQVQY02PYu3fvnj17du3adejQoYsXL165cuXkyZOXLl26du3a6dOnd+7ae+r06QsXLly9ehUoBRQ8ePDg1q1bgep37tzJAFR67NgxoDqg3Px585KTk2tra/Pz89PT04GM12/efASDTzDw/v37t2/fvgMDhh07dvT09Kxfvx5oZGxsLAMDg6GhoYuLC5ABJL9///7///9///79xwYYVqxYMXv27KVLl+7fvz81NVVZWdnGxsbHx0dWVtbb2/vHjx/4NE+dOhWof/ny5UDNaWlpgoKCiYmJ4uLiZmZmBgYGBDQDHbx48eLe3l6g50tLS0VFReXl5UNCQnR0dBQVFX///o1PMzCogd4GWn7kyJHy8nIBAQFLMAC63NHREb9mAEtwLocks4ZyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.78378378378378%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLUlEQVQY032Qv6qCcBTHf/oO4mDo5GBuQfgAjg0OvYLdwe7Y0BvY0OgiBhkuIYguFt6uYNDlSoQG+ecpyrh0t8R7CO4WfYfD4XA+fL/noM1mE4ZhEARRFB0Oh6Io9vt9mqbQHI/H4OPz6ztO0yTP8yzLYBjHse/7wUMIgN1uBxVW1+v122AwHo9Ho5GiKO/DYV6Ut9tvVVU//7per+fz+fIQAltN0yzL2m63qqoihEiS7Pf7OI4zDAOGTdPUdd08E1oul/P5fLFYQP7JZMKybLfblSSJ47h2u12W5SsYMMMwXNf1PE/XdQzDZFmmaVoQhFarlSTJK9hxHNu2p9MpOM9mMwAoihJFsdfrwQmn0wmW7vf7cxievFqtwBm+ZZomQRCdTgeSw9k8z7+O/QcuFCzAJkr0ZAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Binarization&quot;
-        title=&quot;&quot;
-        src=&quot;/static/878a8b6344176459b9594bf4af950e66/b9e4f/binarization.png&quot;
-        srcset=&quot;/static/878a8b6344176459b9594bf4af950e66/cf440/binarization.png 148w,
-/static/878a8b6344176459b9594bf4af950e66/d2d38/binarization.png 295w,
-/static/878a8b6344176459b9594bf4af950e66/b9e4f/binarization.png 590w,
-/static/878a8b6344176459b9594bf4af950e66/e60a7/binarization.png 827w&quot;
+        title=&quot;Binarization&quot;
+        src=&quot;/static/878a8b6344176459b9594bf4af950e66/fcda8/binarization.png&quot;
+        srcset=&quot;/static/878a8b6344176459b9594bf4af950e66/12f09/binarization.png 148w,
+/static/878a8b6344176459b9594bf4af950e66/e4a3f/binarization.png 295w,
+/static/878a8b6344176459b9594bf4af950e66/fcda8/binarization.png 590w,
+/static/878a8b6344176459b9594bf4af950e66/4e6ec/binarization.png 827w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;
+    &lt;/span&gt;
 &lt;a href=&quot;https://janmonschke.com/Image-Processing-with-HTML5-Canvas/Ue01-Monschke-Jan&quot;&gt;Try out the demo&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Above you see the first exercise, two simple binarization algorithms for images.&lt;/p&gt;
 &lt;p&gt;It was a fun course because it was something I never did before in my Bachelor studies. Also it felt like very low-level development, although all the code was written in JavaScript (or in my case in CoffeeScript). Sadly, I stopped doing the exercises in CoffeeScript after some time because my prof didn’t like its syntax and already had a hard time to understand JavaScript. For the last exercises I switched to Java afterwards, which also was a &lt;em&gt;fun&lt;/em&gt; experience after so many years with Ruby, JS, Python and CoffeeScript ;)&lt;/p&gt;
 &lt;h3&gt;Canvas Filters&lt;/h3&gt;
 &lt;p&gt;‘Computer Vision’ also was a course that dealt with calculations on image data and its aim was to write algorithms that could detect objects semantically in images. E.g. it should say that there’s a duck on the image if you’d show it an image of a duck swimming in a pond.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://janmonschke.com/ComputerVision/01_Edge_Detection&quot;&gt;&lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
-  &gt;
-    &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 48.447893569844794%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsSAAALEgHS3X78AAACS0lEQVQoz2PYvn37wYMHjx49umfv3t27dx86dGjXrl379+8HkhcuXLh9+/YdMLiNAW7dusVw6OChM2fOXL5y5czZswcOHjx58hSQe/HihWvXrkEUnTp16uzZs9evX78KA0ApIHnjxg2Gy5cv3bt7997dO0Dy1s0bN2/cAJoJVHrn7l2ghTdv3rx79+7jx0+eP38BhEDw7Nmz52Dw4MEDho7evsUr127bc3DTrr1HTl84cvbS5WvXn7148erNm9VrVicnJ1eUl9fX1wJRXU1NXX1tU0NDXU1dTXX1xo0bGYJiE0vr2us6+rPLa9smL6hp72tobaqprTq0e21rcz0DAwM/Ly8vDx83Fw8/Nx83Nz8XOw8bMzcbA2ttTTVDcVVTbVNHdV1zRWVtWXFRUV5aYKC3hbHu2kXdUyb3sbFxyMnJSknJiktIioqJCwuLCgmLioqKifLztjQ2MiSlZmVn5eTn5uWkJ+WkxQf4eLjYmgZ42J09sHhCXw8LM7u4mKSQkDA/v5CQoLCIiLigoJC0lJQwF1ddQwNDTExcYmJyeEhgQly0h7uLuZ5aoIdjsJvplYPLujvaGBiYhISEeHn5RISBQExERFRORkZSQlKAi7Ourp4hyMcjOMAnJirC2cFWT0PZycbUy9Ux3N3kwdmN7a2NQM0iIiJioqKCgqL8/ILiImJi4hISomK8HBx1dXUMrg5W8bExdlbmFgZaJjrqgb4+RtoqKaHOD85vbW9pYGRgkZSQ4uUV5OPj4ecTEBURBrKlREQ42Vhr6+oBT+YXA7p+spcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;&lt;/span&gt;
-    &lt;img
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 48.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACTUlEQVQoz2PYtm3bgQMHjhw5sn///u3btx8+fHjnzp1A9o4dO86cOXP79u07YHAbA9y6dYvh6NGjZ8+eu3rt2qVLl4A6T506de7cOSD75s0bd+/evX/vPpB75szZGzduXoeBG2Bw8+ZNhgsXLty9c/vu3Tv37t4FmXbjBtDU6zeuA5lAxtWrV4Hk40ePnz199uw5kHgKAs+ePn/+7MGDBwyNbe3T5y7atHPf6s3b9x45dfDUxdPnLzx++uzVm9c7d+2MjIrMzswsKS4qKSkqLiwE4vLS0pKC4rzcvEULFzGExCcWVbc0dE7MLK1u6JlZ2zGxsq66rLx09ZJpSxfPYWBg4OPh5ucV4ObmFeDl5+EW4Obk42DlYWJgykpPZyiuaq5pbK+tb62qrqsoLSkrzIwID7A2N5zRV7Fp/VIeHn4ZWRkZaTlJSSkxcQlRETFhETEgQ4iHuzA3hyExJSM7KwfojKy0pJz0hOAAH2cbEx8Xmx2rejesXcbOziMmKiEoKMTPLygkICQiIi4oKCwtJSXAwZ6VlcUQEx2XmJgcFhIYHxPp7eVuqqfm72bn52RyYO3E1csWMLOwCwoI8vLwCQsJiwiLCQuLyMkA9crwsrFlZWYxBPt6Bfl7xURHuDrZ62kq25kb+nq4+tjpXNizYPmi2Uws7MJCQmJiooKCovx8AqJCIuJiEhJi4twsLJkZGQwu9pYJcTEOttaWRjom2mr+3p7mhjoh7maXDyxftnAmCwunhJgEL68QLx83SLOwEB+foKSoKAcLU0ZGJgBsaxRoDf9HUQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Edge detection&quot;
-        title=&quot;&quot;
-        src=&quot;/static/2c7f89a8517678877ae531bfaa4f7941/b9e4f/edge-detection.png&quot;
-        srcset=&quot;/static/2c7f89a8517678877ae531bfaa4f7941/cf440/edge-detection.png 148w,
-/static/2c7f89a8517678877ae531bfaa4f7941/d2d38/edge-detection.png 295w,
-/static/2c7f89a8517678877ae531bfaa4f7941/b9e4f/edge-detection.png 590w,
-/static/2c7f89a8517678877ae531bfaa4f7941/f9b6a/edge-detection.png 885w,
-/static/2c7f89a8517678877ae531bfaa4f7941/0c499/edge-detection.png 902w&quot;
+        title=&quot;Edge detection&quot;
+        src=&quot;/static/2c7f89a8517678877ae531bfaa4f7941/fcda8/edge-detection.png&quot;
+        srcset=&quot;/static/2c7f89a8517678877ae531bfaa4f7941/12f09/edge-detection.png 148w,
+/static/2c7f89a8517678877ae531bfaa4f7941/e4a3f/edge-detection.png 295w,
+/static/2c7f89a8517678877ae531bfaa4f7941/fcda8/edge-detection.png 590w,
+/static/2c7f89a8517678877ae531bfaa4f7941/efc66/edge-detection.png 885w,
+/static/2c7f89a8517678877ae531bfaa4f7941/58213/edge-detection.png 902w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-  &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Above you see the first exercise, the first steps towards edge detection with different filters.&lt;/p&gt;
 &lt;p&gt;I was able to use typed-Arrays in JavaScript for the first time, before that I barely knew about them and I was pretty amazed by how much faster they made the whole application.&lt;/p&gt;
 &lt;h2&gt;The bad parts&lt;/h2&gt;
