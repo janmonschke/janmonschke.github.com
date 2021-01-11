@@ -1,5 +1,5 @@
 import React, { useRef, useState, useLayoutEffect, useCallback } from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import { MdRssFeed } from 'react-icons/md';
 
 import Bio from '../components/Bio';
@@ -9,13 +9,17 @@ import { rhythm } from '../utils/typography';
 import Talks from '../components/Talks';
 
 import './index.css';
+import { BlogPostsOnIndex } from '../components/index/BlogPostsOnIndex';
+import { WeeknotesOnIndex } from '../components/index/WeeknotesOnIndex';
 
-export default function BlogIndex({ data, location }) {
+export default function BlogIndex(props) {
+  const { data, location } = props;
   const { title, keywords } = data.site.siteMetadata;
-  const posts = data.allMarkdownRemark.edges;
+  const weeknotesRef = useRef();
   const talksRef = useRef();
   const [elementPositions, setElementPositions] = useState({
     posts: 0,
+    weeknotes: 0,
     talks: 0
   });
   const [contentMargin, setContentMargin] = useState(0);
@@ -23,10 +27,12 @@ export default function BlogIndex({ data, location }) {
 
   useLayoutEffect(() => {
     const talks = talksRef.current.offsetTop;
+    const weeknotes = weeknotesRef.current.offsetTop;
 
     setElementPositions({
-      talks,
-      posts
+      posts: 0,
+      weeknotes,
+      talks
     });
   }, [talksRef]);
 
@@ -39,6 +45,11 @@ export default function BlogIndex({ data, location }) {
     setContentMargin(0);
     setCurrent('posts');
   }, []);
+
+  const onWeeknotesClicked = useCallback(() => {
+    setContentMargin(elementPositions.weeknotes);
+    setCurrent('weeknotes');
+  });
 
   return (
     <Layout location={location} title={title}>
@@ -62,6 +73,14 @@ export default function BlogIndex({ data, location }) {
           <span>Blog posts</span>
         </button>
         <button
+          className={`${
+            current === 'weeknotes' ? 'm-current' : ''
+          } index__navBtn`}
+          onClick={onWeeknotesClicked}
+        >
+          <span>Weeknotes</span>
+        </button>
+        <button
           className={`${current === 'talks' ? 'm-current' : ''} index__navBtn`}
           onClick={onTalksClicked}
         >
@@ -78,20 +97,56 @@ export default function BlogIndex({ data, location }) {
               style={{
                 display: 'flex',
                 alignItems: 'baseline',
-                marginBottom: rhythm(1)
+                marginBottom: rhythm(0.5)
               }}
             >
               <h2 style={{ margin: 0 }} id="blog-posts">
                 Posts
               </h2>
-              <a href="/rss.xml" aria-label="RSS feed">
+              <a href="/rss.xml" aria-label="Blog post RSS feed">
                 <MdRssFeed
                   size="24"
                   style={{ marginLeft: rhythm(0.2), color: '#f26522' }}
                 />
               </a>
             </div>
-            {posts.map(IndexPost)}
+            <BlogPostsOnIndex />
+          </div>
+
+          <div
+            className="weeknotes"
+            ref={weeknotesRef}
+            style={{ marginBottom: rhythm(1) }}
+          >
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'baseline'
+              }}
+            >
+              <h2 style={{ margin: 0 }} id="talks">
+                Weeknotes
+              </h2>
+              <a href="/weeknotes.xml" aria-label="Weeknotes RSS feed">
+                <MdRssFeed
+                  size="24"
+                  style={{ marginLeft: rhythm(0.2), color: '#f26522' }}
+                />
+              </a>
+            </div>
+            <p
+              style={{
+                margin: 0,
+                marginTop: rhythm(0.5),
+                marginBottom: rhythm(0.5)
+              }}
+            >
+              Weeknotes are shorter, more regular and more personal blog posts
+              that I publish on a weekly basis. Expect to read about updates of
+              side projects, books that I like to read, food, living in Berlin
+              and general life things.
+            </p>
+            <WeeknotesOnIndex />
           </div>
 
           <div className="talks" ref={talksRef}>
@@ -106,48 +161,12 @@ export default function BlogIndex({ data, location }) {
   );
 }
 
-function IndexPost({ node }) {
-  const title = node.frontmatter.title || node.fields.slug;
-  return (
-    <div key={node.fields.slug}>
-      <h3
-        style={{
-          marginTop: rhythm(1.5),
-          marginBottom: 0
-        }}
-      >
-        <Link to={node.fields.slug}>{title}</Link>
-      </h3>
-      <small>{node.frontmatter.date}</small>
-      <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-    </div>
-  );
-}
-
 export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
         title
         keywords
-      }
-    }
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { type: { eq: "blog" } } }
-      limit: 10
-    ) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-          }
-        }
       }
     }
   }

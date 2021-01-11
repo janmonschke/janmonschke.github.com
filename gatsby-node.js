@@ -6,7 +6,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`);
   return Promise.all([
-    queryByType(graphql, 'blog').then(result => {
+    queryByType(graphql, 'blog').then((result) => {
       if (result.errors) {
         throw result.errors;
       }
@@ -31,16 +31,14 @@ exports.createPages = ({ graphql, actions }) => {
       });
     }),
 
-    queryByType(graphql, 'weeknote').then(result => {
+    queryByType(graphql, 'weeknote').then((result) => {
       if (result.errors) {
         throw result.errors;
       }
 
       // Create weeknote pages.
       const weeknotes = result.data.allMarkdownRemark.edges;
-      console.log(weeknotes.length);
       weeknotes.forEach((weeknote, index) => {
-        console.log(JSON.stringify(weeknote, null, 2));
         const previous =
           index === weeknotes.length - 1 ? null : weeknotes[index + 1].node;
         const next = index === 0 ? null : weeknotes[index - 1].node;
@@ -57,7 +55,7 @@ exports.createPages = ({ graphql, actions }) => {
       });
     }),
 
-    queryByType(graphql, 'project').then(result => {
+    queryByType(graphql, 'project').then((result) => {
       if (result.errors) {
         throw result.errors;
       }
@@ -65,7 +63,7 @@ exports.createPages = ({ graphql, actions }) => {
       // Create project pages.
       const projects = result.data.allMarkdownRemark.edges;
 
-      projects.forEach(post => {
+      projects.forEach((post) => {
         createPage({
           path: post.node.fields.slug,
           component: blogPost,
@@ -82,7 +80,9 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = node.frontmatter.path ? `/${node.frontmatter.path}` : createFilePath({ node, getNode });
+    const value = node.frontmatter.path
+      ? `/${node.frontmatter.path}`
+      : createFilePath({ node, getNode });
     createNodeField({
       name: `slug`,
       node,
