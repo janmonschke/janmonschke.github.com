@@ -1,13 +1,11 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 
-import { rhythm } from '../utils/typography';
-
 function Bio() {
   return (
     <StaticQuery
       query={bioQuery}
-      render={data => {
+      render={(data) => {
         const { twitter, github } = data.site.siteMetadata;
         return (
           <aside>
