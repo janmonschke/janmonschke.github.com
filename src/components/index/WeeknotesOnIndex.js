@@ -39,7 +39,6 @@ export function WeeknotesOnIndex() {
 
 function WeeknotePreview({ node }) {
   const title = node.frontmatter.title || node.fields.slug;
-  console.log(node);
   return (
     <div style={{ marginBottom: rhythm(0.2) }}>
       <h3
