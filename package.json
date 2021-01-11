@@ -22,18 +22,18 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-icons": "^3.7.0",
+    "react-icons": "^4.1.0",
     "react-typography": "^0.16.19",
-    "typeface-source-sans-pro": "^0.0.54",
-    "typeface-source-serif-pro": "^0.0.73",
+    "typeface-source-sans-pro": "^1.1.13",
+    "typeface-source-serif-pro": "^1.1.13",
     "typography": "^0.16.19",
     "typography-theme-st-annes": "^0.16.19"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.13.0",
+    "eslint": "^7.17.0",
+    "eslint-plugin-react": "^7.22.0",
     "gh-pages": "^2.0.1",
-    "prettier": "^1.18.2"
+    "prettier": "^2.2.1"
   },
   "scripts": {
     "dev": "gatsby develop",
