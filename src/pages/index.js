@@ -92,7 +92,7 @@ export default function BlogIndex(props) {
           className="index__content"
           style={{ transform: `translateY(${-contentMargin}px)` }}
         >
-          <div className="posts">
+          <div className="posts" style={{ marginBottom: rhythm(1) }}>
             <div
               style={{
                 display: 'flex',
