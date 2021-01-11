@@ -27,11 +27,11 @@ export default function BlogIndex(props) {
 
   useLayoutEffect(() => {
     const talks = talksRef.current.offsetTop;
-    const weeknotes = weeknotesRef.current.offsetTop;
+    // const weeknotes = weeknotesRef.current.offsetTop;
 
     setElementPositions({
       posts: 0,
-      weeknotes,
+      // weeknotes,
       talks
     });
   }, [talksRef]);
@@ -68,20 +68,23 @@ export default function BlogIndex(props) {
       >
         <button
           className={`${current === 'posts' ? 'm-current' : ''} index__navBtn`}
+          type="button"
           onClick={onBlogPostsClicked}
         >
           <span>Blog posts</span>
         </button>
-        <button
+        {/* <button
           className={`${
             current === 'weeknotes' ? 'm-current' : ''
           } index__navBtn`}
+          type="button"
           onClick={onWeeknotesClicked}
         >
           <span>Weeknotes</span>
-        </button>
+        </button> */}
         <button
           className={`${current === 'talks' ? 'm-current' : ''} index__navBtn`}
+          type="button"
           onClick={onTalksClicked}
         >
           <span>Talks</span>
@@ -113,7 +116,7 @@ export default function BlogIndex(props) {
             <BlogPostsOnIndex />
           </div>
 
-          <div
+          {/* <div
             className="weeknotes"
             ref={weeknotesRef}
             style={{ marginBottom: rhythm(1) }}
@@ -147,7 +150,7 @@ export default function BlogIndex(props) {
               and general life things.
             </p>
             <WeeknotesOnIndex />
-          </div>
+          </div> */}
 
           <div className="talks" ref={talksRef}>
             <h2 style={{ margin: 0, marginBottom: rhythm(1) }} id="talks">
