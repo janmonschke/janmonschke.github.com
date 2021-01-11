@@ -11,12 +11,11 @@ import './blog-post.css';
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
-    const siteTitle = this.props.data.site.siteMetadata.title;
     const { previous, next } = this.props.pageContext;
     const { title, date, keywords, pomodoros } = post.frontmatter;
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
           title={title}
           description={post.excerpt}
@@ -53,23 +52,15 @@ class BlogPostTemplate extends React.Component {
             to write this post 🍅
           </p>
         )}
-        <hr
-          style={{
-            marginBottom: rhythm(1)
-          }}
-        />
+        <Separator />
         <div
           style={{
-            marginBottom: rhythm(1)
+            marginBottom: rhythm(0.6)
           }}
         >
           <Bio />
         </div>
-        <hr
-          style={{
-            marginBottom: rhythm(1)
-          }}
-        />
+        <Separator />
 
         <ul
           style={{
@@ -101,16 +92,24 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
+function Separator() {
+  return (
+    <hr
+      style={{
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: rhythm(0.6),
+        width: '75%',
+        backgroundColor: '#eee'
+      }}
+    />
+  );
+}
+
 export default BlogPostTemplate;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
