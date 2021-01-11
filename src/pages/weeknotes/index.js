@@ -3,6 +3,7 @@ import { Link, graphql, StaticQuery } from 'gatsby';
 import { rhythm } from '../../utils/typography';
 import { MdRssFeed } from 'react-icons/md';
 import IndexCollection from '../../components/IndexCollection';
+import SEO from '../../components/SEO';
 
 export default function WeeknotesIndex({ location }) {
   return (
