@@ -7,6 +7,7 @@ import IndexCollection from '../../components/IndexCollection';
 export default function WeeknotesIndex({ location }) {
   return (
     <IndexCollection location={location}>
+      <SEO title="All weeknotes" />
       <div
         style={{
           display: 'flex',

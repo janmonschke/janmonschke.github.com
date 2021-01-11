@@ -7,6 +7,7 @@ import IndexCollection from '../../components/IndexCollection';
 export default function BlogPostsIndex({ location }) {
   return (
     <IndexCollection location={location}>
+      <SEO title="All blog posts" />
       <div
         style={{
           display: 'flex',
