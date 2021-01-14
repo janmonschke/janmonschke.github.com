@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
-import { rhythm } from '../../utils/typography';
+import { rhythm, scale } from '../../utils/typography';
+import { Keywords } from '../Keywords';
 
 export function BlogPostsOnIndex() {
   return (
@@ -10,7 +11,7 @@ export function BlogPostsOnIndex() {
           allMarkdownRemark(
             sort: { fields: [frontmatter___date], order: DESC }
             filter: { frontmatter: { type: { eq: "blog" } } }
-            limit: 10
+            limit: 5
           ) {
             edges {
               node {
@@ -20,7 +21,7 @@ export function BlogPostsOnIndex() {
                   slug
                 }
                 frontmatter {
-                  date(formatString: "MMMM DD, YYYY")
+                  date(formatString: "MMM DD, YYYY")
                   title
                 }
               }
@@ -43,17 +44,14 @@ function IndexPost({ node }) {
     <div key={node.fields.slug}>
       <h3
         style={{
-          marginTop: rhythm(1),
-          marginBottom: 0
+          marginTop: rhythm(0.2),
+          marginBottom: 0,
+          fontWeight: 'normal',
+          ...scale(0.1)
         }}
       >
-        <Link to={node.fields.slug}>{title}</Link>
+        {node.frontmatter.date}: <Link to={node.fields.slug}>{title}</Link>
       </h3>
-      <small>{node.frontmatter.date}</small>
-      <p
-        style={{ margin: 0 }}
-        dangerouslySetInnerHTML={{ __html: node.excerpt }}
-      />
     </div>
   );
 }

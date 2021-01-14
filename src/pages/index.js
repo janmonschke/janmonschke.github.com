@@ -1,5 +1,5 @@
 import React, { useRef, useState, useLayoutEffect, useCallback } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { MdRssFeed } from 'react-icons/md';
 
 import Bio from '../components/Bio';
@@ -114,6 +114,16 @@ export default function BlogIndex(props) {
               </a>
             </div>
             <BlogPostsOnIndex />
+            <div
+              style={{
+                marginTop: rhythm(0.4),
+                fontSize: rhythm(0.6),
+                display: 'flex',
+                justifyContent: 'flex-end'
+              }}
+            >
+              <Link to="/blogposts">→ More blog posts</Link>
+            </div>
           </div>
 
           <div

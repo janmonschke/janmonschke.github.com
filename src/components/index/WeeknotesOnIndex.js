@@ -46,7 +46,8 @@ function WeeknotePreview({ node }) {
         style={{
           marginTop: rhythm(0.2),
           marginBottom: 0,
-          fontSize: rhythm(0.8)
+          fontSize: rhythm(0.8),
+          fontWeight: 'normal'
         }}
       >
         <Link to={node.fields.slug}>{title}</Link>
