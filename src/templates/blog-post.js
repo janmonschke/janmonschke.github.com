@@ -16,6 +16,7 @@ class BlogPostTemplate extends React.Component {
     const { title, date, keywords, pomodoros, type } = post.frontmatter;
     const isWeeknote = type === 'weeknote';
     const siteTitle = this.props.data.site.siteMetadata.title;
+    console.log(post);
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
