@@ -19,11 +19,11 @@ class BlogPostTemplate extends React.Component {
     console.log(post);
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
+        {/* <SEO
           title={title}
           description={post.excerpt}
           keywords={keywords || []}
-        />
+        /> */}
         <h1
           style={{
             marginBottom: rhythm(1)
@@ -34,7 +34,7 @@ class BlogPostTemplate extends React.Component {
         <p
           style={{
             ...scale(-1 / 8),
-            display: `block`,
+            display: 'block',
             marginBottom: rhythm(1),
             marginTop: rhythm(-1)
           }}
