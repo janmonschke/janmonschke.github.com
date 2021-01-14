@@ -7,12 +7,14 @@ import SEO from '../components/SEO';
 import { rhythm, scale } from '../utils/typography';
 
 import './blog-post.css';
+import { Keywords } from '../components/Keywords';
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const { previous, next } = this.props.pageContext;
-    const { title, date, keywords, pomodoros } = post.frontmatter;
+    const { title, date, keywords, pomodoros, type } = post.frontmatter;
+    const isWeeknote = type === 'weeknote';
     const siteTitle = this.props.data.site.siteMetadata.title;
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -36,6 +38,11 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1)
           }}
         >
+          {isWeeknote && (
+            <div>
+              <Keywords keywords={keywords} />
+            </div>
+          )}
           {date}
         </p>
         <div
@@ -122,6 +129,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        type
         date(formatString: "MMMM DD, YYYY")
         pomodoros
         keywords

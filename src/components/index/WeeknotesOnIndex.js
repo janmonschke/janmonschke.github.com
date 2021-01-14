@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import { rhythm } from '../../utils/typography';
+import { Keywords } from '../Keywords';
 
 export function WeeknotesOnIndex() {
   return (
@@ -50,13 +51,7 @@ function WeeknotePreview({ node }) {
       >
         <Link to={node.fields.slug}>{title}</Link>
       </h3>
-      <small
-        style={{
-          color: '#666'
-        }}
-      >
-        {node.frontmatter.keywords.map((keyword) => `#${keyword}`).join(' · ')}
-      </small>
+      <Keywords keywords={node.frontmatter.keywords} />
     </div>
   );
 }

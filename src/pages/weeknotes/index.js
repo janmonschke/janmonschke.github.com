@@ -4,6 +4,7 @@ import { rhythm } from '../../utils/typography';
 import { MdRssFeed } from 'react-icons/md';
 import IndexCollection from '../../components/IndexCollection';
 import SEO from '../../components/SEO';
+import { Keywords } from '../../components/Keywords';
 
 export default function WeeknotesIndex({ location }) {
   return (
@@ -78,13 +79,7 @@ function IndexPost({ node }) {
       >
         <Link to={node.fields.slug}>{title}</Link>
       </h3>
-      <small
-        style={{
-          color: '#666'
-        }}
-      >
-        {node.frontmatter.keywords.map((keyword) => `#${keyword}`).join(' · ')}
-      </small>
+      <Keywords keywords={node.frontmatter.keywords} />
     </div>
   );
 }
