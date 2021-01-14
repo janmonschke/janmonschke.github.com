@@ -17,9 +17,7 @@ export default function WeeknotesIndex({ location }) {
           marginBottom: rhythm(0.5)
         }}
       >
-        <h2 style={{ margin: 0 }} id="blog-posts">
-          All weeknotes
-        </h2>
+        <h2 style={{ margin: 0, marginTop: rhythm(0.5) }}>All weeknotes</h2>
         <a href="/weeknotes.xml" aria-label="Weeknotes RSS feed">
           <MdRssFeed
             size="24"

@@ -16,9 +16,7 @@ export default function BlogPostsIndex({ location }) {
           marginBottom: rhythm(0.5)
         }}
       >
-        <h2 style={{ margin: 0 }} id="blog-posts">
-          All blog posts
-        </h2>
+        <h2 style={{ margin: 0, marginTop: rhythm(0.5) }}>All blog posts</h2>
         <a href="/rss.xml" aria-label="Blog post RSS feed">
           <MdRssFeed
             size="24"
