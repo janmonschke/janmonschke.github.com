@@ -4,9 +4,13 @@ import StAnnes from 'typography-theme-st-annes';
 StAnnes.baseLineHeight = 1.6;
 StAnnes.baseFontSize = '18px';
 
-StAnnes.overrideThemeStyles = () => ({
+StAnnes.overrideThemeStyles = ({ rhythm }) => ({
   a: {
     color: '#007acc'
+  },
+  'h2,h3': {
+    marginBottom: rhythm(1 / 2),
+    marginTop: rhythm(1 / 2)
   }
 });
 
