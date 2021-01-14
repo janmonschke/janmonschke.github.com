@@ -19,11 +19,11 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        {/* <SEO
+        <SEO
           title={title}
           description={post.excerpt}
           keywords={keywords || []}
-        /> */}
+        />
         <h1
           style={{
             marginBottom: rhythm(1)
