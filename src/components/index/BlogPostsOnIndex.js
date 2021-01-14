@@ -50,7 +50,10 @@ function IndexPost({ node }) {
           ...scale(0.1)
         }}
       >
-        {node.frontmatter.date}: <Link to={node.fields.slug}>{title}</Link>
+        <Link to={node.fields.slug}>
+          <span style={{ color: 'initial' }}>{node.frontmatter.date}:</span>{' '}
+          {title}
+        </Link>
       </h3>
     </div>
   );
