@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
         >
           {title}
         </h1>
-        {/* <p
+        <div
           style={{
             ...scale(-1 / 8),
             display: 'block',
@@ -39,13 +39,13 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1)
           }}
         >
-          {isWeeknote && (
+          {isWeeknote ? (
             <div>
               <Keywords keywords={keywords} />
             </div>
-          )}
+          ) : null}
           {date}
-        </p> */}
+        </div>
         <div
           className="blogPost"
           dangerouslySetInnerHTML={{ __html: post.html }}
