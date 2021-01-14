@@ -122,7 +122,7 @@ export default function BlogIndex(props) {
                 justifyContent: 'flex-end'
               }}
             >
-              <Link to="/blogposts">→ More blog posts</Link>
+              <Link to="/blog">→ More blog posts</Link>
             </div>
           </div>
 
