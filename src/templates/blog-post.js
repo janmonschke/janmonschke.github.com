@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
         >
           {title}
         </h1>
-        <p
+        {/* <p
           style={{
             ...scale(-1 / 8),
             display: 'block',
@@ -45,7 +45,7 @@ class BlogPostTemplate extends React.Component {
             </div>
           )}
           {date}
-        </p>
+        </p> */}
         <div
           className="blogPost"
           dangerouslySetInnerHTML={{ __html: post.html }}
