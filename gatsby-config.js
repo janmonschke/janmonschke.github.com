@@ -98,7 +98,7 @@ module.exports = {
             }
           `,
             output: '/rss.xml',
-            title: 'All blog posts'
+            title: 'Blog posts - janmonschke.com'
           },
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
@@ -134,7 +134,7 @@ module.exports = {
             }
           `,
             output: '/weeknotes.xml',
-            title: 'All weeknotes'
+            title: 'Weeknotes - janmonschke.com'
           }
         ]
       }
