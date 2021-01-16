@@ -10,6 +10,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
       render={(data) => {
         const metaDescription =
           description || data.site.siteMetadata.description;
+        const imageUrl = image && `${data.site.siteMetadata.siteUrl}${image}`;
         return (
           <Helmet
             htmlAttributes={{
@@ -54,17 +55,17 @@ function SEO({ description, lang, meta, keywords, title, image }) {
                 name: `twitter:description`,
                 content: metaDescription
               },
-              image && {
+              imageUrl && {
                 property: `og:image`,
-                content: image
+                content: imageUrl
               },
-              image && {
+              imageUrl && {
                 property: `twitter:image`,
-                content: image
+                content: imageUrl
               },
-              image && {
+              imageUrl && {
                 property: `image`,
-                content: image
+                content: imageUrl
               }
             ]
               .filter(Boolean)
@@ -108,6 +109,7 @@ const detailsQuery = graphql`
         title
         description
         author
+        siteUrl
       }
     }
   }
