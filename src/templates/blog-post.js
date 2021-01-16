@@ -13,9 +13,10 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
     const { previous, next } = this.props.pageContext;
-    const { title, date, keywords, pomodoros, type } = post.frontmatter;
+    const { title, date, keywords, pomodoros, type, image } = post.frontmatter;
     const isWeeknote = type === 'weeknote';
     const siteTitle = this.props.data.site.siteMetadata.title;
+    const imageSrc = image && image.childImageSharp.fixed.src;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -23,6 +24,7 @@ class BlogPostTemplate extends React.Component {
           title={title}
           description={post.excerpt}
           keywords={keywords || []}
+          image={imageSrc}
         />
         <h1
           style={{
@@ -134,6 +136,13 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         pomodoros
         keywords
+        image {
+          childImageSharp {
+            fixed {
+              src
+            }
+          }
+        }
       }
     }
   }
