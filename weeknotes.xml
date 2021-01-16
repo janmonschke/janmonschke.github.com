@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 16 Jan 2021 09:29:37 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 2/2021]]></title><description><![CDATA[Side Projects Ping Made a lot of progress this week modeling a core user flow with XState. XState has become my go-to tool for modeling…]]></description><link>https://janmonschke.com/weeknotes/2021/02/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/02/</guid><pubDate>Sun, 10 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 16 Jan 2021 11:11:27 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 2/2021]]></title><description><![CDATA[Side Projects Ping Made a lot of progress this week modeling a core user flow with XState. XState has become my go-to tool for modeling…]]></description><link>https://janmonschke.com/weeknotes/2021/02/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/02/</guid><pubDate>Sun, 10 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
 &lt;h3&gt;Ping&lt;/h3&gt;
 &lt;p&gt;Made a lot of progress this week modeling a core user flow with &lt;a href=&quot;https://xstate.js.org/&quot;&gt;XState&lt;/a&gt;. XState has become my go-to tool for modeling complex flows after great the experience I had using it for build &lt;a href=&quot;https://creators.soundcloud.com/mastering-on-soundcloud&quot;&gt;SoundCloud mastering&lt;/a&gt;. The flow that I was working on in Ping involves checking browser support, sign-in state (with a separate machine that models sign-in/sign-up), checking resource access, before the user lands on the actual screen.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -14,20 +14,20 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 31.756756756756754%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3AUD/8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQABBQJ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAGBAAAgMAAAAAAAAAAAAAAAAAAREAEGH/2gAIAQEAAT8hILUW1//aAAwDAQACAAMAAAAQc8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAEBAAIDAAAAAAAAAAAAAAABEQAhMWGB/9oACAEBAAE/EEQYdOD4sntzRoz/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 32%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAGABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAIF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3AUD/8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQABBQJ//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFBABAAAAAAAAAAAAAAAAAAAAEP/aAAgBAQAGPwJ//8QAGBAAAgMAAAAAAAAAAAAAAAAAAREAEGH/2gAIAQEAAT8hILUW1//aAAwDAQACAAMAAAAQc8//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAEBAAIDAAAAAAAAAAAAAAABEQAhMWGB/9oACAEBAAE/EEQYdOD4sntzRoz/2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;State diagram of the user flow&quot;
         title=&quot;State diagram of the user flow&quot;
-        src=&quot;/static/7f3484dce17091fd37fe97641c289612/1c72d/02-xstate.jpg&quot;
-        srcset=&quot;/static/7f3484dce17091fd37fe97641c289612/a80bd/02-xstate.jpg 148w,
-/static/7f3484dce17091fd37fe97641c289612/1c91a/02-xstate.jpg 295w,
-/static/7f3484dce17091fd37fe97641c289612/1c72d/02-xstate.jpg 590w,
-/static/7f3484dce17091fd37fe97641c289612/a8a14/02-xstate.jpg 885w,
-/static/7f3484dce17091fd37fe97641c289612/fbd2c/02-xstate.jpg 1180w,
+        src=&quot;/static/7f3484dce17091fd37fe97641c289612/4b190/02-xstate.jpg&quot;
+        srcset=&quot;/static/7f3484dce17091fd37fe97641c289612/e07e9/02-xstate.jpg 200w,
+/static/7f3484dce17091fd37fe97641c289612/066f9/02-xstate.jpg 400w,
+/static/7f3484dce17091fd37fe97641c289612/4b190/02-xstate.jpg 800w,
+/static/7f3484dce17091fd37fe97641c289612/e5166/02-xstate.jpg 1200w,
+/static/7f3484dce17091fd37fe97641c289612/b17f8/02-xstate.jpg 1600w,
 /static/7f3484dce17091fd37fe97641c289612/818b0/02-xstate.jpg 1722w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -39,7 +39,7 @@
 &lt;p&gt;We both back at work now after a two week stay-at-home vacation. Usually during the winter break we are visiting both our families which always makes for a very rewarding, but also stressful trip. It felt good to not have to rush through Europe and to take the time for the family in different ways. This year in lengthy video calls with televised gift giving and shared Christmas dinners. Everybody was eager to make the best of the situation and we even managed to get some more further-away relatives to join the Christmas calls.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -50,20 +50,19 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoUAAkAPtFUo0uoJKMhsAgBABoJagCdMoADZbrMZZlYgepAAP6o5o4zZ3o6R+3jgS31DrKYNzgtgJKC7x3rhtcIB6YiG4y4TfBVaH1nTgpd2VeFYNGLk7GDnIBkxJwu/xX4zsG2te7u++1Z08AAbkcmr7elo/PAAAA=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADwAwCdASoUAAkAPtFUo0uoJKMhsAgBABoJagCdMoADZbrMZZlYgepAAP6o5o4zZ3o6R+3jgS31DrKYNzgtgJKC7x3rhtcIB6YiG4y4TfBVaH1nTgpd2VeFYNGLk7GDnIBkxJwu/xX4zsG2te7u++1Z08AAbkcmr7elo/PAAAA=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Our Christmas dinner&quot;
         title=&quot;Our Christmas dinner&quot;
-        src=&quot;/static/6aacecfbcd082ee3be335f13b822090a/5ca24/02-christmas-dinner.webp&quot;
-        srcset=&quot;/static/6aacecfbcd082ee3be335f13b822090a/cbe2e/02-christmas-dinner.webp 148w,
-/static/6aacecfbcd082ee3be335f13b822090a/3084c/02-christmas-dinner.webp 295w,
-/static/6aacecfbcd082ee3be335f13b822090a/5ca24/02-christmas-dinner.webp 590w,
-/static/6aacecfbcd082ee3be335f13b822090a/dad35/02-christmas-dinner.webp 885w,
-/static/6aacecfbcd082ee3be335f13b822090a/2baf0/02-christmas-dinner.webp 1180w,
+        src=&quot;/static/6aacecfbcd082ee3be335f13b822090a/d00b9/02-christmas-dinner.webp&quot;
+        srcset=&quot;/static/6aacecfbcd082ee3be335f13b822090a/ba381/02-christmas-dinner.webp 200w,
+/static/6aacecfbcd082ee3be335f13b822090a/7f61c/02-christmas-dinner.webp 400w,
+/static/6aacecfbcd082ee3be335f13b822090a/d00b9/02-christmas-dinner.webp 800w,
+/static/6aacecfbcd082ee3be335f13b822090a/92f8c/02-christmas-dinner.webp 1200w,
 /static/6aacecfbcd082ee3be335f13b822090a/af3f0/02-christmas-dinner.webp 1280w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;

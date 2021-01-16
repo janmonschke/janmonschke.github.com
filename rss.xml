@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog posts - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 16 Jan 2021 09:29:37 GMT</lastBuildDate><item><title><![CDATA[Setting up TailwindCSS in create-react-app]]></title><description><![CDATA[I have started to use TailwindCSS in a couple of side projects now to try out utility-based styling. All of these projects are regular…]]></description><link>https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</link><guid isPermaLink="false">https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</guid><pubDate>Fri, 17 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have started to use &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;TailwindCSS&lt;/a&gt; in a couple of side projects now to try out utility-based styling. All of these projects are regular &lt;a href=&quot;https://create-react-app.dev/&quot;&gt;create-react-app&lt;/a&gt; projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project’s webpack config without &lt;a href=&quot;https://create-react-app.dev/docs/available-scripts#npm-run-eject&quot;&gt;‘ejecting’&lt;/a&gt; your app. In this post I want to show how I have added TailwindCSS to my projects without ejecting.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog posts - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 16 Jan 2021 11:11:27 GMT</lastBuildDate><item><title><![CDATA[Setting up TailwindCSS in create-react-app]]></title><description><![CDATA[I have started to use TailwindCSS in a couple of side projects now to try out utility-based styling. All of these projects are regular…]]></description><link>https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</link><guid isPermaLink="false">https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</guid><pubDate>Fri, 17 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have started to use &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;TailwindCSS&lt;/a&gt; in a couple of side projects now to try out utility-based styling. All of these projects are regular &lt;a href=&quot;https://create-react-app.dev/&quot;&gt;create-react-app&lt;/a&gt; projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project’s webpack config without &lt;a href=&quot;https://create-react-app.dev/docs/available-scripts#npm-run-eject&quot;&gt;‘ejecting’&lt;/a&gt; your app. In this post I want to show how I have added TailwindCSS to my projects without ejecting.&lt;/p&gt;
 &lt;p&gt;Ejecting from a create-react-app means you will lose the ability to easily update to newer versions of &lt;code class=&quot;language-text&quot;&gt;react-scripts&lt;/code&gt; but you will gain the ability to change config files like the webpack config. For side projects I try to not eject for as long as I can because I know I would spend a lot of time tweaking configs for no real reason. I like that with create-react-app I can focus on what I am building and I don’t have to worry about config file.&lt;/p&gt;
 &lt;p&gt;Now, adding TailwindCSS to a create-react-app project is not as straight forward as adding it to an existing webpack config, but it’s also not super complicated. I have seen several ways to do it and I am using a combination of two approaches that I have seen in other blog posts (linked to at the &lt;a href=&quot;#sources&quot;&gt;bottom of this article&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;First, you have to install TailwindCSS and PostCSS. PostCSS will be used to generate the actual TailwindCSS classes.&lt;/p&gt;
@@ -35,7 +35,7 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;
 &lt;p&gt;&lt;strong&gt;&lt;a name=&quot;example&quot;&gt;&lt;/a&gt;Example:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -46,18 +46,18 @@ module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 97.97297297297297%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAEFAgMEBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHfw+imKtbqiAyB/8QAGRABAQEAAwAAAAAAAAAAAAAAAgEDACAh/9oACAEBAAEFAtQ0rNRzBuiz3r//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAgEBPwEj/8QAGhAAAgIDAAAAAAAAAAAAAAAAABECIQEgMf/aAAgBAQAGPwKmNSLjnu//xAAbEAACAgMBAAAAAAAAAAAAAAABEQAhEDFRof/aAAgBAQABPyEyX3Cqnutw5VPTjNIAQKwg4hj/2gAMAwEAAgADAAAAEDQHAP/EABYRAAMAAAAAAAAAAAAAAAAAABEgIf/aAAgBAwEBPxAxP//EABYRAAMAAAAAAAAAAAAAAAAAABEgMf/aAAgBAgEBPxCin//EABsQAQADAAMBAAAAAAAAAAAAAAEAESExQWFx/9oACAEBAAE/EFPl1dgq+qmQwqo1zmoyHUNBeG6S0W/uyvAD7OtyLWTfs8u75hP/2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 98.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAUABQDASIAAhEBAxEB/8QAGgABAAIDAQAAAAAAAAAAAAAAAAEFAgMEBv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHfw+imKtbqiAyB/8QAGRABAQEAAwAAAAAAAAAAAAAAAgEDACAh/9oACAEBAAEFAtQ0rNRzBuiz3r//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/AR//xAAVEQEBAAAAAAAAAAAAAAAAAAARIP/aAAgBAgEBPwEj/8QAGhAAAgIDAAAAAAAAAAAAAAAAABECIQEgMf/aAAgBAQAGPwKmNSLjnu//xAAbEAACAgMBAAAAAAAAAAAAAAABEQAhEDFRof/aAAgBAQABPyEyX3Cqnutw5VPTjNIAQKwg4hj/2gAMAwEAAgADAAAAEDQHAP/EABYRAAMAAAAAAAAAAAAAAAAAABEgIf/aAAgBAwEBPxAxP//EABYRAAMAAAAAAAAAAAAAAAAAABEgMf/aAAgBAgEBPxCin//EABsQAQADAAMBAAAAAAAAAAAAAAEAESExQWFx/9oACAEBAAE/EFPl1dgq+qmQwqo1zmoyHUNBeG6S0W/uyvAD7OtyLWTfs8u75hP/2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Example component&quot;
         title=&quot;Example component&quot;
-        src=&quot;/static/714aab83697dd98c3881174e9373bb69/1c72d/example-component.jpg&quot;
-        srcset=&quot;/static/714aab83697dd98c3881174e9373bb69/a80bd/example-component.jpg 148w,
-/static/714aab83697dd98c3881174e9373bb69/1c91a/example-component.jpg 295w,
-/static/714aab83697dd98c3881174e9373bb69/1c72d/example-component.jpg 590w,
+        src=&quot;/static/714aab83697dd98c3881174e9373bb69/4b190/example-component.jpg&quot;
+        srcset=&quot;/static/714aab83697dd98c3881174e9373bb69/e07e9/example-component.jpg 200w,
+/static/714aab83697dd98c3881174e9373bb69/066f9/example-component.jpg 400w,
+/static/714aab83697dd98c3881174e9373bb69/4b190/example-component.jpg 800w,
 /static/714aab83697dd98c3881174e9373bb69/75474/example-component.jpg 822w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -430,7 +430,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;Another outstanding element of Vince’s talk is that he uses Photoshop to render videos of his simulations. In this way he can create HD-quality videos with realistic motion blur and shallow depth of field. He uses node.js to feed Adobe Generator with positional data from each frame of the visualization. Adobe Generator then creates high-resolution Photoshop images from that data. Those images can then be concatenated into a video &lt;a href=&quot;https://www.youtube.com/watch?v=mrxsD0mCpZ4#t=1034&quot;&gt;(17:14)&lt;/a&gt;. Oh, and did I mention that he uses the Web Audio API for atmospheric background noise generation? ;) His noise library is called Soundbed and can be found on &lt;a href=&quot;https://github.com/vinceallenvince/soundbed&quot;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -441,20 +441,20 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 54.72972972972974%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFAf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAYRjCFIP/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAECESH/2gAIAQEAAQUCkRgm0T28R//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAAMBAAAAAAAAAAAAAAAAAAAQITH/2gAIAQEABj8Cwqj/AP/EABoQAQADAQEBAAAAAAAAAAAAABEAASFBMVH/2gAIAQEAAT8hWigrKbF8uOofZlewuT//2gAMAwEAAgADAAAAEPDP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHRAAAwEAAQUAAAAAAAAAAAAAAREhADFBcZHB8f/aAAgBAQABPxBgEJp8NYDWtZd8bdMio5DfrGSba+MZAQHc7//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIFAf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAYRjCFIP/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAECESH/2gAIAQEAAQUCkRgm0T28R//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAAMBAAAAAAAAAAAAAAAAAAAQITH/2gAIAQEABj8Cwqj/AP/EABoQAQADAQEBAAAAAAAAAAAAABEAASFBMVH/2gAIAQEAAT8hWigrKbF8uOofZlewuT//2gAMAwEAAgADAAAAEPDP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAHRAAAwEAAQUAAAAAAAAAAAAAAREhADFBcZHB8f/aAAgBAQABPxBgEJp8NYDWtZd8bdMio5DfrGSba+MZAQHc7//Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Photoshop and JavaScript&quot;
         title=&quot;Photoshop and JavaScript&quot;
-        src=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/1c72d/photoshop-and-js.jpg&quot;
-        srcset=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/a80bd/photoshop-and-js.jpg 148w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/1c91a/photoshop-and-js.jpg 295w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/1c72d/photoshop-and-js.jpg 590w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/a8a14/photoshop-and-js.jpg 885w,
-/static/da69ef9ed4875fc1dc2fdd843b300386/fbd2c/photoshop-and-js.jpg 1180w,
+        src=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/4b190/photoshop-and-js.jpg&quot;
+        srcset=&quot;/static/da69ef9ed4875fc1dc2fdd843b300386/e07e9/photoshop-and-js.jpg 200w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/066f9/photoshop-and-js.jpg 400w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/4b190/photoshop-and-js.jpg 800w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/e5166/photoshop-and-js.jpg 1200w,
+/static/da69ef9ed4875fc1dc2fdd843b300386/b17f8/photoshop-and-js.jpg 1600w,
 /static/da69ef9ed4875fc1dc2fdd843b300386/a8a02/photoshop-and-js.jpg 1702w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -466,23 +466,22 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;The event took place at the SoundCloud HQ in Berlin in the wonderful classroom :)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;everybodyworking3.jpg&quot;&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 26.351351351351354%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAc8SpB//xAAYEAEBAAMAAAAAAAAAAAAAAAABAgMEE//aAAgBAQABBQJ2KXshN1kP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BWf/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AQn/xAAZEAABBQAAAAAAAAAAAAAAAAABABARITH/2gAIAQEABj8CsBpxf//EABkQAQADAQEAAAAAAAAAAAAAAAEAESExUf/aAAgBAQABPyESrytiq+xhc3wJ/9oADAMBAAIAAwAAABD8P//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxBFsL//xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAgBAgEBPxACVv/EABgQAQEBAQEAAAAAAAAAAAAAAAERIQAx/9oACAEBAAE/EEIsmHA4qjqAMDO2jI8xh3//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 26%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAQF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAL/2gAMAwEAAhADEAAAAc8SpB//xAAYEAEBAAMAAAAAAAAAAAAAAAABAgMEE//aAAgBAQABBQJ2KXshN1kP/8QAFREBAQAAAAAAAAAAAAAAAAAAARD/2gAIAQMBAT8BWf/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/AQn/xAAZEAABBQAAAAAAAAAAAAAAAAABABARITH/2gAIAQEABj8CsBpxf//EABkQAQADAQEAAAAAAAAAAAAAAAEAESExUf/aAAgBAQABPyESrytiq+xhc3wJ/9oADAMBAAIAAwAAABD8P//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxBFsL//xAAVEQEBAAAAAAAAAAAAAAAAAAABAP/aAAgBAgEBPxACVv/EABgQAQEBAQEAAAAAAAAAAAAAAAERIQAx/9oACAEBAAE/EEIsmHA4qjqAMDO2jI8xh3//2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The SoundCloud classroom&quot;
         title=&quot;The SoundCloud classroom&quot;
-        src=&quot;/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/1c72d/everybodyworking3.jpg&quot;
-        srcset=&quot;/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/a80bd/everybodyworking3.jpg 148w,
-/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/1c91a/everybodyworking3.jpg 295w,
-/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/1c72d/everybodyworking3.jpg 590w,
-/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/a8a14/everybodyworking3.jpg 885w,
+        src=&quot;/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/4b190/everybodyworking3.jpg&quot;
+        srcset=&quot;/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/e07e9/everybodyworking3.jpg 200w,
+/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/066f9/everybodyworking3.jpg 400w,
+/static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/4b190/everybodyworking3.jpg 800w,
 /static/a2dc2ae2ba2bebb4d3612d44dd9b35e4/72e01/everybodyworking3.jpg 1024w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -491,7 +490,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/supersole&quot;&gt;Soledad Penadés&lt;/a&gt; gave a very insightful introduction to the Web Audio API that was suited for both beginners and more advanced users. Since most of the 30 attendees were novice users this was perfect. I especially liked her very creative way of explaining the core features of the Web Audio API as &lt;a href=&quot;http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/#38&quot;&gt;Super Powers&lt;/a&gt; and her description and demonstration of LFOs as &lt;a href=&quot;http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/#54&quot;&gt;spooky sounds&lt;/a&gt; :) The slides can be found &lt;a href=&quot;http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/&quot;&gt;here&lt;/a&gt; and a recording of her talk from a Mozilla event can be found &lt;a href=&quot;https://air.mozilla.org/introduction-to-web-audio/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;soletalking.jpg&quot;&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -501,13 +500,12 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Soledad giving an introduction to Web Audio&quot;
         title=&quot;Soledad giving an introduction to Web Audio&quot;
-        src=&quot;/static/13072ab6397e62d71e797fda6445871e/1c72d/soletalking.jpg&quot;
-        srcset=&quot;/static/13072ab6397e62d71e797fda6445871e/a80bd/soletalking.jpg 148w,
-/static/13072ab6397e62d71e797fda6445871e/1c91a/soletalking.jpg 295w,
-/static/13072ab6397e62d71e797fda6445871e/1c72d/soletalking.jpg 590w,
-/static/13072ab6397e62d71e797fda6445871e/a8a14/soletalking.jpg 885w,
+        src=&quot;/static/13072ab6397e62d71e797fda6445871e/4b190/soletalking.jpg&quot;
+        srcset=&quot;/static/13072ab6397e62d71e797fda6445871e/e07e9/soletalking.jpg 200w,
+/static/13072ab6397e62d71e797fda6445871e/066f9/soletalking.jpg 400w,
+/static/13072ab6397e62d71e797fda6445871e/4b190/soletalking.jpg 800w,
 /static/13072ab6397e62d71e797fda6445871e/72e01/soletalking.jpg 1024w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -515,7 +513,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;Then, &lt;a href=&quot;https://twitter.com/jsantell&quot;&gt;Jordan Santell&lt;/a&gt; introduced us to the Web Audio debugging tools that he wrote for Firefox. I can still remember my first steps with the Web Audio API. My computer was making all these weird noises and my typical &lt;code class=&quot;language-text&quot;&gt;debugger-driven&lt;/code&gt; development work flow didn’t work because audio is processed in its own thread and won’t stop for debuggers. His tools would’ve made debugging much much easier! &lt;a href=&quot;http://jsantell.github.io/web-audio-tools-presentation/&quot;&gt;Slides&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;jordantalking.jpg&quot;&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -525,13 +523,12 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Jordan talking about Web Audio debugging&quot;
         title=&quot;Jordan talking about Web Audio debugging&quot;
-        src=&quot;/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/1c72d/jordantalking.jpg&quot;
-        srcset=&quot;/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/a80bd/jordantalking.jpg 148w,
-/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/1c91a/jordantalking.jpg 295w,
-/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/1c72d/jordantalking.jpg 590w,
-/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/a8a14/jordantalking.jpg 885w,
+        src=&quot;/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/4b190/jordantalking.jpg&quot;
+        srcset=&quot;/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/e07e9/jordantalking.jpg 200w,
+/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/066f9/jordantalking.jpg 400w,
+/static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/4b190/jordantalking.jpg 800w,
 /static/dc6a7335bd2d5c8ae23e54e6fa47b4b6/72e01/jordantalking.jpg 1024w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -539,7 +536,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/cwilso&quot;&gt;Chris Wilson&lt;/a&gt; did the last talk and he introduced us to the Web Midi API. It took some time to set this talk up because he took a ton of devices to showcase the capabilities of the API (as you can see on the picture underneath). It was like as if he was the secret 4th member of &lt;a href=&quot;https://soundcloud.com/theglitchmob&quot;&gt;The Glitch Mob&lt;/a&gt;! His &lt;a href=&quot;http://webaudiodemos.appspot.com/slides/webmidi.html&quot;&gt;Slides&lt;/a&gt; are full of demos and are perfectly suitable if you want to get started with Midi on the web right away :)&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;christalking.jpg&quot;&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -549,13 +546,12 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Chris talking about Web Midi&quot;
         title=&quot;Chris talking about Web Midi&quot;
-        src=&quot;/static/abecf33a5d7bbdee5ac06f06d95cd95c/1c72d/christalking.jpg&quot;
-        srcset=&quot;/static/abecf33a5d7bbdee5ac06f06d95cd95c/a80bd/christalking.jpg 148w,
-/static/abecf33a5d7bbdee5ac06f06d95cd95c/1c91a/christalking.jpg 295w,
-/static/abecf33a5d7bbdee5ac06f06d95cd95c/1c72d/christalking.jpg 590w,
-/static/abecf33a5d7bbdee5ac06f06d95cd95c/a8a14/christalking.jpg 885w,
+        src=&quot;/static/abecf33a5d7bbdee5ac06f06d95cd95c/4b190/christalking.jpg&quot;
+        srcset=&quot;/static/abecf33a5d7bbdee5ac06f06d95cd95c/e07e9/christalking.jpg 200w,
+/static/abecf33a5d7bbdee5ac06f06d95cd95c/066f9/christalking.jpg 400w,
+/static/abecf33a5d7bbdee5ac06f06d95cd95c/4b190/christalking.jpg 800w,
 /static/abecf33a5d7bbdee5ac06f06d95cd95c/72e01/christalking.jpg 1024w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -564,7 +560,7 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;Some groups formed during lunch and people started hacking right away. People were really focused and it was the perfect working atmosphere in the room. Sometimes there were weird noises coming from several computers when the attendees were trying out oscillators and audio parameters :) I did not really have time to work on a project on my own because I was still preparing my &lt;a href=&quot;http://janmonschke.com/JSConf2014/&quot;&gt;slides&lt;/a&gt; for &lt;a href=&quot;http://2014.jsconf.eu/speakers/#/speakers/jan-monschke-using-the-web-for-music-production-and-for-live-performances&quot;&gt;JSConf.eu&lt;/a&gt;. In addition to the speakers, we also had coaches (&lt;a href=&quot;https://github.com/chrisguttandin&quot;&gt;Chris&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/woodworker&quot;&gt;Martin&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/halfbyte&quot;&gt;Jan&lt;/a&gt;) helping the attendees with their projects. My favourite moment was when Chris Wilson was explaining details about audio, in the old fashioned way on a white board and people were gathering around him, listening closely:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;chriswilsonexplainingthings.jpg&quot;&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -574,20 +570,19 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Chris explaining audio&quot;
         title=&quot;Chris explaining audio&quot;
-        src=&quot;/static/69d89d3110363aa4cbbc462f95eb11bc/1c72d/chriswilsonexplainingthings.jpg&quot;
-        srcset=&quot;/static/69d89d3110363aa4cbbc462f95eb11bc/a80bd/chriswilsonexplainingthings.jpg 148w,
-/static/69d89d3110363aa4cbbc462f95eb11bc/1c91a/chriswilsonexplainingthings.jpg 295w,
-/static/69d89d3110363aa4cbbc462f95eb11bc/1c72d/chriswilsonexplainingthings.jpg 590w,
-/static/69d89d3110363aa4cbbc462f95eb11bc/a8a14/chriswilsonexplainingthings.jpg 885w,
+        src=&quot;/static/69d89d3110363aa4cbbc462f95eb11bc/4b190/chriswilsonexplainingthings.jpg&quot;
+        srcset=&quot;/static/69d89d3110363aa4cbbc462f95eb11bc/e07e9/chriswilsonexplainingthings.jpg 200w,
+/static/69d89d3110363aa4cbbc462f95eb11bc/066f9/chriswilsonexplainingthings.jpg 400w,
+/static/69d89d3110363aa4cbbc462f95eb11bc/4b190/chriswilsonexplainingthings.jpg 800w,
 /static/69d89d3110363aa4cbbc462f95eb11bc/72e01/chriswilsonexplainingthings.jpg 1024w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
     &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;everybodyworking2.jpg&quot;&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
@@ -597,13 +592,12 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Attendees working&quot;
         title=&quot;Attendees working&quot;
-        src=&quot;/static/ad9cfbf948c710d809dd32fcbcfcd8f5/1c72d/everybodyworking2.jpg&quot;
-        srcset=&quot;/static/ad9cfbf948c710d809dd32fcbcfcd8f5/a80bd/everybodyworking2.jpg 148w,
-/static/ad9cfbf948c710d809dd32fcbcfcd8f5/1c91a/everybodyworking2.jpg 295w,
-/static/ad9cfbf948c710d809dd32fcbcfcd8f5/1c72d/everybodyworking2.jpg 590w,
-/static/ad9cfbf948c710d809dd32fcbcfcd8f5/a8a14/everybodyworking2.jpg 885w,
+        src=&quot;/static/ad9cfbf948c710d809dd32fcbcfcd8f5/4b190/everybodyworking2.jpg&quot;
+        srcset=&quot;/static/ad9cfbf948c710d809dd32fcbcfcd8f5/e07e9/everybodyworking2.jpg 200w,
+/static/ad9cfbf948c710d809dd32fcbcfcd8f5/066f9/everybodyworking2.jpg 400w,
+/static/ad9cfbf948c710d809dd32fcbcfcd8f5/4b190/everybodyworking2.jpg 800w,
 /static/ad9cfbf948c710d809dd32fcbcfcd8f5/72e01/everybodyworking2.jpg 1024w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -650,22 +644,22 @@ I came to HTW Berlin in order to focus even more on web technology since they’
 &lt;p&gt;The goal of the ‘Image Processing’ course was to write a program that could vectorize an input image. Each task during the semester would add a new step to the process so that we’d have the complete algorithm by the end of the semester.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 33.78378378378378%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLUlEQVQY032Qv6qCcBTHf/oO4mDo5GBuQfgAjg0OvYLdwe7Y0BvY0OgiBhkuIYguFt6uYNDlSoQG+ecpyrh0t8R7CO4WfYfD4XA+fL/noM1mE4ZhEARRFB0Oh6Io9vt9mqbQHI/H4OPz6ztO0yTP8yzLYBjHse/7wUMIgN1uBxVW1+v122AwHo9Ho5GiKO/DYV6Ut9tvVVU//7per+fz+fIQAltN0yzL2m63qqoihEiS7Pf7OI4zDAOGTdPUdd08E1oul/P5fLFYQP7JZMKybLfblSSJ47h2u12W5SsYMMMwXNf1PE/XdQzDZFmmaVoQhFarlSTJK9hxHNu2p9MpOM9mMwAoihJFsdfrwQmn0wmW7vf7cxievFqtwBm+ZZomQRCdTgeSw9k8z7+O/QcuFCzAJkr0ZAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 34%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLUlEQVQY032Qv6qCcBTHf/oO4mDo5GBuQfgAjg0OvYLdwe7Y0BvY0OgiBhkuIYguFt6uYNDlSoQG+ecpyrh0t8R7CO4WfYfD4XA+fL/noM1mE4ZhEARRFB0Oh6Io9vt9mqbQHI/H4OPz6ztO0yTP8yzLYBjHse/7wUMIgN1uBxVW1+v122AwHo9Ho5GiKO/DYV6Ut9tvVVU//7per+fz+fIQAltN0yzL2m63qqoihEiS7Pf7OI4zDAOGTdPUdd08E1oul/P5fLFYQP7JZMKybLfblSSJ47h2u12W5SsYMMMwXNf1PE/XdQzDZFmmaVoQhFarlSTJK9hxHNu2p9MpOM9mMwAoihJFsdfrwQmn0wmW7vf7cxievFqtwBm+ZZomQRCdTgeSw9k8z7+O/QcuFCzAJkr0ZAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Binarization&quot;
         title=&quot;Binarization&quot;
-        src=&quot;/static/878a8b6344176459b9594bf4af950e66/fcda8/binarization.png&quot;
-        srcset=&quot;/static/878a8b6344176459b9594bf4af950e66/12f09/binarization.png 148w,
-/static/878a8b6344176459b9594bf4af950e66/e4a3f/binarization.png 295w,
-/static/878a8b6344176459b9594bf4af950e66/fcda8/binarization.png 590w,
+        src=&quot;/static/878a8b6344176459b9594bf4af950e66/5a190/binarization.png&quot;
+        srcset=&quot;/static/878a8b6344176459b9594bf4af950e66/772e8/binarization.png 200w,
+/static/878a8b6344176459b9594bf4af950e66/e17e5/binarization.png 400w,
+/static/878a8b6344176459b9594bf4af950e66/5a190/binarization.png 800w,
 /static/878a8b6344176459b9594bf4af950e66/4e6ec/binarization.png 827w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
@@ -677,23 +671,22 @@ I came to HTW Berlin in order to focus even more on web technology since they’
 &lt;p&gt;‘Computer Vision’ also was a course that dealt with calculations on image data and its aim was to write algorithms that could detect objects semantically in images. E.g. it should say that there’s a duck on the image if you’d show it an image of a duck swimming in a pond.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://janmonschke.com/ComputerVision/01_Edge_Detection&quot;&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 48.64864864864865%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACTUlEQVQoz2PYtm3bgQMHjhw5sn///u3btx8+fHjnzp1A9o4dO86cOXP79u07YHAbA9y6dYvh6NGjZ8+eu3rt2qVLl4A6T506de7cOSD75s0bd+/evX/vPpB75szZGzduXoeBG2Bw8+ZNhgsXLty9c/vu3Tv37t4FmXbjBtDU6zeuA5lAxtWrV4Hk40ePnz199uw5kHgKAs+ePn/+7MGDBwyNbe3T5y7atHPf6s3b9x45dfDUxdPnLzx++uzVm9c7d+2MjIrMzswsKS4qKSkqLiwE4vLS0pKC4rzcvEULFzGExCcWVbc0dE7MLK1u6JlZ2zGxsq66rLx09ZJpSxfPYWBg4OPh5ucV4ObmFeDl5+EW4Obk42DlYWJgykpPZyiuaq5pbK+tb62qrqsoLSkrzIwID7A2N5zRV7Fp/VIeHn4ZWRkZaTlJSSkxcQlRETFhETEgQ4iHuzA3hyExJSM7KwfojKy0pJz0hOAAH2cbEx8Xmx2rejesXcbOziMmKiEoKMTPLygkICQiIi4oKCwtJSXAwZ6VlcUQEx2XmJgcFhIYHxPp7eVuqqfm72bn52RyYO3E1csWMLOwCwoI8vLwCQsJiwiLCQuLyMkA9crwsrFlZWYxBPt6Bfl7xURHuDrZ62kq25kb+nq4+tjpXNizYPmi2Uws7MJCQmJiooKCovx8AqJCIuJiEhJi4twsLJkZGQwu9pYJcTEOttaWRjom2mr+3p7mhjoh7maXDyxftnAmCwunhJgEL68QLx83SLOwEB+foKSoKAcLU0ZGJgBsaxRoDf9HUQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 48.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAACTUlEQVQoz2PYtm3bgQMHjhw5sn///u3btx8+fHjnzp1A9o4dO86cOXP79u07YHAbA9y6dYvh6NGjZ8+eu3rt2qVLl4A6T506de7cOSD75s0bd+/evX/vPpB75szZGzduXoeBG2Bw8+ZNhgsXLty9c/vu3Tv37t4FmXbjBtDU6zeuA5lAxtWrV4Hk40ePnz199uw5kHgKAs+ePn/+7MGDBwyNbe3T5y7atHPf6s3b9x45dfDUxdPnLzx++uzVm9c7d+2MjIrMzswsKS4qKSkqLiwE4vLS0pKC4rzcvEULFzGExCcWVbc0dE7MLK1u6JlZ2zGxsq66rLx09ZJpSxfPYWBg4OPh5ucV4ObmFeDl5+EW4Obk42DlYWJgykpPZyiuaq5pbK+tb62qrqsoLSkrzIwID7A2N5zRV7Fp/VIeHn4ZWRkZaTlJSSkxcQlRETFhETEgQ4iHuzA3hyExJSM7KwfojKy0pJz0hOAAH2cbEx8Xmx2rejesXcbOziMmKiEoKMTPLygkICQiIi4oKCwtJSXAwZ6VlcUQEx2XmJgcFhIYHxPp7eVuqqfm72bn52RyYO3E1csWMLOwCwoI8vLwCQsJiwiLCQuLyMkA9crwsrFlZWYxBPt6Bfl7xURHuDrZ62kq25kb+nq4+tjpXNizYPmi2Uws7MJCQmJiooKCovx8AqJCIuJiEhJi4twsLJkZGQwu9pYJcTEOttaWRjom2mr+3p7mhjoh7maXDyxftnAmCwunhJgEL68QLx83SLOwEB+foKSoKAcLU0ZGJgBsaxRoDf9HUQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Edge detection&quot;
         title=&quot;Edge detection&quot;
-        src=&quot;/static/2c7f89a8517678877ae531bfaa4f7941/fcda8/edge-detection.png&quot;
-        srcset=&quot;/static/2c7f89a8517678877ae531bfaa4f7941/12f09/edge-detection.png 148w,
-/static/2c7f89a8517678877ae531bfaa4f7941/e4a3f/edge-detection.png 295w,
-/static/2c7f89a8517678877ae531bfaa4f7941/fcda8/edge-detection.png 590w,
-/static/2c7f89a8517678877ae531bfaa4f7941/efc66/edge-detection.png 885w,
+        src=&quot;/static/2c7f89a8517678877ae531bfaa4f7941/5a190/edge-detection.png&quot;
+        srcset=&quot;/static/2c7f89a8517678877ae531bfaa4f7941/772e8/edge-detection.png 200w,
+/static/2c7f89a8517678877ae531bfaa4f7941/e17e5/edge-detection.png 400w,
+/static/2c7f89a8517678877ae531bfaa4f7941/5a190/edge-detection.png 800w,
 /static/2c7f89a8517678877ae531bfaa4f7941/58213/edge-detection.png 902w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
