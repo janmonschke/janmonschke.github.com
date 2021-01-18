@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 16 Jan 2021 11:11:27 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 2/2021]]></title><description><![CDATA[Side Projects Ping Made a lot of progress this week modeling a core user flow with XState. XState has become my go-to tool for modeling…]]></description><link>https://janmonschke.com/weeknotes/2021/02/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/02/</guid><pubDate>Sun, 10 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 18 Jan 2021 22:36:27 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 3/2021]]></title><description><![CDATA[Work / SoundCloud  It was my six year anniversary at SoundCloud this week 🥳 I still can’t believe I’ve been at the company for that long. I…]]></description><link>https://janmonschke.com/weeknotes/2021/03/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/03/</guid><pubDate>Sun, 17 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Work / SoundCloud&lt;/h2&gt;
+&lt;div style=&quot;max-width: 340px; margin: 0 auto;&quot;&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e0f520bbadf2dcc267ea299373cd1ceb/a2510/03-soundcloudrecord.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 131.50000000000003%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAaABQDASIAAhEBAxEB/8QAGQABAQADAQAAAAAAAAAAAAAAAAUBAgME/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAIDBP/aAAwDAQACEAMQAAABdTPXxuCqUtJGFaukg//EAB4QAAIBBAMBAAAAAAAAAAAAAAECAAMREhMEEDIz/9oACAEBAAEFAqZZ5gxmzGcf5KNcqgl08WMImTWuev/EABYRAQEBAAAAAAAAAAAAAAAAABEAEP/aAAgBAwEBPwExm//EABcRAQEBAQAAAAAAAAAAAAAAAAARAQL/2gAIAQIBAT8B3rVRH//EABkQAAIDAQAAAAAAAAAAAAAAAAABECExEf/aAAgBAQAGPwLSm2ch2di41mx//8QAHRAAAwACAgMAAAAAAAAAAAAAAAERMVFBkWGB4f/aAAgBAQABPyHkEXRE201S3bX2ImisZNtyNSYYkWaKPmijwfZHndlez//aAAwDAQACAAMAAAAQWzYC/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQAQESH/2gAIAQMBAT8QDkTtv//EABcRAQEBAQAAAAAAAAAAAAAAAAEhABD/2gAIAQIBAT8QMtxF7//EAB0QAQADAAIDAQAAAAAAAAAAAAEAESExkWGBsXH/2gAIAQEAAT8QCUFnbDk1WR3Opxr1DhOcEqFGfYtcN55OYKxNrTktTNTtjhGgrqKiD2c+4NnxACFf7lzr+0G5Xc//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Golden record that I got for my 5 year anniversary&quot;
+        title=&quot;Golden record that I got for my 5 year anniversary&quot;
+        src=&quot;/static/e0f520bbadf2dcc267ea299373cd1ceb/4b190/03-soundcloudrecord.jpg&quot;
+        srcset=&quot;/static/e0f520bbadf2dcc267ea299373cd1ceb/e07e9/03-soundcloudrecord.jpg 200w,
+/static/e0f520bbadf2dcc267ea299373cd1ceb/066f9/03-soundcloudrecord.jpg 400w,
+/static/e0f520bbadf2dcc267ea299373cd1ceb/4b190/03-soundcloudrecord.jpg 800w,
+/static/e0f520bbadf2dcc267ea299373cd1ceb/a2510/03-soundcloudrecord.jpg 1000w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;It was my six year anniversary at SoundCloud this week 🥳 I still can’t believe I’ve been at the company for that long. I’m incredibly grateful to work there and am still learning something new every day to this year. Here’s to many more years ☕️ 🎉&lt;/p&gt;
+&lt;p&gt;The golden record was actually given to me at my five year anniversary, as it’s the custom at the company. I could not think of a better image to celebrate this week’s milestone. 😄&lt;/p&gt;
+&lt;h2&gt;Side projects&lt;/h2&gt;
+&lt;p&gt;A reader on Twitter asked how much time I spend per week on side projects and how I have the energy to work on those. My previous notes on side projects must have given the impression that I work on them every day and all weekend. None of that is true. Most days I do not have the energy to work on anything after work and I’m happy to not be on a computer to be honest. Especially on weekends I am trying to decompress from digital tech as much as I can. 📚 🥾 🏕&lt;/p&gt;
+&lt;p&gt;All in all, I spend couple of hours, up to 6 or 8, per week on side projects. I reduced that time after reading &lt;a href=&quot;https://www.joshwcomeau.com/blog/year-in-review-2020/#q2-the-pandemic-and-an-injury&quot;&gt;Josh’s experience with Cubital Tunnel Syndrome&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Blog&lt;/h3&gt;
+&lt;p&gt;Most of that time this week I spent setting up &lt;a href=&quot;/weeknotes&quot;&gt;weeknotes&lt;/a&gt; and turning my weekly notes into &lt;a href=&quot;/weeknotes/2021/02/&quot;&gt;proper&lt;/a&gt; &lt;a href=&quot;/weeknotes/2021/01/&quot;&gt;prose&lt;/a&gt;. I added all the notes to the index and then created a collection page and an RSS feed. I could re-use most of the &lt;a href=&quot;/blog&quot;&gt;blog post&lt;/a&gt; setup to be honest 🤩&lt;/p&gt;
+&lt;h3&gt;Ping&lt;/h3&gt;
+&lt;p&gt;The biggest chunk of work on ping I actually did not spend with coding. I wrote up on architecture, data entities, business ideas and more in our &lt;a href=&quot;https://notion.so&quot;&gt;Notion&lt;/a&gt; 📝. We’re certainly not planning to incorporate any time soon. However, it’s very important to me to write these things down as early as possible to make sure we have a common understanding of where we want to go with this product. The architecture documents are a great reference for me and for potential future engineers 🕵️‍♂️.&lt;/p&gt;
+&lt;p&gt;I also learned a lot about &lt;a href=&quot;https://firebase.google.com/docs/firestore/security/rules-conditions&quot;&gt;Cloud Firestore Security Rules&lt;/a&gt; and &lt;a href=&quot;https://firebase.google.com/docs/firestore/query-data/queries#collection-group-query&quot;&gt;Collection group queries&lt;/a&gt; this week. As part of the proof-of-concept I want to check if Firebase supports all our queries and if its security model is both restrictive and flexible enough.&lt;/p&gt;
+&lt;p&gt;So far, the security model looks promising but it takes me some time to wrap my head around. The logic is executed in the storage layer and not on the application server which takes some getting used to. I’m going with a hybrid approach of very restrictive storage layer rules and more complex access logic in the application server. Right now feels good this way 😅. I wish there was an easier way to execute and write the access rules locally so that I would not have to do that in their UI. Maybe I should spend some time reading up on their &lt;a href=&quot;https://firebase.google.com/docs/firestore/security/test-rules-emulator&quot;&gt;rule emulator&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I really like that Firebase supports subcollections at document level because it allows for great encapsulation and makes it easy to cascade-delete data. Until recently it was hard to query across subcollections though. E.g. if you had a relationship like &lt;code class=&quot;language-text&quot;&gt;Post -&amp;gt; Comments&lt;/code&gt; and you wanted to get all comments by a user. Without splitting up &lt;code class=&quot;language-text&quot;&gt;Post&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;Comments&lt;/code&gt; into top-level collections, it was not possible to execute that query ✂️. With the addition of &lt;a href=&quot;https://firebase.googleblog.com/2019/06/understanding-collection-group-queries.html&quot;&gt;Collection group queries&lt;/a&gt; you don’t have to do that anymore. After adding an index for the subcollection, you can query it like any other top-level collection 🤯.&lt;/p&gt;
+&lt;h2&gt;Life&lt;/h2&gt;
+&lt;p&gt;We are seeing a more snow these days in Berlin. It’s still not enough for it to stick around for more than a couple of hours. But it brings us joy to walk through snow on our daily city hike. Due to the current pandemic situation here, we are sticking to walking late in the evenings. This lets us reduce the exposure to other people. However, the government is talking about introducing a curfew which could mean the end for that habit. Here’s to hoping the curfew will not prevent this daily escape of the flat to clear our heads.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/27bf5308a39b57553eac5eda4750707d/af3f0/03-vegan-tuna-salad.webp&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBACdASoUAAkAPtFUo0uoJKMhsAgBABoJZgCdL1yB3snGC+66aRXT9sAAzj7u2aValY6FzaZIkeHrb03zpjumHxMQi+oXccGsxkpgDN/9IBFXZF6hIOKJPSZVqMGTg93Vm/cHBlOnusCGp4hXCIiGN9z40UKcAAA=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Vegan tuna salad on bagel&quot;
+        title=&quot;Vegan tuna salad on bagel&quot;
+        src=&quot;/static/27bf5308a39b57553eac5eda4750707d/d00b9/03-vegan-tuna-salad.webp&quot;
+        srcset=&quot;/static/27bf5308a39b57553eac5eda4750707d/ba381/03-vegan-tuna-salad.webp 200w,
+/static/27bf5308a39b57553eac5eda4750707d/7f61c/03-vegan-tuna-salad.webp 400w,
+/static/27bf5308a39b57553eac5eda4750707d/d00b9/03-vegan-tuna-salad.webp 800w,
+/static/27bf5308a39b57553eac5eda4750707d/92f8c/03-vegan-tuna-salad.webp 1200w,
+/static/27bf5308a39b57553eac5eda4750707d/af3f0/03-vegan-tuna-salad.webp 1280w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;One of our recent favorite dishes is this &lt;a href=&quot;https://www.instagram.com/p/CIfix5ZpqIm/&quot;&gt;vegan tuna salad on bagel&lt;/a&gt; (recipe by Max La Manna). It’s so easy to make, tastes super fresh and is pretty healthy on top of it. Writing about it now makes me want to have it again next week 😋.&lt;/p&gt;
+&lt;h2&gt;Entertainment&lt;/h2&gt;
+&lt;p&gt;I finished reading “The Last Emperox”, the final book in the &lt;a href=&quot;https://www.goodreads.com/series/202297-the-interdependency&quot;&gt;Interdependency trilogy by John Scalzi&lt;/a&gt;. The final book, as it’s often the case, was not the strongest one in the series. It felt like Scalzi rushed this one a bit to fit it into a single book. Some of the events could have been their own books but then they ended up being just a couple chapters long. But maybe that is just me being sad about the end of the series, longing for more of the same 😅&lt;/p&gt;
+&lt;p&gt;Staying on the topic of science fiction: This week I finally started watching season 5 of &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Expanse_(TV_series)&quot;&gt;The Expanse&lt;/a&gt;. The first episode is promising with new arcs popping up left and right and I felt right at home in the season. Looking forward to watching more of it.&lt;/p&gt;
+&lt;h2&gt;Song of the week&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.stefanjudis.com/blog/web-weekly-2/&quot;&gt;Stefan&lt;/a&gt; released his notes faster than me and stole my music pick for this week, so I had to chose a new one. This week’s song has a lot more melody and groove than the other recent ones and I hope you enjoy it as much. When this song comes up, I can’t help myself but micro-dance to the tunes on my standing desk.&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/290368052&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Weeknotes 2/2021]]></title><description><![CDATA[Side Projects Ping Made a lot of progress this week modeling a core user flow with XState. XState has become my go-to tool for modeling…]]></description><link>https://janmonschke.com/weeknotes/2021/02/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/02/</guid><pubDate>Sun, 10 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
 &lt;h3&gt;Ping&lt;/h3&gt;
 &lt;p&gt;Made a lot of progress this week modeling a core user flow with &lt;a href=&quot;https://xstate.js.org/&quot;&gt;XState&lt;/a&gt;. XState has become my go-to tool for modeling complex flows after great the experience I had using it for build &lt;a href=&quot;https://creators.soundcloud.com/mastering-on-soundcloud&quot;&gt;SoundCloud mastering&lt;/a&gt;. The flow that I was working on in Ping involves checking browser support, sign-in state (with a separate machine that models sign-in/sign-up), checking resource access, before the user lands on the actual screen.&lt;/p&gt;
 &lt;p&gt;&lt;span
