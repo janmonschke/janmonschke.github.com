@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 08 Feb 2021 22:41:17 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 6/2021]]></title><description><![CDATA[Side Projects Somewhere The project is nearing its end soon so the students are in scrum mode. The Babelsberg orchestra finished recording…]]></description><link>https://janmonschke.com/weeknotes/2021/06/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/06/</guid><pubDate>Sun, 07 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 15 Feb 2021 21:32:22 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 7/2021]]></title><description><![CDATA[Side Projects Somewhere  Last week I worked on the foundation of the responsive behaviour for the landing page. This week I applied the…]]></description><link>https://janmonschke.com/weeknotes/2021/07/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/07/</guid><pubDate>Sun, 14 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
+&lt;h3&gt;Somewhere&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e856b3dc14c2dddb1c9c5f8c51bc4a6c/4e564/07-responsively-editor.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 87.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAASABQDASIAAhEBAxEB/8QAGAABAAMBAAAAAAAAAAAAAAAAAAIDBAH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIQAxAAAAG/LsmQWjZwLAf/xAAbEAADAQADAQAAAAAAAAAAAAABAgMABBESFP/aAAgBAQABBQIyejXm8U4TExEwx+eTCSCeKr34XAAb/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAwEBPwEf/8QAFBEBAAAAAAAAAAAAAAAAAAAAIP/aAAgBAgEBPwEf/8QAIBAAAgEDBAMAAAAAAAAAAAAAAQIAESIxAxIhMhORkv/aAAgBAQAGPwJiNVhdN3lY80hqTmOdzC44MuZvqOq4rOonUepwJ//EAB4QAQACAgEFAAAAAAAAAAAAAAEAESExQRBhcZHB/9oACAEBAAE/IcrwFHEIm/sx9i45vtj4RrUjm3RbaqcU+NvYikvo6KMwHgn/2gAMAwEAAgADAAAAENMPAP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8QH//EAB0QAQACAgMBAQAAAAAAAAAAAAEAESExQVFhgfH/2gAIAQEAAT8QHs12aAnvsC2VhPBb26lCd1ouiIfpUDHNDCgWBMGN5xM2O2HL7+xYFW1TmflJVR7ugJ//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Building Somewhere in the Responsively editor&quot;
+        title=&quot;Building Somewhere in the Responsively editor&quot;
+        src=&quot;/static/e856b3dc14c2dddb1c9c5f8c51bc4a6c/4b190/07-responsively-editor.jpg&quot;
+        srcset=&quot;/static/e856b3dc14c2dddb1c9c5f8c51bc4a6c/e07e9/07-responsively-editor.jpg 200w,
+/static/e856b3dc14c2dddb1c9c5f8c51bc4a6c/066f9/07-responsively-editor.jpg 400w,
+/static/e856b3dc14c2dddb1c9c5f8c51bc4a6c/4b190/07-responsively-editor.jpg 800w,
+/static/e856b3dc14c2dddb1c9c5f8c51bc4a6c/e5166/07-responsively-editor.jpg 1200w,
+/static/e856b3dc14c2dddb1c9c5f8c51bc4a6c/b17f8/07-responsively-editor.jpg 1600w,
+/static/e856b3dc14c2dddb1c9c5f8c51bc4a6c/4e564/07-responsively-editor.jpg 1900w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/weeknotes/2021/06/&quot;&gt;Last week&lt;/a&gt; I worked on the foundation of the responsive behaviour for the landing page. This week I applied the constraints to the content on the page and worked out little issues here and there.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/cangoektas&quot;&gt;Can&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/juliozynger&quot;&gt;Julio&lt;/a&gt; recommended a handy little tool called &lt;a href=&quot;https://responsively.app/&quot;&gt;Responsively&lt;/a&gt;. It previews your site live on different device sizes and orientations. It has worked super well for me and I’m actually looking forward to using it again soon 😍&lt;/p&gt;
+&lt;p&gt;Next, I will replace the static image of that little creature on the landing page with a 3D animated version. The image will blend into the 3D canvas once the 3D model is loaded.&lt;/p&gt;
+&lt;h3&gt;Ping&lt;/h3&gt;
+&lt;p&gt;I used my newly acrued knowledge of Firebase Cloud Storage to build the MVP of the file upload. As per my new usual, I first sketched out the behaviour of the module in XState’s visualizer and once I was content, I added the actual implementation. I love this workflow because the XState UI allows me to play around with the machine without writing any of the business logic. This flow feels super natrual to me by now. 🌅&lt;/p&gt;
+&lt;p&gt;I’m happy with the upload and now &lt;a href=&quot;http://julianpanzer.com&quot;&gt;Julian&lt;/a&gt; and I are thinking of getting another developer on board. We want to ship an MVP as early as possible to a group of beta testers. I hope I can share more soon ☺️&lt;/p&gt;
+&lt;h2&gt;Hiking&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/c705dbc734d15765cf2e2d14dae9a851/e5166/07-hiking-in-wintery-berlin.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAv/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAFFpjUSCqV//8QAGRAAAgMBAAAAAAAAAAAAAAAAAAIBAzIS/9oACAEBAAEFAlqceuyR0fpsxqT/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAZEAEAAgMAAAAAAAAAAAAAAAABABEgITH/2gAIAQEABj8CsIbOY//EABoQAAMBAAMAAAAAAAAAAAAAAAABESExQXH/2gAIAQEAAT8hZTwIoqY7EGtH2cAqq8P/2gAMAwEAAgADAAAAEAwf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQIBAT8QiP/EABoQAQEBAAMBAAAAAAAAAAAAAAERACFBobH/2gAIAQEAAT8QWijbYPHVz9leEJD7jgN7QXJat4Pd5sxEFR1v/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Hiking in winterly Berlin&quot;
+        title=&quot;Hiking in winterly Berlin&quot;
+        src=&quot;/static/c705dbc734d15765cf2e2d14dae9a851/4b190/07-hiking-in-wintery-berlin.jpg&quot;
+        srcset=&quot;/static/c705dbc734d15765cf2e2d14dae9a851/e07e9/07-hiking-in-wintery-berlin.jpg 200w,
+/static/c705dbc734d15765cf2e2d14dae9a851/066f9/07-hiking-in-wintery-berlin.jpg 400w,
+/static/c705dbc734d15765cf2e2d14dae9a851/4b190/07-hiking-in-wintery-berlin.jpg 800w,
+/static/c705dbc734d15765cf2e2d14dae9a851/e5166/07-hiking-in-wintery-berlin.jpg 1200w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;We had lots of sun and snow this week which made for the perfect winter hiking weather 🥾. Though there are no impressive mountains in Berlin, there are quite some hilly forests. They’re beatiful, even in the deepest winter. Life at work and with the move can be very hectic these days. I really need more of these &lt;a href=&quot;https://time.com/5259602/japanese-forest-bathing/&quot;&gt;forest bathing&lt;/a&gt; sessions!&lt;/p&gt;
+&lt;h2&gt;Entertainment&lt;/h2&gt;
+&lt;p&gt;I finished reading &lt;a href=&quot;https://www.goodreads.com/book/show/23168809-the-end-of-all-things&quot;&gt;The end of all things&lt;/a&gt; by John Scalzi which was a great conclusion of the series. Now I’m lacking ideas for a new sci-fi series to start 😅&lt;/p&gt;
+&lt;p&gt;I might continue with &lt;a href=&quot;https://www.goodreads.com/series/206992-space-team&quot;&gt;Space Team&lt;/a&gt; where I’m midway-through and the author is 12 books in the series and promised to write more. So a steady source is guaranteed there. It’s not so much hard sci-fi but more sci-fi in the same vein as Hitchhiker’s guide to the galaxy. It’s problematic to read at night because it does make me giggle out loud 😂&lt;/p&gt;
+&lt;p&gt;The other series I finished this week is &lt;a href=&quot;https://en.wikipedia.org/wiki/The_Expanse_(TV_series)&quot;&gt;The Expanse&lt;/a&gt;. Not the books though, the series. I’m glad to hear there will be another season. I loved the little side-story on earth this season and was sad to see one of my fav characters die. 😭 It appears that the next season might be the last one before they take a break. I’m not complaining, I’m happy that Amazon bought the rights for the series after ScyFy decided to not continue it. They deserve a break. As long as they come back.&lt;/p&gt;
+&lt;p&gt;I did find a new series to watch already because the second season of &lt;a href=&quot;https://en.wikipedia.org/wiki/Snowpiercer_(TV_series)&quot;&gt;Snowpiercer&lt;/a&gt; (yes, there is a TV series that plays in the movie’s realm) has been released. The first season was rather mediocre and the writing/acting didn’t convince me. The second season started a lot stronger though and I’m looking forward to what’s happening next. Especially how this all ties back into the movie’s story.&lt;/p&gt;
+&lt;h2&gt;Song of the week&lt;/h2&gt;
+&lt;p&gt;I took some long, sunny, snowy walks this week with my headphones on. Many funky, jazzy house tunes released on &lt;a href=&quot;https://soundcloud.com/toytonics&quot;&gt;Toy Tonics&lt;/a&gt; (a small Berlin-based label) provided the perfect atmosphere. Since I can only share one track each week (because, you know, those are the rules…I guess), I will give you this one by &lt;a href=&quot;https://soundcloud.com/coeo&quot;&gt;COEO&lt;/a&gt;:&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/178406952&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Weeknotes 6/2021]]></title><description><![CDATA[Side Projects Somewhere The project is nearing its end soon so the students are in scrum mode. The Babelsberg orchestra finished recording…]]></description><link>https://janmonschke.com/weeknotes/2021/06/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/06/</guid><pubDate>Sun, 07 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
 &lt;h3&gt;Somewhere&lt;/h3&gt;
 &lt;p&gt;The project is nearing its end soon so the students are in scrum mode. The Babelsberg orchestra finished recording the background music and it sounds absolutely amazing. The digital soundtrack was already great. Hearing it played by an actual orchestra is just on another level 🤩.&lt;/p&gt;
 &lt;p&gt;For me it means I’m preparing the landing page so it works well on all kinds of devices. In the beginning we mainly wanted to support iPads and desktop browsers. Now that we saw that I have some extra time, I can add support for mobile phones as well. 📲&lt;/p&gt;
