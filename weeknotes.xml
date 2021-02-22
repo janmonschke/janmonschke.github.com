@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 17 Feb 2021 18:57:33 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 7/2021]]></title><description><![CDATA[Side Projects Somewhere  Last week I worked on the foundation of the responsive behaviour for the landing page. This week I applied the…]]></description><link>https://janmonschke.com/weeknotes/2021/07/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/07/</guid><pubDate>Sun, 14 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 22 Feb 2021 22:20:56 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 8/2021]]></title><description><![CDATA[Life  I’m in the middle of a move, so my updates might not be as thourough or interesting in the next couple of weeks but I will keep up the…]]></description><link>https://janmonschke.com/weeknotes/2021/08/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/08/</guid><pubDate>Sun, 21 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Life&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/707d1c664eb71725eadcb5ff46b0067a/e5166/08-cat-moving-box.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIEA//EABUBAQEAAAAAAAAAAAAAAAAAAAED/9oADAMBAAIQAxAAAAFcqJoUcmF//8QAGxAAAgIDAQAAAAAAAAAAAAAAAQIAAxESITL/2gAIAQEAAQUCdwk2IPIaUcVjEf1//8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERIf/aAAgBAwEBPwF6yn//xAAXEQEAAwAAAAAAAAAAAAAAAAAAAREx/9oACAECAQE/AYxT/8QAGxAAAgEFAAAAAAAAAAAAAAAAAAEQESIxQVH/2gAIAQEABj8CS2y1xV56OP/EABgQAQEBAQEAAAAAAAAAAAAAAAERACEx/9oACAEBAAE/IWa3CLJrI9hmPWaT3mw41G99/9oADAMBAAIAAwAAABBPz//EABYRAQEBAAAAAAAAAAAAAAAAAAEQEf/aAAgBAwEBPxBuEf/EABcRAQEBAQAAAAAAAAAAAAAAAAEAEUH/2gAIAQIBAT8QIb7E/8QAHBABAQACAgMAAAAAAAAAAAAAAREAITFBUWHR/9oACAEBAAE/EDGF6HUPLl2gk0bK3pHL4a94TCHAH5kPbNVxrfqGf//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;cat in a moving box&quot;
+        title=&quot;cat in a moving box&quot;
+        src=&quot;/static/707d1c664eb71725eadcb5ff46b0067a/4b190/08-cat-moving-box.jpg&quot;
+        srcset=&quot;/static/707d1c664eb71725eadcb5ff46b0067a/e07e9/08-cat-moving-box.jpg 200w,
+/static/707d1c664eb71725eadcb5ff46b0067a/066f9/08-cat-moving-box.jpg 400w,
+/static/707d1c664eb71725eadcb5ff46b0067a/4b190/08-cat-moving-box.jpg 800w,
+/static/707d1c664eb71725eadcb5ff46b0067a/e5166/08-cat-moving-box.jpg 1200w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;I’m in the middle of a move, so my updates might not be as thourough or interesting in the next couple of weeks but I will keep up the habbit 😊.&lt;/p&gt;
+&lt;p&gt;We did get back into listening to audio books this week. Turns out that packing moving boxes is the perfect activity for audio books. We are still listening to &lt;a href=&quot;https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind&quot;&gt;Sapiens&lt;/a&gt;. It’s a whooping 15h long 🤓&lt;/p&gt;
+&lt;h2&gt;Side projects&lt;/h2&gt;
+&lt;h3&gt;Somewhere&lt;/h3&gt;
+&lt;p&gt;Not much to show for this week on somewhere. I am adding legal pages, fixing small issues in the responsive layout and trying to add a 3d scene to the landing page. A placeholder image is shown while the scene, and the whole 3d engine, is loaded asynchronously. I am currently struggling to fade nicely between the two because the perspective of the scene and the placeholder don’t match. Will ask for help from the artist 👨‍🎨&lt;/p&gt;
+&lt;p&gt;Also the scene is 8mb and it’s pretty much empty. We probably need to tick some extra boxes when exporting the files 😅&lt;/p&gt;
+&lt;h3&gt;Ping&lt;/h3&gt;
+&lt;p&gt;Didn’t manage to spend any time on ping this week due to move preparations. The only thing that I did was to buy this &lt;a href=&quot;https://fireship.io/courses/react-next-firebase/&quot;&gt;course on NextJS and Firebase&lt;/a&gt; from &lt;a href=&quot;https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA&quot;&gt;Fireship&lt;/a&gt;. I love their YouTube videos and the course promises to be similar to their videos.&lt;/p&gt;
+&lt;p&gt;Unrelated/Related: I love that there are so many creators selling their courses/books/workshops independently these days 🤩&lt;/p&gt;
+&lt;p&gt;I have not yet managed to watch a lot of the course but I hope to get to that in the next weeks. Probably after the move.&lt;/p&gt;
+&lt;h2&gt;Song of the week&lt;/h2&gt;
+&lt;p&gt;Like last week, I am sticking with some &lt;a href=&quot;https://soundcloud.com/toytonics&quot;&gt;Toy Tonics&lt;/a&gt; again. The sun is out, the parks are buzzing with people (keeping safe distances). I am dreaming of the time when we can celebrate life and music at the small island-festivals in Berlin. This is the song I want to dance to:&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/149479296&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;</content:encoded></item><item><title><![CDATA[Weeknotes 7/2021]]></title><description><![CDATA[Side Projects Somewhere  Last week I worked on the foundation of the responsive behaviour for the landing page. This week I applied the…]]></description><link>https://janmonschke.com/weeknotes/2021/07/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/07/</guid><pubDate>Sun, 14 Feb 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Side Projects&lt;/h2&gt;
 &lt;h3&gt;Somewhere&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
