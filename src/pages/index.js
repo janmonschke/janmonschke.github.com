@@ -160,6 +160,16 @@ export default function BlogIndex(props) {
               and general life things.
             </p>
             <WeeknotesOnIndex />
+            <div
+              style={{
+                marginTop: rhythm(0.4),
+                fontSize: rhythm(0.6),
+                display: 'flex',
+                justifyContent: 'flex-end'
+              }}
+            >
+              <Link to="/weeknotes">→ All weeknotes</Link>
+            </div>
           </div>
 
           <div className="talks" ref={talksRef}>
