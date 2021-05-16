@@ -1,30 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 May 2021 21:21:17 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 9/2021]]></title><description><![CDATA[Life  Wahoo, I’m back after a long break! As mentioned in the last update, I moved apartments. Apart from a couple lightbulbs, the new…]]></description><link>https://janmonschke.com/weeknotes/2021/09/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/09/</guid><pubDate>Sun, 16 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Life&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Weeknotes - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 16 May 2021 21:24:31 GMT</lastBuildDate><item><title><![CDATA[Weeknotes 9/2021]]></title><description><![CDATA[Life  Wahoo, I’m back after a long break! As mentioned in the last update, I moved apartments. Apart from a couple lightbulbs, the new…]]></description><link>https://janmonschke.com/weeknotes/2021/09/</link><guid isPermaLink="false">https://janmonschke.com/weeknotes/2021/09/</guid><pubDate>Sun, 16 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Life&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6523d3ed2f0081a0f11599524a840444/0f98f/09-volkspark-friedrichshain.jpg&quot;
+    href=&quot;/static/e4aa541059cccc06f4f0490ee8620119/e5166/09-volkspark-friedrichshain.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIEAwX/xAAWAQEBAQAAAAAAAAAAAAAAAAACAAH/2gAMAwEAAhADEAAAAc6OW5xicN//xAAZEAEBAAMBAAAAAAAAAAAAAAABAgAREgP/2gAIAQEAAQUCm0J9oDoya0dbGKz/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQEBAQAAAAAAAAAAAAAAAAAAERL/2gAIAQIBAT8BrL//xAAYEAACAwAAAAAAAAAAAAAAAAAQIQABEf/aAAgBAQAGPwKOmcH/xAAZEAEAAwEBAAAAAAAAAAAAAAABABEhMWH/2gAIAQEAAT8hU8pYisxLTewzuJdOvkvY3c//2gAMAwEAAgADAAAAEDTP/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAIAQMBAT8QqP/EABgRAQADAQAAAAAAAAAAAAAAAAEAESFB/9oACAECAQE/EBHY325//8QAHBABAQACAgMAAAAAAAAAAAAAAREAITFRYaGx/9oACAEBAAE/EERrZmp4xRWdECN+OAEPbjAx1G8X1kLqkTQMgMAtGZ//2Q==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAMCBf/EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABhbn6xAP/xAAbEAACAgMBAAAAAAAAAAAAAAABAgASAxEhE//aAAgBAQABBQJTz2dVvL6FuHGJ/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFhEBAQEAAAAAAAAAAAAAAAAAAAES/9oACAECAQE/AWY//8QAFxAAAwEAAAAAAAAAAAAAAAAAARARAP/aAAgBAQAGPwITFyL/xAAaEAADAQEBAQAAAAAAAAAAAAABESEAMVFx/9oACAEBAAE/IS0n5iBRcfmmSYIBcwZsN9xSIKY3/9oADAMBAAIAAwAAABALD//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/EKj/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/ELEU0//EABoQAQEBAQEBAQAAAAAAAAAAAAERACExUXH/2gAIAQEAAT8QD2nVH57MOp5EdvEhfCoNyE0eK+Ye4l0rnERSJd//2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Volkspark Friedrichshain&quot;
         title=&quot;Volkspark Friedrichshain&quot;
-        src=&quot;/static/6523d3ed2f0081a0f11599524a840444/4b190/09-volkspark-friedrichshain.jpg&quot;
-        srcset=&quot;/static/6523d3ed2f0081a0f11599524a840444/e07e9/09-volkspark-friedrichshain.jpg 200w,
-/static/6523d3ed2f0081a0f11599524a840444/066f9/09-volkspark-friedrichshain.jpg 400w,
-/static/6523d3ed2f0081a0f11599524a840444/4b190/09-volkspark-friedrichshain.jpg 800w,
-/static/6523d3ed2f0081a0f11599524a840444/e5166/09-volkspark-friedrichshain.jpg 1200w,
-/static/6523d3ed2f0081a0f11599524a840444/b17f8/09-volkspark-friedrichshain.jpg 1600w,
-/static/6523d3ed2f0081a0f11599524a840444/0f98f/09-volkspark-friedrichshain.jpg 1920w&quot;
+        src=&quot;/static/e4aa541059cccc06f4f0490ee8620119/4b190/09-volkspark-friedrichshain.jpg&quot;
+        srcset=&quot;/static/e4aa541059cccc06f4f0490ee8620119/e07e9/09-volkspark-friedrichshain.jpg 200w,
+/static/e4aa541059cccc06f4f0490ee8620119/066f9/09-volkspark-friedrichshain.jpg 400w,
+/static/e4aa541059cccc06f4f0490ee8620119/4b190/09-volkspark-friedrichshain.jpg 800w,
+/static/e4aa541059cccc06f4f0490ee8620119/e5166/09-volkspark-friedrichshain.jpg 1200w&quot;
         sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
