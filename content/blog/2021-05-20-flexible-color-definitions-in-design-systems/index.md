@@ -70,12 +70,7 @@ Et voilà, our `ButtonLink` now behaves correctly and it will automatically upda
 
 <a href="#" class="ButtonLink2">ButtonLink</a>
 
-Check out the example on CodePen:
-
-<iframe height="265" style="width: 100%;" scrolling="no" title="JjWbjJP" src="https://codepen.io/janmonschke/embed/preview/JjWbjJP?height=265&theme-id=light&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/janmonschke/pen/JjWbjJP'>JjWbjJP</a> by Jan
-  (<a href='https://codepen.io/janmonschke'>@janmonschke</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+I like this approach as it gives a lot of flexibility and aids with maintainability.
 
 <style>
   /* Initial approach */
