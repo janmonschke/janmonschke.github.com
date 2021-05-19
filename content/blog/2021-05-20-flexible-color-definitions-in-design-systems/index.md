@@ -25,7 +25,7 @@ Let's say our task is to build a `LinkButton` component. A component that looks 
 
 This results in the following component component:
 
-<a href="#" class="ButtonLink">ButtonLink</a>
+<a href="#" class="ButtonLink" onclick="return false;">ButtonLink</a>
 
 The design spec specifies, that the background should have `50%` opacity when the element is hovered. So we're adding an additional opacity rule:
 
@@ -37,13 +37,13 @@ The design spec specifies, that the background should have `50%` opacity when th
 
 When hovered, the component's background changes correctly. However, the text becomes a lot less readable because `opacity` is applied to the entire element which includes its child elements:
 
-<a href="#" class="ButtonLink1">ButtonLink</a>
+<a href="#" class="ButtonLink1" onclick="return false;">ButtonLink</a>
 
-Not only is this bad for the readbility, it's also not correct according to the design spec which only specifies an change in opacity for the background.
+Not only is this bad for the readbility, it's also not correct according to the design spec which only specifies a change in opacity for the background. The text should keep its original color.
 
 Instinctively I want to solve this issue by defining a new variable `colors-space-green-opacity-50` that is a `rgba()` copy of the original color. That color is then used as the background color for the hovered button. That is a valid approach and gets you to the solution quickly.
 
-Another approach is to define the "raw" RGB values of `space green` as its own variable and use that variable for the base color definition and the hover color. LEt me show you what I mean by "raw" RGB values:
+Another approach is to define the "raw" RGB values of `space green` as their own variable and use that variable for the base color definition and the hover color. Let me show you what I mean by "raw" RGB values:
 
 ```css
 :root {
@@ -52,7 +52,7 @@ Another approach is to define the "raw" RGB values of `space green` as its own v
 }
 ```
 
-The definition of `--colors-space-green-rgb` might look incomplete and invalid but it is actually a valid definition of a custom property. Custom properties are replaced **as is** so it is actually valid CSS code. `rgb(var(--colors-space-green-rgb))` is interpreted as `rgb(3, 227, 211)` which is identical to our initial color definition of `space green`.
+The definition of `--colors-space-green-rgb` might look incomplete and invalid but it is actually a valid definition of a custom property. Custom properties are replaced **as is**. `rgb(var(--colors-space-green-rgb))` is interpreted as `rgb(3, 227, 211)` which in turn is identical to our initial color definition of `space green`.
 
 This now allows us to define a hover version of the background color that depends on the base color definition:
 
@@ -68,7 +68,7 @@ This now allows us to define a hover version of the background color that depend
 
 Et voilà, our `ButtonLink` now behaves correctly and it will automatically update when we change the base color definition 🎉:
 
-<a href="#" class="ButtonLink2">ButtonLink</a>
+<a href="#" class="ButtonLink2" onclick="return false;">ButtonLink</a>
 
 I like this approach as it gives a lot of flexibility and aids with maintainability.
 
