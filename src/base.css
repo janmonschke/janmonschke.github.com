@@ -2,7 +2,7 @@
 pre[class*='language-'] {
   font-size: 0.9em;
   overflow: auto;
-  padding: 1.4rem;
+  padding: 1rem;
   background: #f5f2f0a6;
   margin: 1.2em 0;
   border-radius: 0.25rem;
@@ -15,5 +15,5 @@ pre[class*='language-'] {
   background: #f1f2f4;
   padding: 0.15em 0.2em 0.05em;
   white-space: normal;
-  color: rgba(0,0,0,0.8);
+  color: rgba(0, 0, 0, 0.8);
 }
