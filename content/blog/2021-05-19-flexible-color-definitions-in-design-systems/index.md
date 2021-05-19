@@ -3,7 +3,7 @@ title: Flexible color definitions in design systems
 type: blog
 path: flexible-color-definitions-in-design-systems
 keywords: ['design', 'system', 'color', 'pattern', 'css', 'variables']
-date: 2021-05-20
+date: 2021-05-19
 pomodoros: 4
 image: ./color-splash.jpg
 ---
