@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog posts - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 17 May 2021 15:52:56 GMT</lastBuildDate><item><title><![CDATA[Setting up TailwindCSS in create-react-app]]></title><description><![CDATA[I have started to use TailwindCSS in a couple of side projects now to try out utility-based styling. All of these projects are regular…]]></description><link>https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</link><guid isPermaLink="false">https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</guid><pubDate>Fri, 17 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have started to use &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;TailwindCSS&lt;/a&gt; in a couple of side projects now to try out utility-based styling. All of these projects are regular &lt;a href=&quot;https://create-react-app.dev/&quot;&gt;create-react-app&lt;/a&gt; projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project’s webpack config without &lt;a href=&quot;https://create-react-app.dev/docs/available-scripts#npm-run-eject&quot;&gt;‘ejecting’&lt;/a&gt; your app. In this post I want to show how I have added TailwindCSS to my projects without ejecting.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog posts - janmonschke.com]]></title><description><![CDATA[The portfolio and blog of Jan Monschke]]></description><link>https://janmonschke.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 19 May 2021 11:21:42 GMT</lastBuildDate><item><title><![CDATA[Flexible color definitions in design systems]]></title><description><![CDATA[While working on the implementation of a new design system at work, I came across this nifty little trick that makes color definitions more…]]></description><link>https://janmonschke.com/flexible-color-definitions-in-design-systems</link><guid isPermaLink="false">https://janmonschke.com/flexible-color-definitions-in-design-systems</guid><pubDate>Wed, 19 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;While working on the implementation of a new design system at work, I came across this nifty little trick that makes color definitions more usable and flexible.&lt;/p&gt;
+&lt;p&gt;Let’s say our task is to build a &lt;code class=&quot;language-text&quot;&gt;LinkButton&lt;/code&gt; component. A component that looks like a button but it is actually a link. The component’s background should be &lt;code class=&quot;language-text&quot;&gt;space green&lt;/code&gt; from our list of theme colors:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;:root&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;--colors-space-green&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;3&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 227&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 211&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;--surface-primary-button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--colors-space-green&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token selector&quot;&gt;.ButtonLink&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--surface-primary-button&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This results in the following component component:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;ButtonLink&quot; onclick=&quot;return false;&quot;&gt;ButtonLink&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The design spec specifies, that the background should have &lt;code class=&quot;language-text&quot;&gt;50%&lt;/code&gt; opacity when the element is hovered. So we’re adding an additional opacity rule:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;.ButtonLink:hover&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;opacity&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 0.5&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;When hovered, the component’s background changes correctly. However, the text becomes a lot less readable because &lt;code class=&quot;language-text&quot;&gt;opacity&lt;/code&gt; is applied to the entire element which includes its child elements:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;ButtonLink1&quot; onclick=&quot;return false;&quot;&gt;ButtonLink&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Not only is this bad for the readbility, it’s also not correct according to the design spec which only specifies a change in opacity for the background. The text should keep its original color.&lt;/p&gt;
+&lt;p&gt;Instinctively I want to solve this issue by defining a new variable &lt;code class=&quot;language-text&quot;&gt;colors-space-green-opacity-50&lt;/code&gt; that is a &lt;code class=&quot;language-text&quot;&gt;rgba()&lt;/code&gt; copy of the original color. That color is then used as the background color for the hovered button. That is a valid approach and gets you to the solution quickly.&lt;/p&gt;
+&lt;p&gt;Another approach is to define the “raw” RGB values of &lt;code class=&quot;language-text&quot;&gt;space green&lt;/code&gt; as their own variable and use that variable for the base color definition and the hover color. Let me show you what I mean by “raw” RGB values:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;:root&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;--colors-space-green-rgb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 3&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 227&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 211&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;--colors-space-green&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rgb&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--colors-space-green-rgb&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The definition of &lt;code class=&quot;language-text&quot;&gt;--colors-space-green-rgb&lt;/code&gt; might look incomplete and invalid but it is actually a valid definition of a custom property. Custom properties are replaced &lt;strong&gt;as is&lt;/strong&gt;. &lt;code class=&quot;language-text&quot;&gt;rgb(var(--colors-space-green-rgb))&lt;/code&gt; is interpreted as &lt;code class=&quot;language-text&quot;&gt;rgb(3, 227, 211)&lt;/code&gt; which in turn is identical to our initial color definition of &lt;code class=&quot;language-text&quot;&gt;space green&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This now allows us to define a hover version of the background color that depends on the base color definition:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;css&quot;&gt;&lt;pre class=&quot;language-css&quot;&gt;&lt;code class=&quot;language-css&quot;&gt;&lt;span class=&quot;token selector&quot;&gt;:root&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;--surface-primary-button-50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;rgba&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--colors-space-green-rgb&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 0.5&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token selector&quot;&gt;.ButtonLink:hover&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;var&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;--surface-primary-button-50&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Et voilà, our &lt;code class=&quot;language-text&quot;&gt;ButtonLink&lt;/code&gt; now behaves correctly and it will automatically update when we change the base color definition 🎉:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;ButtonLink2&quot; onclick=&quot;return false;&quot;&gt;ButtonLink&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I like this approach as it gives a lot of flexibility and aids with maintainability.&lt;/p&gt;
+&lt;style&gt;
+  /* Initial approach */
+  :root {
+    --colors-space-green: rgb(3, 227, 211);
+
+    --surface-primary-button: var(--colors-space-green);
+  }
+
+  .ButtonLink, .ButtonLink1 {
+    background: var(--surface-primary-button);
+  }
+  .ButtonLink1:hover {
+    opacity: 0.5;
+  }
+
+  /* RGB variable approach */
+  :root {
+    --colors-space-green-rgb: 3, 227, 211;
+    --colors-space-green-2: var(--colors-space-green-rgb);
+
+    --surface-primary-button-2: rgb(var(--colors-space-green-2)); /* Excuse my bad naming here */
+    --surface-primary-button-50: rgba(var(--colors-space-green-rgb), 0.5);
+  }
+
+  .ButtonLink2 {
+    background: var(--surface-primary-button-2);
+  }
+
+  .ButtonLink2:hover {
+    background: var(--surface-primary-button-50);
+  }
+
+  .ButtonLink, .ButtonLink1, .ButtonLink2 {
+    color: black;
+    margin: 0.5em;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 15px;
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Setting up TailwindCSS in create-react-app]]></title><description><![CDATA[I have started to use TailwindCSS in a couple of side projects now to try out utility-based styling. All of these projects are regular…]]></description><link>https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</link><guid isPermaLink="false">https://janmonschke.com/setting-up-tailwindcss-in-create-react-app</guid><pubDate>Fri, 17 Apr 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I have started to use &lt;a href=&quot;https://tailwindcss.com/&quot;&gt;TailwindCSS&lt;/a&gt; in a couple of side projects now to try out utility-based styling. All of these projects are regular &lt;a href=&quot;https://create-react-app.dev/&quot;&gt;create-react-app&lt;/a&gt; projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project’s webpack config without &lt;a href=&quot;https://create-react-app.dev/docs/available-scripts#npm-run-eject&quot;&gt;‘ejecting’&lt;/a&gt; your app. In this post I want to show how I have added TailwindCSS to my projects without ejecting.&lt;/p&gt;
 &lt;p&gt;Ejecting from a create-react-app means you will lose the ability to easily update to newer versions of &lt;code class=&quot;language-text&quot;&gt;react-scripts&lt;/code&gt; but you will gain the ability to change config files like the webpack config. For side projects I try to not eject for as long as I can because I know I would spend a lot of time tweaking configs for no real reason. I like that with create-react-app I can focus on what I am building and I don’t have to worry about config file.&lt;/p&gt;
 &lt;p&gt;Now, adding TailwindCSS to a create-react-app project is not as straight forward as adding it to an existing webpack config, but it’s also not super complicated. I have seen several ways to do it and I am using a combination of two approaches that I have seen in other blog posts (linked to at the &lt;a href=&quot;#sources&quot;&gt;bottom of this article&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;First, you have to install TailwindCSS and PostCSS. PostCSS will be used to generate the actual TailwindCSS classes.&lt;/p&gt;
