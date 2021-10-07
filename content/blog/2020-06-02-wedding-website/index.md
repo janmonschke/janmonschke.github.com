@@ -48,13 +48,13 @@ I could have deployed my own database and server for this project but I decided 
 
 - This setup saved a lot of time because I didn't have to manage/setup a database- nor an application server. It allowed me to fully focus on building the website and not to worry about running the backend of things.
 
-- Firebase comes with authentication built right in. This was probably the most important reason for me. I really did not want to have to write a super-secure™ and battle-tested™ authentication system that stores all my relative's and my friend's passwords. Sure, I could have used a module for this, but then I would have still needed to spend time setting that up, making sure there are no security issues, updating it frequently. Which brings me back to the previous point: I did not want to have to run the servers.
+- Firebase comes with authentication built right in. This was probably the most important reason for me. I really did not want to have to write a super-secure™ and battle-tested™ authentication system that stores all my relative's and my friend's passwords. Sure, I could have used a module for this, but then I would have still needed to spend time setting that up, making sure there are no security issues, updating it frequently. Which brings me back to the previous point: I did not want to have to run the servers. Plus, Firebase offers password-less sign-in.
 
 - Firebase offers Cloud Firestore, a real-time database. At first this might sound like a nice gimmick. However, this feature was key to building the room-booking service for our guests. 🤯.
 
-- [Netlify's deployments](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) and [deploy previews](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) are so super easy to set up, it feels like cheating!
+- The [Cloud Firestore security rules](https://firebase.google.com/docs/firestore/security/rules-structure) removed the need for a server to restrict write operations to the documents that are owned by the current user.
 
-- Net
+- [Netlify's deployments](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) and [deploy previews](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) are so super easy to set up, it feels like cheating!
 
 ## Using Firebase's Authentication module
 
