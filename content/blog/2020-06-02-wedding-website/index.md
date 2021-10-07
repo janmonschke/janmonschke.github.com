@@ -1,6 +1,6 @@
 ---
 title: Building a wedding RSVP website in React and Firebase
-type: blog
+type: draft
 path: building-a-wedding-rsvp-website-in-react-and-firebase
 keywords:
   [
@@ -29,15 +29,32 @@ Titles:
 - no server
 - Building the interface
 
-## Why Firebase?
+As I wrote in my weeknotes, I recently got married. We initially planned to get married in 2020 but the pandemic situation did not allow us to celebrate with more than just the close family. So we moved the bigger celebration to 2021. Still smaller than originally planned but as safe as we could make it. And we had a blast! 🎉
 
-I could have deployed my own database and server for this project but I decided to go with Firebase for several reasons. First of all, it saved me a lot of time because I did not have to set up the database and the server and it comes with many features. It allowed me to fully focus on building the website and not to worry about the backend side of things.
+However, this is not what this post is about. This post is about why and how we build our own RSVP and room booking system for our wedding website.
 
-Secondly, it comes with authentication built right in. And that was probably the most important reason for me because I really did not want to have to write a super secure and battle-tested authentication system that stores all my relative's and my friend's passwords. Sure, I could have used an open source project for this, but then I would have still needed to spend time on that and then we would be back at my first point for using Firebase: not having to build a backend system.
+## Why we built our own website
 
-Thirdly, Firebase offers Cloud Firestore, a real-time database. At first this might sound like a nice gimmick and nothing more but this feature was crucial for me to build a room booking service for our guests without a server 🤯.
+So why did we build our own wedding website instead of going with one of the plenty providers out there that come with RSVP modules, hundreds of templates and features like a wedding registry? To be fair, we could have probably used one of those providers but we had a hard time finding one that offered all the modules we wanted:
 
-On top of all that, you get these features for free for small websites and their documentation gets you up to speed super quickly!
+1) Our guests should be able to give us a virtual RSVP and tell us the names of their plus one(s). We could manage this list ourselves in Excel and let guests reply via mail but this creates a lot of organisational overhead for us. Most providers offered this feature but we had some special requirements. We also wanted to ask for our guest's dietary requirements (some providers allow this) and if they wanted to book a seat on the bus to the venue. You see, our venue was in the middle of nowhere in Brandenburg with no public transport and the vast majority of our guests don't own cars. None of the providers offers this functionality.
+2) The wedding venue came with a bunch of accommodation options and we wanted guests to be able to reserve them themselves. Again, this is something that we could have managed in Excel. However, given that we did not have enough rooms for all guests at the venue directly and plenty of different kinds of rooms, this would've meant a lot of back and forth communication. Some providers offer a module to book a room but we found them to be very inflexible. E.g we had some "room" types they simply didn't offer. We had plenty of tent spots and also parking spots for camper vans. Or some rooms offered optional breakfast wheter others did not. And yes, camping at a wedding is a thing  ... at least amongst our group of friends 😅
+3) We wanted to offer the website in French, German and English to make sure we were as inclusive as possible to our guests. This feature was lacking for pretty much all providers.
+4) We did not want to manage e-mails and Excel files. The database of the website should be the source of truth and we should be able to get an overview of people's answers and bookings easily with custom dashboards.
+
+## What tech to use
+
+I could have deployed my own database and server for this project but I decided to go with a static preact site hosted on netlify with Firebase as the data store. There are several reasons for this:
+
+- This setup saved a lot of time because I didn't have to manage/setup a database- nor an application server. It allowed me to fully focus on building the website and not to worry about running the backend of things.
+
+- Firebase comes with authentication built right in. This was probably the most important reason for me. I really did not want to have to write a super-secure™ and battle-tested™ authentication system that stores all my relative's and my friend's passwords. Sure, I could have used a module for this, but then I would have still needed to spend time setting that up, making sure there are no security issues, updating it frequently. Which brings me back to the previous point: I did not want to have to run the servers.
+
+- Firebase offers Cloud Firestore, a real-time database. At first this might sound like a nice gimmick. However, this feature was key to building the room-booking service for our guests. 🤯.
+
+- [Netlify's deployments](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) and [deploy previews](https://www.netlify.com/blog/2016/07/20/introducing-deploy-previews-in-netlify/) are so super easy to set up, it feels like cheating!
+
+- Net
 
 ## Using Firebase's Authentication module
 
@@ -414,26 +431,78 @@ function GuestList({ user }) {
 The `GuestList` fetches the user's guest by calling `onSnapshot` on the `guestsCollection`. `onSnapshot` invokes a fetch from Firestore and will call the passed in function with the result. In our case, we are only interested in the `docs` of that result which will be stored in the component's state. `onSnapshot` is also called when the `guestsCollection` changes locally or remotely. I will go into more detail on remote real-time updates in the next posts.
 
 ```jsx
-<ul>
-  {guests.map(guestRef => {
-    const { firstName, lastName, diet } = guestRef.data();
+return (
+  <ul>
+    {guests.map(guestRef => {
+      const { firstName, lastName, diet } = guestRef.data();
 
-    const name = `${firstName} ${lastName}`;
-    const display = `${name} - ${diet}`;
+      const name = `${firstName} ${lastName}`;
+      const display = `${name} - ${diet}`;
 
-    return (
-      <li key={guestRef.id}>
-        <span>{display}</span>
-        <button onClick={() => removeGuest(user.id, guestRef.id)}>X</button>
-      </li>
-    );
-  })}
-</ul>
+      return (
+        <li key={guestRef.id}>
+          <span>{display}</span>
+          <button onClick={() => removeGuest(user.id, guestRef.id)}>X</button>
+        </li>
+      );
+    })}
+  </ul>
+);
 ```
 
 For the actual rendering of the `GuestList` we are mapping over the guests and use the `data()` method to extract the information that we want to render. In this case we are rendering the full name and the dietary requirements in a list. Each guest also has a button next to them that allows our user to remove the guest. The button is using the `removeGuest()` function that we had defined before.
 
-//TODO: useReducer?
+```jsx
+function formReducer(state, action) {
+  switch (action.type) {
+    case 'setField':
+      return { ...state, [action.field]: action.value };
+    default:
+      return state;
+  }
+}
+
+const initialState = {
+  name: '',
+  diet: ''
+};
+```
+
+```jsx
+export default function App() {
+  const [formState, dispatch] = useReducer(formReducer, initialState);
+
+  const setName = useCallback(
+    event =>
+      dispatch({
+        type: "setField",
+        field: "name",
+        value: event.currentTarget.value
+      }),
+    []
+  );
+```
+
+```jsx
+<div className="App">
+  <form onSubmit={addGuest} ref={form => (this.form = form)}>
+    <input
+      type="text"
+      placeholder="Name"
+      value={formState.name}
+      onChange={setName}
+      required
+    />
+    <input
+      type="text"
+      placeholder="Dietary requirements"
+      onChange={setDiet}
+      value={formState.diet}
+    />
+    <input type="submit" value="Add guest" />
+  </form>
+</div>
+```
 
 ```jsx
 <form onSubmit={this.addGuest} ref={form => (this.form = form)}>
