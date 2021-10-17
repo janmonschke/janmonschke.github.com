@@ -38,7 +38,7 @@ Some groups formed during lunch and people started hacking right away. People we
 
 After several hours of hacking it was time for the presentations! We had eight groups presenting their projects and here's the recording:
 
-<iframe class="video-embed" width="560" height="315" src="//www.youtube.com/embed/atJgvEBn6qg" frameborder="0" allowfullscreen></iframe>
+<iframe class="video-embed" width="560" height="315" src="//www.youtube.com/embed/atJgvEBn6qg" frameborder="0" allowfullscreen loading="lazy"></iframe>
 
 Here's a list of all the projects that were presented if you don't have the time to watch the entire video. If you are an attendee and you want your project link on here, please contact me on [Twitter](https://twitter.com/thedeftone).
 
