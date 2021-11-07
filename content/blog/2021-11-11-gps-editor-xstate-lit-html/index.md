@@ -70,10 +70,4 @@ In the diagram above you can see all of the state machine's states, it's transit
 
 Overall I'm very happy with the current setup. I feel productive, the state machine adds a great structure and lit-html is a great renderer for small aplications like this one. I will definitely reuse this stack in other applications. If you are insterested in trying out the editor yourself, you can find it on https://janmonschke.com/gpx-editor. The code is up on GitHub at [janmonschke/gpx-editor](https://github.com/janmonschke/gpx-editor).
 
-### PS
-
-- Huge shoutout to [Leaflet](https://leafletjs.com/) an excellent map renderer and [spectre.css](https://picturepan2.github.io/spectre/) a great and light CSS framework
-
-
-- state machine diagram
-- deploy to github pages
+PS: A special shoutout goes out to [Leaflet](https://leafletjs.com/) an excellent map renderer and [spectre.css](https://picturepan2.github.io/spectre/) a great and light CSS framework
