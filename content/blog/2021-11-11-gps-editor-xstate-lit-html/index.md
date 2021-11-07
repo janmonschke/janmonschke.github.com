@@ -5,7 +5,7 @@ path: building-a-gpx-editor-with-xstate-and-lit-html
 keywords: ['xstate', 'lit-html', 'gpx editor', 'side project']
 date: 2021-11-11
 pomodoros: 6
-image: ./gpx-editor-screenshot.png
+image: ./gpx-editor-state-machine.png
 ---
 
 ![GPX editor screenshot](./gpx-editor-screenshot.png)
