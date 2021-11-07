@@ -10,10 +10,8 @@ function Bio() {
         return (
           <aside>
             Hi, I'm Jan 👋 I am a frontend engineer working for{' '}
-            <ExternalLink href="https://soundcloud.com">
-              SoundCloud
-            </ExternalLink>{' '}
-            in Berlin.
+            <ExternalLink href="https://elastic.co">Elastic</ExternalLink> in
+            Berlin.
             <br />
             You can find me on{' '}
             <ExternalLink href={`https://twitter.com/${twitter}`}>
