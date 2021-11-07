@@ -9,7 +9,7 @@ function Bio() {
         const { twitter, github } = data.site.siteMetadata;
         return (
           <aside>
-            Hi, I'm Jan 👋 I am a frontend engineer working for{' '}
+            Hi, I'm Jan 👋 I am a software engineer working for{' '}
             <ExternalLink href="https://elastic.co">Elastic</ExternalLink> in
             Berlin.
             <br />
