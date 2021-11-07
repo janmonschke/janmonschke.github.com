@@ -4,8 +4,8 @@ type: blog
 path: building-a-gpx-editor-with-xstate-and-lit-html
 keywords: ['xstate', 'lit-html', 'gpx editor', 'side project']
 date: 2021-11-11
-pomodoros: 4
-image: ./color-splash.jpg
+pomodoros: 6
+image: ./gpx-editor-screenshot.png
 ---
 
 ![GPX editor screenshot](./gpx-editor-screenshot.png)
