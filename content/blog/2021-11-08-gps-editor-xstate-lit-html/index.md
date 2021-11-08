@@ -11,7 +11,7 @@ image: ./gpx-editor-state-machine.png
 <a href="https://janmonschke.com/gpx-editor" target="_blank">![GPX editor screenshot](./gpx-editor-screenshot.png)
 <small>(try out the editor)</small></a>
 
-When [I go hiking](https://aweekinthewoods.com/france/auvergne/), I usually record the trip with this battery-efficient [GPS Logger app](https://gpslogger.app/) 🏕. Battery-efficiency is important because there's often no possibility to charge my phone on a multi-day hike. The app let's me define custom intervals at which it records a GPS point. I usually set the interval to somewhere between 45 seconds and a minute. That resolution is accurate enough for recordings of walks and it does not add too much strain on my battery.
+When [I go hiking](https://aweekinthewoods.com/france/auvergne/), I usually record the trip with this battery-efficient [GPS Logger app](https://gpslogger.app/) 🏕. Battery-efficiency is important because there's often no possibility to charge my phone on a multi-day hike. The app let's me define custom intervals at which it records a GPS point. I usually set the interval to somewhere between 45 seconds and a minute. This resolution is accurate enough for recordings of walks and it does not add too much strain on my battery.
 
 The app is requesting a GPS fix at certain points in an interval and disables GPS in-between recordings. This sometimes results in inaccurate readings of elevation and GPS locations. At least in my case and on my current phone.This in turn means that when I upload the recording to a tour website like [komoot](https://www.komoot.com/user/214500264344) the stats can be quite off and people that use my GPS recording might take wrong turns due to the inaccurate GPS 🛰.
 
@@ -23,7 +23,7 @@ The last new building-block of my setup was [parcel](https://parceljs.org/). Pre
 
 ![GPX editor diagram](./gpx-editor-diagram.png)
 
-The diagram above shows the application architecture. At the core of it is the state machine. It holds all of the application's state, it transistions based on user interaction and performs side-effects when necessary. Side-effects may also cause transitions e.g. in case of a file parsing error.
+The diagram above shows the application architecture. At the core of it is the state machine. It holds all of the application's state, it transitions based on user interaction and performs side-effects when necessary. Side-effects may also cause transitions e.g. in case of a file parsing error.
 
 The user interface reacts to the state machine's transitions. Depending on the current state, it will render the appropriate component. It also acts as the glue-code between user interaction and the machine:
 
@@ -72,6 +72,6 @@ This diagram shows all of the state machine's states, its transitions and side-e
 
 And that is pretty much everything there is to say about the editor. It uses [Leaflet](https://leafletjs.com/) as the map renderer and [spectre.css](https://picturepan2.github.io/spectre/) as a light-weight CSS component framework.
 
-Overall I'm very happy with the current setup. I feel productive, the state machine adds a great structure and lit-html is a great renderer for small aplications like this one. I will definitely reuse this stack in other applications.
+Overall I'm very happy with the current setup. I feel productive, the state machine adds a great structure and lit-html is a great renderer for small applications like this one. I will definitely reuse this stack in other applications.
 
 If you are insterested in trying out the editor yourself, you can find it on https://janmonschke.com/gpx-editor. The code is up on GitHub at [janmonschke/gpx-editor](https://github.com/janmonschke/gpx-editor).
