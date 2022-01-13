@@ -31,7 +31,7 @@ class Layout extends React.Component {
           <img src={profile} className="Layout__titleProfile" alt="" />
           <h1
             style={{
-              ...scale(1.2),
+              ...scale(0.8),
               marginBottom: rhythm(1.5)
             }}
             className="Layout__title"

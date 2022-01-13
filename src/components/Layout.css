@@ -55,6 +55,7 @@ a:focus:after,
 
 .Layout__menuLink {
   color: #333;
+  font-size: 0.8rem;
 }
 
 .m-small .Layout__menuLink:hover:after,
@@ -95,10 +96,21 @@ a.gatsby-resp-image-link:after {
   margin-right: 1em;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
+  .m-small .Layout__titleProfile {
+    width: 50px;
+    margin-right: 0.4em;
+  }
   .Layout__menu li:not(:last-child) {
-    margin-right: 0.8em;
+    margin-right: 0.6em;
   }
 }
 
-
+@media (max-width: 374px) {
+  .Layout__menu li:not(:last-child) {
+    margin-right: 0.8em;
+  }
+  .Layout__menuContainer {
+    display: none;
+  }
+}
