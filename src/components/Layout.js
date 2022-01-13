@@ -7,6 +7,9 @@ import { rhythm, scale } from '../utils/typography';
 import favicon from '../images/favicon.ico';
 import favicon16 from '../images/favicon-16x16.png';
 import favicon32 from '../images/favicon-32x32.png';
+import profile from '../images/profile.jpg';
+
+import './Layout.css';
 
 class Layout extends React.Component {
   render() {
@@ -16,32 +19,30 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
+        <Link
           style={{
-            ...scale(1.3),
-            marginBottom: rhythm(1.5),
-            marginTop: 0
+            boxShadow: `none`,
+            textDecoration: `none`,
+            color: `inherit`
           }}
+          to={`/`}
+          className="Layout__homeLink"
         >
-          <Link
+          <img src={profile} className="Layout__titleProfile" alt="" />
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`
+              ...scale(1.3),
+              marginBottom: rhythm(1.5)
             }}
-            to={`/`}
+            className="Layout__title"
           >
             {title}
-          </Link>
-        </h1>
+          </h1>
+        </Link>
       );
     } else {
       header = (
-        <h3
-          style={{
-            marginTop: 0
-          }}
-        >
+        <div className="Layout__titleContainer m-small">
           <Link
             style={{
               boxShadow: `none`,
@@ -49,10 +50,33 @@ class Layout extends React.Component {
               color: `inherit`
             }}
             to={`/`}
+            className="Layout__homeLink"
           >
-            {title}
+            <img src={profile} className="Layout__titleProfile" alt="" />
+            <h3
+              style={{
+                marginTop: 0
+              }}
+              className="Layout__title"
+            >
+              {title}
+            </h3>
           </Link>
-        </h3>
+          <nav className="Layout__menuContainer">
+            <ul className="Layout__menu">
+              <li>
+                <Link to="/blog" className="Layout__menuLink">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/weeknotes" className="Layout__menuLink">
+                  Weeknotes
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
       );
     }
     return (
