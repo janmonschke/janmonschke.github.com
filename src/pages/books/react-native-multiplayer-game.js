@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery } from 'gatsby';
+import { graphql, StaticQuery } from 'gatsby';
 import cover from './assets/react-native-multiplayer-game-cover-v3.png';
 import Bio from '../../components/Bio';
 import './react-native-multiplayer-game.css';
@@ -18,7 +18,7 @@ export default function ReactNativeMultiplayerGame() {
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <div className="reactNativeMGBook">
           <SEO
             title="Build a multiplayer game with React Native and Firebase"

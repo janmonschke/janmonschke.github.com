@@ -16,7 +16,8 @@ class BlogPostTemplate extends React.Component {
     const { title, date, keywords, pomodoros, type, image } = post.frontmatter;
     const isWeeknote = type === 'weeknote';
     const siteTitle = this.props.data.site.siteMetadata.title;
-    const imageSrc = image && image.childImageSharp.fluid.src;
+    const imageSrc =
+      image && image.childImageSharp.gatsbyImageData.images.fallback.src;
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -139,9 +140,7 @@ export const pageQuery = graphql`
         keywords
         image {
           childImageSharp {
-            fluid {
-              src
-            }
+            gatsbyImageData(width: 1000, layout: FIXED)
           }
         }
       }

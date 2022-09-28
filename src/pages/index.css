@@ -9,24 +9,11 @@
   outline: none;
   cursor: pointer;
   color: #007acc;
-  padding: 0.5rem 1rem 0.2rem;
-}
-
-.index__navBtn span {
-  padding-bottom: 0.2rem;
-  border-bottom: 1.5px solid transparent;
+  margin-right: 1rem;
 }
 
 .index__navBtn:first-child {
   padding-left: 0;
-}
-
-.index__navBtn.m-current span {
-  border-bottom-color: #007acc;
-}
-
-.index__navBtn:not(.m-current):hover {
-  color: #000;
 }
 
 .index__contentContainer {

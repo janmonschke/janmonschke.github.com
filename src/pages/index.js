@@ -15,41 +15,6 @@ import { WeeknotesOnIndex } from '../components/index/WeeknotesOnIndex';
 export default function BlogIndex(props) {
   const { data, location } = props;
   const { title, keywords } = data.site.siteMetadata;
-  const weeknotesRef = useRef();
-  const talksRef = useRef();
-  const [elementPositions, setElementPositions] = useState({
-    posts: 0,
-    weeknotes: 0,
-    talks: 0
-  });
-  const [contentMargin, setContentMargin] = useState(0);
-  const [current, setCurrent] = useState('posts');
-
-  useLayoutEffect(() => {
-    const talks = talksRef.current.offsetTop;
-    const weeknotes = weeknotesRef.current.offsetTop;
-
-    setElementPositions({
-      posts: 0,
-      weeknotes,
-      talks
-    });
-  }, [talksRef]);
-
-  const onTalksClicked = useCallback(() => {
-    setContentMargin(elementPositions.talks);
-    setCurrent('talks');
-  }, [elementPositions]);
-
-  const onBlogPostsClicked = useCallback(() => {
-    setContentMargin(0);
-    setCurrent('posts');
-  }, []);
-
-  const onWeeknotesClicked = useCallback(() => {
-    setContentMargin(elementPositions.weeknotes);
-    setCurrent('weeknotes');
-  });
 
   return (
     <Layout location={location} title={title}>
@@ -66,35 +31,18 @@ export default function BlogIndex(props) {
         aria-hidden={true}
         style={{ marginBottom: rhythm(0.8), fontSize: rhythm(0.7) }}
       >
-        <button
-          className={`${current === 'posts' ? 'm-current' : ''} index__navBtn`}
-          type="button"
-          onClick={onBlogPostsClicked}
-        >
-          <span>Blog posts</span>
-        </button>
-        <button
-          className={`${
-            current === 'weeknotes' ? 'm-current' : ''
-          } index__navBtn`}
-          type="button"
-          onClick={onWeeknotesClicked}
-        >
-          <span>Weeknotes</span>
-        </button>
-        <button
-          className={`${current === 'talks' ? 'm-current' : ''} index__navBtn`}
-          type="button"
-          onClick={onTalksClicked}
-        >
-          <span>Talks</span>
-        </button>
+        <a className="index__navBtn" href="#blogposts">
+          Blog posts
+        </a>
+        <a className="index__navBtn" href="#weeknotes">
+          Weeknotes
+        </a>
+        <a className="index__navBtn" href="#talks">
+          Talks
+        </a>
       </nav>
       <div className="index__contentContainer">
-        <div
-          className="index__content"
-          style={{ transform: `translateY(${-contentMargin}px)` }}
-        >
+        <div className="index__content">
           <div className="posts" style={{ marginBottom: rhythm(1) }}>
             <div
               style={{
@@ -104,7 +52,7 @@ export default function BlogIndex(props) {
               }}
             >
               <h2 style={{ margin: 0 }} id="blog-posts">
-                Posts
+                <a name="blogposts"></a>Posts
               </h2>
               <a href="/rss.xml" aria-label="Blog post RSS feed">
                 <MdRssFeed
@@ -126,11 +74,7 @@ export default function BlogIndex(props) {
             </div>
           </div>
 
-          <div
-            className="weeknotes"
-            ref={weeknotesRef}
-            style={{ marginBottom: rhythm(1) }}
-          >
+          <div className="weeknotes" style={{ marginBottom: rhythm(1) }}>
             <div
               style={{
                 display: 'flex',
@@ -138,7 +82,7 @@ export default function BlogIndex(props) {
               }}
             >
               <h2 style={{ margin: 0 }} id="talks">
-                Weeknotes
+                <a name="weeknotes"></a>Weeknotes
               </h2>
               <a href="/weeknotes.xml" aria-label="Weeknotes RSS feed">
                 <MdRssFeed
@@ -172,7 +116,8 @@ export default function BlogIndex(props) {
             </div>
           </div>
 
-          <div className="talks" ref={talksRef}>
+          <div className="talks">
+            <a name="talks"></a>
             <h2 style={{ margin: 0, marginBottom: rhythm(1) }} id="talks">
               Talks
             </h2>
