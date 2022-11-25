@@ -18,6 +18,10 @@ function Bio() {
               🐦 Twitter
             </ExternalLink>
             {', '}
+            <ExternalLink rel="me" href="https://indieweb.social/@thedeftone">
+              🐘 Mastodon
+            </ExternalLink>
+            {', '}
             <ExternalLink href={`https://github.com/${github}`}>
               💻 GitHub
             </ExternalLink>{' '}
