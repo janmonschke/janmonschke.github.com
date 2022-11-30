@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.1.0",
   "dependencies": {
+    "@fontsource/source-sans-pro": "^4.5.11",
+    "@fontsource/source-serif-pro": "^4.5.9",
     "gatsby": "^4.24.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-feed": "^4.24.0",
@@ -27,8 +29,6 @@
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "react-typography": "^0.16.20",
-    "typeface-source-sans-pro": "^1.1.13",
-    "typeface-source-serif-pro": "^1.1.13",
     "typography": "^0.16.21",
     "typography-theme-st-annes": "^0.16.19"
   },
