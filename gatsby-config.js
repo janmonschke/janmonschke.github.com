@@ -1,3 +1,7 @@
+const cheerio = require('cheerio');
+const siteUrl = 'https://janmonschke.com';
+const url = process.env.URL || siteUrl;
+
 module.exports = {
   siteMetadata: {
     title: 'Jan Monschke',
@@ -5,7 +9,7 @@ module.exports = {
     author: 'Jan Monschke',
     description: 'The portfolio and blog of Jan Monschke',
     keywords: ['frontend', 'engineering', 'javascript', 'blog'],
-    siteUrl: 'https://janmonschke.com/',
+    siteUrl,
     github: 'janmonschke',
     twitter: 'thedeftone'
   },
@@ -73,7 +77,14 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
+                  custom_elements: [
+                    {
+                      'content:encoded': replaceBlurryImages(
+                        edge.node.frontmatter.title,
+                        edge.node.html
+                      )
+                    }
+                  ]
                 });
               });
             },
@@ -109,7 +120,14 @@ module.exports = {
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
                   guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  custom_elements: [{ 'content:encoded': edge.node.html }]
+                  custom_elements: [
+                    {
+                      'content:encoded': replaceBlurryImages(
+                        edge.node.frontmatter.title,
+                        edge.node.html
+                      )
+                    }
+                  ]
                 });
               });
             },
@@ -150,3 +168,19 @@ module.exports = {
     }
   ]
 };
+
+function replaceBlurryImages(title, htmlWithImages) {
+  const $ = cheerio.load(htmlWithImages);
+  const imageWrappers = $('.gatsby-resp-image-wrapper');
+  console.log('replacing images', title, imageWrappers.length);
+  imageWrappers.each((_, wrapper) => {
+    const actualImage = $('.gatsby-resp-image-image', wrapper);
+    actualImage.attr('src', `${url}${actualImage.attr('src')}`);
+    actualImage.attr('srcset', '');
+    actualImage.attr('sizes', '');
+    actualImage.attr('style', 'max-width: 100%');
+    $(wrapper).replaceWith(actualImage);
+  });
+
+  return $.html();
+}

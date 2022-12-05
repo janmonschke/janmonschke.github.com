@@ -18,6 +18,7 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.site_name}`}
+            link={[{ rel: 'me', href: 'https://indieweb.social/@thedeftone' }]}
             meta={[
               {
                 name: `description`,
