@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect, useCallback } from 'react';
+import React from 'react';
 import { graphql, Link } from 'gatsby';
 import { MdRssFeed } from 'react-icons/md';
 
@@ -51,7 +51,7 @@ export default function BlogIndex(props) {
                 marginBottom: rhythm(0.5)
               }}
             >
-              <h2 style={{ margin: 0 }} id="blog-posts">
+              <h2 style={{ margin: 0 }}>
                 <a name="blogposts"></a>Posts
               </h2>
               <a href="/rss.xml" aria-label="Blog post RSS feed">
@@ -81,7 +81,7 @@ export default function BlogIndex(props) {
                 alignItems: 'baseline'
               }}
             >
-              <h2 style={{ margin: 0 }} id="talks">
+              <h2 style={{ margin: 0 }}>
                 <a name="weeknotes"></a>Weeknotes
               </h2>
               <a href="/weeknotes.xml" aria-label="Weeknotes RSS feed">
@@ -118,9 +118,7 @@ export default function BlogIndex(props) {
 
           <div className="talks">
             <a name="talks"></a>
-            <h2 style={{ margin: 0, marginBottom: rhythm(1) }} id="talks">
-              Talks
-            </h2>
+            <h2 style={{ margin: 0, marginBottom: rhythm(1) }}>Talks</h2>
             <Talks />
           </div>
         </div>
