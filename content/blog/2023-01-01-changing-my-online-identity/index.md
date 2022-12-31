@@ -9,7 +9,7 @@ pomodoros: 6
 
 TLDR: You can find me on [@janmon@social.lol](https://social.lol/@janmon) now.
 
-I joined Twitter in January 2009. Like everybody else, I had to find a username. I was young, just started studying and I was (and still am) a huge fan of [the Deftones](https://en.wikipedia.org/wiki/Deftones), so I thought I would be cheeky to use **@thedeftone** as my handle. It described my affinity to the band and I was betting on some people accidentally subscribing to my account instead of the bands account. The latter didn't really work out and mostly let to confusion when people tried to follow me. Joke's on me, I guess ;)
+I joined Twitter in January 2009. Like everybody else, I had to find a username. I was young, just started studying and I was (and still am) a huge fan of [the Deftones](https://en.wikipedia.org/wiki/Deftones), so I thought I would be cheeky to use **@thedeftone** as my handle. It described my affinity to the band and I was betting on some people accidentally subscribing to my account instead of the bands account. The latter didn't really work out and mostly led to confusion when people tried to follow me. Joke's on me, I guess ;)
 
 Another reason for @thedeftone was going for a handle that didn't contain my name. I thought I would stay somewhat anonymous that way. Your handle was your display name back in those days. Only people how knew you would know who you were.
 
@@ -21,13 +21,13 @@ For context, that talk was not about NodeJS. It was a talk on a Java-based JavaS
 
 But back to my beginnings on Twitter.
 
-Looking back at my old tweets I realized that I actually started out tweeting in German. Three months in, I then randmly switched to tweeting in English. Most of the people I was communicating with were friends from university, so it made sense to start out in German. But all of a sudden I thought it would be better to switch to English.
+Looking back at my old tweets I realized that I actually started out tweeting in German. Three months in, I then randomly switched to tweeting in English. Most of the people I was communicating with were friends from university, so it made sense to start out in German. But all of a sudden I thought it would be better to switch to English.
 
 Maybe it had to do with me switching to (or trying to switch to) [OpenSolaris](https://en.wikipedia.org/wiki/OpenSolaris) [^2]  I must have read so many English guides and forum posts to make that OpenSolaris work on my machine, that I thought I should document my journey in English? Maybe there's an easier explanation for the language change. Most of our uni materials and most programming documentation online are written in English. So tweeting about those things in German felt off. It might've been a mix of those reasons.
 
-But I digress. I guess what I'm trying to say is that I had loads of fun early in my early days on Twitter. A lot of my friends where there and my silly little username was not in the way.
+But I digress. I guess what I'm trying to say is that I had loads of fun early in my early days on Twitter. A lot of my friends were there and my silly little username was not in the way.
 
-Over the course of university I started to give talks at barcamps, meetups and eventually [at conferences](https://janmonschke.com/#talks). My Twitter handle can be found on all of my slide decks. After my talks though, I would often have people come to me to tell me they couldn't find me on Twitter, they just found the account of a metal band. 😭
+Over the course of university I started to give talks at barcamps, meetups and eventually [at conferences](https://janmonschke.com/#talks). My Twitter handle can be found on my slide decks. After my talks though, I would often have people come to me to tell me they couldn't find me on Twitter, they just found the account of a metal band. 😭
 
 I should've probay changed my handle the first time this happened. But I didn't give those interactions much thought. I never questioned my choice of handle back then. But this is exactly what I did over the last months.
 
@@ -61,4 +61,4 @@ So yeah, happy new year. Here's to a fresh new start of my online identity 🎉 
 
 [^1]: You can search for your tweets by time frame using these tags in the Twitter search: `from:ACCOUNT since:2008-03-01 until:2008-03-31`
 
-[^2]: Back in those days I was a real [Sun](https://en.wikipedia.org/wiki/Sun_Microsystems) fanboy. I spent most of my days programming in [NetBeans](https://en.wikipedia.org/wiki/NetBeans)  programming Java and [JavaFx](https://en.wikipedia.org/wiki/JavaFX). For the longest time in uni it was my dream to join Sun after graduation. Things took a different turn though. But I fell in love with the web and Sun was bought by Oracle. It wasn't meant to be in the end.
+[^2]: Back in those days I was a real [Sun](https://en.wikipedia.org/wiki/Sun_Microsystems) fanboy. I spent most of my days programming in [NetBeans](https://en.wikipedia.org/wiki/NetBeans)  programming Java and [JavaFx](https://en.wikipedia.org/wiki/JavaFX). For the longest time in uni it was my dream to join Sun after graduation. Things took a different turn though. But I fell in love with the web and Sun got acquired by Oracle. It wasn't meant to be in the end.
