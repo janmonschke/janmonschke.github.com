@@ -18,11 +18,11 @@ function Bio() {
               🐘 Mastodon
             </ExternalLink>
             {', '}
-            <ExternalLink href={`https://twitter.com/${twitter}`}>
+            <ExternalLink rel="me" href={`https://twitter.com/${twitter}`}>
               🐦 Twitter
             </ExternalLink>
             {', '}
-            <ExternalLink href={`https://github.com/${github}`}>
+            <ExternalLink rel="me" href={`https://github.com/${github}`}>
               💻 GitHub
             </ExternalLink>{' '}
             and{' '}

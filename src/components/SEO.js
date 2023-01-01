@@ -18,7 +18,11 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             }}
             title={title}
             titleTemplate={`%s | ${data.site.siteMetadata.site_name}`}
-            link={[{ rel: 'me', href: 'https://social.lol/@janmon' }]}
+            link={[
+              { rel: 'me', href: 'https://social.lol/@janmon' },
+              { rel: 'me', href: 'https://github.com/janmonschke' },
+              { rel: 'me', href: 'https://twitter.com/thedeftone' }
+            ]}
             meta={[
               {
                 name: `description`,
