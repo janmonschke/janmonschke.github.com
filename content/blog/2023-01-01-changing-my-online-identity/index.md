@@ -57,7 +57,7 @@ I'm glad that Mastodon makes it so easy to [redirect your account without losing
 
 As for my Twitter account. I'm not sure yet what to do with it. I haven't tweeted there in forever and only checked it seldomly. Maybe I'll update my Mastodon handle there and tweet about the occasional blog post but I'm planning to keep it a write-only account.
 
-So yeah, happy new year. Here's to a fresh new start of my online identity 🎉 And see you over on [Mastodon](https://social.lol/@janmon) 👋
+So yeah, happy new year! Here's to a fresh new start of my online identity 🎉 And see you over on [Mastodon](https://social.lol/@janmon) 👋
 
 [^1]: You can search for your tweets by time frame using these tags in the Twitter search: `from:ACCOUNT since:2008-03-01 until:2008-03-31`
 
