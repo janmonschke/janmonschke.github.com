@@ -14,12 +14,12 @@ function Bio() {
             Berlin.
             <br />
             You can find me on{' '}
-            <ExternalLink href={`https://twitter.com/${twitter}`}>
-              🐦 Twitter
+            <ExternalLink rel="me" href="https://social.lol/@janmon">
+              🐘 Mastodon
             </ExternalLink>
             {', '}
-            <ExternalLink rel="me" href="https://indieweb.social/@thedeftone">
-              🐘 Mastodon
+            <ExternalLink href={`https://twitter.com/${twitter}`}>
+              🐦 Twitter
             </ExternalLink>
             {', '}
             <ExternalLink href={`https://github.com/${github}`}>
