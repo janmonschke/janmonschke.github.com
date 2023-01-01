@@ -21,7 +21,15 @@ function SEO({ description, lang, meta, keywords, title, image }) {
             link={[
               { rel: 'me', href: 'https://social.lol/@janmon' },
               { rel: 'me', href: 'https://github.com/janmonschke' },
-              { rel: 'me', href: 'https://twitter.com/thedeftone' }
+              { rel: 'me', href: 'https://twitter.com/thedeftone' },
+              {
+                rel: 'webmention',
+                href: 'https://webmention.io/janmonschke.com/webmention'
+              },
+              {
+                rel: 'pingback',
+                href: 'https://webmention.io/janmonschke.com/xmlrpc'
+              }
             ]}
             meta={[
               {
