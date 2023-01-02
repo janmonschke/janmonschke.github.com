@@ -22,6 +22,8 @@ jobs:
             Fetch webmentions
             skip-checks: true
         run: |
+          git config user.email "jan.monschke@gmail.com"
+          git config user.name "Jan Monschke"
           git remote set-url origin https://x-access-token:${GH_PAGES_ACCESS_TOKEN}@github.com/janmonschke/janmonschke.github.com.git
           git checkout dev
           git add .
