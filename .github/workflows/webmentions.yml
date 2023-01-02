@@ -4,23 +4,24 @@ on:
   schedule:
     - cron: '0 */6 * * *'
 
-webmentions:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Check out repository
-      uses: actions/checkout@dev
-    - name: Fetch webmentions
-      env:
-        WEBMENTIONS_IO_TOKEN: ${{ secrets.WEBMENTIONS_IO_TOKEN }}
-      run: node ./webmentions/sync.js
-    - name: Commit to repository
-      env:
-        GH_PAGES_ACCESS_TOKEN: ${{ secrets.GH_PAGES_ACCESS_TOKEN }}
-        COMMIT_MSG: |
-          Fetch webmentions
-          skip-checks: true
-      run: |
-        git remote set-url origin https://x-access-token:${GH_PAGES_ACCESS_TOKEN}@github.com/janmonschke/janmonschke.github.com.git
-        git checkout dev
-        git add .
-        git diff --quiet && git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin dev)
+jobs:
+  webmentions-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@dev
+      - name: Fetch webmentions
+        env:
+          WEBMENTIONS_IO_TOKEN: ${{ secrets.WEBMENTIONS_IO_TOKEN }}
+        run: node ./webmentions/sync.js
+      - name: Commit to repository
+        env:
+          GH_PAGES_ACCESS_TOKEN: ${{ secrets.GH_PAGES_ACCESS_TOKEN }}
+          COMMIT_MSG: |
+            Fetch webmentions
+            skip-checks: true
+        run: |
+          git remote set-url origin https://x-access-token:${GH_PAGES_ACCESS_TOKEN}@github.com/janmonschke/janmonschke.github.com.git
+          git checkout dev
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin dev)
