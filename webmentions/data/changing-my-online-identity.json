@@ -1,0 +1,386 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Carolyn Stransky",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/3ae70a355447f8c4034e561685ad58151167088bc92151f8e713f3cebe7077d1.jpg",
+      "url": "https://twitter.com/carolstran"
+    },
+    "url": "https://twitter.com/thedeftone/status/1609479763273334787#favorited-by-837424448085110784",
+    "published": null,
+    "wm-received": "2023-01-01T17:22:39Z",
+    "wm-id": 1590697,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1609479763273334787/837424448085110784",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Chris Lowis",
+      "photo": "https://webmention.io/avatar/media.social.lol/80127754d02422a8f04bc7a955c6338a235a7c98bd25fd4385be78fa9c07a820.jpg",
+      "url": "https://ruby.social/@chrislowis"
+    },
+    "url": "https://ruby.social/@chrislowis/109613437894313414",
+    "published": "2023-01-01T10:18:47",
+    "wm-received": "2023-01-01T20:59:32Z",
+    "wm-id": 1590817,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109613437938187198",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> Happy New Year mate. Hope we can hang out again some time in '23.</p>",
+      "text": "@janmon Happy New Year mate. Hope we can hang out again some time in '23."
+    },
+    "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/109613534718782844",
+    "published": "2023-01-01T10:43:24",
+    "wm-received": "2023-01-01T20:59:33Z",
+    "wm-id": 1590818,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109613534718782844",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://ruby.social/@chrislowis\" class=\"u-url\">@<span>chrislowis</span></a></span> That would be great 🎉🎊</p>",
+      "text": "@chrislowis That would be great 🎉🎊"
+    },
+    "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/109615089263130070",
+    "published": "2023-01-01T17:18:45",
+    "wm-received": "2023-01-01T20:59:34Z",
+    "wm-id": 1590819,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109615089263130070",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://m.fru.bar/@bluemaex\" class=\"u-url\">@<span>bluemaex</span></a></span> Would love to manage to hang this year! </p><p>Fun fact, when I was researching for this post, one of your tweets showed up when I searched for <a href=\"https://social.lol/tags/bcruhr2\">#<span>bcruhr2</span></a> : <a href=\"https://twitter.com/tweetmaex/status/1418161858\"><span>https://</span><span>twitter.com/tweetmaex/status/1</span><span>418161858</span></a></p>\n<a class=\"p-category\" href=\"https://social.lol/tags/bcruhr2\">bcruhr2</a>\n<a href=\"https://twitter.com/tweetmaex/status/1418161858\">maex.cloud 云出 on Twitter</a>",
+      "text": "@bluemaex Would love to manage to hang this year! Fun fact, when I was researching for this post, one of your tweets showed up when I searched for #bcruhr2 : https://twitter.com/tweetmaex/status/1418161858\nbcruhr2\nmaex.cloud 云出 on Twitter"
+    },
+    "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "rmehner",
+      "photo": "https://webmention.io/avatar/media.social.lol/dda71f7b57a060b8d43172d5461075577f20118d1f8614d32b64268f730bdd36.jpg",
+      "url": "https://chaos.social/@rmehner"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109478687032278138",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:35Z",
+    "wm-id": 1590820,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109478687032278138",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "~bluemaex",
+      "photo": "https://webmention.io/avatar/media.social.lol/8514e227aeb4cf29c967e32a2010dbdd4f7e169c24835881469f6f9da3a29c94.png",
+      "url": "https://m.fru.bar/@bluemaex"
+    },
+    "url": "https://m.fru.bar/@bluemaex/109614857268771002",
+    "published": "2023-01-01T16:19:45",
+    "wm-received": "2023-01-01T20:59:36Z",
+    "wm-id": 1590821,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109614857400427080",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> Hah, I relate very very much to your tweet-story. Exactly my same though process earlier :)</p><p>Happy new year, hope we can manage to hang this year again been a while! 🎉</p>",
+      "text": "@janmon Hah, I relate very very much to your tweet-story. Exactly my same though process earlier :)Happy new year, hope we can manage to hang this year again been a while! 🎉"
+    },
+    "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Michael Henriksen",
+      "photo": "https://webmention.io/avatar/media.social.lol/f3c773ff17ba197727fb1dafae3dd63977d55848ad3ad87df5d3d1710b085e3d.png",
+      "url": "https://chaos.social/@michenriksen"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109331349286151910",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:38Z",
+    "wm-id": 1590822,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109331349286151910",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Felix Niklas",
+      "photo": "https://webmention.io/avatar/media.social.lol/226293473413cf32a608af25a701971c08af5ab04ca9c195e79d81d28797c723.jpg",
+      "url": "https://mastodon.social/@mrflix"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109298379160918805",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:38Z",
+    "wm-id": 1590823,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109298379160918805",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Guillaume Marty",
+      "photo": "https://webmention.io/avatar/media.social.lol/f880a3cb33e4e3e50b4041f60034eaf030c115c5bd4231ceff4a5ddb40eb688e.jpg",
+      "url": "https://indieweb.social/@gmarty"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109437888941458521",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:39Z",
+    "wm-id": 1590824,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109437888941458521",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Chris Lowis",
+      "photo": "https://webmention.io/avatar/media.social.lol/80127754d02422a8f04bc7a955c6338a235a7c98bd25fd4385be78fa9c07a820.jpg",
+      "url": "https://ruby.social/@chrislowis"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109307716188144746",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:40Z",
+    "wm-id": 1590825,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109307716188144746",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "vectorsize",
+      "photo": "https://webmention.io/avatar/media.social.lol/4bc6a8af455ec395bbe4cdbe945e147f95b38dc280232206f83caeac33d05de6.jpg",
+      "url": "https://vis.social/@vectorsize"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109348305478313152",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:42Z",
+    "wm-id": 1590826,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109348305478313152",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Denis Defreyne",
+      "photo": "https://webmention.io/avatar/media.social.lol/6b851c7f195be2ceea14103a5d3b2205d064e9781a9d61fbe95c49b66f68bd5c.jpg",
+      "url": "https://ruby.social/@denis"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109296592914526410",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:43Z",
+    "wm-id": 1590827,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109296592914526410",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Simon Hohl",
+      "photo": "https://webmention.io/avatar/media.social.lol/de3008fdb11a86c7ce704921c451ef3a6ca0f2ba652f29a9761c0462f20dde63.png",
+      "url": "https://home.social/@dersmon"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109353923473060147",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:43Z",
+    "wm-id": 1590828,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109353923473060147",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "benschwarz",
+      "photo": "https://webmention.io/avatar/media.social.lol/0d3df44b39dd6c170f5b4289ec60ecd95a75114ada3ef783e412d9bf15e5c8ff.png",
+      "url": "https://front-end.social/@benschwarz"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109378102550153935",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:44Z",
+    "wm-id": 1590829,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109378102550153935",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Leonard Koch",
+      "photo": "https://webmention.io/avatar/media.social.lol/10f48b94a0a6f0739baadbdcd7d2726c47738d72f921f62738e88676ee704d9c.jpg",
+      "url": "https://mastodon.social/@leonardkoch"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109537156869485640",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:45Z",
+    "wm-id": 1590830,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109537156869485640",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan Lehnardt 🛋️",
+      "photo": "https://webmention.io/avatar/media.social.lol/bf236d71704810327e734bad7981dc38ca189b7f05d2591f3496805089cb8a4f.jpg",
+      "url": "https://chaos.social/@janl"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109250726388781873",
+    "published": null,
+    "wm-received": "2023-01-01T20:59:46Z",
+    "wm-id": 1590831,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109250726388781873",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sona",
+      "photo": "https://webmention.io/avatar/media.social.lol/d7e72ac74df31ccd73c2b27d1d493057e55e8ca91a8614447b6497e3550839a3.jpg",
+      "url": "https://mastodon.world/@sonasoeun"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109613091779956834",
+    "published": null,
+    "wm-received": "2023-01-01T22:54:00Z",
+    "wm-id": 1590874,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109613091779956834",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "NERDDISCO",
+      "photo": "https://webmention.io/avatar/media.social.lol/bb7543515d22ab6c65f13e07a202fffee2ea821bfeb68fb9f4382de02ba3195f.png",
+      "url": "https://mastodon.social/@NERDDISCO"
+    },
+    "url": "https://mastodon.social/@NERDDISCO/109619282008845211",
+    "published": "2023-01-02T11:05:01",
+    "wm-received": "2023-01-02T12:01:08Z",
+    "wm-id": 1591234,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109619282047414217",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> thanks for the explanation! I think when you move you loose some followers / followings, this might has to do something with their privacy settings, but I’m not sure! I just noticed when I moved instances that the numbers did not align anymore.</p>",
+      "text": "@janmon thanks for the explanation! I think when you move you loose some followers / followings, this might has to do something with their privacy settings, but I’m not sure! I just noticed when I moved instances that the numbers did not align anymore."
+    },
+    "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "NERDDISCO",
+      "photo": "https://webmention.io/avatar/media.social.lol/bb7543515d22ab6c65f13e07a202fffee2ea821bfeb68fb9f4382de02ba3195f.png",
+      "url": "https://mastodon.social/@NERDDISCO"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#reblogged-by-109422103663090721",
+    "published": null,
+    "wm-received": "2023-01-02T12:01:16Z",
+    "wm-id": 1591235,
+    "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/109613166812461535/109422103663090721",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "repost-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "repost-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/109619307609689799",
+    "published": "2023-01-02T11:11:31",
+    "wm-received": "2023-01-02T12:01:26Z",
+    "wm-id": 1591236,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109619307609689799",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@NERDDISCO\" class=\"u-url\">@<span>NERDDISCO</span></a></span> yeah, I think I lost a couple of followers as well.</p><p>I also noticed that there is no way to import lists. Even though you can export them 😅</p>",
+      "text": "@NERDDISCO yeah, I think I lost a couple of followers as well.I also noticed that there is no way to import lists. Even though you can export them 😅"
+    },
+    "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  }
+]
