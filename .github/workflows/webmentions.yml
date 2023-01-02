@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@dev
-      - name: Fetch webmentions
+        uses: actions/checkout@v2
+      - name: Sync webmentions
         env:
           WEBMENTIONS_IO_TOKEN: ${{ secrets.WEBMENTIONS_IO_TOKEN }}
         run: node ./webmentions/sync.js
