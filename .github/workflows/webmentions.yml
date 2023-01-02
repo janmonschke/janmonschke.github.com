@@ -19,8 +19,7 @@ jobs:
         env:
           GH_PAGES_ACCESS_TOKEN: ${{ secrets.GH_PAGES_ACCESS_TOKEN }}
           COMMIT_MSG: |
-            Fetch webmentions
-            skip-checks: true
+            Sync webmentions
         run: |
           git config user.email "jan.monschke@gmail.com"
           git config user.name "Jan Monschke"
