@@ -19,30 +19,7 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <Link
-          style={{
-            boxShadow: `none`,
-            textDecoration: `none`,
-            color: `inherit`
-          }}
-          to={`/`}
-          className="Layout__homeLink"
-        >
-          <img src={profile} className="Layout__titleProfile" alt="" />
-          <h1
-            style={{
-              ...scale(0.8),
-              marginBottom: rhythm(1.5)
-            }}
-            className="Layout__title"
-          >
-            {title}
-          </h1>
-        </Link>
-      );
-    } else {
-      header = (
-        <div className="Layout__titleContainer m-small">
+        <div className="h-card">
           <Link
             style={{
               boxShadow: `none`,
@@ -50,14 +27,47 @@ class Layout extends React.Component {
               color: `inherit`
             }}
             to={`/`}
-            className="Layout__homeLink"
+            className="Layout__homeLink u-url"
           >
-            <img src={profile} className="Layout__titleProfile" alt="" />
+            <img
+              src={profile}
+              className="Layout__titleProfile u-photo"
+              alt=""
+            />
+            <h1
+              style={{
+                ...scale(0.8),
+                marginBottom: rhythm(1.5)
+              }}
+              className="Layout__title p-name"
+            >
+              {title}
+            </h1>
+          </Link>
+        </div>
+      );
+    } else {
+      header = (
+        <div className="Layout__titleContainer m-small h-card">
+          <Link
+            style={{
+              boxShadow: `none`,
+              textDecoration: `none`,
+              color: `inherit`
+            }}
+            to={`/`}
+            className="Layout__homeLink u-url"
+          >
+            <img
+              src={profile}
+              className="Layout__titleProfile u-photo"
+              alt=""
+            />
             <h3
               style={{
                 marginTop: 0
               }}
-              className="Layout__title"
+              className="Layout__title p-name"
             >
               {title}
             </h3>
