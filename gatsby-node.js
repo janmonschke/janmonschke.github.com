@@ -64,13 +64,15 @@ exports.createPages = ({ graphql, actions }) => {
 
       // Create project pages.
       const projects = result.data.allMarkdownRemark.edges;
+      const { slug } = post.node.fields;
 
       projects.forEach((post) => {
         createPage({
-          path: post.node.fields.slug,
+          path: slug,
           component: blogPost,
           context: {
-            slug: post.node.fields.slug
+            slug: post.node.fields.slug,
+            publicUrl: ensureTrailingSlash('https://janmonschke.com' + slug)
           }
         });
       });
