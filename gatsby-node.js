@@ -64,9 +64,9 @@ exports.createPages = ({ graphql, actions }) => {
 
       // Create project pages.
       const projects = result.data.allMarkdownRemark.edges;
-      const { slug } = post.node.fields;
 
       projects.forEach((post) => {
+        const { slug } = post.node.fields;
         createPage({
           path: slug,
           component: blogPost,
