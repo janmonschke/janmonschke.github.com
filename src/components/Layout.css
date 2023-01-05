@@ -45,7 +45,7 @@ a:after,
   background-color: transparent;
 }
 
-a:hover:after,
+a:hover:after:not(.no-underline),
 .Layout__menuLink:hover:after,
 .Layout__title:after {
   background-color: #007acc;

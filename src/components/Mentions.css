@@ -1,0 +1,27 @@
+.Mentions {
+  margin: 0;
+  padding: 0;
+}
+
+.Mention {
+  display: flex;
+  margin-bottom: 1.5em;
+}
+
+.Mention__authorImageLink {
+  flex-shrink: 0;
+  margin-right: 0.8em;
+}
+
+.Mention__image {
+  width: 60px;
+}
+
+.Mention__authorLink {
+  display: block;
+  margin-bottom: 0.1em;
+}
+
+.Mention__content {
+  margin-bottom: 0.1em;
+}

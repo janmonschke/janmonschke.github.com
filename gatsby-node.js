@@ -18,12 +18,13 @@ exports.createPages = ({ graphql, actions }) => {
         const previous =
           index === posts.length - 1 ? null : posts[index + 1].node;
         const next = index === 0 ? null : posts[index - 1].node;
-
+        const { slug } = post.node.fields;
         createPage({
-          path: post.node.fields.slug,
+          path: slug,
           component: blogPost,
           context: {
-            slug: post.node.fields.slug,
+            slug,
+            publicUrl: ensureTrailingSlash('https://janmonschke.com' + slug),
             previous,
             next
           }
@@ -42,12 +43,13 @@ exports.createPages = ({ graphql, actions }) => {
         const previous =
           index === weeknotes.length - 1 ? null : weeknotes[index + 1].node;
         const next = index === 0 ? null : weeknotes[index - 1].node;
-
+        const { slug } = weeknote.node.fields;
         createPage({
-          path: weeknote.node.fields.slug,
+          path: slug,
           component: blogPost,
           context: {
-            slug: weeknote.node.fields.slug,
+            slug,
+            publicUrl: ensureTrailingSlash('https://janmonschke.com' + slug),
             previous,
             next
           }
@@ -115,4 +117,8 @@ function queryByType(graphql, type) {
       }
     `
   );
+}
+
+function ensureTrailingSlash(url) {
+  return url[url.length - 1] === '/' ? url : url + '/';
 }
