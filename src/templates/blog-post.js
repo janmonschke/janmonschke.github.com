@@ -175,7 +175,7 @@ export const pageQuery = graphql`
     }
     webmentions: allWebmentions(
       filter: {
-        wm_property: { eq: "in-reply-to" }
+        wm_property: { in: ["in-reply-to", "mention-of"] }
         wm_target: { eq: $publicUrl }
       }
       sort: { fields: published, order: ASC }
