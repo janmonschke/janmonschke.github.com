@@ -19,10 +19,10 @@ function Mention({ mention: { author, content, url, published } }) {
       <ExternalLink href={author.url} className="Mention__authorImageLink">
         <img
           src={author.photo}
-          alt={author.name}
-          title={author.name}
+          alt=""
           className="Mention__image"
           loading="lazy"
+          aria-hidden
         />
       </ExternalLink>
       <div>
