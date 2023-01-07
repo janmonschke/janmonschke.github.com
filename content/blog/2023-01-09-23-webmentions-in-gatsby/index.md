@@ -130,7 +130,13 @@ The synchronization works like this:
 	3. Write the file to disk 🎉
 5. If the file does not exist, create a new cache file for this post which only contains this webmention: `[webmention]` 🎉
 
-<script src="https://gist.github.com/janmonschke/49d354bc96393348a9037dba0018fa6b.js"></script>
+
+You can check out the code below or directly in my [site's GitHub repo](https://github.com/janmonschke/janmonschke.github.com/blob/dev/webmentions/sync.js).
+<iframe
+  src="https://gist.github.com/janmonschke/49d354bc96393348a9037dba0018fa6b.pibb"
+  style="width: 100%; height: 200px; border: 0;margin-top: -1.5em;"
+>
+</iframe>
 
 I found that a good directory for the JSON files is `./webmentions/data`. First I tried to co-locate blog posts and their webmentions cache but it turned out to be quite complicated to find the correct directory for based on the `wm-target` property.
 
