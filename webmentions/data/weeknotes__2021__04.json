@@ -1,0 +1,113 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Mark Essel",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/17c609e919d31a2434b23a9bbd74c480db1884e36b1e1c220de32a8cb3f350af.jpg",
+      "url": "https://twitter.com/VictusFate"
+    },
+    "url": "https://twitter.com/thedeftone/status/1354131116542881792#favorited-by-16498291",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:28Z",
+    "wm-id": 1595163,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/16498291",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "julian",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/7645c3c0388fed4ebd7b89694a78e125adaafc1a2289fdbd9311e4b294041f76.jpg",
+      "url": "https://twitter.com/julianpanzer"
+    },
+    "url": "https://twitter.com/thedeftone/status/1354131116542881792#favorited-by-23795166",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:30Z",
+    "wm-id": 1595164,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/23795166",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "アンドレイ",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/93e851d4a3e56f1185db85a9ea347b6928e73bc47d25c56c3d61ec8e18af5ca0.jpg",
+      "url": "https://twitter.com/unsoundscapes"
+    },
+    "url": "https://twitter.com/thedeftone/status/1354131116542881792#favorited-by-92598408",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:31Z",
+    "wm-id": 1595165,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/92598408",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Peter Müller",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/0ec64f3ca06c350a9d7f6a54785dbccc7ebe48f334ad200b3d9ebe89637bcc99.jpg",
+      "url": "https://twitter.com/BaggersIO"
+    },
+    "url": "https://twitter.com/thedeftone/status/1354131116542881792#favorited-by-1685803400",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:31Z",
+    "wm-id": 1595166,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/1685803400",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Peter Müller",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/0ec64f3ca06c350a9d7f6a54785dbccc7ebe48f334ad200b3d9ebe89637bcc99.jpg",
+      "url": "https://twitter.com/BaggersIO"
+    },
+    "url": "https://twitter.com/BaggersIO/status/1354154608776642560",
+    "published": "2021-01-26T19:49:52+00:00",
+    "wm-received": "2023-01-07T20:58:32Z",
+    "wm-id": 1595167,
+    "wm-source": "https://brid.gy/repost/twitter/thedeftone/1354131116542881792/1354154608776642560",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "content": {
+      "text": "Notes for week 4 are out 🎉\n\n- CSS animations I built in a side project 🌠\n- I learned that @ikea uses WebAssembly 🤯\n- I found out that all I read, watched and played this week revolved around science fiction 🖖✨\n\njanmonschke.com/weeknotes/2021…"
+    },
+    "repost-of": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-property": "repost-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "litenjacob",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/757964d6e2df9827c8caf61ef495fc59999011c243ac44fb07921653ac87c840.jpg",
+      "url": "https://twitter.com/litenjacob"
+    },
+    "url": "https://twitter.com/thedeftone/status/1354131116542881792#favorited-by-16417044",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:58Z",
+    "wm-id": 1595178,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/16417044",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]

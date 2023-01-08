@@ -1,0 +1,92 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Júlio Zynger",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/a9be9ed5bbfdea6a2a127f8db592a91dec27c7dd83113d86cf84c9dbef19a031.jpg",
+      "url": "https://twitter.com/juliozynger"
+    },
+    "url": "https://twitter.com/thedeftone/status/1394340591870300163#favorited-by-130300967",
+    "published": null,
+    "wm-received": "2023-01-07T20:56:57Z",
+    "wm-id": 1595143,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1394340591870300163/130300967",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/09/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/09/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Debbie Blume",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/1b7e0203f5d6d6844dfd38fad5cad31d5107c71b3901573c25a0523695cdea4e.jpg",
+      "url": "https://twitter.com/debbie_blume"
+    },
+    "url": "https://twitter.com/thedeftone/status/1394340591870300163#favorited-by-351455686",
+    "published": null,
+    "wm-received": "2023-01-07T20:56:57Z",
+    "wm-id": 1595144,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1394340591870300163/351455686",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/09/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/09/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Zsolt Török",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/c5cf8df145f4e0ed41386f791ec0c607ba7f658ed1826316a848806b83fa97cc.jpg",
+      "url": "https://twitter.com/zstorok"
+    },
+    "url": "https://twitter.com/thedeftone/status/1394340591870300163#favorited-by-14831523",
+    "published": null,
+    "wm-received": "2023-01-07T20:56:58Z",
+    "wm-id": 1595145,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1394340591870300163/14831523",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/09/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/09/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "julian",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/7645c3c0388fed4ebd7b89694a78e125adaafc1a2289fdbd9311e4b294041f76.jpg",
+      "url": "https://twitter.com/julianpanzer"
+    },
+    "url": "https://twitter.com/thedeftone/status/1394340591870300163#favorited-by-23795166",
+    "published": null,
+    "wm-received": "2023-01-07T20:57:00Z",
+    "wm-id": 1595146,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1394340591870300163/23795166",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/09/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/09/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sona/Soeun Lee",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/acca9bf92bfb627bf2cd85ff287fa60c7c062c6b32aaad965984c64655f868a1.jpg",
+      "url": "https://twitter.com/mojosoeun"
+    },
+    "url": "https://twitter.com/thedeftone/status/1394340591870300163#favorited-by-435814448",
+    "published": null,
+    "wm-received": "2023-01-07T20:57:00Z",
+    "wm-id": 1595147,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1394340591870300163/435814448",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/09/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/09/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "chrisguttandin",
+      "photo": "https://webmention.io/avatar/abs.twimg.com/0e6b2cd70aa5b35dec24ca4e1e63f8963f0118736d9ec3bba77e3a8c99a27bc2.png",
+      "url": "https://twitter.com/chrisguttandin"
+    },
+    "url": "https://twitter.com/thedeftone/status/1205160880679399426#favorited-by-368848771",
+    "published": null,
+    "wm-received": "2023-01-07T21:00:24Z",
+    "wm-id": 1595185,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1205160880679399426/368848771",
+    "wm-target": "https://janmonschke.com/simple-frontend-data-migration/",
+    "like-of": "https://janmonschke.com/simple-frontend-data-migration/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "fredrik wallberg",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/decc427ff7676d56809260b0eb2239ca48f7b0190e2fbee44372c181b1fbc63a.jpg",
+      "url": "https://twitter.com/quesebifurcan"
+    },
+    "url": "https://twitter.com/thedeftone/status/1205160880679399426#favorited-by-2230546526",
+    "published": null,
+    "wm-received": "2023-01-07T21:00:25Z",
+    "wm-id": 1595186,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1205160880679399426/2230546526",
+    "wm-target": "https://janmonschke.com/simple-frontend-data-migration/",
+    "like-of": "https://janmonschke.com/simple-frontend-data-migration/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Can Göktas",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/0eb9ec6434a2f51db1d1c51e8b6ccb0f6ca17c6f6cc70059325b5df4a951f0d5.jpg",
+      "url": "https://twitter.com/cangoektas"
+    },
+    "url": "https://twitter.com/thedeftone/status/1205160880679399426#favorited-by-124237915",
+    "published": null,
+    "wm-received": "2023-01-07T21:00:25Z",
+    "wm-id": 1595187,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1205160880679399426/124237915",
+    "wm-target": "https://janmonschke.com/simple-frontend-data-migration/",
+    "like-of": "https://janmonschke.com/simple-frontend-data-migration/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Martin Stadler",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/76b5b3bcd42e57095eac928e1f8d54d0ccdbc6ec2e9f30802c2fc7cfcc3c5762.jpeg",
+      "url": "https://twitter.com/xMartin"
+    },
+    "url": "https://twitter.com/thedeftone/status/1205160880679399426#favorited-by-202275865",
+    "published": null,
+    "wm-received": "2023-01-07T21:00:26Z",
+    "wm-id": 1595188,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1205160880679399426/202275865",
+    "wm-target": "https://janmonschke.com/simple-frontend-data-migration/",
+    "like-of": "https://janmonschke.com/simple-frontend-data-migration/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sasha K",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/0959c64dbbe010a9916983c1778b91d07feaa1a919f7221ce002f6343cee00f7.jpg",
+      "url": "https://twitter.com/a_kovalev"
+    },
+    "url": "https://twitter.com/thedeftone/status/1205160880679399426#favorited-by-50318548",
+    "published": null,
+    "wm-received": "2023-01-07T21:00:31Z",
+    "wm-id": 1595189,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1205160880679399426/50318548",
+    "wm-target": "https://janmonschke.com/simple-frontend-data-migration/",
+    "like-of": "https://janmonschke.com/simple-frontend-data-migration/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Márton Salomváry",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/160bac451ef53cd3827333a02129ee81c2041147ca4efdf65c1201b373fadf3b.jpg",
+      "url": "https://twitter.com/salomvary"
+    },
+    "url": "https://twitter.com/thedeftone/status/1205160880679399426#favorited-by-240356865",
+    "published": null,
+    "wm-received": "2023-01-07T21:00:32Z",
+    "wm-id": 1595190,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1205160880679399426/240356865",
+    "wm-target": "https://janmonschke.com/simple-frontend-data-migration/",
+    "like-of": "https://janmonschke.com/simple-frontend-data-migration/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Can Göktas",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/0eb9ec6434a2f51db1d1c51e8b6ccb0f6ca17c6f6cc70059325b5df4a951f0d5.jpg",
+      "url": "https://twitter.com/cangoektas"
+    },
+    "url": "https://twitter.com/thedeftone/status/1349773930685485058#favorited-by-124237915",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:50Z",
+    "wm-id": 1595174,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1349773930685485058/124237915",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/01/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/01/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Vardan Torosyan",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/ea95fd0f187a7b3974ea6dc146bbdabd5cd8d2ff879bee64cc32f31f62948dd9.jpg",
+      "url": "https://twitter.com/vtorosy"
+    },
+    "url": "https://twitter.com/thedeftone/status/1349773930685485058#favorited-by-216476208",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:50Z",
+    "wm-id": 1595175,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1349773930685485058/216476208",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/01/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/01/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Stefan Judis",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/2ba9a47d3ee6152babbedde03f3aa501709fa131fd662c70cfd9c4ee0aca30b6.jpg",
+      "url": "https://twitter.com/stefanjudis"
+    },
+    "url": "https://twitter.com/thedeftone/status/1349773930685485058#favorited-by-380616577",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:51Z",
+    "wm-id": 1595176,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1349773930685485058/380616577",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/01/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/01/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "julian",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/7645c3c0388fed4ebd7b89694a78e125adaafc1a2289fdbd9311e4b294041f76.jpg",
+      "url": "https://twitter.com/julianpanzer"
+    },
+    "url": "https://twitter.com/thedeftone/status/1349773930685485058#favorited-by-23795166",
+    "published": null,
+    "wm-received": "2023-01-07T20:58:51Z",
+    "wm-id": 1595177,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1349773930685485058/23795166",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/01/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/01/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "chrisguttandin",
+      "photo": "https://webmention.io/avatar/abs.twimg.com/0e6b2cd70aa5b35dec24ca4e1e63f8963f0118736d9ec3bba77e3a8c99a27bc2.png",
+      "url": "https://twitter.com/chrisguttandin"
+    },
+    "url": "https://twitter.com/thedeftone/status/1349773930685485058#favorited-by-368848771",
+    "published": null,
+    "wm-received": "2023-01-07T20:59:20Z",
+    "wm-id": 1595180,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1349773930685485058/368848771",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/01/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/01/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]

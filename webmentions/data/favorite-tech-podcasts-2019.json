@@ -1,0 +1,20 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "litenjacob",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/757964d6e2df9827c8caf61ef495fc59999011c243ac44fb07921653ac87c840.jpg",
+      "url": "https://twitter.com/litenjacob"
+    },
+    "url": "https://twitter.com/thedeftone/status/1181948733480681474#favorited-by-16417044",
+    "published": null,
+    "wm-received": "2023-01-07T21:01:01Z",
+    "wm-id": 1595191,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1181948733480681474/16417044",
+    "wm-target": "https://janmonschke.com/favorite-tech-podcasts-2019/",
+    "like-of": "https://janmonschke.com/favorite-tech-podcasts-2019/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]

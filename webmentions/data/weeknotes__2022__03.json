@@ -1,0 +1,38 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sasha K",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/0959c64dbbe010a9916983c1778b91d07feaa1a919f7221ce002f6343cee00f7.jpg",
+      "url": "https://twitter.com/a_kovalev"
+    },
+    "url": "https://twitter.com/thedeftone/status/1494345449762922498#favorited-by-50318548",
+    "published": null,
+    "wm-received": "2023-01-07T20:38:32Z",
+    "wm-id": 1595078,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1494345449762922498/50318548",
+    "wm-target": "https://janmonschke.com/weeknotes/2022/03/",
+    "like-of": "https://janmonschke.com/weeknotes/2022/03/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Júlio Zynger",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/a9be9ed5bbfdea6a2a127f8db592a91dec27c7dd83113d86cf84c9dbef19a031.jpg",
+      "url": "https://twitter.com/juliozynger"
+    },
+    "url": "https://twitter.com/thedeftone/status/1494345449762922498#favorited-by-130300967",
+    "published": null,
+    "wm-received": "2023-01-07T20:38:33Z",
+    "wm-id": 1595079,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1494345449762922498/130300967",
+    "wm-target": "https://janmonschke.com/weeknotes/2022/03/",
+    "like-of": "https://janmonschke.com/weeknotes/2022/03/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]

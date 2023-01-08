@@ -1,0 +1,38 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Eichi Uehara🤖🔧",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/310a45164383db7bc1cadc032dfbdf90ed3cda43b3b020fbbdd2c3f614fdae8a.jpg",
+      "url": "https://twitter.com/EICHI_UEHARA"
+    },
+    "url": "https://twitter.com/thedeftone/status/1364210088559394816#favorited-by-1339186612786216961",
+    "published": null,
+    "wm-received": "2023-01-07T20:57:15Z",
+    "wm-id": 1595148,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1364210088559394816/1339186612786216961",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/08/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/08/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Fireship",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/7374599b45413952f2a0aace0542e1fffd9d3ac98326e6352ce7f370bb88c6e0.jpg",
+      "url": "https://twitter.com/fireship_dev"
+    },
+    "url": "https://twitter.com/thedeftone/status/1364210088559394816#favorited-by-850333483339730945",
+    "published": null,
+    "wm-received": "2023-01-07T20:57:16Z",
+    "wm-id": 1595149,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1364210088559394816/850333483339730945",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/08/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/08/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Pedro",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/ff2d5dfc1bf18e9d32d2209317b297b73ce9c42a44937d5049b1db49f966183e.jpg",
+      "url": "https://twitter.com/pepicrft"
+    },
+    "url": "https://twitter.com/thedeftone/status/1447965945650102276#favorited-by-16185220",
+    "published": null,
+    "wm-received": "2023-01-07T20:52:05Z",
+    "wm-id": 1595125,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1447965945650102276/16185220",
+    "wm-target": "https://janmonschke.com/weeknotes/2021/12/",
+    "like-of": "https://janmonschke.com/weeknotes/2021/12/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
