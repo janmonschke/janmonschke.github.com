@@ -122,5 +122,8 @@ function queryByType(graphql, type) {
 }
 
 function ensureTrailingSlash(url) {
+  if (url.endsWith('.html')) {
+    return url;
+  }
   return url[url.length - 1] === '/' ? url : url + '/';
 }
