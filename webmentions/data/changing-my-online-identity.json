@@ -382,5 +382,23 @@
     "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "in-reply-to",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/109613166812461535#favorited-by-109580686270474069",
+    "published": null,
+    "wm-received": "2023-01-11T21:50:06Z",
+    "wm-id": 1597708,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109580686270474069",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "like-of": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
