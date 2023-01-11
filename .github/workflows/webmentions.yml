@@ -5,6 +5,11 @@ on:
     - cron: '0 */24 * * *'
   workflow_dispatch:
 
+  # IFTT webhook
+  repository_dispatch:
+    types:
+      - webmention_webhook
+
 jobs:
   webmentions-sync:
     runs-on: ubuntu-latest
