@@ -1,5 +1,9 @@
 name: Webmentions Sync
 
+concurrency:
+  group: webmention_sync
+  cancel-in-progress: true
+
 on:
   schedule:
     - cron: '0 */24 * * *'
