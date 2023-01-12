@@ -44,7 +44,7 @@ function Mention({ mention: { author, content, url, published } }) {
 }
 
 const atMentionUrlRegex = /<a href="([http].+)".+class=\"u-url\">(.*?)<\/a>/g;
-const urlRegex = /[a-z]+:\/\/\S+/g;
+const urlRegex = /(https|http):\/\/\S+/g;
 const atMentionRegex = /^@\w+/g;
 
 /**
