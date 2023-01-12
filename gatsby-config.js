@@ -16,10 +16,22 @@ module.exports = {
   plugins: [
     'gatsby-plugin-preact',
     {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: `webmentions`
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/webmentions/data`
       }
     },
     {
