@@ -1,10 +1,10 @@
 ---
 title: Using Webmentions on your Gatsby site
-type: blog
+type: draft
 path: using-webmentions-on-your-gatsby-site
 keywords: ['webmentions', 'gatsby', 'github actions', 'github workflow', 'webhook', 'webmentions.io']
 date: 2023-01-09
-pomodoros: 8
+pomodoros: 12
 ---
 - explain web mentions
 - what are the different players?
