@@ -1,6 +1,6 @@
 ---
 title: Using Webmentions on your Gatsby site
-type: draft
+type: blog
 path: using-webmentions-on-your-gatsby-site
 keywords: ['webmentions', 'gatsby', 'github actions', 'github workflow', 'webhook', 'webmentions.io']
 date: 2023-01-09
