@@ -121,6 +121,7 @@ class Layout extends React.Component {
         />
         {header}
         {children}
+        <script async defer src="https://scripts.withcabin.com/hello.js"></script>
       </div>
     );
   }
