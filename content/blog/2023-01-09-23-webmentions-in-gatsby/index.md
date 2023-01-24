@@ -80,7 +80,6 @@ function Webmentions({ postUrl }) {
   useEffect(() => {
     fetch('https://webmention.io/api/mentions.jf2?target=' + postUrl)
       .then((response) => response.json())
-
       .then((mentionsJson) => setMentions(mentionsJson.children));
   }, []);
 
@@ -92,11 +91,9 @@ function Webmentions({ postUrl }) {
     <aside>
       <ul>
         {mentions
-
           .filter((wm) =>
             ['in-reply-to', 'mention-of'].includes(wm['wm-property'])
           )
-
           .map((mention) => (
             <li key={mention.id}>
               @{mention.author.name}: {mention.content.text}
@@ -148,9 +145,9 @@ The synchronization works like this:
 2. For each webmention, we will read out it's `wm-target` property
 3. Check in `./webmentions/data/` if we already have a JSON webmention file for that post (e.g. `webmentions-explained.json`)
 4. If the file exists, then merge the new mention into that file
-	1. Make sure to exclude duplicates by comparing the `wm-id` property 🔎
-	2. Sort mentions by `wm-id` to keep a roughly correct order in the cache file. The actual order for mentions will be based on the `published` property later on. However, likes and reposts don't have this property, so `wm-id` is the best we can do at this point. ✅
-	3. Write the file to disk 🎉
+   1. Make sure to exclude duplicates by comparing the `wm-id` property 🔎
+   2. Sort mentions by `wm-id` to keep a roughly correct order in the cache file. The actual order for mentions will be based on the `published` property later on. However, likes and reposts don't have this property, so `wm-id` is the best we can do at this point. ✅
+   3. Write the file to disk 🎉
 5. If the file does not exist, create a new cache file for this post which only contains this webmention: `[webmention]` 🎉
 
 You can check out the code below or directly in my [site's GitHub repo](https://github.com/janmonschke/janmonschke.github.com/blob/dev/webmentions/sync.js).
@@ -221,14 +218,16 @@ It's nice to have all webmentions for our site, but a more practical query is to
 
 ```graphql
 query Webmentions {
-	allWebmentions(
-		filter: {
-			wm_target: { eq: $publicUrl }
-		}
-		sort: { fields: published, order: ASC }
-	) {
-	(...)
-	}
+  allWebmentions(
+    filter: {
+      wm_target: { eq: $publicUrl }
+    }
+    sort: {
+      fields: published, order: ASC
+    }
+  ) {
+  (...)
+  }
 }
 ```
 
@@ -237,11 +236,11 @@ At the same time, we can also use the `published` property to sort the posts by 
 ```javascript
 const { slug } = post.node.fields;
 createPage({
-	path: slug,
-	component: blogPost,
-	context: {
-	  publicUrl: ensureTrailingSlash(YOUR_DOMAIN + slug),
-	}
+  path: slug,
+  component: blogPost,
+  context: {
+    publicUrl: ensureTrailingSlash(YOUR_DOMAIN + slug),
+  }
 });
 ```
 
@@ -273,16 +272,22 @@ If you want to show likes and reposts of your posts as well, you can use the fol
 
 ```graphql
 query Webmentions($publicUrl: String!) {
-	likes: allWebmentions(
-	  filter: { wm_property: { eq: "like-of" }, wm_target: { eq: $publicUrl } }
-	) {
-		(...)
-	}
-	reposts: allWebmentions(
-	  filter: { wm_property: { eq: "repost-of" }, wm_target: { eq: $publicUrl } }
-	) {
-		(...)
-	}
+  likes: allWebmentions(
+    filter: {
+      wm_property: { eq: "like-of" },
+      wm_target: { eq: $publicUrl }
+    }
+  ) {
+    (...)
+  }
+  reposts: allWebmentions(
+    filter: {
+      wm_property: { eq: "repost-of" },
+      wm_target: { eq: $publicUrl }
+    }
+  ) {
+    (...)
+  }
 }
 ```
 
@@ -320,14 +325,14 @@ const atMentionRegex = /^@\w+/g;
 const urlRegex = /(https|http):\/\/\S+/g;
 
 const enhancedText = text
-	// Replace all @mentions with links nofollow + ugc links that were parsed before
-	.replace(atMentionRegex, (atMention) => {
-		return `<a href="${atMentionsUrls[atMention]}" rel="nofollow ugc" target="_blank">${atMention}</a>`;
-	})
-	// Replace all urls in the text with nofollow + ugc links
-	.replace(urlRegex, (url) => {
-		return `<a href="${url}" rel="nofollow ugc" target="_blank">${url}</a>`;
-	});
+  // Replace all @mentions with links nofollow + ugc links that were parsed before
+  .replace(atMentionRegex, (atMention) => {
+    return `<a href="${atMentionsUrls[atMention]}" rel="nofollow ugc" target="_blank">${atMention}</a>`;
+  })
+  // Replace all urls in the text with nofollow + ugc links
+  .replace(urlRegex, (url) => {
+    return `<a href="${url}" rel="nofollow ugc" target="_blank">${url}</a>`;
+  });
 ```
 
 In the first step, we're using a regular expression that matches @mentions to replace the mention with a normal link. I also decided to add [rel="nofollow ugc"](http://developer.mozilla.org/docs/Web/HTML/Link_types) to the link since they are indeed user-generated and I do not have control over to where they link to.
@@ -405,13 +410,6 @@ The webhook fits in beautifully into the GitHub action workflow because GitHub w
 
 There is only a tiny problem with that setup. The GitHub webhook needs to be called with specific headers. Those headers cannot be configured on webmention.io. In order to go around this issue, I decided to add a no-code tool in between those two entities.
 
-```mermaid
-graph TD
-
-A[webmention.io] -->|webhook| B[pipedream.com]
-
-B -->|Add headers + webhook| C[GitHub]
-```
 I went with [pipedream.com](https://pipedream.com) because I struggled to set up a webhook from [ifttt.com](https://ifttt.com/) to GitHub and there is no way to inspect outgoing requests. It's possible to make this flow work with other no-code tools but since I'm already using pipedream for other automations, I opted for this one.
 
 ![Setting up a pipedream trigger](pipedream_trigger.png)
