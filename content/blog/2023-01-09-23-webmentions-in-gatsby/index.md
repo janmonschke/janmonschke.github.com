@@ -16,8 +16,16 @@ After a couple of years I decided to remove the comment box since it wasn't real
 
 But when I was reading [Sophie's](https://localghost.dev/blog/2022-the-year-in-lists/) and [Andy's](https://andy-bell.co.uk/wrapping-up-2022/) blog posts, I noticed that they contained comments and likes from social media sites without a third-party embed. So I went on a journey to understand how that integration works and how to bring it to my own blog as well.
 
-## What are webmentions
-They are using [webmentions](https://en.wikipedia.org/wiki/Webmention). A (recommended) standard that allows sites to notify other sites that they're linking to them. The way this works is that site A defines a `webmention` API endpoint as a `<link />` and site B, e.g. when a new blog post is created, looks at its external links, checks if they support webmentions and when they do, calls their webmention endpoint. That call contains the source of the link and e.g. the type of that link (will be explained later).
+## What are webmentions?
+These blogs are using [webmentions](https://en.wikipedia.org/wiki/Webmention) to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they're linking to them.
+
+<div style="width: 60%; margin: 0 auto;">
+
+![Site A publishes a blog post mentioning your site. This generates a webmention.](webmentions_diagram.svg)
+
+</div>
+
+The way this works is that site A defines a `webmention` API endpoint as a `<link />` and site B, e.g. when a new blog post is created, looks at its external links, checks if they support webmentions and when they do, calls their webmention endpoint. That call contains the source of the link and e.g. the type of that link (will be explained later).
 
 That's a great system, but it does not really work for static sites like this one. There is no server, so no webmention endpoint. Luckily, there are services that will collect webmentions on your behalf so you can collect them later. One of those services is [webmention.io](https://webmention.io).
 
@@ -45,7 +53,11 @@ Of course there is a service that solves this problem: [brid.gy](https://brid.gy
 
 Brid.gy connects mentions, likes, reposts etc. from social media sites to your site. It basically works as an automated social media search for mentions for your site and it then converts those mentions / reactions into webmentions.
 
+<div style="width: 60%; margin: 0 auto;">
+
 ![Bridgy crawls your site for mentions of other sites that use webmentions](bridgy_site_crawl_diagram.svg)
+
+</div>
 
 Brid.gy also acts as webmention "notifier" for your site. It periodically crawls your site for mentions of other sites and it will then create webmentions for this sites. It's such a helpful service. This allows static sites to act like proper players in the webmention/indieweb game.
 
