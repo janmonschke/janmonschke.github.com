@@ -21,4 +21,5 @@ pre[class*='language-'] {
 blockquote {
   font-size: 0.9em;
   border-color: #007acc;
+  border-width: 0.3em;
 }

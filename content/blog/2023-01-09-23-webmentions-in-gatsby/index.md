@@ -42,9 +42,7 @@ Add that to your site's `<head/>` and other sites can immediately start sending 
 
 The collected webmentions can be queried through webmention.io's API. When there's an API, there's a way to embed them onto my blog. That's great.
 
-But!
-
-There had to be a but, of course.
+But! *There had to be a but, of course.*
 
 My initial problem was that discussions were happening on social media. Social media sites do sadly not send webmentions. Neither Twitter, nor Mastodon[^1]. So how do the sites mentioned above get their likes and mentions from social media?
 
