@@ -1,10 +1,10 @@
 ---
-title: Adding webmentions to your static site
+title: Adding webmentions to your static blog
 type: blog
-path: adding-webmentions-to-your-static-site
+path: adding-webmentions-to-your-static-blog
 keywords: ['webmentions', 'gatsby', 'github actions', 'github workflow', 'webhook', 'webmentions.io']
-date: 2023-01-09
-pomodoros: 17
+date: 2023-01-27
+pomodoros: 21
 image: ./webmentions_header_alternative.jpg
 ---
 
@@ -40,7 +40,9 @@ Add that to your site's `<head/>` and other sites can immediately start sending 
 
 ![webmention.io collects webmentions for your site from external sites](webmention_io_diagram.svg)
 
-The collected webmentions can be queried through webmention.io's API. When there's an API, there's a way to embed them onto my blog. That's great. But!
+The collected webmentions can be queried through webmention.io's API. When there's an API, there's a way to embed them onto my blog. That's great.
+
+But!
 
 There had to be a but, of course.
 
@@ -111,9 +113,9 @@ function Webmentions({ postUrl }) {
 
 This will render a list of all webmentions for the given post on your site. Each mention will contain the user's name and their message like so:
 
-> @Jeremy: I found this really cool blog post by Ada adas.site/webmentions-explained
+*@Jeremy: I found this really cool blog post by Ada adas.site/webmentions-explained*
 
-The webmention object has a lot more properties that we are not using in this example but you might want to check them out for your use-case (e.g. a link back to the author at [`author.url`], the author's profile pic [`author.photo`] or a link back to the original post [`mention.url`]).
+The webmention object has a lot more properties that we are not using in this example but you might want to check them out for your use-case (e.g. a link back to the author at `author.url`, the author's profile pic `author.photo or a link back to the original post `mention.url`).
 
 This component can be placed anywhere on a blog post or any other site. Its only parameter is `postUrl` which is the public url of the page you want to fetch webmentions for (e.g. `https://adas.site/webmentions-explained/`). This url is the one that you or other users post on social media or their webmention-enabled blog. **Brid.gy** and **webmention.io** will only use that public url to send and store your mentions.
 
@@ -121,10 +123,12 @@ If we have another look at where the code iterates over the mentions, you'll fin
 
 ```javascript
 mentions
-  .filter((wm) => ['in-reply-to', 'mention-of'].includes(wm['wm-property']))
+  .filter(
+    (wm) => ['in-reply-to', 'mention-of'].includes(wm['wm-property'])
+  )
 ````
 
-We're doing this in order to only show replies or mentions of our post. Other types of webmentions do not include `content` , so the code above would not support them. Other types include `like-of` for likes of your post and `repost-of` for reposts of your post. A full list of the supported values of `wm-property` can be found in the [webmention.io documention](https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page).
+We are doing this in order to only show replies or mentions of our post. Other types of webmentions do not include `content` , so the code above would not support them. Other types include `like-of` for likes of your post and `repost-of` for reposts of your post. A full list of the supported values of `wm-property` can be found in the [webmention.io documention](https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page).
 
 It is generally a good idea to group webmentions by type and show them in distinct lists. For example a simpler list of likes and more complex list for actuall mentions with content. But also feel free to integrate all types in the same list. There are no rules and the world is your oyster!
 
