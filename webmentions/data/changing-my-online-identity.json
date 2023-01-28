@@ -400,5 +400,27 @@
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Rob Anderson",
+      "photo": "https://webmention.io/avatar/media.social.lol/58f0928fe136e8aa8a4bdf0861137158f95a762dfd999fe963bc947539523076.jpg",
+      "url": "https://hyem.tech/@rob"
+    },
+    "url": "https://hyem.tech/@rob/109764493042994385",
+    "published": "2023-01-28T02:34:05",
+    "wm-received": "2023-01-28T05:56:18Z",
+    "wm-id": 1608698,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109764442643306971/109764493121358483",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> ooh nice, I’ll have to have a play around with that! Thanks, I’ll look out for your post too 😬</p>\n<a class=\"u-mention\" href=\"https://brid.gy/\"></a>",
+      "text": "@janmon ooh nice, I’ll have to have a play around with that! Thanks, I’ll look out for your post too 😬"
+    },
+    "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
   }
 ]
