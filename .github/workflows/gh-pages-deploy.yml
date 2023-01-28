@@ -1,10 +1,10 @@
 name: GH Pages Publish
 
 on:
+  workflow_dispatch:
   push:
     branches:
-      - 'dev'
-  workflow_dispatch:
+      - dev
 
 jobs:
   build:
