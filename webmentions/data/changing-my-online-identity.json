@@ -422,5 +422,27 @@
     "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "in-reply-to",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Rob Anderson",
+      "photo": "https://webmention.io/avatar/media.social.lol/58f0928fe136e8aa8a4bdf0861137158f95a762dfd999fe963bc947539523076.jpg",
+      "url": "https://hyem.tech/@rob"
+    },
+    "url": "https://hyem.tech/@rob/109766727981618608",
+    "published": "2023-01-28T12:02:28",
+    "wm-received": "2023-01-28T12:21:30Z",
+    "wm-id": 1609113,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109764442643306971/109766728072240761",
+    "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> have you though about something like tweetback to reclaim your old tweets? <a href=\"https://github.com/tweetback/tweetback\"><span>https://</span><span>github.com/tweetback/tweetback</span><span></span></a></p>\n<a class=\"u-mention\" href=\"https://brid.gy/\"></a>\n<a href=\"https://github.com/tweetback/tweetback\">GitHub - tweetback/tweetback: Take ownership of your Twitter data and get your tweets back</a>",
+      "text": "@janmon have you though about something like tweetback to reclaim your old tweets? https://github.com/tweetback/tweetback\n\nGitHub - tweetback/tweetback: Take ownership of your Twitter data and get your tweets back"
+    },
+    "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
   }
 ]
