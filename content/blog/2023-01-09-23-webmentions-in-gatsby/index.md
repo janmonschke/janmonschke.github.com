@@ -374,31 +374,29 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
+        with:
+          ref: dev
+          token: ${{ secrets.GH_PAGES_ACCESS_TOKEN }}
       - name: Sync webmentions
         env:
           WEBMENTIONS_IO_TOKEN: ${{ secrets.WEBMENTIONS_IO_TOKEN }}
         run: node ./webmentions/sync.js
       - name: Commit to repository
         env:
-          GH_PAGES_ACCESS_TOKEN: ${{ secrets.GH_PAGES_ACCESS_TOKEN }}
           COMMIT_MSG: |
             Sync webmentions
         run: |
           git config user.email "YOUR_GITHUB_EMAIL"
           git config user.name "THE_NAME_YOU_WANT_TO_ASSOCIATE_TO_THE_COMMIT"
-          git remote set-url origin https://x-access-token:${GH_PAGES_ACCESS_TOKEN}@github.com/YOUR_GITHUB_NAME/REPOSITORY.git
-          git checkout dev
           git add .
           git diff --quiet && git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin dev)
 ```
 
-In the first step we're using the `actions/checkout` action to check out the current repository on the CI. This is an external action that is provided by GitHub.
+In the first step we're using the `actions/checkout` action to check out the current repository on the CI. This is an external action that is provided by GitHub. We're checking out the `dev` branch and passing a custom `token`. `secrets.GH_PAGES_ACCESS_TOKEN` is a personal access token the script needs in order to commit to your repository with a token that is not the standard action token. Check out [this guide on how to create a token on GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). A different token is needed here since only a custom token will trigger the action workflow that will actually build the site[^5].
 
 Next we're executing the actual synchonisation script with `run: node ./webmentions/sync.js`. Notice that we're also making the `WEBMENTIONS_IO_TOKEN` secret available as an environment variable. If you remember, the script needs that variable to make requests to webmention.io. The actual value of that variable is saved as an encrypted secret in our repository. Check out [this GitHub guide on how to add encrypted secrets to your repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets).
 
-At that point, the script will have fetched new webmentions and have written them to disk. Time to actually commit them to the repository. There is weirdly no reusabled action for this, so that step is just executing a couple of git commands. `secrets.GH_PAGES_ACCESS_TOKEN` is a personal access token the script needs in order to commit to your repository. Check out [this guide on how to create a token on GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token). Also make sure to replace the committer's name and e-mail with your credentials so that the commit is associated to your account.
-
-What this step does it, it sets up the local git, checks out the branch you want to commit to (in my case `dev`), then adds the changes and tries to commit and push them. In case there are no changes (e.g. no new webmentions) it will not create a new commit.
+At that point, the script will have fetched new webmentions and have written them to disk. Time to actually commit them to the repository. There is weirdly no reusabled action for this, so that step is just executing a couple of git commands. Also make sure to replace the committer's name and e-mail with your credentials so that the commit is associated to your account. The final command will push new mentions to your repository or do nothing if there were no changes.
 
 Since I am depoying my site to GitHub pages with [another action workflow which is triggererd by pushes to `dev`](https://github.com/janmonschke/janmonschke.github.com/blob/dev/.github/workflows/gh-pages-deploy.yml), my site will automatically rebuild whenever there are new webmentions 🎉.
 
@@ -469,9 +467,14 @@ This will stop previous pipelines when a new pipeline run is triggered. No more 
 
 This was really it, haha.
 
-I hope this helps you to set up webmentions on your site. Let me know how it worked out by replying to this toot / this tweet.
+## The end (my friend)
+
+I hope this helps you to set up webmentions on your site. This post did get a little longer than I hoped, and documenting the process took way longer than actually building the integration. That is to say, it might look complicated, but it's not as much work as it seems to be!
+
+Let me know how it worked out for you on your site by replying to this toot / this tweet.
 
 [^1]: Check out this discussion on why Mastodon doesn't currently support webmentions: https://github.com/mastodon/mastodon/issues/6074
 [^2]: Brid.gy uses the standard Twitter search which does not return replies for tweets that are older than a couple of days: https://brid.gy/about#missing
 [^3]: Yes, I know about the debate over fetching in `useEffect`. That's not the point of this example. I just wanted to provide a quick piece of code to showcase fetching webmentions on the client. 😅
 [^4]: This approach of enriching the text might not be 100% secure itself and it relies on the fact that `content.text` does not contain any HTML tags.
+[^5]: This discussion on GitHub shines some light on why another token is required: https://github.com/community/community/discussions/37103
