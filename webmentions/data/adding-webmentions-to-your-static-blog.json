@@ -190,5 +190,23 @@
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Rob Anderson",
+      "photo": "https://webmention.io/avatar/media.social.lol/58f0928fe136e8aa8a4bdf0861137158f95a762dfd999fe963bc947539523076.jpg",
+      "url": "https://hyem.tech/@rob"
+    },
+    "url": "https://social.lol/@janmon/109777627702072379#favorited-by-109435415106206989",
+    "published": null,
+    "wm-received": "2023-01-30T14:05:49Z",
+    "wm-id": 1610491,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109435415106206989",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
