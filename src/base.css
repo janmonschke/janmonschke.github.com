@@ -17,3 +17,9 @@ pre[class*='language-'] {
   white-space: normal;
   color: rgba(0, 0, 0, 0.8);
 }
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}

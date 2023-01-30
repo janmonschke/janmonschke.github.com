@@ -9,7 +9,7 @@ on:
     - cron: '0 */24 * * *'
   workflow_dispatch:
 
-  # IFTT webhook
+  # pipedream webhook
   repository_dispatch:
     types:
       - webmention_webhook
