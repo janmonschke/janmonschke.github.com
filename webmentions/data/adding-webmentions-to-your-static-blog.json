@@ -60,5 +60,23 @@
     "repost-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "repost-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Márton Salomváry",
+      "photo": "https://webmention.io/avatar/media.social.lol/87042648575d2aa2de2c2d66533c63431eec95a82ee47094bc6eb526ec39a356.jpg",
+      "url": "https://mastodon.berlin/@mrc"
+    },
+    "url": "https://social.lol/@janmon/109777627702072379#favorited-by-109722280063246686",
+    "published": null,
+    "wm-received": "2023-01-30T11:15:42Z",
+    "wm-id": 1610347,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109722280063246686",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
