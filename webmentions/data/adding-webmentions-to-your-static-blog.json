@@ -1,0 +1,24 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/109777631384556985",
+    "published": "2023-01-30T10:15:21",
+    "wm-received": "2023-01-30T10:23:57Z",
+    "wm-id": 1610313,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109777627702072379/109777631384556985",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "content": {
+      "html": "<p>Thanks to <span class=\"h-card\"><a href=\"https://bell.bz/@andy\" class=\"u-url\">@<span>andy</span></a></span> and <span class=\"h-card\"><a href=\"https://social.lol/@sophie\" class=\"u-url\">@<span>sophie</span></a></span> for the inspiration :)</p>",
+      "text": "Thanks to @andy and @sophie for the inspiration :)"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  }
+]
