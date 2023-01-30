@@ -226,5 +226,63 @@
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan Monschke (@janmon@social.lol)",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/ca3ad8e6d343c6d7b2069c6c885f79e0e2e53eaab61482b5a471a344cf7780a8.jpg",
+      "url": "https://twitter.com/thedeftone"
+    },
+    "url": "https://twitter.com/thedeftone/status/1620052183713718272",
+    "published": "2023-01-30T13:31:54+00:00",
+    "wm-received": "2023-01-30T16:17:52Z",
+    "wm-id": 1610613,
+    "wm-source": "https://brid.gy/comment/twitter/thedeftone/1620004702632169473/1620052183713718272",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "content": {
+      "html": "Yess, let me know how it goes!\n<a class=\"u-mention\" href=\"https://twitter.com/esttorhe\"></a>",
+      "text": "Yess, let me know how it goes!"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "🇺🇦 @gryzzly@mastodon.social",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/1cea001225e316fea0cd64321f597ce8c13088979442312bfe3f93b43137ea72.jpg",
+      "url": "https://twitter.com/gryzzly"
+    },
+    "url": "https://twitter.com/thedeftone/status/1620004702632169473#favorited-by-10253772",
+    "published": null,
+    "wm-received": "2023-01-30T16:17:55Z",
+    "wm-id": 1610614,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/10253772",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "michele with one L",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/981eadca03f4d53b672c4ffd90e792c353e8071c4c82c63d09b7e965be1f7fc1.png",
+      "url": "https://twitter.com/sheley"
+    },
+    "url": "https://twitter.com/thedeftone/status/1620004702632169473#favorited-by-17388692",
+    "published": null,
+    "wm-received": "2023-01-30T16:17:58Z",
+    "wm-id": 1610615,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/17388692",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
