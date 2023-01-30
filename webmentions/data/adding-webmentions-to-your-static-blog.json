@@ -20,5 +20,45 @@
     "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "in-reply-to",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Juhis",
+      "photo": "https://webmention.io/avatar/media.social.lol/4681b01a570ac17b6a3f8ec557578ff027e45fe9d79e5af6b39145bcece82dda.jpg",
+      "url": "https://mastodon.world/@hamatti"
+    },
+    "url": "https://mastodon.world/@hamatti/109777741911560491",
+    "published": "2023-01-30T10:43:27",
+    "wm-received": "2023-01-30T11:14:40Z",
+    "wm-id": 1610345,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109777627702072379/109777741960270672",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> This was a great read, thanks for writing it! I've been thinking about adding webmentions to my site for a long while now but I've been put off by so many moving pieces (and integrations).</p><p>Maybe this week is the time I pick up that project!</p>",
+      "text": "@janmon This was a great read, thanks for writing it! I've been thinking about adding webmentions to my site for a long while now but I've been put off by so many moving pieces (and integrations).Maybe this week is the time I pick up that project!"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Rob Anderson",
+      "photo": "https://webmention.io/avatar/media.social.lol/58f0928fe136e8aa8a4bdf0861137158f95a762dfd999fe963bc947539523076.jpg",
+      "url": "https://hyem.tech/@rob"
+    },
+    "url": "https://social.lol/@janmon/109777627702072379#reblogged-by-109435415106206989",
+    "published": null,
+    "wm-received": "2023-01-30T11:14:40Z",
+    "wm-id": 1610346,
+    "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/109777627702072379/109435415106206989",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "repost-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "repost-of",
+    "wm-private": false
   }
 ]
