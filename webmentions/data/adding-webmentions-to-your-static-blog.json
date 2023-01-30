@@ -136,5 +136,23 @@
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Simon Hohl",
+      "photo": "https://webmention.io/avatar/media.social.lol/de3008fdb11a86c7ce704921c451ef3a6ca0f2ba652f29a9761c0462f20dde63.png",
+      "url": "https://home.social/@dersmon"
+    },
+    "url": "https://social.lol/@janmon/109777627702072379#favorited-by-109353923473060147",
+    "published": null,
+    "wm-received": "2023-01-30T11:46:30Z",
+    "wm-id": 1610386,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109353923473060147",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
