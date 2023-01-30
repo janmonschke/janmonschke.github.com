@@ -305,6 +305,8 @@ Just showing the raw text was not an option for me, neither was embedding the ex
 
 First, we're parsing the HTML for @mentions and their links:
 ```javascript
+const atMentionUrlRegex = /<a href="([http].+?)".+?class=\"u-url\">(.*?)<\/a>/g;
+
 // Create a lookup for @mention links e.g.:
 // { "@janmon": "https://social.lol/janmon" }
 const atMentionsUrls = [...html.matchAll(atMentionUrlRegex)].reduce(
@@ -320,7 +322,7 @@ const atMentionsUrls = [...html.matchAll(atMentionUrlRegex)].reduce(
 This will allow us to replace raw @mentions e.g. `@janmon` with proper `<a/>` tags in the next step.
 
 ```javascript
-const atMentionRegex = /^@\w+/g;
+const atMentionRegex = /(@\w+)/g;
 const urlRegex = /(https|http):\/\/\S+/g;
 
 const enhancedText = text

@@ -43,9 +43,9 @@ function Mention({ mention: { author, content, url, published } }) {
   );
 }
 
-const atMentionUrlRegex = /<a href="([http].+)".+class=\"u-url\">(.*?)<\/a>/g;
+const atMentionUrlRegex = /<a href="([http].+?)".+?class=\"u-url\">(.*?)<\/a>/g;
 const urlRegex = /(https|http):\/\/\S+/g;
-const atMentionRegex = /^@\w+/g;
+const atMentionRegex = /(@\w+)/g;
 
 /**
  * While webmentions.io comes with a HTML version of the mention, it does not
