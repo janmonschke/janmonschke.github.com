@@ -284,5 +284,49 @@
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Robb Knight :prami:",
+      "photo": "https://webmention.io/avatar/media.social.lol/d2b5943b2e687ef31399f8241bd07d88b1140716a89c5e026038eaf8ec5341b7.jpg",
+      "url": "https://social.lol/@robb"
+    },
+    "url": "https://social.lol/@robb/109779567016132895",
+    "published": "2023-01-30T18:27:36",
+    "wm-received": "2023-01-30T18:37:24Z",
+    "wm-id": 1610874,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109779564599075072/109779567016132895",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> Your post is what reminded me, I just saw it in my RSS!</p>",
+      "text": "@janmon Your post is what reminded me, I just saw it in my RSS!"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/109779571523369368",
+    "published": "2023-01-30T18:28:45",
+    "wm-received": "2023-01-30T18:37:24Z",
+    "wm-id": 1610875,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109779564599075072/109779571523369368",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@robb\" class=\"u-url\">@<span>robb</span></a></span> 🤩✌️</p>",
+      "text": "@robb 🤩✌️"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
   }
 ]
