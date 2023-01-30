@@ -328,5 +328,45 @@
     "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "in-reply-to",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/109778389481723036",
+    "published": "2023-01-30T13:28:08",
+    "wm-received": "2023-01-30T18:43:30Z",
+    "wm-id": 1610882,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109777627702072379/109778389481723036",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.world/@hamatti\" class=\"u-url\">@<span>hamatti</span></a></span> Glad you liked it 🎉</p><p>Good luck with your integration. Let me know in case you hit any road blocks!</p>",
+      "text": "@hamatti Glad you liked it 🎉Good luck with your integration. Let me know in case you hit any road blocks!"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Guillaume Marty",
+      "photo": "https://webmention.io/avatar/media.social.lol/f880a3cb33e4e3e50b4041f60034eaf030c115c5bd4231ceff4a5ddb40eb688e.jpg",
+      "url": "https://indieweb.social/@gmarty"
+    },
+    "url": "https://social.lol/@janmon/109777627702072379#favorited-by-109437888941458521",
+    "published": null,
+    "wm-received": "2023-01-30T18:43:33Z",
+    "wm-id": 1610883,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109437888941458521",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
