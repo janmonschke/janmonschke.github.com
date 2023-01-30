@@ -154,5 +154,41 @@
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Andy Bell",
+      "photo": "https://webmention.io/avatar/media.social.lol/cea017ea6e66e1ee7d2f97f7278d83b1aa6a13ccb195c71c06a3e7b04d9bdfa0.jpg",
+      "url": "https://bell.bz/@andy"
+    },
+    "url": "https://social.lol/@janmon/109777627702072379#favorited-by-109365862216270557",
+    "published": null,
+    "wm-received": "2023-01-30T12:24:38Z",
+    "wm-id": 1610419,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109365862216270557",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Henry",
+      "photo": "https://webmention.io/avatar/media.social.lol/2d3c63a237690d230a534d120e4ee48813a409195bf4cb061af204bc8d1fe63e.jpg",
+      "url": "https://social.lol/@hl"
+    },
+    "url": "https://social.lol/@janmon/109777627702072379#favorited-by-109604777636002090",
+    "published": null,
+    "wm-received": "2023-01-30T12:24:38Z",
+    "wm-id": 1610420,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109604777636002090",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
