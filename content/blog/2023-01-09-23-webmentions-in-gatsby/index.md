@@ -471,7 +471,7 @@ This was really it, haha.
 
 I hope this helps you to set up webmentions on your site. This post did get a little longer than I hoped, and documenting the process took way longer than actually building the integration. That is to say, it might look complicated, but it's not as much work as it seems to be!
 
-Let me know how it worked out for you on your site by replying to this toot / this tweet.
+Let me know how it worked out for you on your site by replying to [this toot](https://social.lol/@janmon/109777627702072379) or [this tweet](https://twitter.com/thedeftone/status/1620004702632169473).
 
 [^1]: Check out this discussion on why Mastodon doesn't currently support webmentions: https://github.com/mastodon/mastodon/issues/6074
 [^2]: Brid.gy uses the standard Twitter search which does not return replies for tweets that are older than a couple of days: https://brid.gy/about#missing
