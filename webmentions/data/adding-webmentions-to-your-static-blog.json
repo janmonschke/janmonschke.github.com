@@ -78,5 +78,63 @@
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Stefan Judis",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/2ba9a47d3ee6152babbedde03f3aa501709fa131fd662c70cfd9c4ee0aca30b6.jpg",
+      "url": "https://twitter.com/stefanjudis"
+    },
+    "url": "https://twitter.com/thedeftone/status/1620004702632169473#favorited-by-380616577",
+    "published": null,
+    "wm-received": "2023-01-30T11:46:13Z",
+    "wm-id": 1610383,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/380616577",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Esteban Torres",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/74583f80a05615213b01cf11d2d926ae624d42cf393f5072b508e09fd2fd9216.jpg",
+      "url": "https://twitter.com/esttorhe"
+    },
+    "url": "https://twitter.com/esttorhe/status/1620014912834572288",
+    "published": "2023-01-30T11:03:48+00:00",
+    "wm-received": "2023-01-30T11:46:28Z",
+    "wm-id": 1610384,
+    "wm-source": "https://brid.gy/comment/twitter/thedeftone/1620004702632169473/1620014912834572288",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "content": {
+      "html": "Ohhh. Nice work Jan. \n\nWill definitely try to tinker with this and try to add it to my own website\n<a class=\"u-mention\" href=\"https://janmonschke.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/thedeftone\"></a>",
+      "text": "Ohhh. Nice work Jan. \n\nWill definitely try to tinker with this and try to add it to my own website"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Esteban Torres",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/74583f80a05615213b01cf11d2d926ae624d42cf393f5072b508e09fd2fd9216.jpg",
+      "url": "https://twitter.com/esttorhe"
+    },
+    "url": "https://twitter.com/thedeftone/status/1620004702632169473#favorited-by-31261028",
+    "published": null,
+    "wm-received": "2023-01-30T11:46:28Z",
+    "wm-id": 1610385,
+    "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/31261028",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
