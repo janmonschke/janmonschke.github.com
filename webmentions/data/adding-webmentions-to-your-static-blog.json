@@ -386,5 +386,23 @@
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "",
+      "photo": "",
+      "url": ""
+    },
+    "url": "https://rknight.me/adding-webmentions-to-your-site/",
+    "published": null,
+    "wm-received": "2023-01-31T13:13:06Z",
+    "wm-id": 1612074,
+    "wm-source": "https://rknight.me/adding-webmentions-to-your-site/",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "mention-of",
+    "wm-private": false
   }
 ]
