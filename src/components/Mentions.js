@@ -6,9 +6,13 @@ import './Mentions.css';
 export function Mentions({ mentions }) {
   return (
     <ul className="Mentions">
-      {mentions.map((mention) => (
-        <Mention mention={mention.node} key={mention.id} />
-      ))}
+      {mentions.map((mention) =>
+        mention.node.content ? (
+          <Mention mention={mention.node} key={mention.id} />
+        ) : (
+          <JustAReference url={mention.node.url} />
+        )
+      )}
     </ul>
   );
 }
@@ -38,6 +42,23 @@ function Mention({ mention: { author, content, url, published } }) {
         <small>
           <ExternalLink href={url}>{published}</ExternalLink>
         </small>
+      </div>
+    </div>
+  );
+}
+
+function JustAReference({ url }) {
+  return (
+    <div className="Reference">
+      <ExternalLink
+        href={url}
+        className="Reference__authorImageLink"
+        aria-hidden
+      >
+        <div src={url} className="Reference__image" />
+      </ExternalLink>
+      <div className="Reference__content">
+        Mentioned on <ExternalLink href={url}>{url}</ExternalLink>
       </div>
     </div>
   );

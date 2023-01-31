@@ -3,19 +3,20 @@
   padding: 0;
 }
 
-.Mention {
+.Mention, .Reference {
   display: flex;
   margin-bottom: 1.5em;
 }
 
-.Mention__authorImageLink {
+.Mention__authorImageLink, .Reference__authorImageLink {
   flex-shrink: 0;
   margin-right: 0.8em;
 }
 
-.Mention__image {
+.Mention__image, .Reference__image {
   width: 60px;
   height: 60px;
+  border-radius: 30%;
 }
 
 .Mention__authorLink {
@@ -23,6 +24,14 @@
   margin-bottom: 0.1em;
 }
 
-.Mention__content {
+.Mention__content, .Reference__content {
   margin-bottom: 0.1em;
+}
+
+.Reference {
+  align-items: center;
+}
+
+.Reference__image {
+  background-image: linear-gradient(to right, #00b4db, #0083b0);
 }
