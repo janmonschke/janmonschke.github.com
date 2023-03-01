@@ -404,5 +404,27 @@
     "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "mention-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "trovster",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/9164cacb13a6a5ae179f52d1926a290f33a576fd782b65f017a6e17fd02a4891.jpg",
+      "url": "https://twitter.com/trovster"
+    },
+    "url": "https://twitter.com/trovster/status/1630994987742625801",
+    "published": "2023-03-01T18:14:42+00:00",
+    "wm-received": "2023-03-01T20:27:36Z",
+    "wm-id": 1632435,
+    "wm-source": "https://brid.gy/post/twitter/thedeftone/1630994987742625801",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "content": {
+      "html": "🔗 Adding webmentions to your static blog\n\n&gt; Blogs are using webmentions to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they’re linking to them.\n\n<a href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog\">janmonschke.com/adding-webment…</a>\n<a class=\"u-mention\" href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog/\"></a>",
+      "text": "🔗 Adding webmentions to your static blog\n\n> Blogs are using webmentions to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they’re linking to them.\n\njanmonschke.com/adding-webment…"
+    },
+    "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "mention-of",
+    "wm-private": false
   }
 ]
