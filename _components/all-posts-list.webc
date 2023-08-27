@@ -1,0 +1,48 @@
+<header class="allPostsList__header">
+  <h2 @text="title"></h2>
+  <a :href="rssUrl">
+    <img
+      src="/assets/images/rss.svg"
+      class="allPostsList__rssIcon"
+      alt="RSS feed"
+    />
+  </a>
+</header>
+<main>
+  <ul class="allPostsList__list">
+    <li webc:for="(post, index) of posts">
+      <h3 class="allPostsList__postTitle">
+        <a :href="post.url" @text="post.data.title"></a>
+      </h3>
+      <small @text="sub(post)"></small>
+    </li>
+  </ul>
+</main>
+<style>
+  .allPostsList__header {
+    display: flex;
+    align-items: baseline;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .allPostsList__header h2,
+  .allPostsList__rssIcon {
+    margin: 0;
+  }
+
+  .allPostsList__rssIcon {
+    margin-left: 0.32rem;
+  }
+
+  .allPostsList__list {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  .allPostsList__postTitle {
+    margin-top: 1.6rem;
+    margin-bottom: 0px;
+    font-size: 1.12rem;
+  }
+</style>

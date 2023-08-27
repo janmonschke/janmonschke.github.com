@@ -1,0 +1,111 @@
+<ul class="mentions">
+  <li webc:for="mention of mentions" class="mentions__item">
+    <div webc:if="mention.enrichedContent" class="mention">
+      <a
+        rel="noopener noreferrer nofollow ugc"
+        target="_blank"
+        :href="mention.author.url"
+        class="mention__authorImageLink"
+      >
+        <img
+          :src="mention.author.photo"
+          alt=""
+          class="mention__image"
+          loading="lazy"
+          aria-hidden
+        />
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a
+            rel="noopener noreferrer nofollow ugc"
+            target="_blank"
+            :href="mention.author.url"
+            @text="mention.author.name"
+          ></a>
+        </strong>
+        <div class="mention__content" @raw="mention.enrichedContent"></div>
+        <small>
+          <a
+            rel="noopener noreferrer nofollow ugc"
+            target="_blank"
+            :href="mention.url"
+            @text="mention.publishedDisplay"
+          ></a>
+        </small>
+      </div>
+    </div>
+
+    <div webc:else class="reference">
+      <a
+        rel="noopener noreferrer nofollow ugc"
+        target="_blank"
+        :href="mention.url"
+        class="reference__authorImageLink"
+        aria-hidden
+      >
+        <div class="reference__image"></div>
+      </a>
+      <div class="reference__content">
+        Mentioned on
+        <a
+          rel="noopener noreferrer nofollow ugc"
+          target="_blank"
+          :href="mention.url"
+          @text="mention.url"
+        ></a>
+      </div>
+    </div>
+  </li>
+</ul>
+<style>
+  .mentions {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .mentions__item {
+    margin-bottom: 1.5em;
+  }
+
+  .mention,
+  .reference {
+    display: flex;
+  }
+
+  .mention__authorImageLink,
+  .reference__authorImageLink {
+    flex-shrink: 0;
+    margin-right: 0.8em;
+  }
+
+  .mention__image,
+  .reference__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+  }
+
+  .mention__authorLink {
+    display: block;
+    margin-bottom: 0.1em;
+  }
+
+  .mention__content,
+  .reference__content {
+    margin-bottom: 0.1em;
+  }
+
+  .reference {
+    align-items: center;
+  }
+
+  .reference__image {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(156, 252, 248, 1) 11.2%,
+      rgba(110, 123, 251, 1) 91.1%
+    );
+  }
+</style>

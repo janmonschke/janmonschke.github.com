@@ -13,6 +13,7 @@
     "wm-id": 1595163,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/16498291",
     "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/weeknotes/2021/04/",
     "wm-property": "like-of",
     "wm-private": false
@@ -31,6 +32,7 @@
     "wm-id": 1595164,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/23795166",
     "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/weeknotes/2021/04/",
     "wm-property": "like-of",
     "wm-private": false
@@ -49,6 +51,7 @@
     "wm-id": 1595165,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/92598408",
     "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/weeknotes/2021/04/",
     "wm-property": "like-of",
     "wm-private": false
@@ -67,6 +70,7 @@
     "wm-id": 1595166,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/1685803400",
     "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/weeknotes/2021/04/",
     "wm-property": "like-of",
     "wm-private": false
@@ -85,6 +89,7 @@
     "wm-id": 1595167,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/1354131116542881792/1354154608776642560",
     "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Notes for week 4 are out 🎉\n\n- CSS animations I built in a side project 🌠\n- I learned that @ikea uses WebAssembly 🤯\n- I found out that all I read, watched and played this week revolved around science fiction 🖖✨\n\njanmonschke.com/weeknotes/2021…"
     },
@@ -106,6 +111,7 @@
     "wm-id": 1595178,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1354131116542881792/16417044",
     "wm-target": "https://janmonschke.com/weeknotes/2021/04/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/weeknotes/2021/04/",
     "wm-property": "like-of",
     "wm-private": false

@@ -13,6 +13,7 @@
     "wm-id": 1610313,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109777627702072379/109777631384556985",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p>Thanks to <span class=\"h-card\"><a href=\"https://bell.bz/@andy\" class=\"u-url\">@<span>andy</span></a></span> and <span class=\"h-card\"><a href=\"https://social.lol/@sophie\" class=\"u-url\">@<span>sophie</span></a></span> for the inspiration :)</p>",
       "text": "Thanks to @andy and @sophie for the inspiration :)"
@@ -35,6 +36,7 @@
     "wm-id": 1610345,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109777627702072379/109777741960270672",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> This was a great read, thanks for writing it! I've been thinking about adding webmentions to my site for a long while now but I've been put off by so many moving pieces (and integrations).</p><p>Maybe this week is the time I pick up that project!</p>",
       "text": "@janmon This was a great read, thanks for writing it! I've been thinking about adding webmentions to my site for a long while now but I've been put off by so many moving pieces (and integrations).Maybe this week is the time I pick up that project!"
@@ -57,6 +59,7 @@
     "wm-id": 1610346,
     "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/109777627702072379/109435415106206989",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "repost-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "repost-of",
     "wm-private": false
@@ -75,6 +78,7 @@
     "wm-id": 1610347,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109722280063246686",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -93,6 +97,7 @@
     "wm-id": 1610383,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/380616577",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -111,6 +116,7 @@
     "wm-id": 1610384,
     "wm-source": "https://brid.gy/comment/twitter/thedeftone/1620004702632169473/1620014912834572288",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "Ohhh. Nice work Jan. \n\nWill definitely try to tinker with this and try to add it to my own website\n<a class=\"u-mention\" href=\"https://janmonschke.com/\"></a>\n<a class=\"u-mention\" href=\"https://twitter.com/thedeftone\"></a>",
       "text": "Ohhh. Nice work Jan. \n\nWill definitely try to tinker with this and try to add it to my own website"
@@ -133,6 +139,7 @@
     "wm-id": 1610385,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/31261028",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -151,6 +158,7 @@
     "wm-id": 1610386,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109353923473060147",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -169,6 +177,7 @@
     "wm-id": 1610419,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109365862216270557",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -187,6 +196,7 @@
     "wm-id": 1610420,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109604777636002090",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -205,6 +215,7 @@
     "wm-id": 1610491,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109435415106206989",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -223,6 +234,7 @@
     "wm-id": 1610522,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109331349286151910",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -241,6 +253,7 @@
     "wm-id": 1610613,
     "wm-source": "https://brid.gy/comment/twitter/thedeftone/1620004702632169473/1620052183713718272",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "Yess, let me know how it goes!\n<a class=\"u-mention\" href=\"https://twitter.com/esttorhe\"></a>",
       "text": "Yess, let me know how it goes!"
@@ -263,6 +276,7 @@
     "wm-id": 1610614,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/10253772",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -281,6 +295,7 @@
     "wm-id": 1610615,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/17388692",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -299,6 +314,7 @@
     "wm-id": 1610874,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109779564599075072/109779567016132895",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> Your post is what reminded me, I just saw it in my RSS!</p>",
       "text": "@janmon Your post is what reminded me, I just saw it in my RSS!"
@@ -321,6 +337,7 @@
     "wm-id": 1610875,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109779564599075072/109779571523369368",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@robb\" class=\"u-url\">@<span>robb</span></a></span> 🤩✌️</p>",
       "text": "@robb 🤩✌️"
@@ -343,6 +360,7 @@
     "wm-id": 1610882,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109777627702072379/109778389481723036",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.world/@hamatti\" class=\"u-url\">@<span>hamatti</span></a></span> Glad you liked it 🎉</p><p>Good luck with your integration. Let me know in case you hit any road blocks!</p>",
       "text": "@hamatti Glad you liked it 🎉Good luck with your integration. Let me know in case you hit any road blocks!"
@@ -365,6 +383,7 @@
     "wm-id": 1610883,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109777627702072379/109437888941458521",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -383,6 +402,7 @@
     "wm-id": 1611974,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1620004702632169473/16965828",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "like-of",
     "wm-private": false
@@ -401,6 +421,30 @@
     "wm-id": 1612074,
     "wm-source": "https://rknight.me/adding-webmentions-to-your-site/",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
+    "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "mention-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "trovster",
+      "photo": "https://webmention.io/avatar/pbs.twimg.com/9164cacb13a6a5ae179f52d1926a290f33a576fd782b65f017a6e17fd02a4891.jpg",
+      "url": "https://twitter.com/trovster"
+    },
+    "url": "https://twitter.com/trovster/status/1630994987742625801",
+    "published": "2023-03-01T18:14:42+00:00",
+    "wm-received": "2023-03-01T20:27:36Z",
+    "wm-id": 1632435,
+    "wm-source": "https://brid.gy/post/twitter/thedeftone/1630994987742625801",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "🔗 Adding webmentions to your static blog\n\n&gt; Blogs are using webmentions to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they’re linking to them.\n\n<a href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog\">janmonschke.com/adding-webment…</a>\n<a class=\"u-mention\" href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog/\"></a>",
+      "text": "🔗 Adding webmentions to your static blog\n\n> Blogs are using webmentions to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they’re linking to them.\n\njanmonschke.com/adding-webment…"
+    },
     "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "mention-of",
     "wm-private": false

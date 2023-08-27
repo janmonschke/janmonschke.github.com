@@ -1,0 +1,16 @@
+---
+title: All weeknotes
+layout: layouts/base.webc
+---
+
+<script webc:setup>
+  function sub(post) {
+    return post.data.keywords.map((keyword) => `#${keyword}`).join(" · ");
+  }
+</script>
+<all-posts-list
+  title="All weeknotes"
+  rssUrl="/weeknotes.xml"
+  :posts="collections.weeknotes"
+  :sub="sub"
+></all-posts-list>

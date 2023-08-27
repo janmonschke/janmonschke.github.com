@@ -13,6 +13,7 @@
     "wm-id": 1595078,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1494345449762922498/50318548",
     "wm-target": "https://janmonschke.com/weeknotes/2022/03/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/weeknotes/2022/03/",
     "wm-property": "like-of",
     "wm-private": false
@@ -31,6 +32,7 @@
     "wm-id": 1595079,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1494345449762922498/130300967",
     "wm-target": "https://janmonschke.com/weeknotes/2022/03/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/weeknotes/2022/03/",
     "wm-property": "like-of",
     "wm-private": false

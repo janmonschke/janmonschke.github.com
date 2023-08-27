@@ -13,6 +13,7 @@
     "wm-id": 1595139,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1395031012539781124/695243",
     "wm-target": "https://janmonschke.com/flexible-color-definitions-in-design-systems/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/flexible-color-definitions-in-design-systems/",
     "wm-property": "like-of",
     "wm-private": false
@@ -31,6 +32,7 @@
     "wm-id": 1595140,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1395031012539781124/747513881556246528",
     "wm-target": "https://janmonschke.com/flexible-color-definitions-in-design-systems/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/flexible-color-definitions-in-design-systems/",
     "wm-property": "like-of",
     "wm-private": false
@@ -49,6 +51,7 @@
     "wm-id": 1595141,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1395031012539781124/19666605",
     "wm-target": "https://janmonschke.com/flexible-color-definitions-in-design-systems/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/flexible-color-definitions-in-design-systems/",
     "wm-property": "like-of",
     "wm-private": false
@@ -67,6 +70,7 @@
     "wm-id": 1595142,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/1395031012539781124/1395109745091096583",
     "wm-target": "https://janmonschke.com/flexible-color-definitions-in-design-systems/",
+    "wm-protocol": "webmention",
     "content": {
       "text": "While working on the implementation of a new design system at work 🎨 I came across this nifty little trick that makes color definitions more reusable and flexible 🤩\n\njanmonschke.com/flexible-color…"
     },

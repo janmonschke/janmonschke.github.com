@@ -1,0 +1,50 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 41.6rem;
+  padding: 2.4rem 1.2rem;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.96rem;
+  margin-top: 0.96rem;
+  width: 75%;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Custom overrides */
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f03d;
+  margin: 1.2em 0;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: #f1f2f4;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}

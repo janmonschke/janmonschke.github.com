@@ -13,6 +13,7 @@
     "wm-id": 1595191,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1181948733480681474/16417044",
     "wm-target": "https://janmonschke.com/favorite-tech-podcasts-2019/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/favorite-tech-podcasts-2019/",
     "wm-property": "like-of",
     "wm-private": false
