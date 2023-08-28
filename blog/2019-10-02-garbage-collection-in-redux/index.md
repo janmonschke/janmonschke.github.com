@@ -1,7 +1,7 @@
 ---
 title: Garbage Collection in Redux Applications
 tags: post
-permalink: garbage-collection-in-redux-applications
+permalink: garbage-collection-in-redux-applications/
 date: 2019-10-02
 pomodoros: 1
 keywords: ["JavaScript", "React", "Redux", "garbage collection"]

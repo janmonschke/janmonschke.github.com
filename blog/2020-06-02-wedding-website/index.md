@@ -1,7 +1,7 @@
 ---
 title: Building a wedding RSVP website in React and Firebase
 type: draft
-permalink: building-a-wedding-rsvp-website-in-react-and-firebase
+permalink: building-a-wedding-rsvp-website-in-react-and-firebase/
 keywords:
   [
     "react",

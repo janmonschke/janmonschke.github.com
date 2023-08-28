@@ -1,7 +1,7 @@
 ---
 title: Adding webmentions to your static blog
 tags: post
-permalink: adding-webmentions-to-your-static-blog
+permalink: adding-webmentions-to-your-static-blog/
 keywords:
   [
     "webmentions",

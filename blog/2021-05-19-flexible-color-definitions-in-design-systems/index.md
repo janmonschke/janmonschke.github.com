@@ -1,7 +1,7 @@
 ---
 title: Flexible color definitions in design systems
 tags: post
-permalink: flexible-color-definitions-in-design-systems
+permalink: flexible-color-definitions-in-design-systems/
 keywords: ["design", "system", "color", "pattern", "css", "variables"]
 date: 2021-05-19
 pomodoros: 4

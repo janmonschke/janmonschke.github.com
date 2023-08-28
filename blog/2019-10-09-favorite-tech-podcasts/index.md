@@ -1,7 +1,7 @@
 ---
 title: My favorite (tech) podcasts
 tags: post
-permalink: favorite-tech-podcasts-2019
+permalink: favorite-tech-podcasts-2019/
 keywords: ["podcasts", "tech", "narrative", "non-tech"]
 date: 2019-10-09
 pomodoros: 4

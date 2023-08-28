@@ -1,7 +1,7 @@
 ---
 title: Building a gpx editor with xstate and lit-html
 tags: post
-permalink: building-a-gpx-editor-with-xstate-and-lit-html
+permalink: building-a-gpx-editor-with-xstate-and-lit-html/
 keywords: ["xstate", "lit-html", "gpx editor", "side project"]
 date: 2021-11-08
 pomodoros: 6

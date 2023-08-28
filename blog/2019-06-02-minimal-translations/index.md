@@ -1,7 +1,7 @@
 ---
 title: Building a minimal i18n library
 tags: post
-permalink: building-a-minimal-i18n-library
+permalink: building-a-minimal-i18n-library/
 date: 2019-06-10
 pomodoros: 8
 keywords: ["JavaScript", "i18n", "library", "tutorial"]

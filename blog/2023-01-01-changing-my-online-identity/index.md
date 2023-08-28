@@ -1,7 +1,7 @@
 ---
 title: Changing my online identity
 tags: post
-permalink: changing-my-online-identity
+permalink: changing-my-online-identity/
 keywords: ["twitter", "mastodon", "barcamp", "opensolaris"]
 date: 2023-01-01
 pomodoros: 6

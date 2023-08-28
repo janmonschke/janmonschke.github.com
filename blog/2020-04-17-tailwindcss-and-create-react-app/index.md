@@ -1,6 +1,6 @@
 ---
 title: Setting up TailwindCSS in create-react-app
-permalink: setting-up-tailwindcss-in-create-react-app
+permalink: setting-up-tailwindcss-in-create-react-app/
 tags: post
 keywords: ["tailwindcss", "react", "create-react-app", "postcss"]
 date: 2020-04-17

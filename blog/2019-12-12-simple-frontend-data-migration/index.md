@@ -1,6 +1,6 @@
 ---
 title: Simple frontend data migration
-permalink: simple-frontend-data-migration
+permalink: simple-frontend-data-migration/
 tags: post
 keywords: ["frontend", "data migration", "JavaScript", "React Native"]
 date: 2019-12-12
