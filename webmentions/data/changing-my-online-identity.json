@@ -13,6 +13,7 @@
     "wm-id": 1590697,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1609479763273334787/837424448085110784",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -31,6 +32,7 @@
     "wm-id": 1590817,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109613437938187198",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> Happy New Year mate. Hope we can hang out again some time in '23.</p>",
       "text": "@janmon Happy New Year mate. Hope we can hang out again some time in '23."
@@ -53,6 +55,7 @@
     "wm-id": 1590818,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109613534718782844",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://ruby.social/@chrislowis\" class=\"u-url\">@<span>chrislowis</span></a></span> That would be great 🎉🎊</p>",
       "text": "@chrislowis That would be great 🎉🎊"
@@ -75,6 +78,7 @@
     "wm-id": 1590819,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109615089263130070",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://m.fru.bar/@bluemaex\" class=\"u-url\">@<span>bluemaex</span></a></span> Would love to manage to hang this year! </p><p>Fun fact, when I was researching for this post, one of your tweets showed up when I searched for <a href=\"https://social.lol/tags/bcruhr2\">#<span>bcruhr2</span></a> : <a href=\"https://twitter.com/tweetmaex/status/1418161858\"><span>https://</span><span>twitter.com/tweetmaex/status/1</span><span>418161858</span></a></p>\n<a class=\"p-category\" href=\"https://social.lol/tags/bcruhr2\">bcruhr2</a>\n<a href=\"https://twitter.com/tweetmaex/status/1418161858\">maex.cloud 云出 on Twitter</a>",
       "text": "@bluemaex Would love to manage to hang this year! Fun fact, when I was researching for this post, one of your tweets showed up when I searched for #bcruhr2 : https://twitter.com/tweetmaex/status/1418161858\nbcruhr2\nmaex.cloud 云出 on Twitter"
@@ -97,6 +101,7 @@
     "wm-id": 1590820,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109478687032278138",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -115,6 +120,7 @@
     "wm-id": 1590821,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109614857400427080",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> Hah, I relate very very much to your tweet-story. Exactly my same though process earlier :)</p><p>Happy new year, hope we can manage to hang this year again been a while! 🎉</p>",
       "text": "@janmon Hah, I relate very very much to your tweet-story. Exactly my same though process earlier :)Happy new year, hope we can manage to hang this year again been a while! 🎉"
@@ -137,6 +143,7 @@
     "wm-id": 1590822,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109331349286151910",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -155,6 +162,7 @@
     "wm-id": 1590823,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109298379160918805",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -173,6 +181,7 @@
     "wm-id": 1590824,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109437888941458521",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -191,6 +200,7 @@
     "wm-id": 1590825,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109307716188144746",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -209,6 +219,7 @@
     "wm-id": 1590826,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109348305478313152",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -227,6 +238,7 @@
     "wm-id": 1590827,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109296592914526410",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -245,6 +257,7 @@
     "wm-id": 1590828,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109353923473060147",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -263,6 +276,7 @@
     "wm-id": 1590829,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109378102550153935",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -281,6 +295,7 @@
     "wm-id": 1590830,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109537156869485640",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -299,6 +314,7 @@
     "wm-id": 1590831,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109250726388781873",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -317,6 +333,7 @@
     "wm-id": 1590874,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109613091779956834",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -335,6 +352,7 @@
     "wm-id": 1591234,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109619282047414217",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> thanks for the explanation! I think when you move you loose some followers / followings, this might has to do something with their privacy settings, but I’m not sure! I just noticed when I moved instances that the numbers did not align anymore.</p>",
       "text": "@janmon thanks for the explanation! I think when you move you loose some followers / followings, this might has to do something with their privacy settings, but I’m not sure! I just noticed when I moved instances that the numbers did not align anymore."
@@ -357,6 +375,7 @@
     "wm-id": 1591235,
     "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/109613166812461535/109422103663090721",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "repost-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "repost-of",
     "wm-private": false
@@ -375,6 +394,7 @@
     "wm-id": 1591236,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109613166812461535/109619307609689799",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://mastodon.social/@NERDDISCO\" class=\"u-url\">@<span>NERDDISCO</span></a></span> yeah, I think I lost a couple of followers as well.</p><p>I also noticed that there is no way to import lists. Even though you can export them 😅</p>",
       "text": "@NERDDISCO yeah, I think I lost a couple of followers as well.I also noticed that there is no way to import lists. Even though you can export them 😅"
@@ -397,6 +417,7 @@
     "wm-id": 1597708,
     "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/109613166812461535/109580686270474069",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "like-of",
     "wm-private": false
@@ -415,6 +436,7 @@
     "wm-id": 1608698,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109764442643306971/109764493121358483",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> ooh nice, I’ll have to have a play around with that! Thanks, I’ll look out for your post too 😬</p>\n<a class=\"u-mention\" href=\"https://brid.gy/\"></a>",
       "text": "@janmon ooh nice, I’ll have to have a play around with that! Thanks, I’ll look out for your post too 😬"
@@ -437,6 +459,7 @@
     "wm-id": 1609113,
     "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/109764442643306971/109766728072240761",
     "wm-target": "https://janmonschke.com/changing-my-online-identity/",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> have you though about something like tweetback to reclaim your old tweets? <a href=\"https://github.com/tweetback/tweetback\"><span>https://</span><span>github.com/tweetback/tweetback</span><span></span></a></p>\n<a class=\"u-mention\" href=\"https://brid.gy/\"></a>\n<a href=\"https://github.com/tweetback/tweetback\">GitHub - tweetback/tweetback: Take ownership of your Twitter data and get your tweets back</a>",
       "text": "@janmon have you though about something like tweetback to reclaim your old tweets? https://github.com/tweetback/tweetback\n\nGitHub - tweetback/tweetback: Take ownership of your Twitter data and get your tweets back"

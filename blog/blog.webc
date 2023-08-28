@@ -1,0 +1,16 @@
+---
+title: All blog posts
+layout: layouts/base.webc
+---
+
+<script webc:setup>
+  function sub(post) {
+    return post.data.dateDisplay;
+  }
+</script>
+<all-posts-list
+  title="All blog posts"
+  rssurl="/rss.xml"
+  :posts="collections.blogPosts"
+  :sub="sub"
+></all-posts-list>

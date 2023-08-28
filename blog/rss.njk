@@ -1,0 +1,28 @@
+---
+  permalink: rss.xml
+  eleventyExcludeFromCollections: true
+  layout: ""
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ metadata.url }}">
+  <title>janmonschke.com - blog posts</title>
+  <subtitle>Blog posts from janmonschke.com</subtitle>
+  <link href="{{ permalink | absoluteUrl(metadata.url) }}" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ collections.blogPosts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <id>{{ metadata.url }}</id>
+  <author>
+    <name>{{ metadata.author }}</name>
+  </author>
+  {%- for post in collections.blogPosts %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(metadata.url) %}
+  {%- set content = post.templateContent %}
+  <entry>
+    <title>{{ post.data.title }}</title>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <id>{{ absolutePostUrl }}</id>
+    <content xml:lang="{{ metadata.language }}" type="html">{{ content | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+  </entry>
+  {%- endfor %}
+</feed>

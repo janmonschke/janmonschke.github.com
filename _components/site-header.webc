@@ -1,0 +1,107 @@
+<div
+  :class="ismain ? 'Layout__titleContainer' : 'Layout__titleContainer m-small'"
+>
+  <div class="h-card">
+    <a href="/" class="Layout__homeLink u-url">
+      <img
+        src="/assets/profile.jpg"
+        class="Layout__titleProfile u-photo"
+        alt=""
+      />
+      <h1 webc:if="ismain" class="Layout__title p-name" @text="title"></h1>
+      <h3 webc:else class="Layout__title p-name" @text="title"></h3>
+    </a>
+  </div>
+  <nav webc:if="!ismain" class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<style>
+  .Layout__titleContainer,
+  .Layout__homeLink {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Layout__titleProfile {
+    width: 90px;
+    border-radius: 50%;
+    margin-right: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  .m-small .Layout__titleProfile {
+    width: 60px;
+    margin-right: 1em;
+  }
+
+  .Layout__title {
+    margin-top: 14px;
+  }
+
+  .Layout__title,
+  .Layout__menuLink {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Layout__titleContainer:not(.m-small) .Layout__title {
+    font-size: 1.7411rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .m-small .Layout__title {
+    margin-top: 0px;
+  }
+
+  .Layout__menuLink {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .Layout__menuLink:hover,
+  .Layout__menuLink:active {
+    text-decoration: underline;
+  }
+
+  .Layout__menuContainer {
+    margin-left: auto;
+  }
+
+  .Layout__menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+
+  .Layout__menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  @media (max-width: 400px) {
+    .m-small .Layout__titleProfile {
+      width: 50px;
+      margin-right: 0.4em;
+    }
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.8em;
+    }
+    .Layout__menuContainer {
+      display: none;
+    }
+  }
+</style>

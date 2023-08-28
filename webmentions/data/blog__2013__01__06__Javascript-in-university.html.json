@@ -13,6 +13,7 @@
     "wm-id": 1595470,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/289423287870697473/14075485",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -31,6 +32,7 @@
     "wm-id": 1595471,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/289423287870697473/76693160",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -49,6 +51,7 @@
     "wm-id": 1595472,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/289423287870697473/153322714",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -67,6 +70,7 @@
     "wm-id": 1595473,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/289423287870697473/249393719",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -85,6 +89,7 @@
     "wm-id": 1595474,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/289423287870697473/456535238",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -103,6 +108,7 @@
     "wm-id": 1595475,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/289423287870697473/274528142",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -121,6 +127,7 @@
     "wm-id": 1595476,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/289423287870697473/15713724",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -139,6 +146,7 @@
     "wm-id": 1595477,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/289423287870697473/34872179",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -157,6 +165,7 @@
     "wm-id": 1595478,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/289423287870697473/289683170415230976",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Javascript in University: janmonschke.com/blog/2013/01/0… //cc @berlinjs @mrflix @sjockers"
     },
@@ -178,6 +187,7 @@
     "wm-id": 1595479,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/289423287870697473/289500817466224640",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Javascript in University: janmonschke.com/blog/2013/01/0… //cc @berlinjs @mrflix @sjockers"
     },
@@ -199,6 +209,7 @@
     "wm-id": 1595480,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/289423287870697473/289472305699098624",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Javascript in University: janmonschke.com/blog/2013/01/0… //cc @berlinjs @mrflix @sjockers"
     },
@@ -220,6 +231,7 @@
     "wm-id": 1595481,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/289423287870697473/289437142223052800",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Javascript in University: janmonschke.com/blog/2013/01/0… //cc @berlinjs @mrflix @sjockers"
     },
@@ -241,6 +253,7 @@
     "wm-id": 1595482,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/289423287870697473/289436728345911296",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Javascript in University: janmonschke.com/blog/2013/01/0… //cc @berlinjs @mrflix @sjockers"
     },
@@ -262,6 +275,7 @@
     "wm-id": 1595483,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/289423287870697473/289430298284945408",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Javascript in University: janmonschke.com/blog/2013/01/0… //cc @berlinjs @mrflix @sjockers"
     },
@@ -283,6 +297,7 @@
     "wm-id": 1595484,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/289423287870697473/289429256663080963",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Javascript in University: janmonschke.com/blog/2013/01/0… //cc @berlinjs @mrflix @sjockers"
     },
@@ -304,6 +319,7 @@
     "wm-id": 1595499,
     "wm-source": "https://brid.gy/post/twitter/thedeftone/289470839391408128",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "html": "<a href=\"https://twitter.com/thedeftone\">@thedeftone</a> has put together some really good points about the state of web development education at universities: <a href=\"http://janmonschke.com/blog/2013/01/06/Javascript-in-university.html\">janmonschke.com/blog/2013/01/0…</a>\n<a class=\"u-mention\" href=\"https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html\"></a>",
       "text": "@thedeftone has put together some really good points about the state of web development education at universities: janmonschke.com/blog/2013/01/0…"
@@ -326,6 +342,7 @@
     "wm-id": 1595501,
     "wm-source": "https://brid.gy/post/twitter/thedeftone/289769718468993025",
     "wm-target": "https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html",
+    "wm-protocol": "webmention",
     "content": {
       "html": "JavaScript in University <a href=\"http://janmonschke.com/blog/2013/01/06/Javascript-in-university.html\">janmonschke.com/blog/2013/01/0…</a> by <a href=\"https://twitter.com/thedeftone\">@thedeftone</a>\n<a class=\"u-mention\" href=\"https://janmonschke.com/blog/2013/01/06/Javascript-in-university.html\"></a>",
       "text": "JavaScript in University janmonschke.com/blog/2013/01/0… by @thedeftone"

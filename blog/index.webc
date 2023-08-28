@@ -1,0 +1,191 @@
+---
+title: Blog
+layout: layouts/base.webc
+---
+
+<div class="index__bioContainer">
+  <bio />
+</div>
+
+<nav class="index__nav" aria-hidden>
+  <a class="index__navBtn" href="#blogposts"> Blog posts </a>
+  <a class="index__navBtn" href="#weeknotes"> Weeknotes </a>
+  <a class="index__navBtn" href="#talks"> Talks </a>
+</nav>
+
+<div class="posts index__listContainer">
+  <span class="index__sectionHeadline">
+    <h2><a name="blogposts"></a>Posts</h2>
+    <a href="/rss.xml" aria-label="Blog post RSS feed">
+      <img
+        src="/assets/images/rss.svg"
+        class="index__rssIcon"
+        alt="Blog post RSS feed"
+      />
+    </a>
+  </span>
+  <ul class="index__postList">
+    <li webc:for="(post, index) of collections.blogPosts.slice(0, 5)">
+      <h3 class="index__postListItem">
+        <a :href="post.url">
+          <span style="color: initial" @text="post.data.dateDisplay"></span>:
+          <span class="index__blogPostTitle" @text="post.data.title"></span>
+        </a>
+      </h3>
+    </li>
+  </ul>
+  <a href="/blog" class="index__moreLink">→ More blog posts</a>
+</div>
+
+<div class="weeknotes index__listContainer">
+  <span class="index__sectionHeadline">
+    <h2><a name="weeknotes"></a>Weeknotes</h2>
+    <a href="/weeknotes.xml" aria-label="Weeknotes RSS feed">
+      <img
+        src="/assets/images/rss.svg"
+        class="index__rssIcon"
+        alt="Weeknotes RSS feed"
+      />
+    </a>
+  </span>
+  <p class="index__weeknoteNote">
+    Weeknotes are shorter, more regular and more personal blog posts that I
+    publish on a weekly basis. Expect to read about updates of side projects,
+    books that I like to read, food, living in Berlin and general life things.
+  </p>
+  <ul class="index__postList">
+    <li webc:for="(post, index) of collections.weeknotes.slice(0, 5)">
+      <h3 class="index__postListItem">
+        <a :href="post.url" @text="post.data.title"></a>
+      </h3>
+      <small
+        @text="post.data.keywords.map((keyword) => `#${keyword}`).join(' · ')"
+      ></small>
+    </li>
+  </ul>
+  <a href="/weeknotes" class="index__moreLink">→ All weeknotes</a>
+</div>
+
+<div class="talks index__listContainer">
+  <span class="index__sectionHeadline">
+    <h2><a name="talks"></a>Talks</h2>
+  </span>
+  <ul class="index__talksList">
+    <li webc:for="talk of talks">
+      <span class="index__talkTitle">
+        <span @text="talk.name"></span>
+
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          :href="talk.slides"
+          webc:if="talk.slides"
+          >(Slides)</a
+        >
+      </span>
+
+      <ul class="index__talkConfList">
+        <li webc:for="conference of talk.conferences">
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            @text="conference.name + ' · ' + conference.location"
+            :href="conference.video"
+            webc:if="conference.video"
+          ></a>
+          <span
+            @text="conference.name + ' · ' + conference.location"
+            webc:else
+          ></span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <style>
+    .index__bioContainer {
+      margin-bottom: 1.28em;
+    }
+
+    .index__nav {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 1.28rem;
+      font-size: 1.12rem;
+    }
+
+    .index__navBtn {
+      border: none;
+      background: transparent;
+      outline: none;
+      cursor: pointer;
+      color: #007acc;
+      margin-right: 1rem;
+    }
+
+    .index__navBtn:first-child {
+      padding-left: 0;
+    }
+
+    .index__sectionHeadline {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 0.8rem;
+    }
+
+    .index__sectionHeadline h2,
+    .index__rssIcon {
+      margin: 0;
+    }
+
+    .index__rssIcon {
+      margin-left: 0.32rem;
+    }
+
+    .index__listContainer {
+      margin-bottom: 1.6rem;
+    }
+
+    .index__postList,
+    .index__talksList {
+      list-style-type: none;
+      margin: 0;
+    }
+
+    .index__postList li {
+      margin: 0;
+    }
+
+    .index__postListItem {
+      margin-top: 0.32rem;
+      margin-bottom: 0px;
+      font-weight: normal;
+      font-size: 1.07177rem;
+      line-height: 1.6rem;
+    }
+
+    .index__moreLink {
+      margin-top: 0.64rem;
+      font-size: 0.96rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .index__weeknoteNote {
+      margin-bottom: 1rem;
+    }
+
+    .index__talksList > li {
+      margin-bottom: 1.6rem;
+    }
+
+    .index__talkTitle {
+      font-size: 1.12rem;
+      font-weight: 500;
+    }
+
+    .index__talkConfList li {
+      margin: 0.16rem;
+    }
+  </style>
+</div>

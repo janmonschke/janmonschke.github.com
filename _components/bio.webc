@@ -1,0 +1,75 @@
+<aside class="bio">
+  <eleventy-image
+    src="assets/profile.jpg"
+    alt="Jan Monschke"
+    :width="[80, 160]"
+    :formats="['avif', 'webp', 'jpeg']"
+    sizes="100vw"
+    class="bio__authorImage"
+    webc:if="showimage"
+  ></eleventy-image>
+  <span>
+    Hi, I'm Jan 👋 I am a software engineer working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co"
+      >Elastic</a
+    >
+    in Berlin. You can find me on
+    <a
+      rel="noopener noreferrer"
+      target="_blank"
+      rel="me"
+      href="https://social.lol/@janmon"
+    >
+      🐘 Mastodon
+    </a>
+    ,
+    <a
+      rel="noopener noreferrer"
+      target="_blank"
+      rel="me"
+      href="https://github.com/janmonschke"
+    >
+      💻 GitHub
+    </a>
+    and
+    <a
+      rel="noopener noreferrer"
+      target="_blank"
+      href="https://www.linkedin.com/in/jan-monschke-aa6a249a/"
+    >
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
+<style>
+  .bio {
+    display: flex;
+    align-items: center;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+</style>

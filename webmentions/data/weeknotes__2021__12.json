@@ -13,6 +13,7 @@
     "wm-id": 1595125,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/1447965945650102276/16185220",
     "wm-target": "https://janmonschke.com/weeknotes/2021/12/",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/weeknotes/2021/12/",
     "wm-property": "like-of",
     "wm-private": false

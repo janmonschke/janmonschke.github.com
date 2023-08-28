@@ -13,6 +13,7 @@
     "wm-id": 1595486,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/555424820117377024/807289",
     "wm-target": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -31,6 +32,7 @@
     "wm-id": 1595487,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/555424820117377024/397649768",
     "wm-target": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -49,6 +51,7 @@
     "wm-id": 1595488,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/555424820117377024/14251968",
     "wm-target": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -67,6 +70,7 @@
     "wm-id": 1595489,
     "wm-source": "https://brid.gy/like/twitter/thedeftone/555424820117377024/1605454080",
     "wm-target": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
+    "wm-protocol": "webmention",
     "like-of": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
     "wm-property": "like-of",
     "wm-private": false
@@ -85,6 +89,7 @@
     "wm-id": 1595490,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/555424820117377024/559644202024185856",
     "wm-target": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Simulations in JavaScript! janmonschke.com/blog/2015/01/1… Excellent work by @simon_swain and @vinceallenvince :)"
     },
@@ -106,6 +111,7 @@
     "wm-id": 1595491,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/555424820117377024/555724923394850817",
     "wm-target": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Simulations in JavaScript! janmonschke.com/blog/2015/01/1… Excellent work by @simon_swain and @vinceallenvince :)"
     },
@@ -127,6 +133,7 @@
     "wm-id": 1595492,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/555424820117377024/555462673001746433",
     "wm-target": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Simulations in JavaScript! janmonschke.com/blog/2015/01/1… Excellent work by @simon_swain and @vinceallenvince :)"
     },
@@ -148,6 +155,7 @@
     "wm-id": 1595493,
     "wm-source": "https://brid.gy/repost/twitter/thedeftone/555424820117377024/555427798287155200",
     "wm-target": "https://janmonschke.com/blog/2015/01/14/simulations-in-javascript.html",
+    "wm-protocol": "webmention",
     "content": {
       "text": "Simulations in JavaScript! janmonschke.com/blog/2015/01/1… Excellent work by @simon_swain and @vinceallenvince :)"
     },
