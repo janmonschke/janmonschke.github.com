@@ -21,6 +21,7 @@ const {
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("CNAME");
+  eleventyConfig.addPassthroughCopy("robots.txt");
 
   eleventyConfig.addGlobalData("typographyStyles", typography.toString());
 
