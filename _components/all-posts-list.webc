@@ -1,6 +1,6 @@
 <header class="allPostsList__header">
   <h2 @text="title"></h2>
-  <a :href="rssUrl">
+  <a :href="rssurl">
     <img
       src="/assets/images/rss.svg"
       class="allPostsList__rssIcon"

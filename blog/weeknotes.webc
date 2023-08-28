@@ -10,7 +10,7 @@ layout: layouts/base.webc
 </script>
 <all-posts-list
   title="All weeknotes"
-  rssUrl="/weeknotes.xml"
+  rssurl="/weeknotes.xml"
   :posts="collections.weeknotes"
   :sub="sub"
 ></all-posts-list>

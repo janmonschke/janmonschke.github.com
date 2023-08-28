@@ -10,7 +10,7 @@ layout: layouts/base.webc
 </script>
 <all-posts-list
   title="All blog posts"
-  rssUrl="/tss.xml"
+  rssurl="/rss.xml"
   :posts="collections.blogPosts"
   :sub="sub"
 ></all-posts-list>
