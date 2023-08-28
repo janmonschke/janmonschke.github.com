@@ -27,7 +27,7 @@ layout: layouts/base.webc
   ></p>
   <bio showimage="true"></bio>
   <hr />
-  <nav>
+  <nav webc:if="prevPost || nextPost">
     <span class="blogPost__nacvigationTitle">Read more:</span>
     <ul class="blogPost__navigation">
       <li webc:if="nextPost">
