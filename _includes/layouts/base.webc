@@ -60,12 +60,20 @@
 
     <link rel="me" href="https://social.lol/@janmon" />
     <link rel="me" href="https://github.com/janmonschke" />
+
     <link
       rel="alternate"
       type="application/rss+xml"
-      title="A week in the woods RSS feed"
+      title="janmonschke.com - Weeknotes"
+      href="/weeknotes.xml"
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="janmonschke.com - Blog posts"
       href="/rss.xml"
     />
+
     <link
       rel="icon"
       type="image/png"
