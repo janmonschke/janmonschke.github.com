@@ -48,3 +48,7 @@ blockquote {
   border-color: #007acc;
   border-width: 0.3em;
 }
+
+video {
+  width: 100%;
+}

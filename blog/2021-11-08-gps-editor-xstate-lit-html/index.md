@@ -6,10 +6,10 @@ keywords: ["xstate", "lit-html", "gpx editor", "side project"]
 date: 2021-11-08
 pomodoros: 6
 image: gpx-editor-state-machine.png
+hideImage: true
 ---
 
-<a href="https://janmonschke.com/gpx-editor" target="_blank">![GPX editor screenshot](./gpx-editor-screenshot.png)
-<small>(try out the editor)</small></a>
+![GPX editor screenshot ](./gpx-editor-screenshot.png)
 
 When [I go hiking](https://aweekinthewoods.com/france/auvergne/), I usually record the trip with this battery-efficient [GPS Logger app](https://gpslogger.app/) 🏕. Battery-efficiency is important because there's often no possibility to charge my phone on a multi-day hike. The app let's me define custom intervals at which it records a GPS point. I usually set the interval to somewhere between 45 seconds and a minute. This resolution is accurate enough for recordings of walks and it does not add too much strain on my battery.
 

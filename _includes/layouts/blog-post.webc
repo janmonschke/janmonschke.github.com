@@ -7,6 +7,11 @@ layout: layouts/base.webc
     <h1 class="blogPost__title" @text="title"></h1>
     <span class="blogPost__date" @text="dateDisplayLong"></span>
   </header>
+  <aside
+    class="blogPost__coverImage"
+    webc:if="coverImageHtml"
+    @html="coverImageHtml"
+  ></aside>
   <section class="blogPost__content" @raw="content"></section>
 </article>
 <aside>

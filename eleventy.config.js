@@ -193,6 +193,18 @@ function mapPosts(posts) {
       : undefined;
 
     if (coverImagePath) {
+      if (!blogPost.data.hideImage) {
+        blogPost.data.coverImageHtml = renderBlogPicture({
+          src: coverImagePath,
+          attributes: {
+            alt: blogPost.data.imageCaption || "",
+            loading: "eager",
+            decoding: "auto",
+          },
+          includeCaption: false,
+        });
+      }
+
       let shareMetadata = await Image(coverImagePath, {
         ...imageOptions,
         widths: [600],

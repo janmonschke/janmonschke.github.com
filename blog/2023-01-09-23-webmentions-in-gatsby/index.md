@@ -16,8 +16,6 @@ pomodoros: 22
 image: webmentions_header_alternative.jpg
 ---
 
-![](./webmentions_header_alternative.jpg)
-
 This blog used to have comments. There was a time when you could find a comment form under each post. The form was provided through a third-party embed of course, since this is a static site. There is no server or no database that could hold on to your comments.
 
 After a couple of years I decided to remove the comment form since it wasn't really used and most discussions happened on social media anyways. Sadly there was no (sensible / easy) way to bring those discussion here without embedding tons of external code.
