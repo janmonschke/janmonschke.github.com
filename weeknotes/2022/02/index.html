@@ -15,8 +15,8 @@
     <meta name="description" content="The portfolio and blog of Jan Monschke">
     <meta property="og:description" content="The portfolio and blog of Jan Monschke">
     <meta property="article:published_time" content="Tue Feb 08 2022 01:00:00 GMT+0100 (Central European Standard Time)">
-    <meta property="og:image" content="https://janmonschke.com/img/9cp5kzctdx-600.jpeg">
-    <meta property="image" content="https://janmonschke.com/img/9cp5kzctdx-600.jpeg">
+    <meta property="og:image" content="https://janmonschke.com/img/content/9cp5kzctdx-600.jpeg">
+    <meta property="image" content="https://janmonschke.com/img/content/9cp5kzctdx-600.jpeg">
     <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
@@ -418,6 +418,10 @@ blockquote {
   border-color: #007acc;
   border-width: 0.3em;
 }
+
+video {
+  width: 100%;
+}
 .picture {
   max-width: 100%;
   width: 100%;
@@ -439,7 +443,7 @@ blockquote {
         <div class="Layout__titleContainer m-small">
   <div class="h-card">
     <a href="/" class="Layout__homeLink u-url">
-      <picture><source type="image/avif" srcset="/img/hQbkMv3lT7-90.avif 90w, /img/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/hQbkMv3lT7-90.webp 90w, /img/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/hQbkMv3lT7-90.jpeg 90w, /img/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
       
       <h3 class="Layout__title p-name">Jan Monschke</h3>
     </a>
@@ -463,6 +467,7 @@ blockquote {
     <h1 class="blogPost__title">Weeknotes 02/2022</h1>
     <span class="blogPost__date">February 08, 2022</span>
   </header>
+  
   <section class="blogPost__content"><h2>Work</h2>
 <p>The biggest change in ways of working at Elastic for me is that we're releasing software at defined intervals. I know similar release cadences from the mobile teams from previous companies (release trains they were called at SoundCloud 🚂). However, I got used to the process of deploying often, pretty much daily. The web team at SoundCloud would deploy PRs in batches, multiple times per day.</p>
 <p>Of course this kind of release cadence does not make sense for software like Elasticsearch and Kibana. They are not consumer-facing apps but actual released pieces of software that comes in form of bundles. When you find a bug in a consumper app, you fix the bug in <code>main</code>, create a PR, run the tests, have someone look over it and deploy the same day. The process for released software is exactly that but you'll have to make sure to bring the fix to <code>main</code> and backport it to all releases that are in long-term support. 🏄‍♂️ And they're released at defined intervals.</p>
@@ -472,7 +477,7 @@ blockquote {
 <p>Over the winter holidays I picked up work on an older project again. A mini game that I built for the first time <a href="https://github.com/janmonschke/Brunch-colors/commit/96b3613833000a0b23b65bf2049f2a90f74f424c">11 years ago</a>. Back then it was a showcase for <a href="https://brunch.io/">a web build tool called Brunch</a> that I was working on with friends. That was back in the days when the field of web build tools was pretty empty. The original game was written in <a href="https://backbonejs.org/">Backbone</a> and <a href="http://coffeescript.org/">CoffeeScript</a>. Oh, and it was hosted as a <a href="https://couchapp.readthedocs.io/en/latest/intro/what-is-couchapp.html">Couchapp</a> <em>inside</em> of a CouchDB instance. 🤯 Those were wild days &lt;3</p>
 <p>Anyways, I started to rebuild the game with a more modern stack. Back then it only had a single-player mode, this time I started out with a multiplayer mode right away and still have to add the single player mode. The design is still very sub-par and I want to make the server a little more robust but it already feels like I will actually be able to release a side project this year 😅</p>
 <p>Little teaser video:</p>
-<p><video src="./02-colorbattle.mp4" controls></video></p>
+<p><video src="/assets/videos/02-colorbattle.mp4" controls></video></p>
 <h2>Life</h2>
 <p>For the first time after a long injury I was finally able to go back bouldering 🎉 Needless to say, my entire body has been feeling sore for three days now 😅 Looking forward to getting back into that routine.</p>
 <h2>Entertainment</h2>
@@ -492,7 +497,7 @@ blockquote {
   <hr>
   
   <bio showimage="true"><aside class="bio">
-  <picture><source type="image/avif" srcset="/img/hQbkMv3lT7-80.avif 80w, /img/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/hQbkMv3lT7-80.webp 80w, /img/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/hQbkMv3lT7-80.jpeg 80w, /img/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
   <span>
     Hi, I'm Jan 👋 I am a software engineer working for
     <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>

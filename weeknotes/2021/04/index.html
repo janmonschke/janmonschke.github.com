@@ -15,8 +15,8 @@
     <meta name="description" content="The portfolio and blog of Jan Monschke">
     <meta property="og:description" content="The portfolio and blog of Jan Monschke">
     <meta property="article:published_time" content="Sun Jan 24 2021 01:00:00 GMT+0100 (Central European Standard Time)">
-    <meta property="og:image" content="https://janmonschke.com/img/blL3WWOv4q-600.jpeg">
-    <meta property="image" content="https://janmonschke.com/img/blL3WWOv4q-600.jpeg">
+    <meta property="og:image" content="https://janmonschke.com/img/content/blL3WWOv4q-600.jpeg">
+    <meta property="image" content="https://janmonschke.com/img/content/blL3WWOv4q-600.jpeg">
     <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
@@ -445,6 +445,10 @@ blockquote {
   border-color: #007acc;
   border-width: 0.3em;
 }
+
+video {
+  width: 100%;
+}
 .picture {
   max-width: 100%;
   width: 100%;
@@ -466,7 +470,7 @@ blockquote {
         <div class="Layout__titleContainer m-small">
   <div class="h-card">
     <a href="/" class="Layout__homeLink u-url">
-      <picture><source type="image/avif" srcset="/img/hQbkMv3lT7-90.avif 90w, /img/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/hQbkMv3lT7-90.webp 90w, /img/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/hQbkMv3lT7-90.jpeg 90w, /img/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
       
       <h3 class="Layout__title p-name">Jan Monschke</h3>
     </a>
@@ -490,11 +494,12 @@ blockquote {
     <h1 class="blogPost__title">Weeknotes 4/2021</h1>
     <span class="blogPost__date">January 24, 2021</span>
   </header>
+  
   <section class="blogPost__content"><h2>Side projects</h2>
 <h3>Somewhere</h3>
 <p>I managed to finish the animations for the loading screen which also act as onboarding. You can check them out in the video below. It's always great to see how powerful a couple of simple CSS animations and transitions can be. I'm very pleased with the result. 🤩</p>
 <video controls loop alt="Somewhere loading animation">
-  <source src="./04-somewhere-animation.mp4" type="video/mp4" />
+  <source src="/assets/videos/04-somewhere-animation.mp4" type="video/mp4" />
 </video>
 <h3>Ping</h3>
 <p>I spent only an hour or two on ping this week. I made the sign up screen component more generic to also support sign in. Next step in the proof of concept is to build a basic version of the screen that will let users collaborate.</p>
@@ -561,7 +566,7 @@ blockquote {
   <hr>
   
   <bio showimage="true"><aside class="bio">
-  <picture><source type="image/avif" srcset="/img/hQbkMv3lT7-80.avif 80w, /img/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/hQbkMv3lT7-80.webp 80w, /img/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/hQbkMv3lT7-80.jpeg 80w, /img/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
   <span>
     Hi, I'm Jan 👋 I am a software engineer working for
     <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>

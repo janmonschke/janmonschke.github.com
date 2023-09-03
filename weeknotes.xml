@@ -4,26 +4,62 @@
   <subtitle>Weeknotes from janmonschke.com</subtitle>
   <link href="weeknotes.xml" rel="self"/>
   <link href=""/>
-  <updated>2022-07-24T00:00:00Z</updated>
+  <updated>2022-09-18T00:00:00Z</updated>
   <id></id>
   <author>
     <name>Jan Monschke</name>
   </author>
+  <entry>
+    <title>Weeknotes 05/2022</title>
+    <link href="/weeknotes/2022/05/"/>
+    <updated>2022-09-18T00:00:00Z</updated>
+    <id>/weeknotes/2022/05/</id>
+    <content xml:lang="" type="html">&lt;h2&gt;Life&lt;/h2&gt;
+&lt;p&gt;Fall has started and temperatures are dropping quickly in Berlin. Yet, somehow we managed to see plenty of friends in parks the last couple of weekends. It&#39;s neither too cold, nor too windy, just the right temperature (with the right clothing 😅).&lt;/p&gt;
+&lt;p&gt;Most days we&#39;re now preparing the flat for the baby. Every day feels like Christmas as boxes and boxes of (mostly second-hand) baby items arrive. There are so many good offers on eBay Kleinanzeigen and Vinted and all of them were in great condition so far. The only problem we had was a baby monitor that turned out to be a recalled product. The battery could potentially overheat and burn your skin 😰. Luckily we got a refund from manufacturer and were able to replace the item!&lt;/p&gt;
+&lt;p&gt;We feel a lot more prepared after a birth preparation course and plenty of great advice from friends and our midwife. In general, the support we received in Berlin has been outstanding. When it comes to organizing child care however, it feels like the wild west. There are processes put in place by the city of Berlin and then there are child care providers that tell you they will not follow those processes. They pretty much make up their own rules 🙃&lt;/p&gt;
+&lt;p&gt;After just over eight years it was time to replace my old MacBook Pro and it&#39;s the first time I did not go for a &lt;code&gt;Pro&lt;/code&gt; MacBook. I went with a M2 MacBook Air and it&#39;s been a great decision. It&#39;s so fast, so light, has a nice screen and the battery seemingly lasts forever 🥰. Especially with &lt;a href=&quot;https://www.apple.com/macos/monterey/&quot;&gt;MacOS Montereys&#39;s Low Power Mode&lt;/a&gt; ✌️ I have low power mode enabled all the time and the laptop still feels snappy for all for my everyday tasks such as working on my side projects, browsing, streaming. Such a marvelous device 🎉&lt;/p&gt;
+&lt;h2&gt;Work&lt;/h2&gt;
+&lt;p&gt;Got to go to my first (in-person) conference since the end of 2019 and it went great! I chose React Finland since I&#39;m working with React at work pretty much every day. And because my friend &lt;a href=&quot;https://mastodon.social/@nikgraf&quot;&gt;Nik Graf&lt;/a&gt; was scheduled to give a hilarious meta talk about the &lt;a href=&quot;https://www.youtube.com/watch?v=25QQcPSzH8Y&amp;amp;list=PL-a9lBflNu2ph1J-a19LNLo3GKikBDsWZ&amp;amp;index=10&quot;&gt;weird things about React&lt;/a&gt;. I had never been in Finland before and loved Helsinki. When taking a break from the conf, I spent time in one of the many cute cafés, took a walk to book shops and sat in one of the many nice parks. Will definitely come back again.&lt;/p&gt;
+&lt;p&gt;The last two weeks before the start of my parental leave have started. My final task is a major refactoring of a plugin that is a core part of the application my team works on. It involves talking a to the original implementors, hearing a lot of apologies about decisions that were made. It&#39;s weird how people apologise now for decisions that were perfectly fine 3 years ago, under different circumstances. In any case, progress is going great and I&#39;m confident I&#39;ll be able to ship it before the birth of my son.&lt;/p&gt;
+&lt;h2&gt;Side projects&lt;/h2&gt;
+&lt;p&gt;
+      &lt;/p&gt;&lt;figure&gt;
+        
+      &lt;a href=&quot;/img/content/weeknotes/2022/9O5HGwhmzh-1500.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
+        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2022/9O5HGwhmzh-352.avif 352w, /img/content/weeknotes/2022/9O5HGwhmzh-705.avif 705w, /img/content/weeknotes/2022/9O5HGwhmzh-1500.avif 1500w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2022/9O5HGwhmzh-352.webp 352w, /img/content/weeknotes/2022/9O5HGwhmzh-705.webp 705w, /img/content/weeknotes/2022/9O5HGwhmzh-1500.webp 1500w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2022/9O5HGwhmzh-352.jpeg 352w, /img/content/weeknotes/2022/9O5HGwhmzh-705.jpeg 705w, /img/content/weeknotes/2022/9O5HGwhmzh-1500.jpeg 1500w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;Screenshot of the pub quiz application&quot; src=&quot;/img/content/weeknotes/2022/9O5HGwhmzh-352.jpeg&quot; width=&quot;1500&quot; height=&quot;962&quot; /&gt;&lt;/picture&gt;
+      &lt;/a&gt;
+    
+        &lt;figcaption class=&quot;picture__caption&quot;&gt;Screenshot of the pub quiz application&lt;/figcaption&gt;
+      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;I&#39;m preparing a remote pub quiz at work and found that while it&#39;s possible to keep score on paper, chances to get something wrong are quite high (for me at least). So obviously I decided to build an web app to help with with keeping score. In the app you create quizzes upfront. It supports regular multiple choice, open ended and estimation questions. When it&#39;s time for running the quiz, a new session can be started, teams randomly assigned and scores taken on the go. There&#39;s also the option to set time limits for questions.&lt;/p&gt;
+&lt;p&gt;This project gave me the opportunity to try out &lt;a href=&quot;https://remix.run/&quot;&gt;Remix&lt;/a&gt; and I think I liked the experience so far. I&#39;m not sure I&#39;m doing things the proper Remix-way but the docs are not always clear on how things are supposed to be done. In any case, I love the approach to stick as close to web standards as possible! Oh, and &lt;a href=&quot;https://www.prisma.io/&quot;&gt;Prisma&lt;/a&gt; is great too!&lt;/p&gt;
+&lt;p&gt;The code is &lt;a href=&quot;https://github.com/janmonschke/quizzo&quot;&gt;available on Github&lt;/a&gt;, in case you&#39;re curious. It also contains some questions to get you started in hosting your first quiz.&lt;/p&gt;
+&lt;p&gt;
+      &lt;/p&gt;&lt;figure&gt;
+        
+      &lt;a href=&quot;/img/content/weeknotes/2022/5YTab_Mpuh-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
+        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2022/5YTab_Mpuh-352.avif 352w, /img/content/weeknotes/2022/5YTab_Mpuh-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2022/5YTab_Mpuh-352.webp 352w, /img/content/weeknotes/2022/5YTab_Mpuh-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2022/5YTab_Mpuh-352.jpeg 352w, /img/content/weeknotes/2022/5YTab_Mpuh-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;Screenshot of the gather town environment in which the quiz was held&quot; src=&quot;/img/content/weeknotes/2022/5YTab_Mpuh-352.jpeg&quot; width=&quot;705&quot; height=&quot;434&quot; /&gt;&lt;/picture&gt;
+      &lt;/a&gt;
+    
+        &lt;figcaption class=&quot;picture__caption&quot;&gt;Screenshot of the gather town environment in which the quiz was held&lt;/figcaption&gt;
+      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;(note from the future: The quiz went well. People loved the &lt;a href=&quot;https://www.gather.town/&quot;&gt;Gather Town&lt;/a&gt; setup specifically.)&lt;/p&gt;
+&lt;h2&gt;Entertainment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📚 I started reading &lt;a href=&quot;https://openlibrary.org/books/OL32009035M/The_Code_Breaker&quot;&gt;The Code Breaker by Walter Isaacson&lt;/a&gt; (which I got in Helsinki). Usually I don&#39;t read biographies, but this one is fascinating me as it&#39;s about Jennifer Doudna, one of the creators of CRISPR gene editing. Genetics was one of my favorite topics in high school and I wanted to learn more about CRISPR for a long time. I am specifically loving the chapters on the ethics of gene editing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Song of the moment&lt;/h2&gt;
+&lt;p&gt;A very mellow track by Kraak &amp;amp; Smaak called Twilight. The intro doesn&#39;t do justice to the rest of the song. The build-up of the soundscape is outstanding ❤️:&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; loading=&quot;lazy&quot; title=&quot;Embedded song from SoundCloud&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/726190648&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;
+</content>
+  </entry>
   <entry>
     <title>Weeknotes 04/2022</title>
     <link href="/weeknotes/2022/04/"/>
     <updated>2022-07-24T00:00:00Z</updated>
     <id>/weeknotes/2022/04/</id>
     <content xml:lang="" type="html">&lt;p&gt;(cw: war, death, pregnancy)&lt;/p&gt;
-&lt;p&gt;
-      &lt;/p&gt;&lt;figure&gt;
-        
-      &lt;a href=&quot;/img/content/weeknotes/2022/Ztqc5YBpzu-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
-        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2022/Ztqc5YBpzu-352.avif 352w, /img/content/weeknotes/2022/Ztqc5YBpzu-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2022/Ztqc5YBpzu-352.webp 352w, /img/content/weeknotes/2022/Ztqc5YBpzu-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2022/Ztqc5YBpzu-352.jpeg 352w, /img/content/weeknotes/2022/Ztqc5YBpzu-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;A new beginning&quot; src=&quot;/img/content/weeknotes/2022/Ztqc5YBpzu-352.jpeg&quot; width=&quot;705&quot; height=&quot;1026&quot; /&gt;&lt;/picture&gt;
-      &lt;/a&gt;
-    
-        &lt;figcaption class=&quot;picture__caption&quot;&gt;A new beginning&lt;/figcaption&gt;
-      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
 &lt;h2&gt;Life&lt;/h2&gt;
 &lt;p&gt;This is a tough update to write. With the current situation in Ukraine still ongoing it still feels like nothing else matters as much. It feels paralyzing, it&#39;s not something to just easily move on from. Heck, the solution has not been resolved, it feels like it&#39;s constantly getting worse. There&#39;s not much I can do from here other than to donate to relief causes in the Ukraine and to help out at the welcome center at the train station from time to time. I don&#39;t know how this situation will be resolved, I just know the world that we lived in before has changed forever.&lt;/p&gt;
 &lt;p&gt;The weekend the war &amp;quot;started&amp;quot; (I know, it&#39;s been coming for years) was a tough one. That night, before Russia started its full-on invasion, my wife and I had to evacuate our apartment because they found a WW2 bomb at a construction site 300 meters from where we live. It&#39;s not an uncommon find in Berlin but it was the first time we had to be evacuated. We spent the night outside the blast radius with another friend. The bomb defusal situation gave the lingering invasion in the Ukraine a different perspective and it made it hard for me to find rest that night. The bomb eventually got defused in the eary hours of the morning and we were able to find sleep.&lt;/p&gt;
@@ -38,7 +74,7 @@
 &lt;p&gt;🍿 &lt;a href=&quot;https://en.wikipedia.org/wiki/Everything_Everywhere_All_at_Once&quot;&gt;Everything Everywhere All at Once&lt;/a&gt;: Go watch it! Don&#39;t even watch the trailer or read reviews. Let yourself be emerged in this absurd....-ly deep and hilarious movie. The only movie I watched in the cinema this year since they were showing it at midnight and I knew only a handfull of people would show up. This Covid thing is not yet over and even though I would always wear a mask in a closed room it felt better to go when there&#39;re not that many people around.&lt;/p&gt;
 &lt;h2&gt;Song of the moment&lt;/h2&gt;
 &lt;p&gt;A deliciously funky tune by Parcels: Overnight!&lt;/p&gt;
-&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; title=&quot;Embedded song from SoundCloud&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/698424172&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; title=&quot;Embedded song from SoundCloud&quot; loading=&quot;lazy&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/698424172&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;
 </content>
   </entry>
   <entry>
@@ -46,16 +82,7 @@
     <link href="/weeknotes/2022/03/"/>
     <updated>2022-02-16T00:00:00Z</updated>
     <id>/weeknotes/2022/03/</id>
-    <content xml:lang="" type="html">&lt;p&gt;
-      &lt;/p&gt;&lt;figure&gt;
-        
-      &lt;a href=&quot;/img/content/weeknotes/2022/2HtAPNqtAz-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
-        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2022/2HtAPNqtAz-352.avif 352w, /img/content/weeknotes/2022/2HtAPNqtAz-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2022/2HtAPNqtAz-352.webp 352w, /img/content/weeknotes/2022/2HtAPNqtAz-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2022/2HtAPNqtAz-352.jpeg 352w, /img/content/weeknotes/2022/2HtAPNqtAz-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;Cartographer art&quot; src=&quot;/img/content/weeknotes/2022/2HtAPNqtAz-352.jpeg&quot; width=&quot;705&quot; height=&quot;451&quot; /&gt;&lt;/picture&gt;
-      &lt;/a&gt;
-    
-        &lt;figcaption class=&quot;picture__caption&quot;&gt;Cartographer art&lt;/figcaption&gt;
-      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
-&lt;h2&gt;Work&lt;/h2&gt;
+    <content xml:lang="" type="html">&lt;h2&gt;Work&lt;/h2&gt;
 &lt;p&gt;Last week &lt;a href=&quot;https://www.elastic.co/blog/whats-new-elastic-8-0-0&quot;&gt;Elastic 8.0 was released&lt;/a&gt; 🎉. My contributions to this big release were rather minor since I joined when teams were wrapping up their 8.0 work already. It was very interesting to see the collective work towards such a big release. Hope the community will be as happy with that version as we are. I cannot wait to get my first bigger features into the next release 🙌.&lt;/p&gt;
 &lt;h2&gt;Side projects&lt;/h2&gt;
 &lt;p&gt;I made some progress on the color-picking game that I was writing about &lt;a href=&quot;/weeknotes/2022/02&quot;&gt;last week&lt;/a&gt;. The game now has three different multiplayer modes: a) play against the computer b) challenge a random player c) play against a friend. The &amp;quot;AI&amp;quot; in a) is actually quite challenging, yet was quite simple to implement. It basically looks at the field and calculates the &lt;em&gt;potentially best next&lt;/em&gt; move. It&#39;s not smart enough to look ahead or take the other player&#39;s move into account. However, it is fun to play against it 🤖.&lt;/p&gt;
@@ -95,7 +122,7 @@
 &lt;p&gt;Over the winter holidays I picked up work on an older project again. A mini game that I built for the first time &lt;a href=&quot;https://github.com/janmonschke/Brunch-colors/commit/96b3613833000a0b23b65bf2049f2a90f74f424c&quot;&gt;11 years ago&lt;/a&gt;. Back then it was a showcase for &lt;a href=&quot;https://brunch.io/&quot;&gt;a web build tool called Brunch&lt;/a&gt; that I was working on with friends. That was back in the days when the field of web build tools was pretty empty. The original game was written in &lt;a href=&quot;https://backbonejs.org/&quot;&gt;Backbone&lt;/a&gt; and &lt;a href=&quot;http://coffeescript.org/&quot;&gt;CoffeeScript&lt;/a&gt;. Oh, and it was hosted as a &lt;a href=&quot;https://couchapp.readthedocs.io/en/latest/intro/what-is-couchapp.html&quot;&gt;Couchapp&lt;/a&gt; &lt;em&gt;inside&lt;/em&gt; of a CouchDB instance. 🤯 Those were wild days &amp;lt;3&lt;/p&gt;
 &lt;p&gt;Anyways, I started to rebuild the game with a more modern stack. Back then it only had a single-player mode, this time I started out with a multiplayer mode right away and still have to add the single player mode. The design is still very sub-par and I want to make the server a little more robust but it already feels like I will actually be able to release a side project this year 😅&lt;/p&gt;
 &lt;p&gt;Little teaser video:&lt;/p&gt;
-&lt;p&gt;&lt;video src=&quot;./02-colorbattle.mp4&quot; controls=&quot;&quot;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;&lt;video src=&quot;/assets/videos/02-colorbattle.mp4&quot; controls=&quot;&quot;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;h2&gt;Life&lt;/h2&gt;
 &lt;p&gt;For the first time after a long injury I was finally able to go back bouldering 🎉 Needless to say, my entire body has been feeling sore for three days now 😅 Looking forward to getting back into that routine.&lt;/p&gt;
 &lt;h2&gt;Entertainment&lt;/h2&gt;
@@ -137,16 +164,7 @@
     <link href="/weeknotes/2021/13/"/>
     <updated>2021-10-26T00:00:00Z</updated>
     <id>/weeknotes/2021/13/</id>
-    <content xml:lang="" type="html">&lt;p&gt;
-      &lt;/p&gt;&lt;figure&gt;
-        
-      &lt;a href=&quot;/img/content/weeknotes/2021/zqsX7K4o1y-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
-        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2021/zqsX7K4o1y-352.avif 352w, /img/content/weeknotes/2021/zqsX7K4o1y-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2021/zqsX7K4o1y-352.webp 352w, /img/content/weeknotes/2021/zqsX7K4o1y-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2021/zqsX7K4o1y-352.jpeg 352w, /img/content/weeknotes/2021/zqsX7K4o1y-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;Forest in the Harz mountains&quot; src=&quot;/img/content/weeknotes/2021/zqsX7K4o1y-352.jpeg&quot; width=&quot;705&quot; height=&quot;352&quot; /&gt;&lt;/picture&gt;
-      &lt;/a&gt;
-    
-        &lt;figcaption class=&quot;picture__caption&quot;&gt;Forest in the Harz mountains&lt;/figcaption&gt;
-      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
-&lt;h2&gt;Life&lt;/h2&gt;
+    <content xml:lang="" type="html">&lt;h2&gt;Life&lt;/h2&gt;
 &lt;p&gt;I took all my remaining vacation days and went hiking with a friend. We went to the Harz mountains in central Germany. They’re not as high as the Alps but they offer plenty of interesting trails. A good mixture of strenuous slopes, dense forests, sandstone caves and great views. Especially in autumn when the trees are so colorful.&lt;/p&gt;
 &lt;p&gt;
       &lt;/p&gt;&lt;figure&gt;
@@ -232,15 +250,6 @@
     <id>/weeknotes/2021/11/</id>
     <content xml:lang="" type="html">&lt;p&gt;Wow, it&#39;s been a while. I basically skipped posting updates all summer long, whoops. Let me try to break down the most important events of the last months.&lt;/p&gt;
 &lt;h2&gt;Life&lt;/h2&gt;
-&lt;p&gt;
-      &lt;/p&gt;&lt;figure&gt;
-        
-      &lt;a href=&quot;/img/content/weeknotes/2021/hhfuiJ6Mfd-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
-        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2021/hhfuiJ6Mfd-352.avif 352w, /img/content/weeknotes/2021/hhfuiJ6Mfd-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2021/hhfuiJ6Mfd-352.webp 352w, /img/content/weeknotes/2021/hhfuiJ6Mfd-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2021/hhfuiJ6Mfd-352.jpeg 352w, /img/content/weeknotes/2021/hhfuiJ6Mfd-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;The married couple&quot; src=&quot;/img/content/weeknotes/2021/hhfuiJ6Mfd-352.jpeg&quot; width=&quot;705&quot; height=&quot;784&quot; /&gt;&lt;/picture&gt;
-      &lt;/a&gt;
-    
-        &lt;figcaption class=&quot;picture__caption&quot;&gt;The married couple&lt;/figcaption&gt;
-      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;I got married!! Again! Let me explain 😅&lt;/p&gt;
 &lt;p&gt;My wife and I got officially married last year but due to covid restrictions we were only able to celebrate with witnesses and family. The big event we had been planning for a hear and a half had to be moved to a year later. Which was this summer. The new regulations allowed us to have around 70 guests. 80% of them were fully vaccinated and even though we legally did not have to, we asked everyone to get tested on the day and it all went well 🎉&lt;/p&gt;
 &lt;p&gt;We celebrated at a farm in the heart of Brandenburg which allowed us to have most of the celebration outside. Luckily the weather also played its part ☀️. It was such an amazing day with a ceremony full of surprises, outdoor games, seeing friends we hadn&#39;t seen in over a year, sitting at the fire until the early morning and a great veggie dinner. Everything we could have dreamed of. 😊&lt;/p&gt;
@@ -278,15 +287,6 @@
     <updated>2021-05-23T00:00:00Z</updated>
     <id>/weeknotes/2021/10/</id>
     <content xml:lang="" type="html">&lt;h2&gt;Life&lt;/h2&gt;
-&lt;p&gt;
-      &lt;/p&gt;&lt;figure&gt;
-        
-      &lt;a href=&quot;/img/content/weeknotes/2021/F27W1NI787-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
-        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2021/F27W1NI787-352.avif 352w, /img/content/weeknotes/2021/F27W1NI787-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2021/F27W1NI787-352.webp 352w, /img/content/weeknotes/2021/F27W1NI787-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2021/F27W1NI787-352.jpeg 352w, /img/content/weeknotes/2021/F27W1NI787-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;Hanging out in the park&quot; src=&quot;/img/content/weeknotes/2021/F27W1NI787-352.jpeg&quot; width=&quot;705&quot; height=&quot;397&quot; /&gt;&lt;/picture&gt;
-      &lt;/a&gt;
-    
-        &lt;figcaption class=&quot;picture__caption&quot;&gt;Hanging out in the park&lt;/figcaption&gt;
-      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;It finally feels like the summer has arrived ☀️&lt;/p&gt;
 &lt;p&gt;I just came back from the park, where, as you can see above, I was literally hanging out with friends. Oh how have I missed those gatherings. There&#39;s a lot of catching up to do and lots of planning of more (corona-friendly) activities. The hottest topic are still the corona vaccinations, how to get appointments for those and discussing the latest episode of &lt;a href=&quot;https://www.ndr.de/nachrichten/info/podcast4684.html&quot;&gt;Coronavirus-Update&lt;/a&gt;. A German podcast featuring two leading virology professors.&lt;/p&gt;
 &lt;h2&gt;Blog&lt;/h2&gt;
@@ -321,15 +321,6 @@
     <updated>2021-05-16T00:00:00Z</updated>
     <id>/weeknotes/2021/09/</id>
     <content xml:lang="" type="html">&lt;h2&gt;Life&lt;/h2&gt;
-&lt;p&gt;
-      &lt;/p&gt;&lt;figure&gt;
-        
-      &lt;a href=&quot;/img/content/weeknotes/2021/6go16EFGsk-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
-        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2021/6go16EFGsk-352.avif 352w, /img/content/weeknotes/2021/6go16EFGsk-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2021/6go16EFGsk-352.webp 352w, /img/content/weeknotes/2021/6go16EFGsk-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2021/6go16EFGsk-352.jpeg 352w, /img/content/weeknotes/2021/6go16EFGsk-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;Volkspark Friedrichshain&quot; src=&quot;/img/content/weeknotes/2021/6go16EFGsk-352.jpeg&quot; width=&quot;705&quot; height=&quot;441&quot; /&gt;&lt;/picture&gt;
-      &lt;/a&gt;
-    
-        &lt;figcaption class=&quot;picture__caption&quot;&gt;Volkspark Friedrichshain&lt;/figcaption&gt;
-      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;Wahoo, I&#39;m back after a long break! As mentioned in the last update, I moved apartments. Apart from a couple lightbulbs, the new apartment was completely empty so it kept us pretty busy over the last two months. Let me tell you, planning and building a kitchen is a fun adventure on its own, let alone during a global pandemic 🙃. But now the kitchen is done, the rest of the flat is progressing nicely and it starts to feel like our new home already. Its proximity to one of my favorite parks in Berlin made it very easy to feel at home to be honest :)&lt;/p&gt;
 &lt;p&gt;The new flat is located really close to one of the Berlin vaccination centers. It gives us a first-row seat for observing the progress of the German vaccination campaign. We noticed that people that come to get their jab are getting younger and younger. It&#39;s reassuring to see this progress and I hope we will see better days in the not so distant future!&lt;/p&gt;
 &lt;p&gt;Speaking of vaccination: I got my first shot last week (AZ) 💉. As expected, it did knock me out for a day. It felt like a flu and it was gone as quickly as it came. I was surprised to find out that there is &lt;a href=&quot;https://www.pei.de/DE/newsroom/hp-meldungen/2020/201222-safevac-app-smartphone-befragung-vertraeglichkeit-covid-19-impfstoffe.html&quot;&gt;an app to track side effects of the vaccination&lt;/a&gt;. Germany usually is not known for being on the digital forefront for these services, so I was left somewhat impressed 🤓.&lt;/p&gt;
@@ -353,15 +344,6 @@
     <updated>2021-02-21T00:00:00Z</updated>
     <id>/weeknotes/2021/08/</id>
     <content xml:lang="" type="html">&lt;h2&gt;Life&lt;/h2&gt;
-&lt;p&gt;
-      &lt;/p&gt;&lt;figure&gt;
-        
-      &lt;a href=&quot;/img/content/weeknotes/2021/7xKyK3AJFf-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
-        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2021/7xKyK3AJFf-352.avif 352w, /img/content/weeknotes/2021/7xKyK3AJFf-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2021/7xKyK3AJFf-352.webp 352w, /img/content/weeknotes/2021/7xKyK3AJFf-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2021/7xKyK3AJFf-352.jpeg 352w, /img/content/weeknotes/2021/7xKyK3AJFf-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;cat in a moving box&quot; src=&quot;/img/content/weeknotes/2021/7xKyK3AJFf-352.jpeg&quot; width=&quot;705&quot; height=&quot;404&quot; /&gt;&lt;/picture&gt;
-      &lt;/a&gt;
-    
-        &lt;figcaption class=&quot;picture__caption&quot;&gt;cat in a moving box&lt;/figcaption&gt;
-      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;I&#39;m in the middle of a move, so my updates might not be as thourough or interesting in the next couple of weeks but I will keep up the habbit 😊.&lt;/p&gt;
 &lt;p&gt;We did get back into listening to audio books this week. Turns out that packing moving boxes is the perfect activity for audio books. We are still listening to &lt;a href=&quot;https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind&quot;&gt;Sapiens&lt;/a&gt;. It&#39;s a whooping 15h long 🤓&lt;/p&gt;
 &lt;h2&gt;Side projects&lt;/h2&gt;
@@ -383,6 +365,8 @@
     <updated>2021-02-14T00:00:00Z</updated>
     <id>/weeknotes/2021/07/</id>
     <content xml:lang="" type="html">&lt;h2&gt;Side Projects&lt;/h2&gt;
+&lt;h2&gt;Hiking&lt;/h2&gt;
+&lt;p&gt;We had lots of sun and snow this week which made for the perfect winter hiking weather 🥾. Though there are no impressive mountains in Berlin, there are quite some hilly forests. They&#39;re beatiful, even in the deepest winter. Life at work and with the move can be very hectic these days. I really need more of these &lt;a href=&quot;https://time.com/5259602/japanese-forest-bathing/&quot;&gt;forest bathing&lt;/a&gt; sessions!&lt;/p&gt;
 &lt;h3&gt;Somewhere&lt;/h3&gt;
 &lt;p&gt;
       &lt;/p&gt;&lt;figure&gt;
@@ -399,17 +383,6 @@
 &lt;h3&gt;Ping&lt;/h3&gt;
 &lt;p&gt;I used my newly acrued knowledge of Firebase Cloud Storage to build the MVP of the file upload. As per my new usual, I first sketched out the behaviour of the module in XState&#39;s visualizer and once I was content, I added the actual implementation. I love this workflow because the XState UI allows me to play around with the machine without writing any of the business logic. This flow feels super natrual to me by now. 🌅&lt;/p&gt;
 &lt;p&gt;I&#39;m happy with the upload and now &lt;a href=&quot;http://julianpanzer.com&quot;&gt;Julian&lt;/a&gt; and I are thinking of getting another developer on board. We want to ship an MVP as early as possible to a group of beta testers. I hope I can share more soon ☺️&lt;/p&gt;
-&lt;h2&gt;Hiking&lt;/h2&gt;
-&lt;p&gt;
-      &lt;/p&gt;&lt;figure&gt;
-        
-      &lt;a href=&quot;/img/content/weeknotes/2021/7TM321yFWl-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
-        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2021/7TM321yFWl-352.avif 352w, /img/content/weeknotes/2021/7TM321yFWl-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2021/7TM321yFWl-352.webp 352w, /img/content/weeknotes/2021/7TM321yFWl-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2021/7TM321yFWl-352.jpeg 352w, /img/content/weeknotes/2021/7TM321yFWl-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;Hiking in winterly Berlin&quot; src=&quot;/img/content/weeknotes/2021/7TM321yFWl-352.jpeg&quot; width=&quot;705&quot; height=&quot;352&quot; /&gt;&lt;/picture&gt;
-      &lt;/a&gt;
-    
-        &lt;figcaption class=&quot;picture__caption&quot;&gt;Hiking in winterly Berlin&lt;/figcaption&gt;
-      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;We had lots of sun and snow this week which made for the perfect winter hiking weather 🥾. Though there are no impressive mountains in Berlin, there are quite some hilly forests. They&#39;re beatiful, even in the deepest winter. Life at work and with the move can be very hectic these days. I really need more of these &lt;a href=&quot;https://time.com/5259602/japanese-forest-bathing/&quot;&gt;forest bathing&lt;/a&gt; sessions!&lt;/p&gt;
 &lt;h2&gt;Entertainment&lt;/h2&gt;
 &lt;p&gt;I finished reading &lt;a href=&quot;https://www.goodreads.com/book/show/23168809-the-end-of-all-things&quot;&gt;The end of all things&lt;/a&gt; by John Scalzi which was a great conclusion of the series. Now I&#39;m lacking ideas for a new sci-fi series to start 😅&lt;/p&gt;
 &lt;p&gt;I might continue with &lt;a href=&quot;https://www.goodreads.com/series/206992-space-team&quot;&gt;Space Team&lt;/a&gt; where I&#39;m midway-through and the author is 12 books in the series and promised to write more. So a steady source is guaranteed there. It&#39;s not so much hard sci-fi but more sci-fi in the same vein as Hitchhiker&#39;s guide to the galaxy. It&#39;s problematic to read at night because it does make me giggle out loud 😂&lt;/p&gt;
@@ -456,7 +429,7 @@
 &lt;h3&gt;Ping&lt;/h3&gt;
 &lt;p&gt;I made a lot of progress on the collaborative screen in Ping. The main achievement there was that I added a video call component (built with &lt;a href=&quot;https://www.twilio.com/docs/video&quot;&gt;Twilio Programmable Video&lt;/a&gt;) 🎥. This involved understanding the Twilio SDK for the client, which handles the room session and displays the video call, and the server, which creates rooms and grants users access to specific rooms.&lt;/p&gt;
 &lt;video controls=&quot;&quot; loop=&quot;&quot; alt=&quot;select camera flow&quot;&gt;
-  &lt;source src=&quot;./05-ping-select-camera.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;/assets/videos/05-ping-select-camera.mp4&quot; type=&quot;video/mp4&quot; /&gt;
 &lt;/video&gt;
 &lt;p&gt;I learned about the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/enumerateDevices&quot;&gt;enumerateDevices API&lt;/a&gt; and how media devices are represented. This allowed me to build the flow above that selects preferred devices. The video loops and will not show the screen that comes after clicking the &lt;code&gt;Join&lt;/code&gt; button. That screen I will keep secret for now 😄.&lt;/p&gt;
 &lt;p&gt;One problem I was struggling with was how Twilio is handling presence in video calls. When a participant closes the tab, no event is fired for other participants that indicates that the person has left the call. I&#39;m used to working with WebSockets and it&#39;s pretty straight-forward to determine when a socket disconnects there. It might be a whole different beast in WebRTC-land.&lt;/p&gt;
@@ -488,7 +461,7 @@
 &lt;h3&gt;Somewhere&lt;/h3&gt;
 &lt;p&gt;I managed to finish the animations for the loading screen which also act as onboarding. You can check them out in the video below. It&#39;s always great to see how powerful a couple of simple CSS animations and transitions can be. I&#39;m very pleased with the result. 🤩&lt;/p&gt;
 &lt;video controls=&quot;&quot; loop=&quot;&quot; alt=&quot;Somewhere loading animation&quot;&gt;
-  &lt;source src=&quot;./04-somewhere-animation.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;/assets/videos/04-somewhere-animation.mp4&quot; type=&quot;video/mp4&quot; /&gt;
 &lt;/video&gt;
 &lt;h3&gt;Ping&lt;/h3&gt;
 &lt;p&gt;I spent only an hour or two on ping this week. I made the sign up screen component more generic to also support sign in. Next step in the proof of concept is to build a basic version of the screen that will let users collaborate.&lt;/p&gt;

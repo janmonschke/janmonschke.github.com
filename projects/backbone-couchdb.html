@@ -418,6 +418,10 @@ blockquote {
   border-color: #007acc;
   border-width: 0.3em;
 }
+
+video {
+  width: 100%;
+}
 .picture {
   max-width: 100%;
   width: 100%;
@@ -439,7 +443,7 @@ blockquote {
         <div class="Layout__titleContainer m-small">
   <div class="h-card">
     <a href="/" class="Layout__homeLink u-url">
-      <picture><source type="image/avif" srcset="/img/hQbkMv3lT7-90.avif 90w, /img/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/hQbkMv3lT7-90.webp 90w, /img/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/hQbkMv3lT7-90.jpeg 90w, /img/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
       
       <h3 class="Layout__title p-name">Jan Monschke</h3>
     </a>
@@ -463,6 +467,7 @@ blockquote {
     <h1 class="blogPost__title">backbone-couchdb - Give your Couchapp some Backbone!</h1>
     <span class="blogPost__date"></span>
   </header>
+  
   <section class="blogPost__content"><h2>Description</h2>
 <p><a href="https://github.com/janmonschke/backbone-couchdb">backbone-couchdb</a> is a plugin for Backbone.js that takes care of synching (Backbone-) Models and Collections automatically with a CouchDB instance. It makes heavy use of CouchDBs built-in Couchapp functionality. Normally it would be necessary to set up a webserver and a webapp (Rails, Sinatra, Django...) in order to persist Models. But with this plugin it is only needed to host Backbone Apps as Couchapp and the persistence layer is ready out of the box.</p>
 <p>Since the App runs as a Couchapp, it is also capable of using the CouchDB _changes-feed which enables the App to receive real-time updates for Collections and Models. If this functionality is not needed it can be turned off easily.</p>
@@ -607,7 +612,7 @@ You simply have to add this line as the first line of your initialize function:<
   <hr>
   
   <bio showimage="true"><aside class="bio">
-  <picture><source type="image/avif" srcset="/img/hQbkMv3lT7-80.avif 80w, /img/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/hQbkMv3lT7-80.webp 80w, /img/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/hQbkMv3lT7-80.jpeg 80w, /img/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
   <span>
     Hi, I'm Jan 👋 I am a software engineer working for
     <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>

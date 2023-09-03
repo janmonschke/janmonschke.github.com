@@ -225,6 +225,10 @@ blockquote {
   border-color: #007acc;
   border-width: 0.3em;
 }
+
+video {
+  width: 100%;
+}
 .picture {
   max-width: 100%;
   width: 100%;
@@ -246,7 +250,7 @@ blockquote {
         <div class="Layout__titleContainer m-small">
   <div class="h-card">
     <a href="/" class="Layout__homeLink u-url">
-      <picture><source type="image/avif" srcset="/img/hQbkMv3lT7-90.avif 90w, /img/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/hQbkMv3lT7-90.webp 90w, /img/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/hQbkMv3lT7-90.jpeg 90w, /img/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
       
       <h3 class="Layout__title p-name">Jan Monschke</h3>
     </a>
@@ -266,7 +270,7 @@ blockquote {
 
       </header>
       <main>
-<all-posts-list title="All weeknotes" rssurl="/weeknotes.xml" posts="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" sub="function sub(post) {
+<all-posts-list title="All weeknotes" rssurl="/weeknotes.xml" posts="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" sub="function sub(post) {
     return post.data.keywords.map((keyword) => `#${keyword}`).join(&quot; · &quot;);
   }"><header class="allPostsList__header">
   <h2>All weeknotes</h2>
@@ -277,6 +281,12 @@ blockquote {
 <main>
   <ul class="allPostsList__list">
     <li>
+      <h3 class="allPostsList__postTitle">
+        <a href="/weeknotes/2022/05/">Weeknotes 05/2022</a>
+      </h3>
+      <small>#baby · #react finland · #pub quiz · #remixjs</small>
+    </li>
+<li>
       <h3 class="allPostsList__postTitle">
         <a href="/weeknotes/2022/04/">Weeknotes 04/2022</a>
       </h3>
