@@ -95,7 +95,9 @@ const imageOptions = {
   formats: ["avif", "webp", "jpeg", "svg"],
   svgShortCircuit: true,
 
-  urlPath: "/img",
+  urlPath: "/img/content",
+
+  outputDir: path.join("_site", "img", "content"),
 
   defaultAttributes: {
     loading: "lazy",
