@@ -1,0 +1,714 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Web Audio Hackday 2014 | Jan Monschke</title>
+
+    <meta httpequiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jan Monschke - Developer Blog">
+    <meta property="article:author" content="Jan Monschke">
+    
+    
+    <meta name="description" content="The portfolio and blog of Jan Monschke">
+    <meta property="og:description" content="The portfolio and blog of Jan Monschke">
+    <meta property="article:published_time" content="Fri Oct 03 2014 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    
+    
+    <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
+
+    <link rel="me" href="https://social.lol/@janmon">
+    <link rel="me" href="https://github.com/janmonschke">
+
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Weeknotes" href="/weeknotes.xml">
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Blog posts" href="/rss.xml">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <style>.likes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .likes li {
+    margin-bottom: 0;
+  }
+
+  .like {
+    margin-right: 0.5em;
+  }
+
+  .like__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-bottom: 0.1em;
+    transition: scale linear 0.1s;
+  }
+
+  .like__image:hover {
+    scale: 1.33;
+  }
+.bio {
+    display: flex;
+    align-items: center;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
+
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
+
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .blogPost__nacvigationTitle {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+  }
+
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
+  }
+
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+.Layout__titleContainer,
+  .Layout__homeLink {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Layout__titleProfile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  .m-small .Layout__titleProfile {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+  }
+
+  .Layout__title {
+    margin-top: 14px;
+  }
+
+  .Layout__title,
+  .Layout__menuLink {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Layout__titleContainer:not(.m-small) .Layout__title {
+    font-size: 1.7411rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .m-small .Layout__title {
+    margin-top: 0px;
+  }
+
+  .Layout__menuLink {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .Layout__menuLink:hover,
+  .Layout__menuLink:active {
+    text-decoration: underline;
+  }
+
+  .Layout__menuContainer {
+    margin-left: auto;
+  }
+
+  .Layout__menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+
+  .Layout__menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  @media (max-width: 400px) {
+    .m-small .Layout__titleProfile {
+      width: 50px;
+      margin-right: 0.4em;
+    }
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.8em;
+    }
+    .Layout__menuContainer {
+      display: none;
+    }
+  }
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Source Sans Pro',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Source Sans Pro',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:0;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:1.8rem;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.59);border-left:0.6rem solid;border-color:#fcea0e;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li &gt; ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li &gt; ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li &gt; p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#007acc;text-decoration:none;}a:hover,a:active{color:hsla(0,0%,0%,0.8);}h1,h2,h3,h4,h5,h6{margin-top:3.2rem;}blockquote &gt; :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.6rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.2rem;margin-right:0;border-left:0.3rem solid;border-color:#fcea0e;padding-left:0.9rem;}}h2,h3,h4{margin-bottom:0.8rem;margin-top:0.8rem;}
+/* source-sans-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-sans-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-sans-pro-latin-400-normal.woff") format("woff");
+  }
+  /* source-serif-pro-latin-ext-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* source-serif-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 41.6rem;
+  padding: 2.4rem 1.2rem;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.96rem;
+  margin-top: 0.96rem;
+  width: 75%;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Custom overrides */
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f03d;
+  margin: 1.2em 0;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: #f1f2f4;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}
+
+video {
+  width: 100%;
+}
+.picture {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  color: #000;
+}
+
+.picture__caption {
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+}</style>
+  </head>
+
+  <body>
+    <div class="base">
+      <header>
+        <div class="Layout__titleContainer m-small">
+  <div class="h-card">
+    <a href="/" class="Layout__homeLink u-url">
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
+    </a>
+  </div>
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+      </header>
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Web Audio Hackday 2014</h1>
+    <span class="blogPost__date">October 03, 2014</span>
+  </header>
+  
+  <section class="blogPost__content"><p>Earlier this year <a href="https://twitter.com/janl">Jan Lehnardt</a>, <a href="https://twitter.com/rinpaku">Rin</a>, <a href="https://twitter.com/rmehner">Robin</a>, <a href="https://twitter.com/theophani">Tiffany</a> and me started to talk about making something special for the upcoming <a href="http://JSConf.eu">JSConf.eu</a> (2014). Our idea was to organize a JSFest in Berlin around the three big conferences in September (Reject.JS, <a href="http://CSSConf.eu">CSSConf.eu</a> and <a href="http://JSConf.eu">JSConf.eu</a>) which would host a range of web-related Meetups and Events.</p>
+<p>For more than two years I have been obsessed with writing things with the Web Audio API which is becoming more and more stable and is supported by more and more browsers. I wanted to share my enthusiasm for this API by creating a Web Audio Hackathon during JSFest. Since I never organised an event before, Tiffany, who is familiar with all the processes that are needed to create big events like <a href="http://JSConf.eu">JSConf.eu</a>, joined the organiser team and we started planning very soon.</p>
+<p>The event took place at the SoundCloud HQ in Berlin in the wonderful classroom :)</p>
+<p><a href="everybodyworking3.jpg">
+      <figure>
+        
+      <a href="/img/content/2014-10-03-web-audio-hackday/szEK3W88Or-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2014-10-03-web-audio-hackday/szEK3W88Or-352.avif 352w, /img/content/2014-10-03-web-audio-hackday/szEK3W88Or-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2014-10-03-web-audio-hackday/szEK3W88Or-352.webp 352w, /img/content/2014-10-03-web-audio-hackday/szEK3W88Or-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2014-10-03-web-audio-hackday/szEK3W88Or-352.jpeg 352w, /img/content/2014-10-03-web-audio-hackday/szEK3W88Or-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="The SoundCloud classroom" src="/img/content/2014-10-03-web-audio-hackday/szEK3W88Or-352.jpeg" width="705" height="184"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">The SoundCloud classroom</figcaption>
+      </figure></a></p>
+<p>We were able to have three amazing speakers from Mozilla and Google which introduced attendees to the Web Audio API and the Web Midi API. To be honest, I was <a href="https://twitter.com/thedeftone/status/498877909525090304">pretty</a> <a href="https://twitter.com/thedeftone/status/497779074585329664">stoked</a> to have the three of them talking at the event because they have always been my Web Audio Heroes &lt;3</p>
+<p><a href="https://twitter.com/supersole">Soledad Penadés</a> gave a very insightful introduction to the Web Audio API that was suited for both beginners and more advanced users. Since most of the 30 attendees were novice users this was perfect. I especially liked her very creative way of explaining the core features of the Web Audio API as <a href="http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/#38">Super Powers</a> and her description and demonstration of LFOs as <a href="http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/#54">spooky sounds</a> :) The slides can be found <a href="http://soledadpenades.com/files/t/berlin-webaudio-hackday-2014/">here</a> and a recording of her talk from a Mozilla event can be found <a href="https://air.mozilla.org/introduction-to-web-audio/">here</a>.</p>
+<p><a href="soletalking.jpg">
+      <figure>
+        
+      <a href="/img/content/2014-10-03-web-audio-hackday/NJArtNlLrg-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2014-10-03-web-audio-hackday/NJArtNlLrg-352.avif 352w, /img/content/2014-10-03-web-audio-hackday/NJArtNlLrg-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2014-10-03-web-audio-hackday/NJArtNlLrg-352.webp 352w, /img/content/2014-10-03-web-audio-hackday/NJArtNlLrg-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2014-10-03-web-audio-hackday/NJArtNlLrg-352.jpeg 352w, /img/content/2014-10-03-web-audio-hackday/NJArtNlLrg-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Soledad giving an introduction to Web Audio" src="/img/content/2014-10-03-web-audio-hackday/NJArtNlLrg-352.jpeg" width="705" height="528"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Soledad giving an introduction to Web Audio</figcaption>
+      </figure></a></p>
+<p>Then, <a href="https://twitter.com/jsantell">Jordan Santell</a> introduced us to the Web Audio debugging tools that he wrote for Firefox. I can still remember my first steps with the Web Audio API. My computer was making all these weird noises and my typical <code>debugger-driven</code> development work flow didn't work because audio is processed in its own thread and won't stop for debuggers. His tools would've made debugging much much easier! <a href="http://jsantell.github.io/web-audio-tools-presentation/">Slides</a></p>
+<p><a href="jordantalking.jpg">
+      <figure>
+        
+      <a href="/img/content/2014-10-03-web-audio-hackday/bo2FXrg7Pc-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2014-10-03-web-audio-hackday/bo2FXrg7Pc-352.avif 352w, /img/content/2014-10-03-web-audio-hackday/bo2FXrg7Pc-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2014-10-03-web-audio-hackday/bo2FXrg7Pc-352.webp 352w, /img/content/2014-10-03-web-audio-hackday/bo2FXrg7Pc-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2014-10-03-web-audio-hackday/bo2FXrg7Pc-352.jpeg 352w, /img/content/2014-10-03-web-audio-hackday/bo2FXrg7Pc-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Jordan talking about Web Audio debugging" src="/img/content/2014-10-03-web-audio-hackday/bo2FXrg7Pc-352.jpeg" width="705" height="528"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Jordan talking about Web Audio debugging</figcaption>
+      </figure></a></p>
+<p><a href="https://twitter.com/cwilso">Chris Wilson</a> did the last talk and he introduced us to the Web Midi API. It took some time to set this talk up because he took a ton of devices to showcase the capabilities of the API (as you can see on the picture underneath). It was like as if he was the secret 4th member of <a href="https://soundcloud.com/theglitchmob">The Glitch Mob</a>! His <a href="http://webaudiodemos.appspot.com/slides/webmidi.html">Slides</a> are full of demos and are perfectly suitable if you want to get started with Midi on the web right away :)</p>
+<p><a href="christalking.jpg">
+      <figure>
+        
+      <a href="/img/content/2014-10-03-web-audio-hackday/_MadUzH-XX-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2014-10-03-web-audio-hackday/_MadUzH-XX-352.avif 352w, /img/content/2014-10-03-web-audio-hackday/_MadUzH-XX-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2014-10-03-web-audio-hackday/_MadUzH-XX-352.webp 352w, /img/content/2014-10-03-web-audio-hackday/_MadUzH-XX-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2014-10-03-web-audio-hackday/_MadUzH-XX-352.jpeg 352w, /img/content/2014-10-03-web-audio-hackday/_MadUzH-XX-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Chris talking about Web Midi" src="/img/content/2014-10-03-web-audio-hackday/_MadUzH-XX-352.jpeg" width="705" height="528"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Chris talking about Web Midi</figcaption>
+      </figure></a></p>
+<p>After all the talks we had time for a little lunch altogether before we started the hack sessions. In addition to providing the location and drinks, SoundCloud sponsored tasty and healthy lunch snacks for all of us :)</p>
+<p>Some groups formed during lunch and people started hacking right away. People were really focused and it was the perfect working atmosphere in the room. Sometimes there were weird noises coming from several computers when the attendees were trying out oscillators and audio parameters :) I did not really have time to work on a project on my own because I was still preparing my <a href="http://janmonschke.com/JSConf2014/">slides</a> for <a href="http://2014.jsconf.eu/speakers/#/speakers/jan-monschke-using-the-web-for-music-production-and-for-live-performances">JSConf.eu</a>. In addition to the speakers, we also had coaches (<a href="https://github.com/chrisguttandin">Chris</a>, <a href="https://twitter.com/woodworker">Martin</a> and <a href="https://twitter.com/halfbyte">Jan</a>) helping the attendees with their projects. My favourite moment was when Chris Wilson was explaining details about audio, in the old fashioned way on a white board and people were gathering around him, listening closely:</p>
+<p><a href="chriswilsonexplainingthings.jpg">
+      <figure>
+        
+      <a href="/img/content/2014-10-03-web-audio-hackday/A31DBM5a2w-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2014-10-03-web-audio-hackday/A31DBM5a2w-352.avif 352w, /img/content/2014-10-03-web-audio-hackday/A31DBM5a2w-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2014-10-03-web-audio-hackday/A31DBM5a2w-352.webp 352w, /img/content/2014-10-03-web-audio-hackday/A31DBM5a2w-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2014-10-03-web-audio-hackday/A31DBM5a2w-352.jpeg 352w, /img/content/2014-10-03-web-audio-hackday/A31DBM5a2w-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Chris explaining audio" src="/img/content/2014-10-03-web-audio-hackday/A31DBM5a2w-352.jpeg" width="705" height="528"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Chris explaining audio</figcaption>
+      </figure></a></p>
+<p><a href="everybodyworking2.jpg">
+      <figure>
+        
+      <a href="/img/content/2014-10-03-web-audio-hackday/QyabPTuKFY-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2014-10-03-web-audio-hackday/QyabPTuKFY-352.avif 352w, /img/content/2014-10-03-web-audio-hackday/QyabPTuKFY-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2014-10-03-web-audio-hackday/QyabPTuKFY-352.webp 352w, /img/content/2014-10-03-web-audio-hackday/QyabPTuKFY-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2014-10-03-web-audio-hackday/QyabPTuKFY-352.jpeg 352w, /img/content/2014-10-03-web-audio-hackday/QyabPTuKFY-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Attendees working" src="/img/content/2014-10-03-web-audio-hackday/QyabPTuKFY-352.jpeg" width="705" height="705"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Attendees working</figcaption>
+      </figure></a></p>
+<p>After several hours of hacking it was time for the presentations! We had eight groups presenting their projects and here's the recording:</p>
+<iframe class="video-embed" width="560" height="315" src="//www.youtube.com/embed/atJgvEBn6qg" frameborder="0" allowfullscreen loading="lazy" title="Video of the hackday demos"></iframe>
+<p>Here's a list of all the projects that were presented if you don't have the time to watch the entire video. If you are an attendee and you want your project link on here, please contact me on <a href="https://twitter.com/thedeftone">Twitter</a>.</p>
+<ol>
+<li>Jelle Akkerman (<a href="https://github.com/jellea">github</a>, <a href="https://twitter.com/jellea">twitter</a>) – NoOsc was an experiment using NoFlo, trying to build something very visual and cool, super suitable for live-acts.</li>
+<li>Guillaume Marty (<a href="https://github.com/gmarty">github</a>, <a href="https://twitter.com/g_marty">twitter</a>) – a BPM detection algorithm, using the OfflineAudioContext</li>
+<li>Erik Woitschig (<a href="https://twitter.com/iam_bnz">twitter</a>) – Using SoundCloud as sample database</li>
+<li>Daniel Roth, Jonathan Lundin (<a href="https://twitter.com/mr_lundis">twitter</a>, <a href="https://github.com/mrlundis">github</a>), Felix Niklas (<a href="https://twitter.com/mrflix">twitter</a>, <a href="https://github.com/mrflix">github</a>) – Oscillator reacting to mobile phone gyroscope.</li>
+<li>Chris Greeff (<a href="https://twitter.com/greevz">twitter</a>, <a href="https://github.com/chrisgreeff">github</a>), Nick Lockhart (<a href="https://twitter.com/nickolockhart">twitter</a>, <a href="https://github.com/N1ck">github</a>) – Beaty Bird, a Flappy Bird clone that can is controlled by various audio inputs. Super Fun! – <a href="https://github.com/N1ck/beaty-bird">source code</a> <strong>(Second prize)</strong></li>
+<li>Lisa Passing (<a href="https://github.com/lislis">github</a>, <a href="https://twitter.com/lisapassing">twitter</a>) – One Hand Soundgame – <a href="https://github.com/lislis/onehandsoundgame">source code</a> <strong>(Third prize)</strong></li>
+<li>Thomas Fett (<a href="https://twitter.com/FettThomas">twitter</a>, <a href="https://github.com/ThomasFett">github</a>) – Remix at once – <a href="https://github.com/kollektivpp/remix-at-once">source code</a> <strong>(Fourth prize)</strong></li>
+<li>Evan Sonderegger (<a href="https://twitter.com/esonderegger">twitter</a>, <a href="https://github.com/esonderegger">github</a>) – Vector Scope in Web Audio API – <a href="http://webaudiometers.rpy.xyz/#">demo page</a> <strong>(First prize)</strong></li>
+</ol>
+<p>We had three hardware prizes that were sponsored by Mozilla (<a href="http://www.amazon.de/gp/product/B002M8GBDI/ref=oh_aui_detailpage_o02_s00?ie=UTF8&amp;psc=1">Akai LPK25</a>, <a href="http://www.amazon.de/gp/product/B002M8EEW8/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;psc=1">Akai LPD8</a>, <a href="http://www.amazon.de/gp/product/B004M8YPKM/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;psc=1">KORG nanoPAD2</a>) and a special software price, a license for <a href="https://www.bitwig.com/en/bitwig-studio/overview.html">Bitwig Studio</a> which was sponsored by Bitwig :)</p>
+<p>Before we announced the winners, the attendees had the chance to get their hands on the amazing dinner that was provided by Google (while Martin and me were counting votes, almost starving ;)). Afterwards we still stayed in the classroom, having some drinks, talking about audio and web development. I was very excited to see another one of my Web Audio heroes popping by for the presentations: <a href="https://twitter.com/stuartmemo">Stuart Memo</a> &lt;3</p>
+<h3>Post Scriptum</h3>
+<ul>
+<li>Judging from the feedback from attendees, coaches and speakers it was an event that is definitely worth to be repeated in the near future :)</li>
+<li>One day after the Hackday in Berlin, there was the Web Music Hackday in Tokyo. We exchanged ideas when we were preparing the event and it looks like their event was a huge success and much bigger than the one in Berlin. You can see all demos and read about it in <a href="http://blog.agektmr.com/2014/09/event-report-web-music-hackathon-3.html">Eiji Kitamura's blog post</a>.</li>
+<li>I'm looking very much forward to the very first dedicated <a href="http://wac.ircam.fr/">Web Audio conference in January in Paris</a>. If you're a web audio developer or interested in the API, you should definitely join.</li>
+<li>Soledad wrote a very good blog post about the event on <a href="http://soledadpenades.com/2014/09/26/berlin-web-audio-hack-day-2014/">her blog as well</a>.</li>
+<li>We semi-announced an &quot;official&quot; Web Audio (community) logo made by <a href="https://twitter.com/woodworker">Martin</a>: <img src="https://prolope.de/svg/webaudio-js.svg" alt="web audio logo"></li>
+</ul>
+</section>
+</article>
+<aside>
+  <div>
+    <h3>Likes</h3>
+    <likes likes="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"><ul class="likes">
+  <li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/JnsWndlmth" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/0081a31272c19d3311b4c0e1d14c26d49ead08175246a8110c3a14b60abdaa0e.png" alt="Jns Wndlmth" title="Jns Wndlmth" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/ntt" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/04e8a5d1f9b463458c163228a9a7e016d28a080e45417e1437324a1f14041067.jpg" alt="Chinmay" title="Chinmay" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/moszeed" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/2ee5f401b7fb7e9d81369c8afdc61b263cec7ca1e26fe989cc1f338d16f17271.jpg" alt="Moszeed" title="Moszeed" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/glenmaddern" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/935e90e40fbd7036ff762b1d42d80747e647fcdd186457c77cdd5b14ebe4f438.png" alt="Glen Maddern 😎" title="Glen Maddern 😎" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/litenjacob" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/757964d6e2df9827c8caf61ef495fc59999011c243ac44fb07921653ac87c840.jpg" alt="litenjacob" title="litenjacob" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/p01" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/1fd7c69ac297242b5bcfaf00f038b0bb6dbcfeb8a0ef0837db7a0f94a34614ac.jpg" alt="Mathieu 'p01' Henri @p01@mastodon.social" title="Mathieu 'p01' Henri @p01@mastodon.social" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/gena01" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/1c65ccfc22036050849317ac46577d05f02765a8f2016096f46fcdf89b9fe66a.jpg" alt="Gennady Feldman" title="Gennady Feldman" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/bonsaielectric" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/fe62538c4102680a13296557d810200e9fab4e8141252d98bcb44414d2a3d25a.jpg" alt="Peter Kadlot" title="Peter Kadlot" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/l0rentus" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/5bdd48ad09b44074399796684c029792208ae90b275baf2496b677e717026452.jpg" alt="l0l0" title="l0l0" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/bendi007" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/038b61c19a6a6160747c8a6d3a38e8d908383d7a5b0d4d2462498670c53878e3.png" alt="Marek Będkowski" title="Marek Będkowski" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/RossBencina" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/d3eed2a5fc04deaff837ea652e43f36df10198d57b504e8cf4fc79e2b8b9adf1.png" alt="Ross Bencina" title="Ross Bencina" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/jsantell" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/97f3b1602290742d6efad7bc117f3a1dc206d67a1f84de8046a06d0bf386f546.jpg" alt="jordan santell" title="jordan santell" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/jiggy_pete" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/56d4f3519d6122dec7d655925935f6029ed7dd1009ffc619292d0e3cff4cf454.jpg" alt="Peter Aitken" title="Peter Aitken" loading="lazy" class="like__image">
+    </a>
+  </li>
+</ul>
+
+</likes>
+  </div>
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  <p>🍅 It took 6 pomodoros to write this post 🍅</p>
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <span>
+    Hi, I'm Jan 👋 I am a software engineer working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
+    in Berlin. You can find me on
+    <a rel="noopener noreferrer" target="_blank" href="https://social.lol/@janmon">
+      🐘 Mastodon
+    </a>
+    ,
+    <a rel="noopener noreferrer" target="_blank" href="https://github.com/janmonschke">
+      💻 GitHub
+    </a>
+    and
+    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jan-monschke-aa6a249a/">
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
+
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      <li>
+        <a href="/blog/2015/01/14/simulations-in-javascript.html" rel="prev">← <span>Simulations in JavaScript</span></a>
+      </li>
+      <li>
+        <a href="/blog/2013/01/06/Javascript-in-university.html" rel="next"><span>JavaScript in University</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+</main>
+    </div>
+    <style></style>
+    <script></script>
+    <script type="module"></script>
+    <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

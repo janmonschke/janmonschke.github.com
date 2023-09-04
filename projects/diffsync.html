@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>diffsync - real-time collaborative editing using the differntial synchronization algorithm | Jan Monschke</title>
+
+    <meta httpequiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jan Monschke - Developer Blog">
+    <meta property="article:author" content="Jan Monschke">
+    
+    
+    <meta name="description" content="The portfolio and blog of Jan Monschke">
+    <meta property="og:description" content="The portfolio and blog of Jan Monschke">
+    
+    
+    
+    <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
+
+    <link rel="me" href="https://social.lol/@janmon">
+    <link rel="me" href="https://github.com/janmonschke">
+
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Weeknotes" href="/weeknotes.xml">
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Blog posts" href="/rss.xml">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <style>.bio {
+    display: flex;
+    align-items: center;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
+
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
+
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .blogPost__nacvigationTitle {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+  }
+
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
+  }
+
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+.Layout__titleContainer,
+  .Layout__homeLink {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Layout__titleProfile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  .m-small .Layout__titleProfile {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+  }
+
+  .Layout__title {
+    margin-top: 14px;
+  }
+
+  .Layout__title,
+  .Layout__menuLink {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Layout__titleContainer:not(.m-small) .Layout__title {
+    font-size: 1.7411rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .m-small .Layout__title {
+    margin-top: 0px;
+  }
+
+  .Layout__menuLink {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .Layout__menuLink:hover,
+  .Layout__menuLink:active {
+    text-decoration: underline;
+  }
+
+  .Layout__menuContainer {
+    margin-left: auto;
+  }
+
+  .Layout__menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+
+  .Layout__menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  @media (max-width: 400px) {
+    .m-small .Layout__titleProfile {
+      width: 50px;
+      margin-right: 0.4em;
+    }
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.8em;
+    }
+    .Layout__menuContainer {
+      display: none;
+    }
+  }
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Source Sans Pro',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Source Sans Pro',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:0;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:1.8rem;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.59);border-left:0.6rem solid;border-color:#fcea0e;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li &gt; ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li &gt; ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li &gt; p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#007acc;text-decoration:none;}a:hover,a:active{color:hsla(0,0%,0%,0.8);}h1,h2,h3,h4,h5,h6{margin-top:3.2rem;}blockquote &gt; :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.6rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.2rem;margin-right:0;border-left:0.3rem solid;border-color:#fcea0e;padding-left:0.9rem;}}h2,h3,h4{margin-bottom:0.8rem;margin-top:0.8rem;}
+/* source-sans-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-sans-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-sans-pro-latin-400-normal.woff") format("woff");
+  }
+  /* source-serif-pro-latin-ext-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* source-serif-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 41.6rem;
+  padding: 2.4rem 1.2rem;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.96rem;
+  margin-top: 0.96rem;
+  width: 75%;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Custom overrides */
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f03d;
+  margin: 1.2em 0;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: #f1f2f4;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}
+
+video {
+  width: 100%;
+}
+.picture {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  color: #000;
+}
+
+.picture__caption {
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+}</style>
+  </head>
+
+  <body>
+    <div class="base">
+      <header>
+        <div class="Layout__titleContainer m-small">
+  <div class="h-card">
+    <a href="/" class="Layout__homeLink u-url">
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
+    </a>
+  </div>
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+      </header>
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">diffsync - real-time collaborative editing using the differntial synchronization algorithm</h1>
+    <span class="blogPost__date"></span>
+  </header>
+  
+  <section class="blogPost__content"><h2>Table of contents</h2>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#how-does-it-work">How does it work?</a></li>
+<li><a href="#usage">Usage</a>
+<ul>
+<li><a href="#client">Client</a></li>
+<li><a href="#server">Server</a></li>
+<li><a href="#dataadapter">DataAdapter</a></li>
+</ul>
+</li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#algorithm">Algorithm</a></li>
+<li><a href="#socketio-independence">Socket.io independence</a></li>
+</ul>
+<p>Enables real-time collaborative editing of arbitrary JSON objects using the differential synchronization algorithm</p>
+<h2>Installation <a name="installation"></a></h2>
+<p>diffsync is available via NPM for server and client (browserify &amp; webpack):</p>
+<p><code>npm install diffsync</code></p>
+<p>If you are neither using browserify nor webpack for your client side code, you can get the latest version here:</p>
+<p><a href="https://wzrd.in/standalone/diffsync">https://wzrd.in/standalone/diffsync</a></p>
+<p>For specific versions of the standalone version, simply add them to the URL like this:</p>
+<p><a href="https://wzrd.in/standalone/diffsync@1.0.2">https://wzrd.in/standalone/diffsync@1.0.2</a></p>
+<h2>Demo <a name="demo"></a></h2>
+<p><a href="https://diffsync-todos.herokuapp.com">DiffSync-Todos</a>: An example implementation of a collaborative todo list hosted on heroku. (Source code: <a href="https://github.com/janmonschke/diffsync-todos">https://github.com/janmonschke/diffsync-todos</a>) Try it out with a couple of browser windows open for the same list :)</p>
+<h2>How does it work? <a name="how-does-it-work"></a></h2>
+<ul>
+<li>The client fetches the initial state of the data and enters a sync-room via WebSockets</li>
+<li>Every change of this state is synced via the <code>sync</code> method</li>
+<li>Clients receive events about changes from the server which are automatically applied to a shared object (in-place)</li>
+<li>The server takes care of syncing the state of all connected clients</li>
+<li>It uses a simple DataAdapter interface to fetch and store data with any kind of database</li>
+<li>Client and Server are syncing with the <a href="#algorithm">Differential Synchronization</a> algorithm</li>
+</ul>
+<h2>Usage <a name="usage"></a></h2>
+<p>diffsync consists of a client and a server component which both implement their side of the <a href="#algorithm">Differential Synchronization Algorithm</a>. These two components communicate via a custom protocol that was built on top of <a href="http://socket.io">socket.io</a>. However, <a href="http://socket.io">socket.io</a> is no hard dependency and it can be replaced by whatever communication library you wish, as long as it implements the <a href="http://socket.io">socket.io</a> interface.</p>
+<p>The following paragraphs will show you how to get started. If you want to jump right into the code of a full example, head to <a href="https://github.com/janmonschke/diffsync-todos">diffsync-todos</a>.</p>
+<h3>Client <a name="client"></a></h3>
+<pre class="language-js"><code class="language-js"><span class="token comment">// if installed from standalone script or browserify / webpack</span>
+<span class="token keyword">var</span> DiffSyncClient <span class="token operator">=</span> diffsync<span class="token punctuation">.</span>Client <span class="token operator">||</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"diffsync"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>Client<span class="token punctuation">;</span>
+
+<span class="token comment">// socket.io standalone or browserify / webpack</span>
+<span class="token keyword">var</span> socket <span class="token operator">=</span> window<span class="token punctuation">.</span>io <span class="token operator">||</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"socket.io-client"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// pass the connection and the id of the data you want to synchronize</span>
+<span class="token keyword">var</span> client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DiffSyncClient</span><span class="token punctuation">(</span><span class="token function">socket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> data<span class="token punctuation">;</span>
+
+client<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"connected"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// the initial data has been loaded,</span>
+  <span class="token comment">// you can initialize your application</span>
+  data <span class="token operator">=</span> client<span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+client<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"synced"</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// an update from the server has been applied</span>
+  <span class="token comment">// you can perform the updates in your application now</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+client<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">_ --- somewhere in your code --- _</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+
+data<span class="token punctuation">.</span>randomChange <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// schedule a sync cycle - this will sync your changes to the server</span>
+client<span class="token punctuation">.</span><span class="token function">sync</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>The client is initialized by passing an instance of a <a href="http://socket.io">socket.io</a> connection (or a socket.io-compatible client) and the id of the object that should be synchronized with the server and other clients. The <code>initialize</code> method starts the synchronization.</p>
+<p>The client object notifies the application about the sync-state via a couple of events:</p>
+<ul>
+<li><code>connected</code>: The client is connected to the server and the initial data has been loaded.</li>
+<li><code>synced</code>: A new version from the server has been applied to the local data, you can update views now</li>
+<li><code>error</code>: There was an error during synchronization.</li>
+</ul>
+<p>The data object that is being synced, can be accessed via the clients <code>getData</code> method. It can't be accessed before the <code>connected</code> event has been fired.</p>
+<p>It is important that your application is altering the exact same object that is returned by <code>getData</code> because the algorithm synchronizes based on changesets of this object. Every update from the server is also applied to this very object and is notified by the <code>synced</code> event.</p>
+<p>When your application has changed the state of this object, the <code>sync</code> method of the client needs to be called to trigger a sync with the server and other connected clients. Since the algorithm is based on sending diffs around, it is perfectly okay to call the <code>sync</code> method after every update on the data.</p>
+<p>The <a href="https://github.com/janmonschke/diffsync-todos">diffsync-todos app</a> provides an example client-side integration of diffsync into a todo list application. Check it out to find out how to integrate it into your existing application. In a nutshell, it makes use of <code>Object.observe</code> (and a polyfill for it) to track changes from within the app that are then synced to the server.</p>
+<h3>Server <a name="server"></a></h3>
+<p>Setting up the server in a very minimal way (with express):</p>
+<pre class="language-js"><code class="language-js"><span class="token comment">// setting up express and socket.io</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"express"</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> http <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"http"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Server</span><span class="token punctuation">(</span>app<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> io <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"socket.io"</span><span class="token punctuation">)</span><span class="token punctuation">(</span>http<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// setting up diffsync's DataAdapter</span>
+<span class="token keyword">var</span> diffsync <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"diffsync"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> dataAdapter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">diffSync<span class="token punctuation">.</span>InMemoryDataAdapter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// setting up the diffsync server</span>
+<span class="token keyword">var</span> diffSyncServer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DiffSync<span class="token punctuation">.</span>Server</span><span class="token punctuation">(</span>dataAdapter<span class="token punctuation">,</span> io<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// starting the http server</span>
+http<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">4000</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"ready to go"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>This is all that is needed for running the server part. There is no further addition necessary. Most of the logic is happening in the <code>DataAdapter</code>, which is described in the next section.</p>
+<h3>DataAdapter <a name="dataadapter"></a></h3>
+<p>A <code>DataAdapter</code> is used by the server component internally to fetch data to initialize the synchronization and to save the data periodically. The simple interface allows to write a custom data provider for which ever data source you are using in your web app.</p>
+<p>The interface consists of two methods:</p>
+<ul>
+<li><code>getData(id callback)</code>:
+<ul>
+<li>is called for the initialization of the algorithm</li>
+<li><code>id (String / Number)</code> is the id of the data</li>
+<li><code>callback (Function[err, data])</code> the callback that should be called after fetching the data. Normal node.js style with the first parameter being the error and the second parameter being the data</li>
+</ul>
+</li>
+<li><code>storeData(id, data, callback)</code>:
+<ul>
+<li>is called to persist data periodically</li>
+<li><code>id (String / Number)</code> is the id of the data</li>
+<li><code>data (Object)</code> the new version of the data that will be saved</li>
+<li><code>callback (Function[err])</code> call back with an error if saving failed</li>
+</ul>
+</li>
+</ul>
+<p>diffsync ships with a simple in-memory DataAdapter which is used in the above example. It is, however, not recommended to use it in a production app since it does not persist data.</p>
+<h2>Best Practices <a name="best-practices"></a></h2>
+<ul>
+<li>If you have arrays of objects in your data structure, it is highly recommended, that these objects have either an <code>id</code> or an <code>_id</code> field which can will be used by the diff-algorithm to identify moved objects in an array</li>
+<li>Error events are the result of a problem in the sync cycle and there is currently no failback procedure implemented yet (see <a href="#algorithm">Algorithm</a>). The best way to restore sync is to reload the client's page. Since only very small diffs are sent around, the data loss should be minimal. This might sound pretty horrible at first, but in reality, sync problems almost never occur unless one of the sides has lost the connection for a substantial amount of time.</li>
+</ul>
+<h2>Algorithm <a name="algorithm"></a></h2>
+<p>The Differential Synchronization algorithm was invented by Neil Fraser in 2009. He wrote a paper about that can be found here: <a href="https://neil.fraser.name/writing/sync/">https://neil.fraser.name/writing/sync/</a>. In addition to that, he held a Google Tech Talk about it, which is available on YouTube: <a href="https://www.youtube.com/watch?v=S2Hp_1jqpY8">https://www.youtube.com/watch?v=S2Hp_1jqpY8</a>.</p>
+<h2><a href="http://Socket.io">Socket.io</a> independence <a name="socketio-independence"></a></h2>
+<p>Neither client, nor server ship with a dependency of <a href="http://socket.io">socket.io</a>. This allows to replace the transportation layer with a completely different library which is compatible to the <a href="http://socket.io">socket.io</a> interface. This implementation relies on named-events, acknowledgments, rooms and it does not make any assumption about the underlying transportation protocol.</p>
+</section>
+</article>
+<aside>
+  
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <span>
+    Hi, I'm Jan 👋 I am a software engineer working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
+    in Berlin. You can find me on
+    <a rel="noopener noreferrer" target="_blank" href="https://social.lol/@janmon">
+      🐘 Mastodon
+    </a>
+    ,
+    <a rel="noopener noreferrer" target="_blank" href="https://github.com/janmonschke">
+      💻 GitHub
+    </a>
+    and
+    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jan-monschke-aa6a249a/">
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
+
+</bio>
+  <hr>
+  
+</footer>
+
+
+</main>
+    </div>
+    <style></style>
+    <script></script>
+    <script type="module"></script>
+    <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

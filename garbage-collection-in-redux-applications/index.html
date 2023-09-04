@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Garbage Collection in Redux Applications | Jan Monschke</title>
+
+    <meta httpequiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jan Monschke - Developer Blog">
+    <meta property="article:author" content="Jan Monschke">
+    
+    
+    <meta name="description" content="The portfolio and blog of Jan Monschke">
+    <meta property="og:description" content="The portfolio and blog of Jan Monschke">
+    <meta property="article:published_time" content="Wed Oct 02 2019 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    
+    
+    <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
+
+    <link rel="me" href="https://social.lol/@janmon">
+    <link rel="me" href="https://github.com/janmonschke">
+
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Weeknotes" href="/weeknotes.xml">
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Blog posts" href="/rss.xml">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <style>.bio {
+    display: flex;
+    align-items: center;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
+
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
+
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .blogPost__nacvigationTitle {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+  }
+
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
+  }
+
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+.Layout__titleContainer,
+  .Layout__homeLink {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Layout__titleProfile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  .m-small .Layout__titleProfile {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+  }
+
+  .Layout__title {
+    margin-top: 14px;
+  }
+
+  .Layout__title,
+  .Layout__menuLink {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Layout__titleContainer:not(.m-small) .Layout__title {
+    font-size: 1.7411rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .m-small .Layout__title {
+    margin-top: 0px;
+  }
+
+  .Layout__menuLink {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .Layout__menuLink:hover,
+  .Layout__menuLink:active {
+    text-decoration: underline;
+  }
+
+  .Layout__menuContainer {
+    margin-left: auto;
+  }
+
+  .Layout__menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+
+  .Layout__menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  @media (max-width: 400px) {
+    .m-small .Layout__titleProfile {
+      width: 50px;
+      margin-right: 0.4em;
+    }
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.8em;
+    }
+    .Layout__menuContainer {
+      display: none;
+    }
+  }
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Source Sans Pro',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Source Sans Pro',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:0;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:1.8rem;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.59);border-left:0.6rem solid;border-color:#fcea0e;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li &gt; ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li &gt; ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li &gt; p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#007acc;text-decoration:none;}a:hover,a:active{color:hsla(0,0%,0%,0.8);}h1,h2,h3,h4,h5,h6{margin-top:3.2rem;}blockquote &gt; :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.6rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.2rem;margin-right:0;border-left:0.3rem solid;border-color:#fcea0e;padding-left:0.9rem;}}h2,h3,h4{margin-bottom:0.8rem;margin-top:0.8rem;}
+/* source-sans-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-sans-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-sans-pro-latin-400-normal.woff") format("woff");
+  }
+  /* source-serif-pro-latin-ext-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* source-serif-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 41.6rem;
+  padding: 2.4rem 1.2rem;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.96rem;
+  margin-top: 0.96rem;
+  width: 75%;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Custom overrides */
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f03d;
+  margin: 1.2em 0;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: #f1f2f4;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}
+
+video {
+  width: 100%;
+}
+.picture {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  color: #000;
+}
+
+.picture__caption {
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+}</style>
+  </head>
+
+  <body>
+    <div class="base">
+      <header>
+        <div class="Layout__titleContainer m-small">
+  <div class="h-card">
+    <a href="/" class="Layout__homeLink u-url">
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
+    </a>
+  </div>
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+      </header>
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Garbage Collection in Redux Applications</h1>
+    <span class="blogPost__date">October 02, 2019</span>
+  </header>
+  
+  <section class="blogPost__content"><p>The topic that I focused on a lot in my <a href="/#talks">recent conference talks</a> was garbage collection in Redux applications. At <a href="https://soundcloud.com">work</a> we built a full-fledged Xbox application in React with Redux.</p>
+<p>Building for the Xbox runtime is a tricky business for web apps that should run in the background when games are playing because they available memory for your app is very limited and your web app shares the memory with the browser process that needs to be active. When your app is over the maximum budget of 128 MB, the OS might decide to just kill your app, even when it's playing music. This is not a lot of memory when you consider that the browser process eats most of it.</p>
+<p>Usually, memory is not a big concern when building web apps, but in our case we were dealing with an application that is often running for several hours in the background and might not even be closed for several days in some cases. We noticed that our Redux store kept on growing and growing while the user was listening to more music and especiall when searching for new songs a lot.</p>
+<p>That's why we came up with a system to identify unused state in our Redux store that then automatically removes those objects when they're not needed anymore. Our solution involved:</p>
+<ul>
+<li>normalization of the store object</li>
+<li>keeping track of active selectors</li>
+<li>a custom garbage collection algorithm</li>
+<li>finding the right moment to remove unused state</li>
+</ul>
+<p>I wrote about our approach in length on the SoundCloud developer blog, you can check it out there if you are interested :)</p>
+<p>→ <a href="https://developers.soundcloud.com/blog/garbage-collection-in-redux-applications">developers.soundcloud.com/blog/garbage-collection-in-redux-applications</a></p>
+<p>Let me know on <a href="https://twitter.com/thedeftone">Twitter</a> what you think about it and if you have any questions about the solution.</p>
+</section>
+</article>
+<aside>
+  
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  <p>🍅 It took 1 pomodoro to write this post 🍅</p>
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <span>
+    Hi, I'm Jan 👋 I am a software engineer working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
+    in Berlin. You can find me on
+    <a rel="noopener noreferrer" target="_blank" href="https://social.lol/@janmon">
+      🐘 Mastodon
+    </a>
+    ,
+    <a rel="noopener noreferrer" target="_blank" href="https://github.com/janmonschke">
+      💻 GitHub
+    </a>
+    and
+    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jan-monschke-aa6a249a/">
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
+
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      <li>
+        <a href="/favorite-tech-podcasts-2019/" rel="prev">← <span>My favorite (tech) podcasts</span></a>
+      </li>
+      <li>
+        <a href="/building-a-minimal-i18n-library/" rel="next"><span>Building a minimal i18n library</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+</main>
+    </div>
+    <style></style>
+    <script></script>
+    <script type="module"></script>
+    <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Setting up TailwindCSS in create-react-app | Jan Monschke</title>
+
+    <meta httpequiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jan Monschke - Developer Blog">
+    <meta property="article:author" content="Jan Monschke">
+    
+    
+    <meta name="description" content="The portfolio and blog of Jan Monschke">
+    <meta property="og:description" content="The portfolio and blog of Jan Monschke">
+    <meta property="article:published_time" content="Fri Apr 17 2020 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    
+    
+    <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
+
+    <link rel="me" href="https://social.lol/@janmon">
+    <link rel="me" href="https://github.com/janmonschke">
+
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Weeknotes" href="/weeknotes.xml">
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Blog posts" href="/rss.xml">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <style>.likes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .likes li {
+    margin-bottom: 0;
+  }
+
+  .like {
+    margin-right: 0.5em;
+  }
+
+  .like__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-bottom: 0.1em;
+    transition: scale linear 0.1s;
+  }
+
+  .like__image:hover {
+    scale: 1.33;
+  }
+.bio {
+    display: flex;
+    align-items: center;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
+
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
+
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .blogPost__nacvigationTitle {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+  }
+
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
+  }
+
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+.Layout__titleContainer,
+  .Layout__homeLink {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Layout__titleProfile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  .m-small .Layout__titleProfile {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+  }
+
+  .Layout__title {
+    margin-top: 14px;
+  }
+
+  .Layout__title,
+  .Layout__menuLink {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Layout__titleContainer:not(.m-small) .Layout__title {
+    font-size: 1.7411rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .m-small .Layout__title {
+    margin-top: 0px;
+  }
+
+  .Layout__menuLink {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .Layout__menuLink:hover,
+  .Layout__menuLink:active {
+    text-decoration: underline;
+  }
+
+  .Layout__menuContainer {
+    margin-left: auto;
+  }
+
+  .Layout__menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+
+  .Layout__menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  @media (max-width: 400px) {
+    .m-small .Layout__titleProfile {
+      width: 50px;
+      margin-right: 0.4em;
+    }
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.8em;
+    }
+    .Layout__menuContainer {
+      display: none;
+    }
+  }
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Source Sans Pro',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Source Sans Pro',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:0;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:1.8rem;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.59);border-left:0.6rem solid;border-color:#fcea0e;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li &gt; ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li &gt; ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li &gt; p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#007acc;text-decoration:none;}a:hover,a:active{color:hsla(0,0%,0%,0.8);}h1,h2,h3,h4,h5,h6{margin-top:3.2rem;}blockquote &gt; :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.6rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.2rem;margin-right:0;border-left:0.3rem solid;border-color:#fcea0e;padding-left:0.9rem;}}h2,h3,h4{margin-bottom:0.8rem;margin-top:0.8rem;}
+/* source-sans-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-sans-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-sans-pro-latin-400-normal.woff") format("woff");
+  }
+  /* source-serif-pro-latin-ext-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* source-serif-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 41.6rem;
+  padding: 2.4rem 1.2rem;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.96rem;
+  margin-top: 0.96rem;
+  width: 75%;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Custom overrides */
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f03d;
+  margin: 1.2em 0;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: #f1f2f4;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}
+
+video {
+  width: 100%;
+}
+.picture {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  color: #000;
+}
+
+.picture__caption {
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+}</style>
+  </head>
+
+  <body>
+    <div class="base">
+      <header>
+        <div class="Layout__titleContainer m-small">
+  <div class="h-card">
+    <a href="/" class="Layout__homeLink u-url">
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
+    </a>
+  </div>
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+      </header>
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Setting up TailwindCSS in create-react-app</h1>
+    <span class="blogPost__date">April 17, 2020</span>
+  </header>
+  
+  <section class="blogPost__content"><p>I have started to use <a href="https://tailwindcss.com/">TailwindCSS</a> in a couple of side projects now to try out utility-based styling. All of these projects are regular <a href="https://create-react-app.dev/">create-react-app</a> projects (based on the TypeScript starter). The way create-react-app projects are set up does not allow you to change the project's webpack config without <a href="https://create-react-app.dev/docs/available-scripts#npm-run-eject">'ejecting'</a> your app. In this post I want to show how I have added TailwindCSS to my projects without ejecting.</p>
+<p>Ejecting from a create-react-app means you will lose the ability to easily update to newer versions of <code>react-scripts</code> but you will gain the ability to change config files like the webpack config. For side projects I try to not eject for as long as I can because I know I would spend a lot of time tweaking configs for no real reason. I like that with create-react-app I can focus on what I am building and I don't have to worry about config file.</p>
+<p>Now, adding TailwindCSS to a create-react-app project is not as straight forward as adding it to an existing webpack config, but it's also not super complicated. I have seen several ways to do it and I am using a combination of two approaches that I have seen in other blog posts (linked to at the <a href="#sources">bottom of this article</a>).</p>
+<p>First, you have to install TailwindCSS and PostCSS. PostCSS will be used to generate the actual TailwindCSS classes.</p>
+<pre><code>npm install --save-dev tailwindcss postcss-cli
+</code></pre>
+<p>After that, initialize TailwindCSS (it will generate an empty config for you)</p>
+<pre><code>npx tailwind init tailwind.config.js
+</code></pre>
+<p>Once that is done, create a <code>postcss.config.js</code> file in the root of your project. In that config we are setting up the TailwindCSS plugin for PostCSS:</p>
+<pre class="language-js"><code class="language-js"><span class="token keyword">const</span> tailwindcss <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"tailwindcss"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token function">tailwindcss</span><span class="token punctuation">(</span><span class="token string">"./tailwind.config.js"</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
+<p>Next, we will create our TailwindCSS entry file (<code>src/tailwind.css</code>). In that file we can define which parts of TailwindCSS we want to use and how we want them to be configured. For now, we will use the basic setup which will include all of Tailwind's utility classes:</p>
+<pre class="language-css"><code class="language-css"><span class="token atrule"><span class="token rule">@tailwind</span> base<span class="token punctuation">;</span></span>
+
+<span class="token atrule"><span class="token rule">@tailwind</span> components<span class="token punctuation">;</span></span>
+
+<span class="token atrule"><span class="token rule">@tailwind</span> utilities<span class="token punctuation">;</span></span></code></pre>
+<p>As the last step of our setup we will create custom npm scripts that will build TailwindCSS when we run <code>npm start</code> or <code>npm run build</code>.</p>
+<pre class="language-json"><code class="language-json"><span class="token punctuation">{</span>
+  (...)
+  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    (...)
+    <span class="token property">"build:tailwind"</span><span class="token operator">:</span> <span class="token string">"postcss src/tailwind.css -o src/base.css"</span><span class="token punctuation">,</span>
+    <span class="token property">"prebuild"</span><span class="token operator">:</span> <span class="token string">"npm run build:tailwind"</span><span class="token punctuation">,</span>
+    <span class="token property">"prestart"</span><span class="token operator">:</span> <span class="token string">"npm run build:tailwind"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p><code>build:tailwind</code> will compile the directives from <code>src/tailwind.css</code> and output it into <code>src/base.css</code>. That file will then contain all of Tailwind's classes. We need to import it in our top level project files as you can see in <a href="#example">the example below</a>.</p>
+<p>The custom <code>build:tailwind</code> script is run by the <code>prebuild</code> and <code>prestart</code> scripts which are executed by default before the app starts or is getting build (thanks, <code>react-scripts</code>🤩).</p>
+<p>Since <code>base.css</code> is a generated file that will be overridden every time you start or build your app, it does not make sense to put any custom CSS in there. You can keep putting your extra CSS in e.g. your component's CSS files. It also makes sense to add <code>base.css</code> to your <code>.gitignore</code> so it does not end up in your source control.</p>
+<p>In addition to that, I can also advise you to set up <code>purgecss</code> for your project because the generated <code>base.css</code> is around 800 KB and you really don't want to ship all of that CSS to your users. <code>purgecss</code> analyzes which CSS classes you're using in your project and removes all unused class definitions from the generated CSS. This <a href="https://tailwindcss.com/docs/controlling-file-size/#setting-up-purgecss">great tutorial on the TailwindCSS website explains how to set it up in just a couple lines of code</a>.</p>
+<p>I hope you found my little tutorial helpful and I wish you lots of fun building your React apps with TailwindCSS 😊.</p>
+<p><strong><a name="example"></a>Example:</strong></p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2020-04-17-tailwindcss-and-create-react-app/_UTQWiOF6F-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2020-04-17-tailwindcss-and-create-react-app/_UTQWiOF6F-352.avif 352w, /img/content/2020-04-17-tailwindcss-and-create-react-app/_UTQWiOF6F-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2020-04-17-tailwindcss-and-create-react-app/_UTQWiOF6F-352.webp 352w, /img/content/2020-04-17-tailwindcss-and-create-react-app/_UTQWiOF6F-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2020-04-17-tailwindcss-and-create-react-app/_UTQWiOF6F-352.jpeg 352w, /img/content/2020-04-17-tailwindcss-and-create-react-app/_UTQWiOF6F-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Example component" src="/img/content/2020-04-17-tailwindcss-and-create-react-app/_UTQWiOF6F-352.jpeg" width="705" height="692"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Example component</figcaption>
+      </figure></p>
+<pre class="language-jsx"><code class="language-jsx"><span class="token keyword">import</span> React <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">"react-dom"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token string">"./base.css"</span><span class="token punctuation">;</span>
+
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>max-w-sm rounded overflow-hidden shadow-lg<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span>
+      <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>w-full<span class="token punctuation">"</span></span>
+      <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//placekitten.com/400/210<span class="token punctuation">"</span></span>
+      <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Sunset in the mountains<span class="token punctuation">"</span></span>
+    <span class="token punctuation">/></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>px-6 py-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>font-bold text-xl mb-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">The Coldest Sunset</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-gray-700 text-base<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+        nihil.
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>px-6 py-4<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        #photography
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        #travel
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+        #winter
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token plain-text">
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token punctuation">,</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p><strong><a name="sources"></a>Sources:</strong></p>
+<ul>
+<li><a href="https://mikefrancis.dev/blog/create-react-app-tailwind-css">https://mikefrancis.dev/blog/create-react-app-tailwind-css</a></li>
+<li><a href="https://medium.com/@grobeldev/setup-tailwind-with-postcss-in-create-react-app-in-5-minutes-43ae343e2789">https://medium.com/@grobeldev/setup-tailwind-with-postcss-in-create-react-app-in-5-minutes-43ae343e2789</a></li>
+</ul>
+</section>
+</article>
+<aside>
+  <div>
+    <h3>Likes</h3>
+    <likes likes="[object Object],[object Object],[object Object],[object Object]"><ul class="likes">
+  <li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/mojosoeun" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/acca9bf92bfb627bf2cd85ff287fa60c7c062c6b32aaad965984c64655f868a1.jpg" alt="Sona/Soeun Lee" title="Sona/Soeun Lee" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/ryyppy" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/bf1fa02069bd2ead3ed98ab0fbf839e7c7ffab21b4d4b88532d91b6a9906405e.jpg" alt="Patrick Ecker" title="Patrick Ecker" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/elie2222" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/1b2c6ea91cd13a5e99e9475fc60e79a6e7845b7325040dfb65b8ccae7e56566e.jpg" alt="Elie Steinbock 🔮" title="Elie Steinbock 🔮" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/BowlingX" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/31c03c80db185540a2b48c37f839a8f710ec5b5e46881406a8631a1142963caa.jpg" alt="David Heidrich" title="David Heidrich" loading="lazy" class="like__image">
+    </a>
+  </li>
+</ul>
+
+</likes>
+  </div>
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  <p>🍅 It took 4 pomodoros to write this post 🍅</p>
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <span>
+    Hi, I'm Jan 👋 I am a software engineer working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
+    in Berlin. You can find me on
+    <a rel="noopener noreferrer" target="_blank" href="https://social.lol/@janmon">
+      🐘 Mastodon
+    </a>
+    ,
+    <a rel="noopener noreferrer" target="_blank" href="https://github.com/janmonschke">
+      💻 GitHub
+    </a>
+    and
+    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jan-monschke-aa6a249a/">
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
+
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      <li>
+        <a href="/flexible-color-definitions-in-design-systems/" rel="prev">← <span>Flexible color definitions in design systems</span></a>
+      </li>
+      <li>
+        <a href="/simple-frontend-data-migration/" rel="next"><span>Simple frontend data migration</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+</main>
+    </div>
+    <style></style>
+    <script></script>
+    <script type="module"></script>
+    <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+  
+
+
+
+
+
+</body>
+</html>

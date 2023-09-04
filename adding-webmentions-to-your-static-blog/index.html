@@ -1,0 +1,1286 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Adding webmentions to your static blog | Jan Monschke</title>
+
+    <meta httpequiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jan Monschke - Developer Blog">
+    <meta property="article:author" content="Jan Monschke">
+    
+    
+    <meta name="description" content="The portfolio and blog of Jan Monschke">
+    <meta property="og:description" content="The portfolio and blog of Jan Monschke">
+    <meta property="article:published_time" content="Mon Jan 30 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    <meta property="og:image" content="https://janmonschke.com/img/content/KdmuQLs0HQ-600.jpeg">
+    <meta property="image" content="https://janmonschke.com/img/content/KdmuQLs0HQ-600.jpeg">
+    <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
+
+    <link rel="me" href="https://social.lol/@janmon">
+    <link rel="me" href="https://github.com/janmonschke">
+
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Weeknotes" href="/weeknotes.xml">
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Blog posts" href="/rss.xml">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <style>.likes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .likes li {
+    margin-bottom: 0;
+  }
+
+  .like {
+    margin-right: 0.5em;
+  }
+
+  .like__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-bottom: 0.1em;
+    transition: scale linear 0.1s;
+  }
+
+  .like__image:hover {
+    scale: 1.33;
+  }
+.mentions {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .mentions__item {
+    margin-bottom: 1.5em;
+  }
+
+  .mention,
+  .reference {
+    display: flex;
+  }
+
+  .mention__authorImageLink,
+  .reference__authorImageLink {
+    flex-shrink: 0;
+    margin-right: 0.8em;
+  }
+
+  .mention__image,
+  .reference__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+  }
+
+  .mention__authorLink {
+    display: block;
+    margin-bottom: 0.1em;
+  }
+
+  .mention__content,
+  .reference__content {
+    margin-bottom: 0.1em;
+  }
+
+  .reference {
+    align-items: center;
+  }
+
+  .reference__image {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(156, 252, 248, 1) 11.2%,
+      rgba(110, 123, 251, 1) 91.1%
+    );
+  }
+.bio {
+    display: flex;
+    align-items: center;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
+
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
+
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .blogPost__nacvigationTitle {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+  }
+
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
+  }
+
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+.Layout__titleContainer,
+  .Layout__homeLink {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Layout__titleProfile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  .m-small .Layout__titleProfile {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+  }
+
+  .Layout__title {
+    margin-top: 14px;
+  }
+
+  .Layout__title,
+  .Layout__menuLink {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Layout__titleContainer:not(.m-small) .Layout__title {
+    font-size: 1.7411rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  .m-small .Layout__title {
+    margin-top: 0px;
+  }
+
+  .Layout__menuLink {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .Layout__menuLink:hover,
+  .Layout__menuLink:active {
+    text-decoration: underline;
+  }
+
+  .Layout__menuContainer {
+    margin-left: auto;
+  }
+
+  .Layout__menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+
+  .Layout__menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  @media (max-width: 400px) {
+    .m-small .Layout__titleProfile {
+      width: 50px;
+      margin-right: 0.4em;
+    }
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.8em;
+    }
+    .Layout__menuContainer {
+      display: none;
+    }
+  }
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Source Sans Pro',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Source Sans Pro',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:0;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:1.8rem;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.59);border-left:0.6rem solid;border-color:#fcea0e;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li &gt; ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li &gt; ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li &gt; p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#007acc;text-decoration:none;}a:hover,a:active{color:hsla(0,0%,0%,0.8);}h1,h2,h3,h4,h5,h6{margin-top:3.2rem;}blockquote &gt; :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.6rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.2rem;margin-right:0;border-left:0.3rem solid;border-color:#fcea0e;padding-left:0.9rem;}}h2,h3,h4{margin-bottom:0.8rem;margin-top:0.8rem;}
+/* source-sans-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-sans-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-sans-pro-latin-400-normal.woff") format("woff");
+  }
+  /* source-serif-pro-latin-ext-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* source-serif-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 41.6rem;
+  padding: 2.4rem 1.2rem;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.96rem;
+  margin-top: 0.96rem;
+  width: 75%;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Custom overrides */
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f03d;
+  margin: 1.2em 0;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: #f1f2f4;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}
+
+video {
+  width: 100%;
+}
+.picture {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  color: #000;
+}
+
+.picture__caption {
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+}</style>
+  </head>
+
+  <body>
+    <div class="base">
+      <header>
+        <div class="Layout__titleContainer m-small">
+  <div class="h-card">
+    <a href="/" class="Layout__homeLink u-url">
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
+      
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
+    </a>
+  </div>
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+      </header>
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Adding webmentions to your static blog</h1>
+    <span class="blogPost__date">January 30, 2023</span>
+  </header>
+  <aside class="blogPost__coverImage"><picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/KdmuQLs0HQ-352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/KdmuQLs0HQ-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/KdmuQLs0HQ-352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/KdmuQLs0HQ-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/KdmuQLs0HQ-352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/KdmuQLs0HQ-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img alt loading="eager" decoding="auto" src="/img/content/2023-01-09-23-webmentions-in-gatsby/KdmuQLs0HQ-352.jpeg" width="705" height="370" class="picture"></picture></aside>
+  <section class="blogPost__content"><p>This blog used to have comments. There was a time when you could find a comment form under each post. The form was provided through a third-party embed of course, since this is a static site. There is no server or no database that could hold on to your comments.</p>
+<p>After a couple of years I decided to remove the comment form since it wasn't really used and most discussions happened on social media anyways. Sadly there was no (sensible / easy) way to bring those discussion here without embedding tons of external code.</p>
+<p>But when I was reading <a href="https://localghost.dev/blog/2022-the-year-in-lists/">Sophie's</a> and <a href="https://andy-bell.co.uk/wrapping-up-2022/">Andy's</a> blog posts, I noticed that they contained comments and likes from social media sites without a third-party embed. So I went on a journey to understand how that integration works and how to bring it to my own blog as well.</p>
+<h2>What are webmentions?</h2>
+<p>These blogs are using <a href="https://en.wikipedia.org/wiki/Webmention">webmentions</a> to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they're linking to them.</p>
+<div style="width: 60%; margin: 0 auto;">
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/qtm4Tsdid--262.svg" target="_blank" aria-label="Click to open image in new window">
+        <img class="picture" loading="lazy" decoding="async" alt="Site A publishes a blog post mentioning your site. This generates a webmention." src="/img/content/2023-01-09-23-webmentions-in-gatsby/qtm4Tsdid--262.svg" width="262" height="281">
+      </a>
+    
+        <figcaption class="picture__caption">Site A publishes a blog post mentioning your site. This generates a webmention.</figcaption>
+      </figure></p>
+</div>
+<p>The way this works is that site A defines a <code>webmention</code> API endpoint as a <code>&lt;link /&gt;</code> and site B, e.g. when a new blog post is created, looks at its external links, checks if they support webmentions and when they do, calls their webmention endpoint. That call contains the source of the link and the type of that link amongst more metadata like the date (types will be explained later).</p>
+<p>Webmentions are a great system, but they do not really work for static sites like this one. There is no server, so no webmention endpoint. Luckily, there are services that will collect webmentions on your behalf so you can fetch them later on. One of those services is <a href="https://webmention.io">webmention.io</a>.</p>
+<h3><a href="http://webmention.io">webmention.io</a></h3>
+<p>After signing up on the site, it provides you with a webmention endpoint that you can add to your site:</p>
+<pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span>
+  <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>webmention<span class="token punctuation">"</span></span>
+  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://webmention.io/janmonschke.com/webmention<span class="token punctuation">"</span></span>
+<span class="token punctuation">/></span></span></code></pre>
+<p>Add that to your site's <code>&lt;head/&gt;</code> and other sites can immediately start sending mentions of your site to <a href="http://webmention.io">webmention.io</a>.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/4qNDBkH3EL-341.svg" target="_blank" aria-label="Click to open image in new window">
+        <img class="picture" loading="lazy" decoding="async" alt="webmention.io collects webmentions for your site from external sites" src="/img/content/2023-01-09-23-webmentions-in-gatsby/4qNDBkH3EL-341.svg" width="341" height="168">
+      </a>
+    
+        <figcaption class="picture__caption">webmention.io collects webmentions for your site from external sites</figcaption>
+      </figure></p>
+<p>The collected webmentions can be queried through <a href="http://webmention.io">webmention.io</a>'s API. And when there's an API, there's a way to embed those mentions onto my blog. That's great!</p>
+<p>But! <em>There had to be a but, of course.</em></p>
+<p>My initial problem was that discussions were happening on social media. Social media sites do sadly not send webmentions. Neither Twitter, nor Mastodon<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. So how do the sites mentioned above get their likes and mentions from social media?</p>
+<h3><a href="http://brid.gy">brid.gy</a></h3>
+<p>Of course there is another service that solves this problem: <a href="https://brid.gy/">brid.gy</a></p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/1DcyYq2t83-396.svg" target="_blank" aria-label="Click to open image in new window">
+        <img class="picture" loading="lazy" decoding="async" alt="Bridgy sits in between social media sites and your webmentions" src="/img/content/2023-01-09-23-webmentions-in-gatsby/1DcyYq2t83-396.svg" width="396" height="168">
+      </a>
+    
+        <figcaption class="picture__caption">Bridgy sits in between social media sites and your webmentions</figcaption>
+      </figure></p>
+<p><a href="http://Brid.gy">Brid.gy</a> connects mentions, likes, reposts etc. from social media sites to your site. It basically works as an automated social media search for mentions for your site and it then converts those mentions / reactions into webmentions.</p>
+<div style="width: 60%; margin: 0 auto;">
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/6iA6QbDF15-259.svg" target="_blank" aria-label="Click to open image in new window">
+        <img class="picture" loading="lazy" decoding="async" alt="Bridgy crawls your site for mentions of other sites that use webmentions" src="/img/content/2023-01-09-23-webmentions-in-gatsby/6iA6QbDF15-259.svg" width="259" height="281">
+      </a>
+    
+        <figcaption class="picture__caption">Bridgy crawls your site for mentions of other sites that use webmentions</figcaption>
+      </figure></p>
+</div>
+<p>Even better, <a href="http://brid.gy">brid.gy</a> also acts as webmention &quot;notifier&quot; for your site. It periodically crawls your site for mentions of other sites and it will then create webmentions for those sites. It's such a helpful service. This allows static sites to act like proper players in the webmention/indieweb game.</p>
+<p>A final cool feature, and I promise I will then stop praising <a href="http://brid.gy">brid.gy</a> so much. <a href="http://Brid.gy">Brid.gy</a> can also scan your old social media posts and create mentions for those. Meaning you can collect likes as webmentions from previously when you weren't using <a href="http://brid.gy">brid.gy</a> and <a href="http://webmention.io">webmention.io</a> yet. Backfeeding of mentions is limited to likes and reposts though<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>.</p>
+<h2>Bringing webmentions to your static site</h2>
+<p>Now, how are we going to bring webmentions to our static site? There are two ways of how to use webmentions in your static site that I will explain in this post.</p>
+<p>The first one is the simplest one and, apart from setting up <a href="http://webmention.io">webmention.io</a> and <a href="http://brid.gy">brid.gy</a>, requires pretty much no extra setup. The second one is a bit more involved and requires GitHub actions, a proper integration into Gatsby's GraphQL layer and, optionally, setting up a webhook for your Github actions (most of that flow will also work for other static site generators).</p>
+<p>The first approach is perfect for your if you quickly want to see how webmentions will look like on your site. However, I recommend going with the second approach (if possible). It has the advantage of owning your mentions. It's more resilient to outages and shutdowns of the third-party sites you rely on and your site will load faster. It is also more flexible, as we'll see later on.</p>
+<h3>Fetching webmentions on-demand</h3>
+<p>The simplest way to show webmentions is to fetch them on the client-side from <a href="http://webmention.io">webmention.io</a>.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">Webmentions</span><span class="token punctuation">(</span><span class="token parameter"><span class="token punctuation">{</span> postUrl <span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">[</span>mentions<span class="token punctuation">,</span> setMentions<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token string">"https://webmention.io/api/mentions.jf2?target="</span> <span class="token operator">+</span> postUrl<span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">mentionsJson</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setMentions</span><span class="token punctuation">(</span>mentionsJson<span class="token punctuation">.</span>children<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>mentions <span class="token operator">||</span> mentions<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">(</span>
+    <span class="token operator">&lt;</span>aside<span class="token operator">></span>
+      <span class="token operator">&lt;</span>ul<span class="token operator">></span>
+        <span class="token punctuation">{</span>mentions
+          <span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">wm</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+            <span class="token punctuation">[</span><span class="token string">"in-reply-to"</span><span class="token punctuation">,</span> <span class="token string">"mention-of"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>wm<span class="token punctuation">[</span><span class="token string">"wm-property"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+          <span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">mention</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+            <span class="token operator">&lt;</span>li key<span class="token operator">=</span><span class="token punctuation">{</span>mention<span class="token punctuation">.</span>id<span class="token punctuation">}</span><span class="token operator">></span>
+              @<span class="token punctuation">{</span>mention<span class="token punctuation">.</span>author<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token operator">:</span> <span class="token punctuation">{</span>mention<span class="token punctuation">.</span>content<span class="token punctuation">.</span>text<span class="token punctuation">}</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>li<span class="token operator">></span>
+          <span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>ul<span class="token operator">></span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>aside<span class="token operator">></span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This piece of code<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> will render a list of all webmentions for the given post on your site. Each mention will contain the user's name and their message like so:</p>
+<p><em>@Jeremy: I found this really cool blog post by Ada adas.site/webmentions-explained</em></p>
+<p>The webmention object has a lot more properties that we are not using in this example but you might want to check them out for your use-case (e.g. a link back to the author at <code>author.url</code>, the author's profile pic <code>author.photo</code> or a link back to the original post <code>mention.url</code>).</p>
+<p>This component can be placed anywhere on a blog post or any other site. Its only parameter is <code>postUrl</code> which is the public url of the page you want to fetch webmentions for (e.g. <code>https://adas.site/webmentions-explained/</code>). This url is the one that you or other users post on social media or their webmention-enabled blog. <strong><a href="http://Brid.gy">Brid.gy</a></strong> and <strong><a href="http://webmention.io">webmention.io</a></strong> will use that public url to send and store your mentions.</p>
+<p>If we have another look at where the code iterates over the mentions, you'll find that we are filtering the mentions based on their <code>wm-property</code>.</p>
+<pre class="language-javascript"><code class="language-javascript">mentions<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">wm</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+  <span class="token punctuation">[</span><span class="token string">"in-reply-to"</span><span class="token punctuation">,</span> <span class="token string">"mention-of"</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>wm<span class="token punctuation">[</span><span class="token string">"wm-property"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>We are doing this in order to only show replies or mentions of our post. Other types of webmentions do not include <code>content</code>, so the code above would not work. Other types include <code>like-of</code> for likes of your post and <code>repost-of</code> for reposts of your post. A full list of the supported values of <code>wm-property</code> can be found in the <a href="https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page">webmention.io documention</a>.</p>
+<p>It is generally a good idea to group webmentions by type and show them in distinct lists. For example a simpler list of likes and more complex list for actuall mentions with content. But feel free to integrate all types in the same list. There are no rules and the world is your oyster!</p>
+<p>This approach is pretty simple but has some disadvantages:</p>
+<ul>
+<li>It makes an extra request for each user visiting the page</li>
+<li>When <a href="http://webmention.io">webmention.io</a> is down, your mentions (and likes etc.) won't load</li>
+<li>In case <a href="http://webmention.io">webmention.io</a> shuts down, you lose all your webmentions</li>
+</ul>
+<h3>Owning your webmentions and building them statically</h3>
+<p>The approach that I took for webmentions on this site makes sure that webmentions are checked into GitHub. This makes them resilient to issues with third-party webmention providers and it allows to build them statically. Meaning we don't need to make an additional request, yay 🎉</p>
+<blockquote>
+<p>This approach is influenced by <a href="https://sebastiandedeyne.com/webmentions-on-a-static-site-with-github-actions/">Sebastian De Deyne's webmention integration</a>. Instead of integrating webmentions into Hugo, I'm explaining here how to integrate them into Gatsby. There are already Gatsby plugins for webmentions but they load them dynamically and not statically.</p>
+</blockquote>
+<h4>Synchronizing webmentions into your GitHub repository</h4>
+<p>Similarly to the first approach, we need to fetch webmentions from <a href="http://webmention.io">webmention.io</a>. This time however, we are going to sync all mentions for our domain, instead of mentions per post/site. We could do it per post, but I find Sebastian's solution quite elegant, so we'll stick to it.</p>
+<p>The synchronization works like this:</p>
+<ol>
+<li>Fetch all mentions for our domain (in my case <a href="https://janmonschke.com">https://janmonschke.com</a>)</li>
+<li>For each webmention, we will read out it's <code>wm-target</code> property</li>
+<li>Check in <code>./webmentions/data/</code> if we already have a JSON webmention file for that post (e.g. <code>webmentions-explained.json</code>)</li>
+<li>If the file exists, then merge the new mention into that file
+<ol>
+<li>Make sure to exclude duplicates by comparing the <code>wm-id</code> property 🔎</li>
+<li>Sort mentions by <code>wm-id</code> to keep a roughly correct order in the cache file. The actual order for mentions will be based on the <code>published</code> property later on. However, likes and reposts don't have this property, so <code>wm-id</code> is the best we can do at this point. ✅</li>
+<li>Write the file to disk 🎉</li>
+</ol>
+</li>
+<li>If the file does not exist, create a new cache file for this post which only contains this webmention: <code>[webmention]</code> 🎉</li>
+</ol>
+<p>You can check out the code below or directly in my <a href="https://github.com/janmonschke/janmonschke.github.com/blob/dev/webmentions/sync.js">site's GitHub repo</a>.</p>
+<iframe
+src="https://gist.github.com/janmonschke/49d354bc96393348a9037dba0018fa6b.pibb"
+style="width: 100%; height: 300px; border: 0;margin-top: -1.5em;"
+title="Embedded code from GitHub">
+</iframe>
+<p>I found that a good directory for the JSON files is <code>./webmentions/data</code> since my sync script lives in <code>./webmentions/sync.js</code>. First I tried to co-locate blog posts and their webmentions cache in the same but it turned out to be quite complicated to find the correct directory based on the <code>wm-target</code> property. I could parse those urls and then also parse all my post's frontmatter to try and match them but there is an easier way to associate mentions and posts and that is GraphQL.</p>
+<p>One optimization for the synchronization flow is to not always fetch all webmentions. If you regularly sync your mentions, you can use the <code>since</code> parameter in the <a href="http://webmention.io">webmention.io</a> API in order to limit the timeframe for new mentions.</p>
+<h4>Sourcing webmentions into Gatsby's GraphQL layer</h4>
+<p>Now that we have the mentions in our repository, we want to tell Gatsby to ingest them so we can query them via GraphQL. For that we need to install <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-transformer-json#readme">gatsby-transformer-json</a> and <a href="https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem#readme">gatsby-source-filesystem</a>.</p>
+<p>In the <code>gatsby-config.js</code> we then set up the plugins like this:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token literal-property property">plugins</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">resolve</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">gatsby-transformer-json</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">typeName</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">webmentions</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token literal-property property">resolve</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">gatsby-source-filesystem</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token literal-property property">options</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>__dirname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/webmentions/data</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
+<p><code>gatsby-source-filesystem</code> tells Gatsby to source files from <code>${__dirname}/webmentions/data</code> and <code>gatsby-transformer-json</code> parses the JSON content from those files and makes the webmentions available via GraphQL.</p>
+<p>In GraphiQL, we now have access to a new entry for <code>allWebmentions</code> which contains the content of all the sourced JSON files.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-2000.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-705.avif 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-1500.avif 1500w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-2000.avif 2000w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-705.webp 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-1500.webp 1500w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-2000.webp 2000w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-705.jpeg 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-1500.jpeg 1500w, /img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-2000.jpeg 2000w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Screenshot of GraphiQL showing the new entry for allWebmentions" src="/img/content/2023-01-09-23-webmentions-in-gatsby/8SSh8QIXtB-352.jpeg" width="2000" height="1357"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Screenshot of GraphiQL showing the new entry for allWebmentions</figcaption>
+      </figure></p>
+<p>If we wanted to fetch all webmentions of our site, we could use the following query:</p>
+<pre class="language-graphql"><code class="language-graphql"><span class="token keyword">query</span> <span class="token definition-query function">Webmentions</span> <span class="token punctuation">{</span>
+  <span class="token object">allWebmentions</span> <span class="token punctuation">{</span>
+    <span class="token object">edges</span> <span class="token punctuation">{</span>
+      <span class="token object">node</span> <span class="token punctuation">{</span>
+        <span class="token property">id</span>
+        <span class="token object">author</span> <span class="token punctuation">{</span>
+          <span class="token property">name</span>
+          <span class="token property">photo</span>
+          <span class="token property">url</span>
+        <span class="token punctuation">}</span>
+        <span class="token object">content</span> <span class="token punctuation">{</span>
+          <span class="token property">text</span>
+        <span class="token punctuation">}</span>
+        <span class="token property">url</span>
+        <span class="token property-query">published</span><span class="token punctuation">(</span><span class="token attr-name">formatString</span><span class="token punctuation">:</span> <span class="token string">"YYYY/MM/DD hh:mm"</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This would return information on each webmention's user, it's content, the url it came from and the date it was published at. The JSON transformer even managed to deduct the correct type for the <code>published</code> field. Since it detected a <code>Date</code> type, we can use the <code>formatString</code> transform to get a preformatted date string 📆.</p>
+<h4>Querying and displaying webmentions for your blog post</h4>
+<p>It's nice to have all webmentions for our site, but a more practical query is to ask for mentions of a specific post on our site. For that, we'll filter webmentions by their <code>wm_target</code> property. <code>wm_target</code> is the public url of the post.</p>
+<pre class="language-graphql"><code class="language-graphql"><span class="token keyword">query</span> <span class="token definition-query function">Webmentions</span> <span class="token punctuation">{</span>
+  <span class="token property-query">allWebmentions</span><span class="token punctuation">(</span>
+    <span class="token attr-name">filter</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">wm_target</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">eq</span><span class="token punctuation">:</span> <span class="token variable">$publicUrl</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token attr-name">sort</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">fields</span><span class="token punctuation">:</span> <span class="token property">published</span><span class="token punctuation">,</span> <span class="token attr-name">order</span><span class="token punctuation">:</span> <span class="token constant">ASC</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>At the same time, we can also use the <code>published</code> property to sort the posts by their publishing date. The <code>$publicUrl</code> variable we can pass to Gatsby's <code>createPage</code> function like this:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token punctuation">{</span> slug <span class="token punctuation">}</span> <span class="token operator">=</span> post<span class="token punctuation">.</span>node<span class="token punctuation">.</span>fields<span class="token punctuation">;</span>
+<span class="token function">createPage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">path</span><span class="token operator">:</span> slug<span class="token punctuation">,</span>
+  <span class="token literal-property property">component</span><span class="token operator">:</span> blogPost<span class="token punctuation">,</span>
+  <span class="token literal-property property">context</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">publicUrl</span><span class="token operator">:</span> <span class="token function">ensureTrailingSlash</span><span class="token punctuation">(</span><span class="token constant">YOUR_DOMAIN</span> <span class="token operator">+</span> slug<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>I noticed that all <code>wm_target</code> values have a trainling slash, but only some of the <code>slug</code>s did, so I made a little helper function (<code>ensureTrailingSlash</code>) that appends a slash in case the slug doesn't have one.</p>
+<p>Now there is only one more filter missing. If you've read the first part about fetching webmentions dynamically, you might remember that we're now also receiving like- and repost-mentions of our post. Those lack some properties such as <code>content</code> and <code>published</code> which is why we filtered them out previously. We can achieve the same thing in GraphQL:</p>
+<pre class="language-graphql"><code class="language-graphql"><span class="token keyword">query</span> <span class="token definition-query function">Webmentions</span><span class="token punctuation">(</span><span class="token variable">$publicUrl</span><span class="token punctuation">:</span> <span class="token scalar">String</span><span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token attr-name">webmentions</span><span class="token punctuation">:</span> <span class="token property-query">allWebmentions</span><span class="token punctuation">(</span>
+    <span class="token attr-name">filter</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">wm_property</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">in</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"in-reply-to"</span><span class="token punctuation">,</span> <span class="token string">"mention-of"</span><span class="token punctuation">]</span> <span class="token punctuation">}</span>
+      <span class="token attr-name">wm_target</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">eq</span><span class="token punctuation">:</span> <span class="token variable">$publicUrl</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token attr-name">sort</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">fields</span><span class="token punctuation">:</span> <span class="token property">published</span><span class="token punctuation">,</span> <span class="token attr-name">order</span><span class="token punctuation">:</span> <span class="token constant">ASC</span> <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>This will only return replies and mentions of our post and it will allow us to display a list of webmentions. On my blog, I'm rendering the webmentions like this:</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/nTJTQzhiiD-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/nTJTQzhiiD-352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/nTJTQzhiiD-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/nTJTQzhiiD-352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/nTJTQzhiiD-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/nTJTQzhiiD-352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/nTJTQzhiiD-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="A screenshot of the list of webmentions" src="/img/content/2023-01-09-23-webmentions-in-gatsby/nTJTQzhiiD-352.jpeg" width="705" height="647"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">A screenshot of the list of webmentions</figcaption>
+      </figure></p>
+<p>As an example, check out how I'm rendering mentions on my site: <a href="https://github.com/janmonschke/janmonschke.github.com/blob/4413146f9d5b9ebfe73f2b7d4b9aeae0ff2e7349/src/components/Mentions.js">Mentions.js</a>.</p>
+<p>If you want to show likes and reposts of your posts as well, you can use the following query to also select those:</p>
+<pre class="language-graphql"><code class="language-graphql"><span class="token keyword">query</span> <span class="token definition-query function">Webmentions</span><span class="token punctuation">(</span><span class="token variable">$publicUrl</span><span class="token punctuation">:</span> <span class="token scalar">String</span><span class="token operator">!</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token attr-name">likes</span><span class="token punctuation">:</span> <span class="token property-query">allWebmentions</span><span class="token punctuation">(</span>
+    <span class="token attr-name">filter</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">wm_property</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">eq</span><span class="token punctuation">:</span> <span class="token string">"like-of"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token attr-name">wm_target</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">eq</span><span class="token punctuation">:</span> <span class="token variable">$publicUrl</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token attr-name">reposts</span><span class="token punctuation">:</span> <span class="token property-query">allWebmentions</span><span class="token punctuation">(</span>
+    <span class="token attr-name">filter</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      <span class="token attr-name">wm_property</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">eq</span><span class="token punctuation">:</span> <span class="token string">"repost-of"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token attr-name">wm_target</span><span class="token punctuation">:</span> <span class="token punctuation">{</span> <span class="token attr-name">eq</span><span class="token punctuation">:</span> <span class="token variable">$publicUrl</span> <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">(</span><span class="token operator">...</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<p>And then you can display them in your blog post as well.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/vhJpqU4K0g-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/vhJpqU4K0g-352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/vhJpqU4K0g-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/vhJpqU4K0g-352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/vhJpqU4K0g-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/vhJpqU4K0g-352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/vhJpqU4K0g-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="A screenshot of the likes on my blog post" src="/img/content/2023-01-09-23-webmentions-in-gatsby/vhJpqU4K0g-352.jpeg" width="705" height="111"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">A screenshot of the likes on my blog post</figcaption>
+      </figure></p>
+<p>This is the code I use for my likes for example: <a href="https://github.com/janmonschke/janmonschke.github.com/blob/4413146f9d5b9ebfe73f2b7d4b9aeae0ff2e7349/src/components/Likes.js">Likes.ts</a>. I haven't really felt the need yet to show reposts as well.</p>
+<h4>Sanitizing the external html content</h4>
+<p>Let's have a last look at the <code>content</code> of a webmention. In the previous examples, I only queried for <code>content.text</code> which does not actually contain links to profiles but only a raw text representation of a webmention. That means @mentions in the content are neither highlighted, nor are they interactive.</p>
+<p>There is a <code>content.html</code> version that does contain links to profiles and proper <code>&lt;a/&gt;</code> tags for external links. However, it also contains more unwanted HTML like <code>&lt;p/&gt;</code> tags around the text. More importantly, the HTML could potentially contain harmful elements (think: script injection).</p>
+<p>Just showing the raw text was not an option for me, neither was embedding the external HTML. So I decided to parse <code>content.html</code> for links to profiles and other resources. And then use that information to enrich the raw text from <code>content.text</code>.</p>
+<p>First, we're parsing the HTML for @mentions and their links:</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> atMentionUrlRegex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">&lt;a href="([http].+?)".+?class=\"u-url\">(.*?)&lt;\/a></span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+
+<span class="token comment">// Create a lookup for @mention links e.g.:</span>
+<span class="token comment">// { "@janmon": "https://social.lol/janmon" }</span>
+<span class="token keyword">const</span> atMentionsUrls <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>html<span class="token punctuation">.</span><span class="token function">matchAll</span><span class="token punctuation">(</span>atMentionUrlRegex<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span>
+  <span class="token punctuation">(</span><span class="token parameter">_atMentions<span class="token punctuation">,</span> <span class="token punctuation">[</span>_<span class="token punctuation">,</span> userUrl<span class="token punctuation">,</span> userAtMention<span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    _atMentions<span class="token punctuation">[</span>userAtMention<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"&lt;span>"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"&lt;/span>"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span>
+      userUrl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> _atMentions<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>This will allow us to replace raw @mentions e.g. <code>@janmon</code> with proper <code>&lt;a/&gt;</code> tags in the next step.</p>
+<pre class="language-javascript"><code class="language-javascript"><span class="token keyword">const</span> atMentionRegex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(@\w+)</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> urlRegex <span class="token operator">=</span> <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">(https|http):\/\/\S+</span><span class="token regex-delimiter">/</span><span class="token regex-flags">g</span></span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> enhancedText <span class="token operator">=</span> text
+  <span class="token comment">// Replace all @mentions with links nofollow + ugc links that were parsed before</span>
+  <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>atMentionRegex<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">atMention</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;a href="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>atMentionsUrls<span class="token punctuation">[</span>atMention<span class="token punctuation">]</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" rel="nofollow ugc" target="_blank"></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>atMention<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/a></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token comment">// Replace all urls in the text with nofollow + ugc links</span>
+  <span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>urlRegex<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&lt;a href="</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">" rel="nofollow ugc" target="_blank"></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>url<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&lt;/a></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>In the first step, we're using a regular expression that matches @mentions to replace the mention with a normal link. I also decided to add <a href="http://developer.mozilla.org/docs/Web/HTML/Link_types">rel=&quot;nofollow ugc&quot;</a> to the link since they are indeed user-generated and I do not have control over to where they link to.</p>
+<p>In the second step, we're replacing raw urls (identified by starting with either <code>http</code> or <code>https</code>) with regular link tags as well. Same procedure, really.</p>
+<p>The resulting text feels &quot;safe&quot; enough for me to then render it in a <code>dangerouslySetInnerHTML</code> 😅. This allows me to render webmentions with interactive @mentions and links 🎉 <sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>.</p>
+<p>The actual code on my site contains some more documentation around the expected shape of the HTML content. Check out my <a href="https://github.com/janmonschke/janmonschke.github.com/blob/4413146f9d5b9ebfe73f2b7d4b9aeae0ff2e7349/src/components/Mentions.js#L46-L102">Mentions component</a> if you want to dive deeper into this function.</p>
+<h3>Automating the webmention synchronisation</h3>
+<p>The final bit of the webmention integration is to automate the entire process. If you're okay with running the script yourself every now and then that is also totally fine. The automation is totally optional.</p>
+<p>Since I'm using GitHub to host my blog and its code, I'm also using GitHub actions to automate fetching webmentions. Prior knowledge with GitHub actions is not required for this step of the process. I'm giving a basic description of most of the instructions but am not going into a lot of detail.</p>
+<p>The game plan for the automation is to be able to run the synchronization periodically, in response to a webhook from <a href="http://webmention.io">webmention.io</a> and when triggered manually (which is useful for debugging).</p>
+<p>As before, I'm using <a href="https://sebastiandedeyne.com/webmentions-on-a-static-site-with-github-actions/">Sebastian's setup</a> as the base for my own integration.</p>
+<p>Let's go ahead and create a new workflow file in <code>.github/workflows</code>. Let's call it <code>webmention-sync.yml</code>.</p>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Webmentions Sync
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">schedule</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 */24 * * *"</span>
+  <span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">webmentions-sync</span><span class="token punctuation">:</span></code></pre>
+<p>This part of the workflow file defines our new workflow <code>Webmentions Sync</code> wich will run periodically every 24 hours at midnight (<code>cron</code>) and it has a manual trigger in the GitHub UI (<code>workflow_dispatch</code>). The actual instructions it will execute are defined in the <code>jobs</code> section. Since we only run one job that is made of several steps, we're only using one top level key here <code>webmentions-sync</code>.</p>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">webmentions-sync</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Check out repository
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v3
+        <span class="token key atrule">with</span><span class="token punctuation">:</span>
+          <span class="token key atrule">ref</span><span class="token punctuation">:</span> dev
+          <span class="token key atrule">token</span><span class="token punctuation">:</span> $
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Sync webmentions
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">WEBMENTIONS_IO_TOKEN</span><span class="token punctuation">:</span> $
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> node ./webmentions/sync.js
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Commit to repository
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">COMMIT_MSG</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+            Sync webmentions</span>
+        <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+          git config user.email "YOUR_GITHUB_EMAIL"
+          git config user.name "THE_NAME_YOU_WANT_TO_ASSOCIATE_TO_THE_COMMIT"
+          git add .
+          git diff --quiet &amp;&amp; git diff --staged --quiet || (git commit -m "${COMMIT_MSG}"; git push origin dev)</span></code></pre>
+<p>In the first step we're using the <code>actions/checkout</code> action to check out the current repository on the CI. This is an external action that is provided by GitHub. We're checking out the <code>dev</code> branch and passing a custom <code>token</code>. <code>secrets.GH_PAGES_ACCESS_TOKEN</code> is a personal access token the script needs in order to commit to your repository with a token that is not the standard action token. Check out <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">this guide on how to create a token on GitHub</a>. A different token is needed here since only a custom token will trigger the action workflow that will actually build the site<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>.</p>
+<p>Next we're executing the actual synchonisation script with <code>run: node ./webmentions/sync.js</code>. Notice that we're also making the <code>WEBMENTIONS_IO_TOKEN</code> secret available as an environment variable. If you remember, the script needs that variable to make requests to <a href="http://webmention.io">webmention.io</a>. The actual value of that variable is saved as an encrypted secret in our repository. Check out <a href="https://docs.github.com/en/actions/security-guides/encrypted-secrets">this GitHub guide on how to add encrypted secrets to your repository</a>.</p>
+<p>At that point, the script will have fetched new webmentions and have written them to disk. Time to actually commit them to the repository. There is weirdly no reusabled action for this, so that step is just executing a couple of git commands. Also make sure to replace the committer's name and e-mail with your credentials so that the commit is associated to your account. The final command will push new mentions to your repository or do nothing if there were no changes.</p>
+<p>Since I am depoying my site to GitHub pages with <a href="https://github.com/janmonschke/janmonschke.github.com/blob/dev/.github/workflows/gh-pages-deploy.yml">another action workflow which is triggererd by pushes to <code>dev</code></a>, my site will automatically rebuild whenever there are new webmentions 🎉.</p>
+<h4>Using webhooks to sync webmentions on-demand</h4>
+<p>This step is also optional but I felt it was actually fun to implement. The <a href="http://webmention.io">webmention.io</a> API has a feature where it calls a webhook when it has new webmentions for your site. This allows us to update webmentions whenever a new mention comes in (faster than just every 24 hours).</p>
+<p>The webhook fits in beautifully into the GitHub action workflow because GitHub workflows can be triggered by calling a webhook. So in theory we could tell the <a href="http://webmention.io">webmention.io</a> API to call our GitHub webhook directly. Which would then in turn start the webmention synchronization workflow.</p>
+<p>There is only a tiny problem with that setup. The GitHub webhook needs to be called with specific headers. Those headers cannot be configured on <a href="http://webmention.io">webmention.io</a>. In order to go around this issue, I decided to add a no-code tool in between those two entities.</p>
+<p>I went with <a href="https://pipedream.com">pipedream.com</a> because I struggled to set up a webhook from <a href="https://ifttt.com/">ifttt.com</a> to GitHub and there is no way to inspect outgoing requests. It's possible to make this flow work with other no-code tools but since I'm already using pipedream for other automations, I opted for this one.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--1500.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--705.avif 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--705.webp 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--705.jpeg 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Setting up a pipedream trigger" src="/img/content/2023-01-09-23-webmentions-in-gatsby/oXLHcuN6e--352.jpeg" width="1500" height="735"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Setting up a pipedream trigger</figcaption>
+      </figure></p>
+<p>There is no special setup required for this trigger. We only need the url so we can add it to our <a href="http://webmention.io">webmention.io</a> settings page.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-1500.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-705.avif 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-705.webp 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-705.jpeg 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Pipedream provides a url for your webhook trigger" src="/img/content/2023-01-09-23-webmentions-in-gatsby/NRld21nfda-352.jpeg" width="1500" height="562"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Pipedream provides a url for your webhook trigger</figcaption>
+      </figure></p>
+<p>The trigger for our new pipedream workflow is an incoming HTTP request:</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-1500.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-705.avif 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-705.webp 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-705.jpeg 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="webmention.io settings screenshot showing the form to enter a webhook url" src="/img/content/2023-01-09-23-webmentions-in-gatsby/iZg5AczbGl-352.jpeg" width="1500" height="761"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">webmention.io settings screenshot showing the form to enter a webhook url</figcaption>
+      </figure></p>
+<p>On the <a href="https://webmention.io/settings/webhooks">webhooks settings page</a> you can then paste that URL and <a href="http://webmention.io">webmention.io</a> will call it whenever there is a new webmention.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-1500.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-705.avif 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-705.webp 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-705.jpeg 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Selecting an outgoing HTTP request as the next step in pipedream" src="/img/content/2023-01-09-23-webmentions-in-gatsby/NhK2pcDs5t-352.jpeg" width="1500" height="743"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Selecting an outgoing HTTP request as the next step in pipedream</figcaption>
+      </figure></p>
+<p>Back in our pipedream workflow, we can add a new HTTP request step:</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-1500.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-705.avif 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-705.webp 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-705.jpeg 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Setting up the URL and body of the outgoing HTTP request" src="/img/content/2023-01-09-23-webmentions-in-gatsby/xHFH4k4not-352.jpeg" width="1500" height="799"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Setting up the URL and body of the outgoing HTTP request</figcaption>
+      </figure></p>
+<p>The request should go to <code>api.github.com/YOUR_NAME/REPOSITORY.git/dispatches</code> (obv. replace with your own repository) and as its body it should send a simple JSON object that describes the type of event (will explain later). In our case, I called the event <code>webmention_webhook</code>.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--1500.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--352.avif 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--705.avif 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--352.webp 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--705.webp 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--352.jpeg 352w, /img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--705.jpeg 705w, /img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Setting up the HTTP headers for your outgoing HTTP request" src="/img/content/2023-01-09-23-webmentions-in-gatsby/wnEN2jnvV--352.jpeg" width="1500" height="886"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Setting up the HTTP headers for your outgoing HTTP request</figcaption>
+      </figure></p>
+<p>Next we add the required headers to the request. In <code>Authorization</code>, add your GitHub token (you can use the one we created earlier) and in <code>Accept</code> add <code>application/vnd.github+json</code>. This marks the workflow as complete and you can deploy it.</p>
+<p>The only thing that's missing now is a change to our GitHub workflow. In our <code>on</code> list, we now add another entry <code>repository_dispatch</code>:</p>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">schedule</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">cron</span><span class="token punctuation">:</span> <span class="token string">"0 */24 * * *"</span>
+  <span class="token key atrule">workflow_dispatch</span><span class="token punctuation">:</span>
+
+  <span class="token comment"># pipedream webhook</span>
+  <span class="token key atrule">repository_dispatch</span><span class="token punctuation">:</span>
+    <span class="token key atrule">types</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> webmention_webhook</code></pre>
+<p><code>repository_dispatch</code> enables webhooks for this workflow and <code>types: - webmention_webhook</code> sets up the flow to run on webhooks that have the event type <code>webmention_webhook</code> (which comes from the request body in our pipedream request).</p>
+<p>And that's it. You can test out the whole flow by liking one of your toots / tweets that contain a URL to your own blog. Once <a href="http://brid.gy">brid.gy</a> picks up the like (you can make it rescan that toot-/tweet-url) you should see that your GitHub workflow was triggered and your site is built again 🎉</p>
+<p>That's really it.</p>
+<p>Unless.</p>
+<p>Well, in the rare case where you will have lots of likes, mentions and reposts for a blog post, you will now trigger a new pipeline run for every one of those webhook calls. This could result in git conflicts on the pipeline. Which in turn will potentially block the pipeline. It's also not necessary to build your site 10 times within a minute. You can prevent multiple pipeline runs by adding the following to your workflow file:</p>
+<pre class="language-yml"><code class="language-yml"><span class="token key atrule">concurrency</span><span class="token punctuation">:</span>
+  <span class="token key atrule">group</span><span class="token punctuation">:</span> webmention_sync
+  <span class="token key atrule">cancel-in-progress</span><span class="token punctuation">:</span> <span class="token boolean important">true</span></code></pre>
+<p>This will stop previous pipelines when a new pipeline run is triggered. No more parallel pipeline runs, no more conflicts, yay 🎉</p>
+<p>This was really it, haha.</p>
+<h2>The end (my friend)</h2>
+<p>I hope this helps you to set up webmentions on your site. This post did get a little longer than I hoped, and documenting the process took way longer than actually building the integration. That is to say, it might look complicated, but it's not as much work as it seems to be!</p>
+<p>Let me know how it worked out for you on your site by replying to <a href="https://social.lol/@janmon/109777627702072379">this toot</a> or <a href="https://twitter.com/thedeftone/status/1620004702632169473">this tweet</a>.</p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Check out this discussion on why Mastodon doesn't currently support webmentions: <a href="https://github.com/mastodon/mastodon/issues/6074">https://github.com/mastodon/mastodon/issues/6074</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="http://Brid.gy">Brid.gy</a> uses the standard Twitter search which does not return replies for tweets that are older than a couple of days: <a href="https://brid.gy/about#missing">https://brid.gy/about#missing</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn3" class="footnote-item"><p>Yes, I know about the debate over fetching in <code>useEffect</code>. That's not the point of this example. I just wanted to provide a quick piece of code to showcase fetching webmentions on the client. 😅 <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn4" class="footnote-item"><p>This approach of enriching the text might not be 100% secure itself and it relies on the fact that <code>content.text</code> does not contain any HTML tags. <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn5" class="footnote-item"><p>This discussion on GitHub shines some light on why another token is required: <a href="https://github.com/community/community/discussions/37103">https://github.com/community/community/discussions/37103</a> <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+</section>
+</article>
+<aside>
+  <div>
+    <h3>Likes</h3>
+    <likes likes="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"><ul class="likes">
+  <li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://mastodon.berlin/@mrc" class="like">
+      <img src="https://webmention.io/avatar/media.social.lol/87042648575d2aa2de2c2d66533c63431eec95a82ee47094bc6eb526ec39a356.jpg" alt="Márton Salomváry" title="Márton Salomváry" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/stefanjudis" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/2ba9a47d3ee6152babbedde03f3aa501709fa131fd662c70cfd9c4ee0aca30b6.jpg" alt="Stefan Judis" title="Stefan Judis" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/esttorhe" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/74583f80a05615213b01cf11d2d926ae624d42cf393f5072b508e09fd2fd9216.jpg" alt="Esteban Torres" title="Esteban Torres" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://home.social/@dersmon" class="like">
+      <img src="https://webmention.io/avatar/media.social.lol/de3008fdb11a86c7ce704921c451ef3a6ca0f2ba652f29a9761c0462f20dde63.png" alt="Simon Hohl" title="Simon Hohl" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://bell.bz/@andy" class="like">
+      <img src="https://webmention.io/avatar/media.social.lol/cea017ea6e66e1ee7d2f97f7278d83b1aa6a13ccb195c71c06a3e7b04d9bdfa0.jpg" alt="Andy Bell" title="Andy Bell" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@hl" class="like">
+      <img src="https://webmention.io/avatar/media.social.lol/2d3c63a237690d230a534d120e4ee48813a409195bf4cb061af204bc8d1fe63e.jpg" alt="Henry" title="Henry" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://hyem.tech/@rob" class="like">
+      <img src="https://webmention.io/avatar/media.social.lol/58f0928fe136e8aa8a4bdf0861137158f95a762dfd999fe963bc947539523076.jpg" alt="Rob Anderson" title="Rob Anderson" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://chaos.social/@michenriksen" class="like">
+      <img src="https://webmention.io/avatar/media.social.lol/f3c773ff17ba197727fb1dafae3dd63977d55848ad3ad87df5d3d1710b085e3d.png" alt="Michael Henriksen" title="Michael Henriksen" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/gryzzly" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/1cea001225e316fea0cd64321f597ce8c13088979442312bfe3f93b43137ea72.jpg" alt="🇺🇦 @gryzzly@mastodon.social" title="🇺🇦 @gryzzly@mastodon.social" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/sheley" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/981eadca03f4d53b672c4ffd90e792c353e8071c4c82c63d09b7e965be1f7fc1.png" alt="michele with one L" title="michele with one L" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://indieweb.social/@gmarty" class="like">
+      <img src="https://webmention.io/avatar/media.social.lol/f880a3cb33e4e3e50b4041f60034eaf030c115c5bd4231ceff4a5ddb40eb688e.jpg" alt="Guillaume Marty" title="Guillaume Marty" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/r_boulay" class="like">
+      <img src="https://webmention.io/avatar/pbs.twimg.com/d12a3ebbc44128b69a7958ffa483d151740a49c7ecbe0f2b1ce9380be1485712.jpg" alt="Romain Boulay" title="Romain Boulay" loading="lazy" class="like__image">
+    </a>
+  </li>
+</ul>
+
+</likes>
+  </div>
+  <div>
+    <h3>Mentions</h3>
+    <mentions mentions="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"><ul class="mentions">
+  <li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon">Jan</a>
+        </strong>
+        <div class="mention__content">Thanks to <a href="https://bell.bz/@andy" rel="nofollow ugc" target="_blank">@andy</a> and <a href="https://social.lol/@sophie" rel="nofollow ugc" target="_blank">@sophie</a> for the inspiration :)</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon/109777631384556985">2023/01/30 10:15</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://mastodon.world/@hamatti" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/media.social.lol/4681b01a570ac17b6a3f8ec557578ff027e45fe9d79e5af6b39145bcece82dda.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://mastodon.world/@hamatti">Juhis</a>
+        </strong>
+        <div class="mention__content"><a href="https://social.lol/@janmon" rel="nofollow ugc" target="_blank">@janmon</a> This was a great read, thanks for writing it! I've been thinking about adding webmentions to my site for a long while now but I've been put off by so many moving pieces (and integrations).Maybe this week is the time I pick up that project!</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://mastodon.world/@hamatti/109777741911560491">2023/01/30 10:43</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/esttorhe" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/pbs.twimg.com/74583f80a05615213b01cf11d2d926ae624d42cf393f5072b508e09fd2fd9216.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/esttorhe">Esteban Torres</a>
+        </strong>
+        <div class="mention__content">Ohhh. Nice work Jan. 
+
+Will definitely try to tinker with this and try to add it to my own website</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/esttorhe/status/1620014912834572288">2023/01/30 11:03</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon">Jan</a>
+        </strong>
+        <div class="mention__content"><a href="https://mastodon.world/@hamatti" rel="nofollow ugc" target="_blank">@hamatti</a> Glad you liked it 🎉Good luck with your integration. Let me know in case you hit any road blocks!</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon/109778389481723036">2023/01/30 01:28</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/thedeftone" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/pbs.twimg.com/ca3ad8e6d343c6d7b2069c6c885f79e0e2e53eaab61482b5a471a344cf7780a8.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/thedeftone">Jan Monschke (@janmon@social.lol)</a>
+        </strong>
+        <div class="mention__content">Yess, let me know how it goes!</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/thedeftone/status/1620052183713718272">2023/01/30 01:31</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@robb" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/media.social.lol/d2b5943b2e687ef31399f8241bd07d88b1140716a89c5e026038eaf8ec5341b7.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@robb">Robb Knight :prami:</a>
+        </strong>
+        <div class="mention__content"><a href="https://social.lol/@janmon" rel="nofollow ugc" target="_blank">@janmon</a> Your post is what reminded me, I just saw it in my RSS!</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@robb/109779567016132895">2023/01/30 06:27</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon">Jan</a>
+        </strong>
+        <div class="mention__content"><a href="https://social.lol/@robb" rel="nofollow ugc" target="_blank">@robb</a> 🤩✌️</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon/109779571523369368">2023/01/30 06:28</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/trovster" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/pbs.twimg.com/9164cacb13a6a5ae179f52d1926a290f33a576fd782b65f017a6e17fd02a4891.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/trovster">trovster</a>
+        </strong>
+        <div class="mention__content">🔗 Adding webmentions to your static blog
+
+> Blogs are using webmentions to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they’re linking to them.
+
+janmonschke.com/adding-webment…</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/trovster/status/1630994987742625801">2023/03/01 06:14</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    
+
+    <div class="reference">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://rknight.me/adding-webmentions-to-your-site/" aria-hidden class="reference__authorImageLink">
+        <div class="reference__image"></div>
+      </a>
+      <div class="reference__content">
+        Mentioned on
+        <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://rknight.me/adding-webmentions-to-your-site/">https://rknight.me/adding-webmentions-to-your-site/</a>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</mentions>
+  </div>
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  <p>🍅 It took 22 pomodoros to write this post 🍅</p>
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <span>
+    Hi, I'm Jan 👋 I am a software engineer working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
+    in Berlin. You can find me on
+    <a rel="noopener noreferrer" target="_blank" href="https://social.lol/@janmon">
+      🐘 Mastodon
+    </a>
+    ,
+    <a rel="noopener noreferrer" target="_blank" href="https://github.com/janmonschke">
+      💻 GitHub
+    </a>
+    and
+    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jan-monschke-aa6a249a/">
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
+
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      
+      <li>
+        <a href="/changing-my-online-identity/" rel="next"><span>Changing my online identity</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+</main>
+    </div>
+    <style></style>
+    <script></script>
+    <script type="module"></script>
+    <script async defer src="https://scripts.withcabin.com/hello.js"></script>
+  
+
+
+
+
+
+</body>
+</html>
