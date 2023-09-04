@@ -22,5 +22,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: _site
-          publish_branch: gh-pages
+          publish_branch: main
           github_token: ${{ secrets.GH_PAGES_ACCESS_TOKEN }}

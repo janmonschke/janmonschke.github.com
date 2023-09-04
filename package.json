@@ -7,7 +7,7 @@
     "start": "npx @11ty/eleventy --serve",
     "start:debug": "DEBUG=Eleventy* npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "deploy": "npx @11ty/eleventy && gh-pages -d _site -b master"
+    "deploy": "npx @11ty/eleventy && gh-pages -d _site -b main"
   },
   "author": "",
   "license": "MIT",
