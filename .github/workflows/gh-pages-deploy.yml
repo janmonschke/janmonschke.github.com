@@ -14,8 +14,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: Elventy build
-        uses: TartanLlama/actions-eleventy@v1.2
+      - name: Eleventy build
+        run: |
+          npm ci
+          npm run build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
