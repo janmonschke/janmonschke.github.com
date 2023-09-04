@@ -11,7 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: TartanLlama/actions-eleventy@v1.2
+      - name: Elventy build
+        uses: TartanLlama/actions-eleventy@v1.2
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: _site
           publish_branch: gh-pages
