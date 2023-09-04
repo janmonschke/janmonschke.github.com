@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>All weeknotes | Jan Monschke</title>
+    <title>Weeknotes 01/2023 | Jan Monschke</title>
 
     <meta httpequiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,9 +14,9 @@
     
     <meta name="description" content="The portfolio and blog of Jan Monschke">
     <meta property="og:description" content="The portfolio and blog of Jan Monschke">
-    
-    
-    
+    <meta property="article:published_time" content="Mon Sep 04 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    <meta property="og:image" content="https://janmonschke.com/img/content/vVLN_ZQwrd-600.jpeg">
+    <meta property="image" content="https://janmonschke.com/img/content/vVLN_ZQwrd-600.jpeg">
 
     <link rel="webmention" href="https://webmention.io/janmonschke.com/webmention">
     <link rel="pingback" href="https://webmention.io/janmonschke.com/xmlrpc">
@@ -35,31 +35,224 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
-    <style>.allPostsList__header {
+    <style>.bio {
     display: flex;
-    align-items: baseline;
-    margin-top: 0.8rem;
+    align-items: center;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
+
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
+
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .blogPost__nacvigationTitle {
+    display: block;
     margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
   }
 
-  .allPostsList__header h2,
-  .allPostsList__rssIcon {
-    margin: 0;
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
   }
 
-  .allPostsList__rssIcon {
-    margin-left: 0.32rem;
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
   }
 
-  .allPostsList__list {
-    list-style-type: none;
-    margin: 0;
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
   }
 
-  .allPostsList__postTitle {
-    margin-top: 1.6rem;
-    margin-bottom: 0px;
-    font-size: 1.12rem;
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
   }
 .Layout__titleContainer,
   .Layout__homeLink {
@@ -273,135 +466,85 @@ video {
 
 
       </header>
-      <main>
-<all-posts-list title="All weeknotes" rssurl="/weeknotes.xml" posts="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" sub="function sub(post) {
-    return post.data.keywords.map((keyword) => `#${keyword}`).join(&quot; · &quot;);
-  }"><header class="allPostsList__header">
-  <h2>All weeknotes</h2>
-  <a href="/weeknotes.xml">
-    <img src="/assets/images/rss.svg" alt="RSS feed" class="allPostsList__rssIcon">
-  </a>
-</header>
-<main>
-  <ul class="allPostsList__list">
-    <li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2023/01/">Weeknotes 01/2023</a>
-      </h3>
-      <small>#daycare · #cargo bike · #elventy · #the expanse · #motherland</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/05/">Weeknotes 05/2022</a>
-      </h3>
-      <small>#baby · #react finland · #pub quiz · #remixjs</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/04/">Weeknotes 04/2022</a>
-      </h3>
-      <small>#war · #death · #pregnancy</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/03/">Weeknotes 03/2022</a>
-      </h3>
-      <small>#elasticsearch · #release · #game development · #side project · #cartographers</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/02/">Weeknotes 02/2022</a>
-      </h3>
-      <small>#elasticsearch · #release · #game · #side project · #bouldering · #hidden gem</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/01/">Weeknotes 01/2022</a>
-      </h3>
-      <small>#winter · #elasticsearch · #coffee · #technology · #politics</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/13/">Weeknotes 13/2021</a>
-      </h3>
-      <small>#hiking · #team events · #squid game · #utopia avenue · #music for flow</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/12/">Weeknotes 12/2021</a>
-      </h3>
-      <small>#fall · #home improvements · #hiking · #bobiverse · #sex education</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/11/">Weeknotes 11/2021</a>
-      </h3>
-      <small>#wedding · #new job · #walter tevis · #dune · #neo-classic</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/10/">Weeknotes 10/2021</a>
-      </h3>
-      <small>#summer time · #blog · #sideproject · #ping · #conference</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/09/">Weeknotes 9/2021</a>
-      </h3>
-      <small>#settling in · #covid vaccination · #new role · #books</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/08/">Weeknotes 8/2021</a>
-      </h3>
-      <small>#moving · #somewhere · #ping · #firebase course</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/07/">Weeknotes 7/2021</a>
-      </h3>
-      <small>#somewhere · #responsively · #ping · #firebase cloud storage · #sci-fi · #house music</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/06/">Weeknotes 6/2021</a>
-      </h3>
-      <small>#somewhere · #ping · #darknet diaries · #music</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/05/">Weeknotes 5/2021</a>
-      </h3>
-      <small>#twilio · #ping · #music · #panama papers · #gamestop short squeeze</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/04/">Weeknotes 4/2021</a>
-      </h3>
-      <small>#soundcloud · #somewhere · #ping · #IKEA web assembly · #science fiction</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/03/">Weeknotes 3/2021</a>
-      </h3>
-      <small>#soundcloud · #ping · #firebase · #interdependency · #the expanse</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/02/">Weeknotes 2/2021</a>
-      </h3>
-      <small>#ping · #xstate · #firebase auth · #nextjs · #work · #board games · #cooking</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/01/">Weeknotes 1/2021</a>
-      </h3>
-      <small>#new year · #side projects · #board games · #audio books · #series</small>
-    </li>
-  </ul>
-</main>
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Weeknotes 01/2023</h1>
+    <span class="blogPost__date">September 04, 2023</span>
+  </header>
+  <aside class="blogPost__coverImage"><picture><source type="image/avif" srcset="/img/content/weeknotes/2023/vVLN_ZQwrd-352.avif 352w, /img/content/weeknotes/2023/vVLN_ZQwrd-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/weeknotes/2023/vVLN_ZQwrd-352.webp 352w, /img/content/weeknotes/2023/vVLN_ZQwrd-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/weeknotes/2023/vVLN_ZQwrd-352.jpeg 352w, /img/content/weeknotes/2023/vVLN_ZQwrd-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img alt loading="eager" decoding="auto" src="/img/content/weeknotes/2023/vVLN_ZQwrd-352.jpeg" width="705" height="426" class="picture"></picture></aside>
+  <section class="blogPost__content"><h2>Life</h2>
+<p>My son finished the fourth week of settling into daycare. In Berlin, as probably in a lot of other places, kids are slowly settled into their daycare routine. In the beginning I stayed with him there, observed him play with the other kids. Then I gradually left for longer durations. Until he's ready to have his lunch nap there and feels confident to interact with other kids and play by himself.</p>
+<p>He was curious from day one and, as most kids were older, he was not afraid. Judging from the experience of friends, we were quite lucky that in week two he was already sleeping there and that he generally didn't reject being there. They only had to call me once and that was just before his nap time anyways. We're super proud of him and he's developing so much there ❤️</p>
+<p>Speaking of which, he grew so quickly and the time flew so fast. My wife and I spent nine months after birth taking care of him together. The parental leave in Germany is quite generous and my employer gave me four extra months on top. Including the daycare month, I've now spent 10 months taking care of him (of which we both worked 3 months part-time). But it feels like much shorter than that. It feels like yesterday that he was such a tiny nugget. And now he's crawling like a champ, wants to go faster on the bike and starts to blabber. 😍</p>
+<p>For several weeks we have now been looking into buying a cargo bike to help us bring the little one to daycare, to do big groceries and to go on bike trips with friends. There are so many different models on the market now which makes it hard to find the right one. Or rather, they're all great, just the it's hard to choose when there are so many options. Where we live in Berlin, we see a lot of <a href="https://muli-cycles.de/en/bikes/motor">Muli bikes</a> or <a href="https://urbanarrow.com/">Urban Arrows</a>.</p>
+<p>The Muli is great because it's compact and very agile. It doesn't feel like cargo bike when you drive it, even without a motor. The Urban Arrow is a lot more inert, less agile and just very big and bulky. There are advantages to long bikes like the Urban Arrow e.g. the large amount of space, but they are ultimately too big for us.</p>
+<p>We almost decided to get the Muli, but then friends recommended the <a href="https://chike.de/e-kids/">Chike</a> and that's the bike we're currently aiming to get. Before that, we want to rent it out for a longer tour though since so far we only had it for 30 minutes when testing it out at the dealership. Our son loved it, of course. It's a cargo bike made for transporting kids. The special thing about the Chike is that it has three wheels, two in the front, one in the back. Which in itself isn't that special and there are plenty of other bikes with the same configuration. However, the Chike's front wheels tilt when taking turns and so it feels much more like a two-wheel bike. I recommend checking out their promo video, it's a very unique bike.</p>
+<h2>Work</h2>
+<p>This week was my first week back at work. I was mainly catching up with what happened in the past months and then I of course had to redo plenty of the corporate trainings, haha. Many of my coworkers are still on vacation, which made it a very easy start so far. Easy is good, since it will take me some time to adjust to this new schedule. Morning routine with the little one, his morning nap, dropping him off at daycare, work work work, picking up the kiddo, evening routine, a little bit more work (meetings with the US) and then bed. Ouff. Let's see how that'll go.</p>
+<h2>Side projects</h2>
+<p>
+      <figure>
+        
+      <a href="/img/content/weeknotes/2023/mzJfgTNwfS-705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/weeknotes/2023/mzJfgTNwfS-352.avif 352w, /img/content/weeknotes/2023/mzJfgTNwfS-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/weeknotes/2023/mzJfgTNwfS-352.webp 352w, /img/content/weeknotes/2023/mzJfgTNwfS-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/weeknotes/2023/mzJfgTNwfS-352.jpeg 352w, /img/content/weeknotes/2023/mzJfgTNwfS-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="" src="/img/content/weeknotes/2023/mzJfgTNwfS-352.jpeg" width="705" height="645"></picture>
+      </a>
+    
+        <figcaption class="picture__caption"></figcaption>
+      </figure></p>
+<p>I ported this blog to <a href="https://www.11ty.dev/docs/">Eleventy</a> last week. There was no real need to do this other than me being upset about how slow Gatsby was and how pointless it felt to load React on this blog. This is not a rant agains React, or any framework for that matter. It's just that it's completely unnecessary on a site like this one.</p>
+<p>Porting the blog went super smoothly, given I had already done the same a few months back with my <a href="https://aweekinthewoods.com/">hiking blog</a>. Interestingly, the hiking blog started off as a clone of this blog. Was then ported to Eleventy. To then ultimately be the template for this blog's port to Eleventy. We went full circle there. 😄</p>
+<p>This site is now 300kB lighter, loads and builds much faster and uses only native web features under the hood (including web components, thanks to <a href="https://www.11ty.dev/docs/languages/webc/">WebC</a>). The hardest part was to change all the <code>className</code> attributes to <code>class</code> 😅. I must say that I feel a lot more comfortable with Eleventy's collection and JSON data sourcing than with Gatsby's GraphQL. Which, of course, is a personal preference. I also <a href="https://social.lol/@janmon/110968694684373814">tooted about it</a>.</p>
+<p>I had to alter the webmention implementation that I talked about <a href="https://janmonschke.com/adding-webmentions-to-your-static-blog/">in this blog post</a> a little bit which makes me think I should write a follow-up post that explains the (minimal) changes that are necessary.</p>
+<h2>Entertainment</h2>
+<ul>
+<li>📚 <a href="https://openlibrary.org/books/OL30036715M/Project_Hail_Mary">Project Hail Mary</a> was a fun read, very much like The Martian was. I read it really quickly, loved the character development. Even though the similarities to The Martian are obvious, it does not feel repetitive. I'm looking forward to the movie adaption and how Ryan Gosling will do in the main role.</li>
+<li>📚 Now I'm reading <a href="https://en.wikipedia.org/wiki/Leviathan_Wakes">Leviathan Wakes</a> which is the first book in the Expanse series. I'm a fan of the TV show that's based on these books and was sad to learn that they cancelled the show. Since the TV show only covers around 6 and a half books out of 9 of the novel series, there's a lot more to read. No, let me rephrase that. A TON. Those books are huge.</li>
+<li>🍿 My wife and I re-watched <a href="https://en.wikipedia.org/wiki/Motherland_(TV_series)">Motherland</a>. It was one of the shows that we watched before the birth of our son as part of our &quot;preparation&quot; 😅 We were able to relate to some of the parent's stories already. The shows cracks us up every time and we'll be watching it again and again.</li>
+</ul>
+</section>
+</article>
+<aside>
+  
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <span>
+    Hi, I'm Jan 👋 I am a software engineer working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
+    in Berlin. You can find me on
+    <a rel="noopener noreferrer" target="_blank" href="https://social.lol/@janmon">
+      🐘 Mastodon
+    </a>
+    ,
+    <a rel="noopener noreferrer" target="_blank" href="https://github.com/janmonschke">
+      💻 GitHub
+    </a>
+    and
+    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jan-monschke-aa6a249a/">
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
 
-</all-posts-list>
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      
+      <li>
+        <a href="/weeknotes/2022/05/" rel="next"><span>Weeknotes 05/2022</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
 </main>
     </div>
     <style></style>

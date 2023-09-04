@@ -4,11 +4,47 @@
   <subtitle>Weeknotes from janmonschke.com</subtitle>
   <link href="weeknotes.xml" rel="self"/>
   <link href=""/>
-  <updated>2022-09-18T00:00:00Z</updated>
+  <updated>2023-09-04T00:00:00Z</updated>
   <id></id>
   <author>
     <name>Jan Monschke</name>
   </author>
+  <entry>
+    <title>Weeknotes 01/2023</title>
+    <link href="/weeknotes/2023/01/"/>
+    <updated>2023-09-04T00:00:00Z</updated>
+    <id>/weeknotes/2023/01/</id>
+    <content xml:lang="" type="html">&lt;h2&gt;Life&lt;/h2&gt;
+&lt;p&gt;My son finished the fourth week of settling into daycare. In Berlin, as probably in a lot of other places, kids are slowly settled into their daycare routine. In the beginning I stayed with him there, observed him play with the other kids. Then I gradually left for longer durations. Until he&#39;s ready to have his lunch nap there and feels confident to interact with other kids and play by himself.&lt;/p&gt;
+&lt;p&gt;He was curious from day one and, as most kids were older, he was not afraid. Judging from the experience of friends, we were quite lucky that in week two he was already sleeping there and that he generally didn&#39;t reject being there. They only had to call me once and that was just before his nap time anyways. We&#39;re super proud of him and he&#39;s developing so much there ❤️&lt;/p&gt;
+&lt;p&gt;Speaking of which, he grew so quickly and the time flew so fast. My wife and I spent nine months after birth taking care of him together. The parental leave in Germany is quite generous and my employer gave me four extra months on top. Including the daycare month, I&#39;ve now spent 10 months taking care of him (of which we both worked 3 months part-time). But it feels like much shorter than that. It feels like yesterday that he was such a tiny nugget. And now he&#39;s crawling like a champ, wants to go faster on the bike and starts to blabber. 😍&lt;/p&gt;
+&lt;p&gt;For several weeks we have now been looking into buying a cargo bike to help us bring the little one to daycare, to do big groceries and to go on bike trips with friends. There are so many different models on the market now which makes it hard to find the right one. Or rather, they&#39;re all great, just the it&#39;s hard to choose when there are so many options. Where we live in Berlin, we see a lot of &lt;a href=&quot;https://muli-cycles.de/en/bikes/motor&quot;&gt;Muli bikes&lt;/a&gt; or &lt;a href=&quot;https://urbanarrow.com/&quot;&gt;Urban Arrows&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The Muli is great because it&#39;s compact and very agile. It doesn&#39;t feel like cargo bike when you drive it, even without a motor. The Urban Arrow is a lot more inert, less agile and just very big and bulky. There are advantages to long bikes like the Urban Arrow e.g. the large amount of space, but they are ultimately too big for us.&lt;/p&gt;
+&lt;p&gt;We almost decided to get the Muli, but then friends recommended the &lt;a href=&quot;https://chike.de/e-kids/&quot;&gt;Chike&lt;/a&gt; and that&#39;s the bike we&#39;re currently aiming to get. Before that, we want to rent it out for a longer tour though since so far we only had it for 30 minutes when testing it out at the dealership. Our son loved it, of course. It&#39;s a cargo bike made for transporting kids. The special thing about the Chike is that it has three wheels, two in the front, one in the back. Which in itself isn&#39;t that special and there are plenty of other bikes with the same configuration. However, the Chike&#39;s front wheels tilt when taking turns and so it feels much more like a two-wheel bike. I recommend checking out their promo video, it&#39;s a very unique bike.&lt;/p&gt;
+&lt;h2&gt;Work&lt;/h2&gt;
+&lt;p&gt;This week was my first week back at work. I was mainly catching up with what happened in the past months and then I of course had to redo plenty of the corporate trainings, haha. Many of my coworkers are still on vacation, which made it a very easy start so far. Easy is good, since it will take me some time to adjust to this new schedule. Morning routine with the little one, his morning nap, dropping him off at daycare, work work work, picking up the kiddo, evening routine, a little bit more work (meetings with the US) and then bed. Ouff. Let&#39;s see how that&#39;ll go.&lt;/p&gt;
+&lt;h2&gt;Side projects&lt;/h2&gt;
+&lt;p&gt;
+      &lt;/p&gt;&lt;figure&gt;
+        
+      &lt;a href=&quot;/img/content/weeknotes/2023/mzJfgTNwfS-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
+        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2023/mzJfgTNwfS-352.avif 352w, /img/content/weeknotes/2023/mzJfgTNwfS-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2023/mzJfgTNwfS-352.webp 352w, /img/content/weeknotes/2023/mzJfgTNwfS-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2023/mzJfgTNwfS-352.jpeg 352w, /img/content/weeknotes/2023/mzJfgTNwfS-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;&quot; src=&quot;/img/content/weeknotes/2023/mzJfgTNwfS-352.jpeg&quot; width=&quot;705&quot; height=&quot;645&quot; /&gt;&lt;/picture&gt;
+      &lt;/a&gt;
+    
+        &lt;figcaption class=&quot;picture__caption&quot;&gt;&lt;/figcaption&gt;
+      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;I ported this blog to &lt;a href=&quot;https://www.11ty.dev/docs/&quot;&gt;Eleventy&lt;/a&gt; last week. There was no real need to do this other than me being upset about how slow Gatsby was and how pointless it felt to load React on this blog. This is not a rant agains React, or any framework for that matter. It&#39;s just that it&#39;s completely unnecessary on a site like this one.&lt;/p&gt;
+&lt;p&gt;Porting the blog went super smoothly, given I had already done the same a few months back with my &lt;a href=&quot;https://aweekinthewoods.com/&quot;&gt;hiking blog&lt;/a&gt;. Interestingly, the hiking blog started off as a clone of this blog. Was then ported to Eleventy. To then ultimately be the template for this blog&#39;s port to Eleventy. We went full circle there. 😄&lt;/p&gt;
+&lt;p&gt;This site is now 300kB lighter, loads and builds much faster and uses only native web features under the hood (including web components, thanks to &lt;a href=&quot;https://www.11ty.dev/docs/languages/webc/&quot;&gt;WebC&lt;/a&gt;). The hardest part was to change all the &lt;code&gt;className&lt;/code&gt; attributes to &lt;code&gt;class&lt;/code&gt; 😅. I must say that I feel a lot more comfortable with Eleventy&#39;s collection and JSON data sourcing than with Gatsby&#39;s GraphQL. Which, of course, is a personal preference. I also &lt;a href=&quot;https://social.lol/@janmon/110968694684373814&quot;&gt;tooted about it&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I had to alter the webmention implementation that I talked about &lt;a href=&quot;https://janmonschke.com/adding-webmentions-to-your-static-blog/&quot;&gt;in this blog post&lt;/a&gt; a little bit which makes me think I should write a follow-up post that explains the (minimal) changes that are necessary.&lt;/p&gt;
+&lt;h2&gt;Entertainment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📚 &lt;a href=&quot;https://openlibrary.org/books/OL30036715M/Project_Hail_Mary&quot;&gt;Project Hail Mary&lt;/a&gt; was a fun read, very much like The Martian was. I read it really quickly, loved the character development. Even though the similarities to The Martian are obvious, it does not feel repetitive. I&#39;m looking forward to the movie adaption and how Ryan Gosling will do in the main role.&lt;/li&gt;
+&lt;li&gt;📚 Now I&#39;m reading &lt;a href=&quot;https://en.wikipedia.org/wiki/Leviathan_Wakes&quot;&gt;Leviathan Wakes&lt;/a&gt; which is the first book in the Expanse series. I&#39;m a fan of the TV show that&#39;s based on these books and was sad to learn that they cancelled the show. Since the TV show only covers around 6 and a half books out of 9 of the novel series, there&#39;s a lot more to read. No, let me rephrase that. A TON. Those books are huge.&lt;/li&gt;
+&lt;li&gt;🍿 My wife and I re-watched &lt;a href=&quot;https://en.wikipedia.org/wiki/Motherland_(TV_series)&quot;&gt;Motherland&lt;/a&gt;. It was one of the shows that we watched before the birth of our son as part of our &amp;quot;preparation&amp;quot; 😅 We were able to relate to some of the parent&#39;s stories already. The shows cracks us up every time and we&#39;ll be watching it again and again.&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>Weeknotes 05/2022</title>
     <link href="/weeknotes/2022/05/"/>
