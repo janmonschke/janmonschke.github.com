@@ -143,5 +143,24 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/01/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Chris Lowis",
+      "photo": "https://webmention.io/avatar/media.social.lol/80127754d02422a8f04bc7a955c6338a235a7c98bd25fd4385be78fa9c07a820.jpg",
+      "url": "https://ruby.social/@chrislowis"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-109307716188144746",
+    "published": null,
+    "wm-received": "2023-09-05T12:38:07Z",
+    "wm-id": 1712811,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/109307716188144746",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
