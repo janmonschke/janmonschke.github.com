@@ -105,5 +105,43 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/01/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sona",
+      "photo": "https://webmention.io/avatar/media.social.lol/d7e72ac74df31ccd73c2b27d1d493057e55e8ca91a8614447b6497e3550839a3.jpg",
+      "url": "https://mastodon.world/@sonasoeun"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-109613091779956834",
+    "published": null,
+    "wm-received": "2023-09-05T09:13:45Z",
+    "wm-id": 1712783,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/109613091779956834",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Lewis Dale",
+      "photo": "https://webmention.io/avatar/media.social.lol/4baa561e40725542dd900d6d003566085dca227fa7f2cdc7aae05f745a601c6e.png",
+      "url": "https://social.lewisdale.dev/@lewis"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-110369024390558349",
+    "published": null,
+    "wm-received": "2023-09-05T09:13:46Z",
+    "wm-id": 1712784,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/110369024390558349",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
