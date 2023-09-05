@@ -8,6 +8,7 @@ const Image = require("@11ty/eleventy-img");
 const markdownIt = require("markdown-it");
 const markdownItFootnote = require("markdown-it-footnote");
 const markdownItEleventyImg = require("markdown-it-eleventy-img");
+const markdownItAttrs = require("markdown-it-attrs");
 const renderBlogPicture = require("./utils/renderBlogPicture");
 const metadata = require("./_data/metadata");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -46,6 +47,7 @@ module.exports = function (eleventyConfig) {
       linkify: true,
     })
       .use(markdownItFootnote)
+      .use(markdownItAttrs)
       .use(markdownItEleventyImg, {
         imgOptions: {
           ...imageOptions,
@@ -57,11 +59,12 @@ module.exports = function (eleventyConfig) {
           return path.join(path.dirname(env.page.inputPath), filepath);
         },
         renderImage: (_, [src, attributes]) => {
+          const linkToImage = attributes["img-no-link"] ? false : true;
           return renderBlogPicture({
             src,
             attributes,
             includeCaption: true,
-            linkToImage: true,
+            linkToImage,
           });
         },
       })
