@@ -1,0 +1,109 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/111011489757426925",
+    "published": "2023-09-05T08:01:45",
+    "wm-received": "2023-09-05T08:22:36Z",
+    "wm-id": 1712765,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/111011472888058362/111011489757426925",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://fosstodon.org/@eleventy\" class=\"u-url\">@<span>eleventy</span></a></span> It seems that less people are publishing weeknotes these days, but whenever they pop up in my RSS reader (<span class=\"h-card\"><a href=\"https://feedbin.social/@feedbin\" class=\"u-url\">@<span>feedbin</span></a></span> ❤️) I get super excited.</p><p>Thanks to <span class=\"h-card\"><a href=\"https://diaspodon.fr/@thom4\" class=\"u-url\">@<span>thom4</span></a></span>, <span class=\"h-card\"><a href=\"https://ruby.social/@denis\" class=\"u-url\">@<span>denis</span></a></span>, <span class=\"h-card\"><a href=\"https://front-end.social/@sarajw\" class=\"u-url\">@<span>sarajw</span></a></span> and <span class=\"h-card\"><a href=\"https://ruby.social/@chrislowis\" class=\"u-url\">@<span>chrislowis</span></a></span> for sticking to your routines (more or less) ????</p>",
+      "text": "@eleventy It seems that less people are publishing weeknotes these days, but whenever they pop up in my RSS reader (@feedbin ❤️) I get super excited.Thanks to @thom4, @denis, @sarajw and @chrislowis for sticking to your routines (more or less) ????"
+    },
+    "mention-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "mention-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sara Joy ✨",
+      "photo": "https://webmention.io/avatar/media.social.lol/a06118ca119ec1183309db1aa65689d6bd69349b68713fd0c3f49cc5de8ca683.jpg",
+      "url": "https://front-end.social/@sarajw"
+    },
+    "url": "https://front-end.social/@sarajw/111011548202677412",
+    "published": "2023-09-05T08:16:37",
+    "wm-received": "2023-09-05T08:22:36Z",
+    "wm-id": 1712766,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/111011472888058362/111011548289213262",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> <span class=\"h-card\"><a href=\"https://fosstodon.org/@eleventy\" class=\"u-url\">@<span>eleventy</span></a></span> <span class=\"h-card\"><a href=\"https://feedbin.social/@feedbin\" class=\"u-url\">@<span>feedbin</span></a></span> <span class=\"h-card\"><a href=\"https://diaspodon.fr/@thom4\" class=\"u-url\">@<span>thom4</span></a></span> <span class=\"h-card\"><a href=\"https://ruby.social/@denis\" class=\"u-url\">@<span>denis</span></a></span> <span class=\"h-card\"><a href=\"https://ruby.social/@chrislowis\" class=\"u-url\">@<span>chrislowis</span></a></span> oh lol. Thanks! You remind me that a new one is probably due... not that mine are very scheduled!</p>",
+      "text": "@janmon @eleventy @feedbin @thom4 @denis @chrislowis oh lol. Thanks! You remind me that a new one is probably due... not that mine are very scheduled!"
+    },
+    "mention-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "mention-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "thomas",
+      "photo": "https://webmention.io/avatar/media.social.lol/9f807b8fbeb3baac3ab698fa307b29a321d403a34333eca569819a3e999965bd.jpg",
+      "url": "https://diaspodon.fr/@thom4"
+    },
+    "url": "https://diaspodon.fr/@thom4/111011488647367966",
+    "published": "2023-09-05T08:01:28",
+    "wm-received": "2023-09-05T08:22:37Z",
+    "wm-id": 1712767,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/111011472888058362/111011489661443031",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> yeah, happy to ready you back ???? (and not to, considering the good news it has been for the three of you).</p>",
+      "text": "@janmon yeah, happy to ready you back ???? (and not to, considering the good news it has been for the three of you)."
+    },
+    "mention-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "mention-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "thomas",
+      "photo": "https://webmention.io/avatar/media.social.lol/9f807b8fbeb3baac3ab698fa307b29a321d403a34333eca569819a3e999965bd.jpg",
+      "url": "https://diaspodon.fr/@thom4"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-109252024086757977",
+    "published": null,
+    "wm-received": "2023-09-05T08:22:38Z",
+    "wm-id": 1712768,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/109252024086757977",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Bodo",
+      "photo": "https://webmention.io/avatar/media.social.lol/36e7f26116f907e06b0ef9c0f0f29310dd31be1c95f4e8ede10f0686e5d9e8e1.jpg",
+      "url": "https://notes.tasche.me/@bodo"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-110802928785728180",
+    "published": null,
+    "wm-received": "2023-09-05T08:22:39Z",
+    "wm-id": 1712769,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/110802928785728180",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
