@@ -162,5 +162,24 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/01/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Vincent Garrigues",
+      "photo": "https://webmention.io/avatar/media.social.lol/8865c0813f9ced75babea8fd5d795172fb006db84126aa33497f842b183b56c8.jpg",
+      "url": "https://masto.garriguv.io/@garriguv"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-109660338114758177",
+    "published": null,
+    "wm-received": "2023-09-05T16:12:31Z",
+    "wm-id": 1712865,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/109660338114758177",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
