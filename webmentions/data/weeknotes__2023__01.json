@@ -181,5 +181,24 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/01/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Denis Defreyne",
+      "photo": "https://webmention.io/avatar/media.social.lol/17671e61e9a9ed8fc88389b9021319b5d2bdc2206952b158076bdbf44a60b9c7.jpg",
+      "url": "https://ruby.social/@denis"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-109296592914526410",
+    "published": null,
+    "wm-received": "2023-09-06T06:38:34Z",
+    "wm-id": 1713320,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/109296592914526410",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
