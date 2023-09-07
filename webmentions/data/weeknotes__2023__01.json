@@ -238,5 +238,24 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/01/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Ian Sutherland ????????",
+      "photo": "https://webmention.io/avatar/media.social.lol/8ad2e4bef4901e0ebaad527a886cdfa6a22d38cf1b616350dc781dc5a42d1aa7.jpg",
+      "url": "https://cosocial.ca/@iansu"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-110562823301743301",
+    "published": null,
+    "wm-received": "2023-09-07T20:32:29Z",
+    "wm-id": 1713971,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/110562823301743301",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
