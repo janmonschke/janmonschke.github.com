@@ -200,5 +200,43 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/01/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Eleventy ???? v2.0.1",
+      "photo": "https://webmention.io/avatar/media.social.lol/0f6c0e1d5a979a0eaa7d09b97e46a3200b3671f07777b7a36e0fd9b01ad9ba47.png",
+      "url": "https://fosstodon.org/@eleventy"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#reblogged-by-109325940940686647",
+    "published": null,
+    "wm-received": "2023-09-07T20:05:12Z",
+    "wm-id": 1713959,
+    "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/111011472888058362/109325940940686647",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "repost-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "repost-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Eleventy ???? v2.0.1",
+      "photo": "https://webmention.io/avatar/media.social.lol/0f6c0e1d5a979a0eaa7d09b97e46a3200b3671f07777b7a36e0fd9b01ad9ba47.png",
+      "url": "https://fosstodon.org/@eleventy"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-109325940940686647",
+    "published": null,
+    "wm-received": "2023-09-07T20:05:13Z",
+    "wm-id": 1713960,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/109325940940686647",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
