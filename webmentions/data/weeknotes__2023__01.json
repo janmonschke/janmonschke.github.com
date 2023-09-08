@@ -257,5 +257,24 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/01/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Dee-Yell (Dave)",
+      "photo": "https://webmention.io/avatar/media.social.lol/057b044aed34a4e7f606c5d9009d8d4b06e70018c93c85628012a69e47257bba.jpg",
+      "url": "https://pkm.social/@dropcase"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-110662537705188646",
+    "published": null,
+    "wm-received": "2023-09-08T02:12:50Z",
+    "wm-id": 1714025,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/110662537705188646",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
