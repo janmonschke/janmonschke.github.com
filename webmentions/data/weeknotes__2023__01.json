@@ -276,5 +276,24 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/01/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "jfroehlich",
+      "photo": "https://webmention.io/avatar/media.social.lol/b321d8321d850cd6cad3aa097331c85c77d28798752d09eceaca496d515b1910.png",
+      "url": "https://mastodon.social/@jfroehlich"
+    },
+    "url": "https://social.lol/@janmon/111011472888058362#favorited-by-109293812915212735",
+    "published": null,
+    "wm-received": "2023-09-08T05:45:25Z",
+    "wm-id": 1714059,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111011472888058362/109293812915212735",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/01/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
