@@ -4,11 +4,40 @@
   <subtitle>Weeknotes from janmonschke.com</subtitle>
   <link href="weeknotes.xml" rel="self"/>
   <link href=""/>
-  <updated>2023-09-04T00:00:00Z</updated>
+  <updated>2023-09-10T00:00:00Z</updated>
   <id></id>
   <author>
     <name>Jan Monschke</name>
   </author>
+  <entry>
+    <title>Weeknotes 02/2023</title>
+    <link href="/weeknotes/2023/02/"/>
+    <updated>2023-09-10T00:00:00Z</updated>
+    <id>/weeknotes/2023/02/</id>
+    <content xml:lang="" type="html">&lt;h2&gt;Life&lt;/h2&gt;
+&lt;p&gt;It&#39;s the first week that our son was looking forward to going to daycare. So far he&#39;d been clingy at times, also cried a little. Not this week. He was squeaking with joy, greeting his friends and the caretaker. 😍 Couldn&#39;t be more proud of him!&lt;/p&gt;
+&lt;p&gt;We started planning our next trip back to the family in Paris and coincidentally it was announced this week that &lt;a href=&quot;https://social.lol/@janmon/111022433617280701&quot;&gt;the night train between Paris and Berlin will launch in December&lt;/a&gt;. We hope to be able to try it out this year, though we are not sure if it&#39;s the best idea to travel in a night train with a 14 month-old. In any case, the existence of this route will make travelling to France so much easier for the years to come 🎉&lt;/p&gt;
+&lt;p&gt;I left Twitter this week. Earlier this year &lt;a href=&quot;/changing-my-online-identity&quot;&gt;I wrote about wanting to keep the account but in read-only mode&lt;/a&gt;. The recent news around the company have made it clear to me though, that I don&#39;t want to associate with it anymore. On top of that, I hadn&#39;t used my account in ages. I asked for an archive of all my data, left a goodbye-tweet and deleted the account a day later. Thanks again &lt;a href=&quot;https://front-end.social/@benschwarz&quot;&gt;@benschwarz&lt;/a&gt; for the reminder to finally delete that account, Ben left, reminded me that I don&#39;t use the site anymore, downloaded my data and sent out a goodbye tweet.&lt;/p&gt;
+&lt;p&gt;This Sunday we were lucky enough to try out our favorite cargo bike for a full day (thanks again &lt;a href=&quot;https://chaos.social/@rmehner&quot;&gt;@rmehner&lt;/a&gt;). Our son loved it so so much. On the first ride he felt so relaxed and save, he even fell asleep 🤩. On the other rides he played with his toys, pointed at trees and blabbered around. We&#39;re happy he loves the bike as much as we do ❤️&lt;/p&gt;
+&lt;h2&gt;Work&lt;/h2&gt;
+&lt;p&gt;Not a lot to report this week since it&#39;s &amp;quot;on week&amp;quot;. In those weeks, we can propose explorative projects or use the time to learn something new or just focus on our work. Most meetings are cancelled for the week in order to reduce distractions. The on week was perfectly timed for me coming back to work after parental week as it gave me time to catch up on new projects and check in on old topics.&lt;/p&gt;
+&lt;h2&gt;Misc&lt;/h2&gt;
+&lt;p&gt;I ttarted to use the &lt;a href=&quot;https://blog.mozilla.org/en/products/firefox/its-a-new-firefox-multi-tasking-extension-side-view/&quot;&gt;Side View extension&lt;/a&gt;. I found it was very helpful for reviewing PRs with attached issues or other links. It&#39;s so handy to open them right next to the PR. So far it&#39;s working great for me. Hoever, it&#39;s sad that it&#39;s been abandoned. But it still works. Only issue I encountered so far: It would be great to be able to increase the width of the side view just a teeny tiny bit more for sites that don&#39;t work well in smaller viewports.&lt;/p&gt;
+&lt;h2&gt;Side projects&lt;/h2&gt;
+&lt;p&gt;I was looking at older weeknotes where I mentioned side projects and found that I sadly abandoned a couple of them. Which, I guess, is just normal. Motivation to work on some projects ebbs and flows. And sometimes completely vanished. The reason I looked into it was because I was about to start a new project, one that I had in mind for a long time. However, I also wanted to finish another one of the open ones to feel accomplished.&lt;/p&gt;
+&lt;p&gt;And there was actually one I almost finished last year (&lt;a href=&quot;/weeknotes/2022/02&quot;&gt;02/2022&lt;/a&gt;) but then life happened, I guess. Or maybe it&#39;s just that I feel like the project&#39;s design isn&#39;t the best and I get stuck on details. Anyways, I made some progress this week. I removed some features that are not necessary for a launch. Tidied up some views, fixed some bugs and now I basically only need to buy a domain name. Funny how I didn&#39;t buy the domain first this time. 😂&lt;/p&gt;
+&lt;h2&gt;Entertainment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📚 &lt;a href=&quot;https://en.wikipedia.org/wiki/Leviathan_Wakes&quot;&gt;Leviathan Wakes&lt;/a&gt; keeps delivering. It&#39;s funny to read the books when you&#39;ve already seen the show though. Takes a bit of the magic away, I guess. When I imagine the characters and the locations they obviously always look like the ones on the TV show. It&#39;s not a bad thing to be honest. Makes me want to watch the show again.&lt;/li&gt;
+&lt;li&gt;🍿 I started watching &lt;a href=&quot;https://en.m.wikipedia.org/wiki/Painkiller_(TV_series)&quot;&gt;Painkiller&lt;/a&gt; and I love hate it. It&#39;s about the opioid crisis in the USA and follows a family affected by the effects of the drug, an investigator going after a pharma company, sales reps from the pharma company and the family running the company. I think it&#39;s well done and I enjoy watching it, but it just makes me really sad. But I also cannot stop watching. Luckily it only has 6 episodes and I&#39;m almost done 😅&lt;/li&gt;
+&lt;li&gt;🔗 Check out &lt;a href=&quot;https://one-from-nippon.ghost.io/coffee-in-a-can/&quot;&gt;this article on coffee cans in Japanese vending machines&lt;/a&gt;. It brought me back to the time I travelled Japan and tried a different canned drink every day 😄. Often not knowing what I had bought but it always turned out to be fun. Well, almost always. Until I bought a hot can of chunky corn soup but I just wanted a refreshing drink.&lt;/li&gt;
+&lt;li&gt;🔗 Final one for today: &lt;a href=&quot;https://steele.blue/geofence-pizza-ordering/&quot;&gt;Using your bike&#39;s GPS to automate a pizza order at the destination of a race&lt;/a&gt; 🍕🚴‍♀️&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Song of the moment&lt;/h2&gt;
+&lt;p&gt;Given that their album preorder just started, I really wanted to share another Hidden Orchestra track. This time it&#39;s from their upcoming album and it&#39;s called Skylarks. Again, perfect music to focus IMO. If you like them, check out the other tracks I shared in &lt;a href=&quot;/weeknotes/2021/02&quot;&gt;2/2021&lt;/a&gt; and &lt;a href=&quot;/weeknotes/2021/04&quot;&gt;4/2021&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe width=&quot;100%&quot; height=&quot;300&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; loading=&quot;lazy&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1458271972&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true&quot;&gt;&lt;/iframe&gt;
+</content>
+  </entry>
   <entry>
     <title>Weeknotes 01/2023</title>
     <link href="/weeknotes/2023/01/"/>
