@@ -1,0 +1,63 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Yves Van Goethem",
+      "photo": "https://webmention.io/avatar/media.social.lol/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg",
+      "url": "https://indieweb.social/@yvg"
+    },
+    "url": "https://indieweb.social/@yvg/111046027250244515",
+    "published": "2023-09-11T10:25:06",
+    "wm-received": "2023-09-11T10:39:17Z",
+    "wm-id": 1715298,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/111045823128915328/111046027306545532",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> Which cargo bike you got?</p>",
+      "text": "@janmon Which cargo bike you got?"
+    },
+    "mention-of": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-property": "mention-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Michael Henriksen",
+      "photo": "https://webmention.io/avatar/media.social.lol/f3c773ff17ba197727fb1dafae3dd63977d55848ad3ad87df5d3d1710b085e3d.png",
+      "url": "https://chaos.social/@michenriksen"
+    },
+    "url": "https://social.lol/@janmon/111045823128915328#favorited-by-109331349286151910",
+    "published": null,
+    "wm-received": "2023-09-11T10:39:19Z",
+    "wm-id": 1715299,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111045823128915328/109331349286151910",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Yves Van Goethem",
+      "photo": "https://webmention.io/avatar/media.social.lol/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg",
+      "url": "https://indieweb.social/@yvg"
+    },
+    "url": "https://social.lol/@janmon/111045823128915328#favorited-by-109376047652333124",
+    "published": null,
+    "wm-received": "2023-09-11T10:39:20Z",
+    "wm-id": 1715300,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111045823128915328/109376047652333124",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
