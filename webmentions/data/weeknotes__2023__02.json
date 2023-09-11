@@ -97,5 +97,47 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/02/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Vincent Garrigues",
+      "photo": "https://webmention.io/avatar/media.social.lol/8865c0813f9ced75babea8fd5d795172fb006db84126aa33497f842b183b56c8.jpg",
+      "url": "https://masto.garriguv.io/@garriguv"
+    },
+    "url": "https://social.lol/@janmon/111045823128915328#favorited-by-109660338114758177",
+    "published": null,
+    "wm-received": "2023-09-11T11:36:53Z",
+    "wm-id": 1715323,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111045823128915328/109660338114758177",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "~bluemaex",
+      "photo": "https://webmention.io/avatar/media.social.lol/8514e227aeb4cf29c967e32a2010dbdd4f7e169c24835881469f6f9da3a29c94.png",
+      "url": "https://m.fru.bar/@bluemaex"
+    },
+    "url": "https://m.fru.bar/@bluemaex/111046222908290141",
+    "published": "2023-09-11T11:14:51",
+    "wm-received": "2023-09-11T11:36:53Z",
+    "wm-id": 1715324,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/111045823128915328/111046223033092636",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> „Funny how I didn't buy the domain first this time. ????“</p><p>I just got my bill for the all the domains … and and I want to cry ????????</p>",
+      "text": "@janmon „Funny how I didn't buy the domain first this time. ????“I just got my bill for the all the domains … and and I want to cry ????????"
+    },
+    "mention-of": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-property": "mention-of",
+    "wm-private": false
   }
 ]
