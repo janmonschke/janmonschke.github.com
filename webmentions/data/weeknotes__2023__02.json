@@ -59,5 +59,43 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/02/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "HerrHerrmann",
+      "photo": "https://webmention.io/avatar/media.social.lol/050c5b63eff8375f390d3529f86beb6a21d98f1a9c97659c8bacd887ab32e5d6.png",
+      "url": "https://mastodon.social/@herrherrmann"
+    },
+    "url": "https://social.lol/@janmon/111045823128915328#favorited-by-109245285620260899",
+    "published": null,
+    "wm-received": "2023-09-11T11:08:41Z",
+    "wm-id": 1715312,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111045823128915328/109245285620260899",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan Lehnardt :couchdb:",
+      "photo": "https://webmention.io/avatar/media.social.lol/d1630de1028ec04a96edcda4ee4b4be17305c7a4869045167c37e2124cbc7960.jpg",
+      "url": "https://narrativ.es/@janl"
+    },
+    "url": "https://social.lol/@janmon/111045823128915328#favorited-by-109728129375271593",
+    "published": null,
+    "wm-received": "2023-09-11T11:08:41Z",
+    "wm-id": 1715313,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111045823128915328/109728129375271593",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
