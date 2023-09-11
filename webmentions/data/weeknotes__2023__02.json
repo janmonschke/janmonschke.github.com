@@ -139,5 +139,24 @@
     "mention-of": "https://janmonschke.com/weeknotes/2023/02/",
     "wm-property": "mention-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "rmehner",
+      "photo": "https://webmention.io/avatar/media.social.lol/dda71f7b57a060b8d43172d5461075577f20118d1f8614d32b64268f730bdd36.jpg",
+      "url": "https://chaos.social/@rmehner"
+    },
+    "url": "https://social.lol/@janmon/111045823128915328#favorited-by-109478687032278138",
+    "published": null,
+    "wm-received": "2023-09-11T18:39:50Z",
+    "wm-id": 1715412,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111045823128915328/109478687032278138",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/02/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
