@@ -35,7 +35,56 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
-    <style>.bio {
+    <style>.mentions {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .mentions__item {
+    margin-bottom: 1.5em;
+  }
+
+  .mention,
+  .reference {
+    display: flex;
+  }
+
+  .mention__authorImageLink,
+  .reference__authorImageLink {
+    flex-shrink: 0;
+    margin-right: 0.8em;
+  }
+
+  .mention__image,
+  .reference__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+  }
+
+  .mention__authorLink {
+    display: block;
+    margin-bottom: 0.1em;
+  }
+
+  .mention__content,
+  .reference__content {
+    margin-bottom: 0.1em;
+  }
+
+  .reference {
+    align-items: center;
+  }
+
+  .reference__image {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(156, 252, 248, 1) 11.2%,
+      rgba(110, 123, 251, 1) 91.1%
+    );
+  }
+.bio {
     display: flex;
     align-items: center;
   }
@@ -495,7 +544,67 @@ video {
 </article>
 <aside>
   
-  
+  <div>
+    <h3>Mentions</h3>
+    <mentions mentions="[object Object],[object Object],[object Object]"><ul class="mentions">
+  <li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://fosstodon.org/@AES" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/media.social.lol/fafe6ee33439a7be3b0d36bb5ef51445de55a064734bd30a1418ec224a19590b.png" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://fosstodon.org/@AES">Lukas</a>
+        </strong>
+        <div class="mention__content"><a href="https://social.lol/@janmon" rel="nofollow ugc" target="_blank">@janmon</a> the color game? I remember that! That was cool!</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://fosstodon.org/@AES/111069155902656848">2023/09/15 12:27</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon">Jan</a>
+        </strong>
+        <div class="mention__content"><a href="https://fosstodon.org/@AES" rel="nofollow ugc" target="_blank">@AES</a> That's the one ???? This time with a multiplayer mode.</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon/111069158373423220">2023/09/15 12:27</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://fosstodon.org/@AES" class="mention__authorImageLink">
+        <img src="https://webmention.io/avatar/media.social.lol/fafe6ee33439a7be3b0d36bb5ef51445de55a064734bd30a1418ec224a19590b.png" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://fosstodon.org/@AES">Lukas</a>
+        </strong>
+        <div class="mention__content"><a href="https://social.lol/@janmon" rel="nofollow ugc" target="_blank">@janmon</a>  naisssssssss</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://fosstodon.org/@AES/111069159951078497">2023/09/15 12:28</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+</ul>
+
+</mentions>
+  </div>
 </aside>
 <footer class="blogPost__footer">
   <hr>
