@@ -4,11 +4,60 @@
   <subtitle>Weeknotes from janmonschke.com</subtitle>
   <link href="weeknotes.xml" rel="self"/>
   <link href=""/>
-  <updated>2023-09-10T00:00:00Z</updated>
+  <updated>2023-09-17T00:00:00Z</updated>
   <id></id>
   <author>
     <name>Jan Monschke</name>
   </author>
+  <entry>
+    <title>Weeknotes 03/2023</title>
+    <link href="/weeknotes/2023/03/"/>
+    <updated>2023-09-17T00:00:00Z</updated>
+    <id>/weeknotes/2023/03/</id>
+    <content xml:lang="" type="html">&lt;h2&gt;Life&lt;/h2&gt;
+&lt;p&gt;For the first (and probably last time) this summer, I was able to make it to &lt;a href=&quot;https://narrativ.es/@janl/111028575484732060&quot;&gt;Jan&#39;s open lunch at Zenner&lt;/a&gt; (a beer garden next to the river, inside a beautiful park). It was fun to meet some folks that I hadn&#39;t seen in literally years. Even though pretty much everyone there worked in tech, the conversations didn&#39;t necessarily revolve around that. One thing that came up were the not so uncommon boar or fox sightings in Berlin. You know, &lt;a href=&quot;https://www.bbc.com/news/world-europe-53692475&quot;&gt;those Berlin boars that steal laptops at nudist lakes&lt;/a&gt; or that &lt;a href=&quot;https://www.theguardian.com/world/2023/jul/21/escaped-lioness-berlin-most-likely-wild-boar&quot;&gt;are sometimes mistaken for lions&lt;/a&gt;. 🐗🦁&lt;/p&gt;
+&lt;p&gt;I went to the park with the cargo bike that &lt;a href=&quot;/weeknotes/2023/02&quot;&gt;we rented from Robin&lt;/a&gt; the week before. It was the longest ride on that bike so far (around half an hour). The day before, we had already decided to get the same bike, so I was already imagining myself, riding those distances with my son very soon. We signed the leasing contract at the end of the week and are now waiting for the delivery. It should arrive in 2-3 weeks 🤞 (It&#39;s a &lt;a href=&quot;https://chike.de/e-kids/&quot;&gt;Chike e-kids&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Our son had pretty high fever for 3 days this week, so we took time off to take care of him. He didn&#39;t have any symptoms apart from the fever which we found odd. Later on we learned that there is a children&#39;s disease that&#39;s literally called three-day-fever (at least in German, in English it&#39;s Roseola or sixth disease). The fever went away as quickly as it came and we were able to spend some time outside over the weekend. ☀️&lt;/p&gt;
+&lt;p&gt;One of the things we did right after he felt better, was to treat ourselves to some yummy Brammibal&#39;s donuts. To our delight, they had already started pumpkin pie spice season 🎉. Pumpkin pie spiced latte makes for the perfect donut pairing. But also reminds us that the days will be colder from now on 😅&lt;/p&gt;
+&lt;h2&gt;Work&lt;/h2&gt;
+&lt;p&gt;Not much to report here since I was out for most of the week. However, I managed to hop on kick-off a call for a really cool kind of work-related and at the same time not work-related new activity that I&#39;m part of. Hope to be able to share more soon.&lt;/p&gt;
+&lt;h2&gt;Side projects&lt;/h2&gt;
+&lt;div style=&quot;width: 70%; margin: 0 auto;&quot;&gt;
+&lt;p&gt;
+      &lt;/p&gt;&lt;figure&gt;
+        
+      &lt;a href=&quot;/img/content/weeknotes/2023/U7BcaI-Ab--705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
+        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2023/U7BcaI-Ab--352.avif 352w, /img/content/weeknotes/2023/U7BcaI-Ab--705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2023/U7BcaI-Ab--352.webp 352w, /img/content/weeknotes/2023/U7BcaI-Ab--705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2023/U7BcaI-Ab--352.jpeg 352w, /img/content/weeknotes/2023/U7BcaI-Ab--705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;&quot; src=&quot;/img/content/weeknotes/2023/U7BcaI-Ab--352.jpeg&quot; width=&quot;705&quot; height=&quot;929&quot; /&gt;&lt;/picture&gt;
+      &lt;/a&gt;
+    
+        &lt;figcaption class=&quot;picture__caption&quot;&gt;&lt;/figcaption&gt;
+      &lt;/figure&gt;&lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I managed to get &lt;em&gt;most&lt;/em&gt; of the remaining work done on the project that I mentioned last week (everything apart from a blog post about it, but more on that later). It&#39;s a color-matching game that I now have build a couple of times. Each time with a completely different tech stack. Each time I built it for a different reason. And every time it made sense to rewrite it. While I was pondering those previous iterations of the game, I got very nostalgic and I feel like it&#39;s worth a proper blog post. Which is the perfect side project for the next week(s).&lt;/p&gt;
+&lt;p&gt;Anyhow, the game can be played here: &lt;a href=&quot;https://colorbattle.app/&quot;&gt;colorbattle.app&lt;/a&gt; 🕹️&lt;/p&gt;
+&lt;p&gt;While it&#39;s technically a multiplayer game, you don&#39;t need to wait for other players to get started. There are two modes where you can challenge the AI (ouuuuuhhh) and also a single player mode.&lt;/p&gt;
+&lt;p&gt;Let me know what you think about the game 🤩&lt;/p&gt;
+&lt;h2&gt;Entertainment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📚 I&#39;m almost done with &lt;a href=&quot;https://en.wikipedia.org/wiki/Leviathan_Wakes&quot;&gt;Leviathan Wakes&lt;/a&gt; and I don&#39;t remember much of the ending from the TV show. Either they completely rewrote the ending for the show or I really just forgot. I&#39;ll rewatch the last episode of the first season after I&#39;m done with the book&lt;/li&gt;
+&lt;li&gt;🍿 I finished Painkiller. The ending was intense, shook me in so many ways. Can highly recommend the show but be warned that it might ruin your good mood 😉&lt;/li&gt;
+&lt;li&gt;🍿 The &lt;a href=&quot;https://www.youtube.com/watch?v=WldgrH9SvbE&quot;&gt;trailer for the final season of Sex Education&lt;/a&gt; dropped and it looks great. Can&#39;t wait for the season to start. Though, I&#39;m already sad it&#39;ll be the last one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Song of the week&lt;/h2&gt;
+&lt;p&gt;Ginger Root - Loretta. This tune has been stuck in my head since this summer. It just won&#39;t leave. And that&#39;s okay. Ginger Root will be playing in Berlin this October but I don&#39;t think I&#39;ll be able to make it 😭.&lt;br /&gt;
+&lt;a href=&quot;https://www.youtube.com/watch?v=u-WTfP3WJc4&quot;&gt;&lt;br /&gt;
+
+      &lt;figure&gt;
+        
+      &lt;a href=&quot;/img/content/weeknotes/2023/xOlhLLNIPO-705.jpeg&quot; target=&quot;_blank&quot; aria-label=&quot;Click to open image in new window&quot;&gt;
+        &lt;picture&gt;&lt;source type=&quot;image/avif&quot; srcset=&quot;/img/content/weeknotes/2023/xOlhLLNIPO-352.avif 352w, /img/content/weeknotes/2023/xOlhLLNIPO-705.avif 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/webp&quot; srcset=&quot;/img/content/weeknotes/2023/xOlhLLNIPO-352.webp 352w, /img/content/weeknotes/2023/xOlhLLNIPO-705.webp 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;/img/content/weeknotes/2023/xOlhLLNIPO-352.jpeg 352w, /img/content/weeknotes/2023/xOlhLLNIPO-705.jpeg 705w&quot; sizes=&quot;(max-width: 705px), 100vw&quot; /&gt;&lt;img class=&quot;picture&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; alt=&quot;&quot; src=&quot;/img/content/weeknotes/2023/xOlhLLNIPO-352.jpeg&quot; width=&quot;705&quot; height=&quot;499&quot; /&gt;&lt;/picture&gt;
+      &lt;/a&gt;
+    
+        &lt;figcaption class=&quot;picture__caption&quot;&gt;&lt;/figcaption&gt;
+      &lt;/figure&gt;&lt;br /&gt;
+&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Weeknotes 02/2023</title>
     <link href="/weeknotes/2023/02/"/>
