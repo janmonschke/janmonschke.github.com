@@ -17,5 +17,28 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/03/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/111091221225178837",
+    "published": "2023-09-19T09:58:31",
+    "wm-received": "2023-09-19T10:10:12Z",
+    "wm-id": 1718776,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/111091069479905436/111091221225178837",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/03/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p>pumpkin spice: It's not a flavor I grew up with so I'm not sure how legit it is at Brammibal's but I love it. Very gingery and not as sweet.</p><p>I remember <span class=\"h-card\"><a href=\"https://mastodon.online/@carolstran\" class=\"u-url\">@<span>carolstran</span></a></span> used to have a rating of the best places for PSL in Berlin but I couldn't find it anymore. It might be a thread on Twitter ????</p>",
+      "text": "pumpkin spice: It's not a flavor I grew up with so I'm not sure how legit it is at Brammibal's but I love it. Very gingery and not as sweet.I remember @carolstran used to have a rating of the best places for PSL in Berlin but I couldn't find it anymore. It might be a thread on Twitter ????"
+    },
+    "mention-of": "https://janmonschke.com/weeknotes/2023/03/",
+    "wm-property": "mention-of",
+    "wm-private": false
   }
 ]
