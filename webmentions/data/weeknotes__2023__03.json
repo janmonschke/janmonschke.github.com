@@ -1,0 +1,21 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Manuel Matuzović",
+      "photo": "https://webmention.io/avatar/media.social.lol/efb1c999b2d30b7c189b6e1c601b820078ff50e3c0fc6019c82e42e0bc364c78.jpg",
+      "url": "https://front-end.social/@matuzo"
+    },
+    "url": "https://social.lol/@janmon/111091069479905436#favorited-by-109417730579597233",
+    "published": null,
+    "wm-received": "2023-09-19T09:44:54Z",
+    "wm-id": 1718774,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111091069479905436/109417730579597233",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/03/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/03/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
