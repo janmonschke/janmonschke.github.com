@@ -40,5 +40,24 @@
     "mention-of": "https://janmonschke.com/weeknotes/2023/03/",
     "wm-property": "mention-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sona",
+      "photo": "https://webmention.io/avatar/media.social.lol/d7e72ac74df31ccd73c2b27d1d493057e55e8ca91a8614447b6497e3550839a3.jpg",
+      "url": "https://mastodon.world/@sonasoeun"
+    },
+    "url": "https://social.lol/@janmon/111091069479905436#favorited-by-109613091779956834",
+    "published": null,
+    "wm-received": "2023-09-19T12:58:23Z",
+    "wm-id": 1718801,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111091069479905436/109613091779956834",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/03/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/03/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
