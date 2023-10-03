@@ -4,11 +4,46 @@
   <subtitle>Weeknotes from janmonschke.com</subtitle>
   <link href="weeknotes.xml" rel="self"/>
   <link href=""/>
-  <updated>2023-09-17T00:00:00Z</updated>
+  <updated>2023-10-03T00:00:00Z</updated>
   <id></id>
   <author>
     <name>Jan Monschke</name>
   </author>
+  <entry>
+    <title>Weeknotes 04/2023</title>
+    <link href="/weeknotes/2023/04/"/>
+    <updated>2023-10-03T00:00:00Z</updated>
+    <id>/weeknotes/2023/04/</id>
+    <content xml:lang="" type="html">&lt;h2&gt;Weeknotes&lt;/h2&gt;
+&lt;h2&gt;Life&lt;/h2&gt;
+&lt;p&gt;Even though it&#39;s the end of September/early October, the days are still pretty warm and our little one is hitting playground after playground. He&#39;s about to start walking we think. Everywhere he can possibly pull himself up, he does so. Then traverses along the object. Stops to stand by himself and then repeats the whole process. Berlin playgrounds have quite the diverse offering. There&#39;s something for all ages. Our favorite playground so far has probably been &lt;a href=&quot;https://maps.app.goo.gl/2Ti62TSJNCH4Yabh6&quot;&gt;Weltspielplatz in Treptower Park&lt;/a&gt;. It&#39;s a little far away for us, but there&#39;s so much to do and it&#39;s close to the water also.&lt;/p&gt;
+&lt;p&gt;We also went to an indoor playground called &lt;a href=&quot;https://maps.app.goo.gl/3LU1atZFexrDLBTw5&quot;&gt;MachMit&lt;/a&gt; which is located in a former church. It has two floors. The one downstairs is an interactive exhibition and the floor upstairs is a gigantic climbing labyrinth. Our little one is still too young for most of the installations but he loved the ones he could try already. We can&#39;t wait to see how he&#39;ll like the climbing installations.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;More of the cafés around us are offering pumpkin spice latte (we tried &lt;a href=&quot;/weeknotes/2023/03/&quot;&gt;Brammibal&#39;s last week&lt;/a&gt;). The newest one being &lt;a href=&quot;https://maps.app.goo.gl/to7Amy9tgdkVBz1N7&quot;&gt;Coffea in Ebertystr&lt;/a&gt; . It&#39;s our go-to café these days. Located neatly between parks and playgrounds with a great lunch offering also. Their PSL is more on the desert-side of things with heavy whipped cream. I prefer the more spicy version of a PSL but I can see how people love these ones also.&lt;/p&gt;
+&lt;h2&gt;Tech stuff&lt;/h2&gt;
+&lt;p&gt;I&#39;ve been blown away by the &lt;a href=&quot;https://begin.com/blog/posts/2023-09-28-introducing-enhance-music&quot;&gt;Enhance Music&lt;/a&gt; tech demo. It&#39;s a music service just like SoundCloud (where I worked for 7 years) but as a multi page web app. SoundCloud is built as a gigantic single page app to allow for page navigation while music keeps playing (amongst other reasons like caching etc.). So this tech demo was quite a refreshing and brilliant take on this problem.&lt;/p&gt;
+&lt;p&gt;Their solution to the whole music in the background problem is to use iframes. Jep, frigging iframes. The page is basically split into two iframes. One is responsible for rendering the music catalogue, the other displays the music player. Each song in the catalogue is an &lt;code&gt;&amp;lt;a /&amp;gt;&lt;/code&gt; tag with &lt;code&gt;target=&#39;player&#39;&lt;/code&gt;. So the &lt;code&gt;player&lt;/code&gt; iframe will navigate to the requested song and start playing it. The catalogue frame is unaffected. I didn&#39;t know that links from one iframe would be able to target another iframe on the same page. So that kind of blew my mind.&lt;/p&gt;
+&lt;p&gt;This comes with a bunch of advantages like a lot less heavy page weight, faster load times, faster rendering etc. It&#39;s an interesting demo and we tried to achieve something similar at SoundCloud (also with iframes) but we were never given the time to execute on those plans. A rewrite of the SoundCloud monolith would have been very complicated and due to the nature of this architectural change, would have probably blocked most other development of the site.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;I upgraded to Sonoma, for the sole reason to be able to add websites to the dock. I LOVE that feature. Previously I used Chrome&#39;s PWA install dialog to add some websites to my app folder (because Firefox doesn&#39;t support this on the desktop, yet). But I&#39;m trying to use Chrome less and less now so I&#39;m happy that Safari has this built-in now. I&#39;m not saying that I&#39;m becoming a Safari user now. Just a couple of apps like Fastmail, Netflix and YouTube music made it in my dock so far.&lt;/p&gt;
+&lt;h2&gt;Work&lt;/h2&gt;
+&lt;p&gt;At work we realized that failing type checks didn&#39;t stop the CI for several months now. So, given the size of the project and that amount of people working on it every day, fixing those type errors was no easy undertaking. I volunteered to fix the types for my &amp;quot;department&amp;quot; and got down the one or the other rabbit hole. Sometimes even needing type fixes in dependencies.&lt;/p&gt;
+&lt;p&gt;Of course, we couldn&#39;t re-enable type checks on the CI before they were all fixed, so there were a couple of days were new type errors made it into &lt;code&gt;main&lt;/code&gt; while you thought you were already done with your fixes. Anyhow, I quite liked getting into the nitty gritty of the code base.&lt;/p&gt;
+&lt;p&gt;On an &amp;quot;unrelated&amp;quot; note, I also enjoyed listening to the &amp;quot;type war&amp;quot; episode of JS Party where they talk about Svelte&#39;s decision to ditch TypeScript in favor of JSDoc. And of course they could not not address the elephant in the room that is the controversial way that &lt;a href=&quot;https://github.com/hotwired/turbo/pull/971&quot;&gt;TypeScript was janked out of turbo&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Side projects&lt;/h2&gt;
+&lt;p&gt;I wanted to continue my blog post on the history of &lt;a href=&quot;https://colorbattle.app/&quot;&gt;colorbattle.app 🕹️&lt;/a&gt; , but didn&#39;t get to it at all the last two weeks. There is an outline and notes for each of the four rewrites and at what time in my life / career I decided to go for another rewrite. I&#39;ve been swimming in nostalgia since I wrote up those note, connecting with people that I had not talked to in a long time. If this continues, I might be finished with the blog post at the end of next year 😅&lt;/p&gt;
+&lt;h2&gt;Entertainment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📚 I finished reading with &lt;code&gt;Leviathan Awakens&lt;/code&gt; and watched the responding ending of the season of its TV show to compare the two. In the show, the end of book one and the beginning of book two actually overlap, so the end of book one is actually halfway in the second season. But yeah, it&#39;s very close to the book, surprisingly. I might watch the show again. Maybe after reading all the books (that they made seasons for).&lt;/li&gt;
+&lt;li&gt;🌐 I loved reading this background story to a YouTube comment: &lt;a href=&quot;https://markslutsky.substack.com/p/something-good-88-irene&quot;&gt;https://markslutsky.substack.com/p/something-good-88-irene&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;🍿 We finished almost all episodes of the final season of Sex Education. It started slow, and not as great as previous seasons. But it got better. You can also feel like they&#39;re trying to wrap up the story archs. They don&#39;t want to leave you hanging like some other shows did ;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Video of the week&lt;/h2&gt;
+&lt;p&gt;No song of the week this time since I didn&#39;t have time to listen to a lot of new music. But here&#39;s one of my favorite clips of the show &lt;code&gt;Toast of London&lt;/code&gt;.&lt;/p&gt;
+&lt;script type=&quot;module&quot; src=&quot;https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;lite-youtube videoid=&quot;grp-hFT2_u0&quot;&gt;&lt;/lite-youtube&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Weeknotes 03/2023</title>
     <link href="/weeknotes/2023/03/"/>

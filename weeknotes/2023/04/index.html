@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Blog | Jan Monschke</title>
+    <title>Weeknotes 04/2023 | Jan Monschke</title>
 
     <meta httpequiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,9 +14,9 @@
     
     <meta name="description" content="The portfolio and blog of Jan Monschke">
     <meta property="og:description" content="The portfolio and blog of Jan Monschke">
-    
-    
-    
+    <meta property="article:published_time" content="Tue Oct 03 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    <meta property="og:image" content="https://janmonschke.com/img/content/Du4tvqFM5F-600.jpeg">
+    <meta property="image" content="https://janmonschke.com/img/content/Du4tvqFM5F-600.jpeg">
 
     <link rel="webmention" href="https://webmention.io/janmonschke.com/webmention">
     <link rel="pingback" href="https://webmention.io/janmonschke.com/xmlrpc">
@@ -64,90 +64,196 @@
       margin-bottom: 0.8rem;
     }
   }
-.index__bioContainer {
-      margin-bottom: 1.28em;
-    }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
 
-    .index__nav {
-      display: flex;
-      flex-direction: row;
-      margin-bottom: 1.28rem;
-      font-size: 1.12rem;
-    }
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
 
-    .index__navBtn {
-      border: none;
-      background: transparent;
-      outline: none;
-      cursor: pointer;
-      color: #007acc;
-      margin-right: 1rem;
-    }
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
 
-    .index__navBtn:first-child {
-      padding-left: 0;
-    }
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
 
-    .index__sectionHeadline {
-      display: flex;
-      align-items: baseline;
-      margin-bottom: 0.8rem;
-    }
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
 
-    .index__sectionHeadline h2,
-    .index__rssIcon {
-      margin: 0;
-    }
+  .blogPost__nacvigationTitle {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
 
-    .index__rssIcon {
-      margin-left: 0.32rem;
-    }
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+  }
 
-    .index__listContainer {
-      margin-bottom: 1.6rem;
-    }
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
+  }
 
-    .index__postList,
-    .index__talksList {
-      list-style-type: none;
-      margin: 0;
-    }
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
 
-    .index__postList li {
-      margin: 0;
-    }
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
 
-    .index__postListItem {
-      margin-top: 0.32rem;
-      margin-bottom: 0px;
-      font-weight: normal;
-      font-size: 1.07177rem;
-      line-height: 1.6rem;
-    }
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
 
-    .index__moreLink {
-      margin-top: 0.64rem;
-      font-size: 0.96rem;
-      display: flex;
-      justify-content: flex-end;
-    }
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
 
-    .index__weeknoteNote {
-      margin-bottom: 1rem;
-    }
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
 
-    .index__talksList > li {
-      margin-bottom: 1.6rem;
-    }
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
 
-    .index__talkTitle {
-      font-size: 1.12rem;
-      font-weight: 500;
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
     }
+  }
 
-    .index__talkConfList li {
-      margin: 0.16rem;
-    }
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
 .Layout__titleContainer,
   .Layout__homeLink {
     display: flex;
@@ -338,22 +444,73 @@ video {
   <body>
     <div class="base">
       <header>
-        <div class="Layout__titleContainer">
+        <div class="Layout__titleContainer m-small">
   <div class="h-card">
     <a href="/" class="Layout__homeLink u-url">
       <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
-      <h1 class="Layout__title p-name">Jan Monschke</h1>
       
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
     </a>
   </div>
-  
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
 </div>
 
 
       </header>
-      <main><div class="index__bioContainer">
-  <bio><aside class="bio">
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Weeknotes 04/2023</h1>
+    <span class="blogPost__date">October 03, 2023</span>
+  </header>
+  <aside class="blogPost__coverImage"><picture><source type="image/avif" srcset="/img/content/weeknotes/2023/Du4tvqFM5F-352.avif 352w, /img/content/weeknotes/2023/Du4tvqFM5F-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/weeknotes/2023/Du4tvqFM5F-352.webp 352w, /img/content/weeknotes/2023/Du4tvqFM5F-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/weeknotes/2023/Du4tvqFM5F-352.jpeg 352w, /img/content/weeknotes/2023/Du4tvqFM5F-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img alt loading="eager" decoding="auto" src="/img/content/weeknotes/2023/Du4tvqFM5F-352.jpeg" width="705" height="520" class="picture"></picture></aside>
+  <section class="blogPost__content"><h2>Weeknotes</h2>
+<h2>Life</h2>
+<p>Even though it's the end of September/early October, the days are still pretty warm and our little one is hitting playground after playground. He's about to start walking we think. Everywhere he can possibly pull himself up, he does so. Then traverses along the object. Stops to stand by himself and then repeats the whole process. Berlin playgrounds have quite the diverse offering. There's something for all ages. Our favorite playground so far has probably been <a href="https://maps.app.goo.gl/2Ti62TSJNCH4Yabh6">Weltspielplatz in Treptower Park</a>. It's a little far away for us, but there's so much to do and it's close to the water also.</p>
+<p>We also went to an indoor playground called <a href="https://maps.app.goo.gl/3LU1atZFexrDLBTw5">MachMit</a> which is located in a former church. It has two floors. The one downstairs is an interactive exhibition and the floor upstairs is a gigantic climbing labyrinth. Our little one is still too young for most of the installations but he loved the ones he could try already. We can't wait to see how he'll like the climbing installations.</p>
+<hr>
+<p>More of the cafés around us are offering pumpkin spice latte (we tried <a href="/weeknotes/2023/03/">Brammibal's last week</a>). The newest one being <a href="https://maps.app.goo.gl/to7Amy9tgdkVBz1N7">Coffea in Ebertystr</a> . It's our go-to café these days. Located neatly between parks and playgrounds with a great lunch offering also. Their PSL is more on the desert-side of things with heavy whipped cream. I prefer the more spicy version of a PSL but I can see how people love these ones also.</p>
+<h2>Tech stuff</h2>
+<p>I've been blown away by the <a href="https://begin.com/blog/posts/2023-09-28-introducing-enhance-music">Enhance Music</a> tech demo. It's a music service just like SoundCloud (where I worked for 7 years) but as a multi page web app. SoundCloud is built as a gigantic single page app to allow for page navigation while music keeps playing (amongst other reasons like caching etc.). So this tech demo was quite a refreshing and brilliant take on this problem.</p>
+<p>Their solution to the whole music in the background problem is to use iframes. Jep, frigging iframes. The page is basically split into two iframes. One is responsible for rendering the music catalogue, the other displays the music player. Each song in the catalogue is an <code>&lt;a /&gt;</code> tag with <code>target='player'</code>. So the <code>player</code> iframe will navigate to the requested song and start playing it. The catalogue frame is unaffected. I didn't know that links from one iframe would be able to target another iframe on the same page. So that kind of blew my mind.</p>
+<p>This comes with a bunch of advantages like a lot less heavy page weight, faster load times, faster rendering etc. It's an interesting demo and we tried to achieve something similar at SoundCloud (also with iframes) but we were never given the time to execute on those plans. A rewrite of the SoundCloud monolith would have been very complicated and due to the nature of this architectural change, would have probably blocked most other development of the site.</p>
+<hr>
+<p>I upgraded to Sonoma, for the sole reason to be able to add websites to the dock. I LOVE that feature. Previously I used Chrome's PWA install dialog to add some websites to my app folder (because Firefox doesn't support this on the desktop, yet). But I'm trying to use Chrome less and less now so I'm happy that Safari has this built-in now. I'm not saying that I'm becoming a Safari user now. Just a couple of apps like Fastmail, Netflix and YouTube music made it in my dock so far.</p>
+<h2>Work</h2>
+<p>At work we realized that failing type checks didn't stop the CI for several months now. So, given the size of the project and that amount of people working on it every day, fixing those type errors was no easy undertaking. I volunteered to fix the types for my &quot;department&quot; and got down the one or the other rabbit hole. Sometimes even needing type fixes in dependencies.</p>
+<p>Of course, we couldn't re-enable type checks on the CI before they were all fixed, so there were a couple of days were new type errors made it into <code>main</code> while you thought you were already done with your fixes. Anyhow, I quite liked getting into the nitty gritty of the code base.</p>
+<p>On an &quot;unrelated&quot; note, I also enjoyed listening to the &quot;type war&quot; episode of JS Party where they talk about Svelte's decision to ditch TypeScript in favor of JSDoc. And of course they could not not address the elephant in the room that is the controversial way that <a href="https://github.com/hotwired/turbo/pull/971">TypeScript was janked out of turbo</a>.</p>
+<h2>Side projects</h2>
+<p>I wanted to continue my blog post on the history of <a href="https://colorbattle.app/">colorbattle.app 🕹️</a> , but didn't get to it at all the last two weeks. There is an outline and notes for each of the four rewrites and at what time in my life / career I decided to go for another rewrite. I've been swimming in nostalgia since I wrote up those note, connecting with people that I had not talked to in a long time. If this continues, I might be finished with the blog post at the end of next year 😅</p>
+<h2>Entertainment</h2>
+<ul>
+<li>📚 I finished reading with <code>Leviathan Awakens</code> and watched the responding ending of the season of its TV show to compare the two. In the show, the end of book one and the beginning of book two actually overlap, so the end of book one is actually halfway in the second season. But yeah, it's very close to the book, surprisingly. I might watch the show again. Maybe after reading all the books (that they made seasons for).</li>
+<li>🌐 I loved reading this background story to a YouTube comment: <a href="https://markslutsky.substack.com/p/something-good-88-irene">https://markslutsky.substack.com/p/something-good-88-irene</a></li>
+<li>🍿 We finished almost all episodes of the final season of Sex Education. It started slow, and not as great as previous seasons. But it got better. You can also feel like they're trying to wrap up the story archs. They don't want to leave you hanging like some other shows did ;)</li>
+</ul>
+<h2>Video of the week</h2>
+<p>No song of the week this time since I didn't have time to listen to a lot of new music. But here's one of my favorite clips of the show <code>Toast of London</code>.</p>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
+<p><lite-youtube videoid="grp-hFT2_u0"></lite-youtube></p>
+</section>
+</article>
+<aside>
   
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
   <span>
     Hi, I'm Jan 👋 I am a software engineer working for
     <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
@@ -373,274 +530,20 @@ video {
   </span>
 </aside>
 
-</bio></div>
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      
+      <li>
+        <a href="/weeknotes/2023/03/" rel="next"><span>Weeknotes 03/2023</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
 
-<nav aria-hidden class="index__nav">
-  <a href="#blogposts" class="index__navBtn"> Blog posts </a>
-  <a href="#weeknotes" class="index__navBtn"> Weeknotes </a>
-  <a href="#talks" class="index__navBtn"> Talks </a>
-</nav>
 
-<div class="posts index__listContainer">
-  <span class="index__sectionHeadline">
-    <h2><a name="blogposts"></a>Posts</h2>
-    <a href="/rss.xml" aria-label="Blog post RSS feed">
-      <img src="/assets/images/rss.svg" alt="Blog post RSS feed" class="index__rssIcon">
-    </a>
-  </span>
-  <ul class="index__postList">
-    <li>
-      <h3 class="index__postListItem">
-        <a href="/adding-webmentions-to-your-static-blog/">
-          <span style="color: initial">Jan 30, 2023</span>:
-          <span class="index__blogPostTitle">Adding webmentions to your static blog</span>
-        </a>
-      </h3>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/changing-my-online-identity/">
-          <span style="color: initial">Jan 01, 2023</span>:
-          <span class="index__blogPostTitle">Changing my online identity</span>
-        </a>
-      </h3>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/building-a-gpx-editor-with-xstate-and-lit-html/">
-          <span style="color: initial">Nov 08, 2021</span>:
-          <span class="index__blogPostTitle">Building a gpx editor with xstate and lit-html</span>
-        </a>
-      </h3>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/flexible-color-definitions-in-design-systems/">
-          <span style="color: initial">May 19, 2021</span>:
-          <span class="index__blogPostTitle">Flexible color definitions in design systems</span>
-        </a>
-      </h3>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/setting-up-tailwindcss-in-create-react-app/">
-          <span style="color: initial">Apr 17, 2020</span>:
-          <span class="index__blogPostTitle">Setting up TailwindCSS in create-react-app</span>
-        </a>
-      </h3>
-    </li>
-  </ul>
-  <a href="/blog" class="index__moreLink">→ More blog posts</a>
-</div>
-
-<div class="weeknotes index__listContainer">
-  <span class="index__sectionHeadline">
-    <h2><a name="weeknotes"></a>Weeknotes</h2>
-    <a href="/weeknotes.xml" aria-label="Weeknotes RSS feed">
-      <img src="/assets/images/rss.svg" alt="Weeknotes RSS feed" class="index__rssIcon">
-    </a>
-  </span>
-  <p class="index__weeknoteNote">
-    Weeknotes are shorter, more regular and more personal blog posts that I
-    publish on a weekly basis. Expect to read about updates of side projects,
-    books that I like to read, food, living in Berlin and general life things.
-  </p>
-  <ul class="index__postList">
-    <li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/04/">Weeknotes 04/2023</a>
-      </h3>
-      <small>#playgrounds · #pumpkin spice latte · #music app · #sonoma</small>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/03/">Weeknotes 03/2023</a>
-      </h3>
-      <small>#boars · #cargo bike · #pumpkin spice · #colorbattle · #ginger root</small>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/02/">Weeknotes 02/2023</a>
-      </h3>
-      <small>#night train · #cargo bike · #side project · #painkiller · #canned coffee</small>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/01/">Weeknotes 01/2023</a>
-      </h3>
-      <small>#daycare · #cargo bike · #eleventy · #the expanse · #motherland</small>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2022/05/">Weeknotes 05/2022</a>
-      </h3>
-      <small>#baby · #react finland · #pub quiz · #remixjs</small>
-    </li>
-  </ul>
-  <a href="/weeknotes" class="index__moreLink">→ All weeknotes</a>
-</div>
-
-<div class="talks index__listContainer">
-  <span class="index__sectionHeadline">
-    <h2><a name="talks"></a>Talks</h2>
-  </span>
-  <ul class="index__talksList">
-    <li>
-      <span class="index__talkTitle">
-        <span>Memory management in modern web applications</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="https://docs.google.com/presentation/d/13t9XpHWtNi498LkU3gTYNYkd6np5015EZmGaVsoEH_c/edit?usp=sharing">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=dtDELTziIUo">Frontend Con 2018 · Warsaw, Poland</a>
-          
-        </li>
-<li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=XtcGHhhGoZw">ReactNotAConf 2018 · Sofia, Bulgaria</a>
-          
-        </li>
-<li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=aaGacO-Yybs">ReactFest 2018 · London, UK</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Prototyping with React Native @ SoundCloud</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/prototyping-at-soundcloud/">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          
-          <span>AgentConf 2017 · Dornbirn, Austria</span>
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>How it's made: our opening of JSConf EU 2017</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="https://nestedloops.github.io/jsconf-2017-presentation/">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=NpKLt_YO3o8">JSConf EU 2017 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>🎶 Nested Loops: PEOPLE GOT MAD</span>
-
-        
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=lCn-XCASn98">JSConf EU 2017 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Building collaborative &amp; realtime applications with diffsync</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/diffsync-presentation">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=YFaSK-W6u-E">Frontend Union Conf 2015 · Moscow, Russia</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>🎶 Nested Loops: JavaScript, what are you?</span>
-
-        
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=lJ1kY-CSpBk">JSConf EU 2015 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Using the web for music production and live performances</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/JSConf2014">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=cqtBpCqgOgM">JSConf EU 2014 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Building a collaborative audio editor based on the Web Audio API</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/Building-a-collaborative-web-audio-editor">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://medias.ircam.fr/x7bde3a">Web Audio Conference 2015 · Paris, France</a>
-          
-        </li>
-<li>
-          <a rel="noopener noreferrer" target="_blank" href="https://vimeo.com/96477738">ScotlandJS 2014 · Edinburgh, Scotland</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Making music with JavaScript and Gamepads</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/Music-with-JS-and-Gamepads">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=0MigafMWLh0">RejectJS 2013 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Genetic Algorithms in JavaScript</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/Genetic-Algorithms/presentation">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          
-          <span>BerlinJS 2012 · Berlin, Germany</span>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  
-</div>
 </main>
     </div>
     <style></style>
