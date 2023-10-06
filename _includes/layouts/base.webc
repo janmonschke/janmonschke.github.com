@@ -113,9 +113,8 @@
     <script @raw="getBundle('js', 'defer')" webc:keep></script>
     <script type="module" @raw="getBundle('js')" webc:keep></script>
     <script
-      async
+      src="https://tinylytics.app/embed/z49iD7EY7XjWtQc-xWYr.js"
       defer
-      src="https://scripts.withcabin.com/hello.js"
       webc:keep
     ></script>
   </body>
