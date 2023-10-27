@@ -74,7 +74,6 @@ module.exports = function (eleventyConfig) {
     // Collections are sorted in ascending order in eleventy,
     // so we reversethat order for blog posts.
     const blogPosts = [...collectionApi.getFilteredByTag("weeknote")].reverse();
-    console.log("weeknotes length", blogPosts.length);
     return await Promise.all(mapPosts(blogPosts));
   });
 
