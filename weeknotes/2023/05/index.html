@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>All weeknotes | Jan Monschke</title>
+    <title>Weeknotes 05/2023 | Jan Monschke</title>
 
     <meta httpequiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,9 +14,9 @@
     
     <meta name="description" content="The portfolio and blog of Jan Monschke">
     <meta property="og:description" content="The portfolio and blog of Jan Monschke">
-    
-    
-    
+    <meta property="article:published_time" content="Wed Oct 25 2023 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    <meta property="og:image" content="https://janmonschke.com/img/content/_GyugJJLWH-600.jpeg">
+    <meta property="image" content="https://janmonschke.com/img/content/_GyugJJLWH-600.jpeg">
 
     <link rel="webmention" href="https://webmention.io/janmonschke.com/webmention">
     <link rel="pingback" href="https://webmention.io/janmonschke.com/xmlrpc">
@@ -35,31 +35,224 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
-    <style>.allPostsList__header {
+    <style>.bio {
     display: flex;
-    align-items: baseline;
-    margin-top: 0.8rem;
+    align-items: center;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
+
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
+
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .blogPost__nacvigationTitle {
+    display: block;
     margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
   }
 
-  .allPostsList__header h2,
-  .allPostsList__rssIcon {
-    margin: 0;
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
   }
 
-  .allPostsList__rssIcon {
-    margin-left: 0.32rem;
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
   }
 
-  .allPostsList__list {
-    list-style-type: none;
-    margin: 0;
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
   }
 
-  .allPostsList__postTitle {
-    margin-top: 1.6rem;
-    margin-bottom: 0px;
-    font-size: 1.12rem;
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
   }
 .Layout__titleContainer,
   .Layout__homeLink {
@@ -273,159 +466,79 @@ video {
 
 
       </header>
-      <main>
-<all-posts-list title="All weeknotes" rssurl="/weeknotes.xml" posts="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" sub="function sub(post) {
-    return post.data.keywords.map((keyword) => `#${keyword}`).join(&quot; · &quot;);
-  }"><header class="allPostsList__header">
-  <h2>All weeknotes</h2>
-  <a href="/weeknotes.xml">
-    <img src="/assets/images/rss.svg" alt="RSS feed" class="allPostsList__rssIcon">
-  </a>
-</header>
-<main>
-  <ul class="allPostsList__list">
-    <li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2023/05/">Weeknotes 05/2023</a>
-      </h3>
-      <small>#baby's first steps · #language · #refactoring · #i18n · #bruno</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2023/04/">Weeknotes 04/2023</a>
-      </h3>
-      <small>#playgrounds · #pumpkin spice latte · #music app · #sonoma</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2023/03/">Weeknotes 03/2023</a>
-      </h3>
-      <small>#boars · #cargo bike · #pumpkin spice · #colorbattle · #ginger root</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2023/02/">Weeknotes 02/2023</a>
-      </h3>
-      <small>#night train · #cargo bike · #side project · #painkiller · #canned coffee</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2023/01/">Weeknotes 01/2023</a>
-      </h3>
-      <small>#daycare · #cargo bike · #eleventy · #the expanse · #motherland</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/05/">Weeknotes 05/2022</a>
-      </h3>
-      <small>#baby · #react finland · #pub quiz · #remixjs</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/04/">Weeknotes 04/2022</a>
-      </h3>
-      <small>#war · #death · #pregnancy</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/03/">Weeknotes 03/2022</a>
-      </h3>
-      <small>#elasticsearch · #release · #game development · #side project · #cartographers</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/02/">Weeknotes 02/2022</a>
-      </h3>
-      <small>#elasticsearch · #release · #game · #side project · #bouldering · #hidden gem</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2022/01/">Weeknotes 01/2022</a>
-      </h3>
-      <small>#winter · #elasticsearch · #coffee · #technology · #politics</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/13/">Weeknotes 13/2021</a>
-      </h3>
-      <small>#hiking · #team events · #squid game · #utopia avenue · #music for flow</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/12/">Weeknotes 12/2021</a>
-      </h3>
-      <small>#fall · #home improvements · #hiking · #bobiverse · #sex education</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/11/">Weeknotes 11/2021</a>
-      </h3>
-      <small>#wedding · #new job · #walter tevis · #dune · #neo-classic</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/10/">Weeknotes 10/2021</a>
-      </h3>
-      <small>#summer time · #blog · #sideproject · #ping · #conference</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/09/">Weeknotes 9/2021</a>
-      </h3>
-      <small>#settling in · #covid vaccination · #new role · #books</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/08/">Weeknotes 8/2021</a>
-      </h3>
-      <small>#moving · #somewhere · #ping · #firebase course</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/07/">Weeknotes 7/2021</a>
-      </h3>
-      <small>#somewhere · #responsively · #ping · #firebase cloud storage · #sci-fi · #house music</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/06/">Weeknotes 6/2021</a>
-      </h3>
-      <small>#somewhere · #ping · #darknet diaries · #music</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/05/">Weeknotes 5/2021</a>
-      </h3>
-      <small>#twilio · #ping · #music · #panama papers · #gamestop short squeeze</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/04/">Weeknotes 4/2021</a>
-      </h3>
-      <small>#soundcloud · #somewhere · #ping · #IKEA web assembly · #science fiction</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/03/">Weeknotes 3/2021</a>
-      </h3>
-      <small>#soundcloud · #ping · #firebase · #interdependency · #the expanse</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/02/">Weeknotes 2/2021</a>
-      </h3>
-      <small>#ping · #xstate · #firebase auth · #nextjs · #work · #board games · #cooking</small>
-    </li>
-<li>
-      <h3 class="allPostsList__postTitle">
-        <a href="/weeknotes/2021/01/">Weeknotes 1/2021</a>
-      </h3>
-      <small>#new year · #side projects · #board games · #audio books · #series</small>
-    </li>
-  </ul>
-</main>
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Weeknotes 05/2023</h1>
+    <span class="blogPost__date">October 25, 2023</span>
+  </header>
+  <aside class="blogPost__coverImage"><picture><source type="image/avif" srcset="/img/content/weeknotes/2023/_GyugJJLWH-352.avif 352w, /img/content/weeknotes/2023/_GyugJJLWH-705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/weeknotes/2023/_GyugJJLWH-352.webp 352w, /img/content/weeknotes/2023/_GyugJJLWH-705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/weeknotes/2023/_GyugJJLWH-352.jpeg 352w, /img/content/weeknotes/2023/_GyugJJLWH-705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img alt loading="eager" decoding="auto" src="/img/content/weeknotes/2023/_GyugJJLWH-352.jpeg" width="705" height="618" class="picture"></picture></aside>
+  <section class="blogPost__content"><h2>Weeknotes</h2>
+<h2>Life</h2>
+<p>The cold season has started in daycare and the little one has a runny nose constantly. He's in a good mood though and his teachers are happy with him.</p>
+<p>He made his first steps last week 😍 We weren't prepared for how emotional the moment would be. He was using a walking toy in the courtyard, went past some flowers and then decided to stop and just walk up to them by himself. Since then he's been walking so much every day. The teachers at daycare won the bet that he would start walking before his first birthday. I'll have to come up with a nice gift for them.</p>
+<p>He also made his first best friend at daycare. Of course it's the only other French-German kid in his class. 🇫🇷🇩🇪</p>
+<p>We started to change our spoken language approach at home. Before, my wife and I would talk English together and then our mother tongues to our son. Now we're just speaking in our mother tongues all the time. This works 95% of the time since we both understand each other's language quite well. It took some time to adjust but we now rarely switch back to English. When he's not around though, we do switch back. Since he's exposed to so much German at daycare, this approach should expose him more to French.</p>
+<p>Our days still start very early (~5:30), so it's pretty dark when we open the blinds. That can feel depressing at times. But then, when we walk the little one to daycare through the park, we are witnessing the most beautiful sunrises 🌅.</p>
+<h2>Work</h2>
+<p>I've been working on a big refactoring of a core feature which ended up being less of a refactoring but more a &quot;straightening&quot; and documentation of the existing architecture. In order to get the feature out sooner and having more time to test it, the &quot;straightening&quot;, documenting the architecture and adding new functionality mindfully, worked better. That way I can get feedback from product and internal users earlier and change the feature and fix bugs if necessary. The big refactor is not off the table though. I took notes along the way and created an action plan for the refactoring and will work on that right after.</p>
+<p>The feature I'm talking about doesn't really have unit tests but is rather well covered by acceptance tests. This means the dev-test cycle is a little slower and my laptop's fans are running constantly. I really need to upgrade the machine. I was unlucky to get one of the last Intel MacBooks when I joined the company. The laptop lineup was refreshed a week after my start date, haha. Anyways, I filled the request to get an M2 and hope it'll all be much smoother in a couple of weeks.</p>
+<h2>Web / Tech</h2>
+<p>My little site got a couple thousand visits over the last week and I don't know where the traffic came from. I have a hunch that it came from a newsletter that linked to my <a href="https://janmonschke.com/building-a-minimal-i18n-library/">blog post on building a minimal i18n library</a> . Most of my site's traffic landed there last week and it appears they came with an <code>utm_source</code> of <code>customer.io</code>. Which is a tool for tracking all sorts of things, including newsletters. I did some digging, but couldn't find a newsletter linking here. So if you're reading this and you came through the newsletter, hi 👋, let me know on <a href="https://social.lol/@janmon/">Mastodon</a> which newsletter that was 🙂.</p>
+<p>Speaking of Mastodon, I came across the <a href="https://streetpass.social/">StreetPass for Mastodon extension</a> and I installed it on all of my machines. It surfaces Mastodon accounts from the sites you visit. Many Mastodon users have added their accounts as <code>&lt;link /&gt;</code> tags to their sites for verification (e.g. <code>&lt;link rel=&quot;me&quot; href=&quot;https://social.lol/@janmon&quot;&gt;</code>. The extension lets you know when you have come across a new Mastodon account and lists all the ones you have already seen. Very handy to get Mastodon handles of blog post authors.</p>
+<p>One blog post that stood out this week was this excellent overview on <a href="https://frontendatscale.com/blog/islands-architecture-state">sharing state on sites with an &quot;island&quot; infrastructure</a>. It feels similar to an architecture of a site that I was working on as a freelancer roughly 10 years ago, haha. But I'm glad that a lot of the building blocks for these architectures are now much more standardised (e.g. web components).</p>
+<p>Another interesting blog post is this one which explains <a href="https://kettanaito.com/blog/one-thing-nobody-explained-to-you-about-typescript">the purpose of <code>tsconfig.json</code></a> . It's very well written and gives handy examples. It shows how to leverage multiple config files depending on the &quot;context&quot; of your TypeScript files (e.g. test vs frontend vs server context).</p>
+<p>And, last but not least, I started using <a href="https://www.usebruno.com/">Bruno</a> as my API test tool of choice. I'm transitioning to a more backend-heavy task at the moment so I was looking for a nicer tool to running and inspecting API calls. Which, in Bruno, is a breeze. In fact, I liked Bruno so much, I contributed two PRs last week. One that <a href="https://github.com/usebruno/bruno/pull/694">fixes a CSS line-breaking issue</a> and another one <a href="https://github.com/usebruno/bruno/pull/750">that makes Bruno (more) GDPR compliant</a>.</p>
+<h2>Entertainment</h2>
+<ul>
+<li>📚 I'm almost done with <a href="https://en.wikipedia.org/wiki/Caliban%27s_War">Caliban's War</a>. For some reason I went through it much fast than Leviathan Wakes which took me some months. Now it took me just a couple weeks. The urge to re-watch The Expanse is growing with every page I'm reading.</li>
+<li>🍿 To wind down in the evening we started watching random <a href="https://en.wikipedia.org/wiki/Parks_and_Recreation">Parks and Recreation</a> episodes. Man, that was such a great show all around.</li>
+</ul>
+<h2>Song of the week</h2>
+<p>Just like <a href="https://janmonschke.com/weeknotes/2023/04/">last week</a>, there is no song of the week this week. This time I want to recommend a &quot;music&quot; streaming service that I use every day at work. Listening to regular songs can distract me at times so I was looking for a more mellow alternative. I found <a href="https://brain.fm">Brain.fm</a> to work very well for me. The songs, and the added &quot;neural effect&quot; do put me into focus mode quite quickly. I can highly recommend it 🎉</p>
+</section>
+</article>
+<aside>
+  
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
+  <span>
+    Hi, I'm Jan 👋 I am a software engineer working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
+    in Berlin. You can find me on
+    <a rel="noopener noreferrer" target="_blank" href="https://social.lol/@janmon">
+      🐘 Mastodon
+    </a>
+    ,
+    <a rel="noopener noreferrer" target="_blank" href="https://github.com/janmonschke">
+      💻 GitHub
+    </a>
+    and
+    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jan-monschke-aa6a249a/">
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
 
-</all-posts-list>
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      
+      <li>
+        <a href="/weeknotes/2023/04/" rel="next"><span>Weeknotes 04/2023</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
 </main>
     </div>
     <style></style>

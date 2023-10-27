@@ -4,11 +4,41 @@
   <subtitle>Weeknotes from janmonschke.com</subtitle>
   <link href="weeknotes.xml" rel="self"/>
   <link href=""/>
-  <updated>2023-10-03T00:00:00Z</updated>
+  <updated>2023-10-25T00:00:00Z</updated>
   <id></id>
   <author>
     <name>Jan Monschke</name>
   </author>
+  <entry>
+    <title>Weeknotes 05/2023</title>
+    <link href="/weeknotes/2023/05/"/>
+    <updated>2023-10-25T00:00:00Z</updated>
+    <id>/weeknotes/2023/05/</id>
+    <content xml:lang="" type="html">&lt;h2&gt;Weeknotes&lt;/h2&gt;
+&lt;h2&gt;Life&lt;/h2&gt;
+&lt;p&gt;The cold season has started in daycare and the little one has a runny nose constantly. He&#39;s in a good mood though and his teachers are happy with him.&lt;/p&gt;
+&lt;p&gt;He made his first steps last week 😍 We weren&#39;t prepared for how emotional the moment would be. He was using a walking toy in the courtyard, went past some flowers and then decided to stop and just walk up to them by himself. Since then he&#39;s been walking so much every day. The teachers at daycare won the bet that he would start walking before his first birthday. I&#39;ll have to come up with a nice gift for them.&lt;/p&gt;
+&lt;p&gt;He also made his first best friend at daycare. Of course it&#39;s the only other French-German kid in his class. 🇫🇷🇩🇪&lt;/p&gt;
+&lt;p&gt;We started to change our spoken language approach at home. Before, my wife and I would talk English together and then our mother tongues to our son. Now we&#39;re just speaking in our mother tongues all the time. This works 95% of the time since we both understand each other&#39;s language quite well. It took some time to adjust but we now rarely switch back to English. When he&#39;s not around though, we do switch back. Since he&#39;s exposed to so much German at daycare, this approach should expose him more to French.&lt;/p&gt;
+&lt;p&gt;Our days still start very early (~5:30), so it&#39;s pretty dark when we open the blinds. That can feel depressing at times. But then, when we walk the little one to daycare through the park, we are witnessing the most beautiful sunrises 🌅.&lt;/p&gt;
+&lt;h2&gt;Work&lt;/h2&gt;
+&lt;p&gt;I&#39;ve been working on a big refactoring of a core feature which ended up being less of a refactoring but more a &amp;quot;straightening&amp;quot; and documentation of the existing architecture. In order to get the feature out sooner and having more time to test it, the &amp;quot;straightening&amp;quot;, documenting the architecture and adding new functionality mindfully, worked better. That way I can get feedback from product and internal users earlier and change the feature and fix bugs if necessary. The big refactor is not off the table though. I took notes along the way and created an action plan for the refactoring and will work on that right after.&lt;/p&gt;
+&lt;p&gt;The feature I&#39;m talking about doesn&#39;t really have unit tests but is rather well covered by acceptance tests. This means the dev-test cycle is a little slower and my laptop&#39;s fans are running constantly. I really need to upgrade the machine. I was unlucky to get one of the last Intel MacBooks when I joined the company. The laptop lineup was refreshed a week after my start date, haha. Anyways, I filled the request to get an M2 and hope it&#39;ll all be much smoother in a couple of weeks.&lt;/p&gt;
+&lt;h2&gt;Web / Tech&lt;/h2&gt;
+&lt;p&gt;My little site got a couple thousand visits over the last week and I don&#39;t know where the traffic came from. I have a hunch that it came from a newsletter that linked to my &lt;a href=&quot;https://janmonschke.com/building-a-minimal-i18n-library/&quot;&gt;blog post on building a minimal i18n library&lt;/a&gt; . Most of my site&#39;s traffic landed there last week and it appears they came with an &lt;code&gt;utm_source&lt;/code&gt; of &lt;code&gt;customer.io&lt;/code&gt;. Which is a tool for tracking all sorts of things, including newsletters. I did some digging, but couldn&#39;t find a newsletter linking here. So if you&#39;re reading this and you came through the newsletter, hi 👋, let me know on &lt;a href=&quot;https://social.lol/@janmon/&quot;&gt;Mastodon&lt;/a&gt; which newsletter that was 🙂.&lt;/p&gt;
+&lt;p&gt;Speaking of Mastodon, I came across the &lt;a href=&quot;https://streetpass.social/&quot;&gt;StreetPass for Mastodon extension&lt;/a&gt; and I installed it on all of my machines. It surfaces Mastodon accounts from the sites you visit. Many Mastodon users have added their accounts as &lt;code&gt;&amp;lt;link /&amp;gt;&lt;/code&gt; tags to their sites for verification (e.g. &lt;code&gt;&amp;lt;link rel=&amp;quot;me&amp;quot; href=&amp;quot;https://social.lol/@janmon&amp;quot;&amp;gt;&lt;/code&gt;. The extension lets you know when you have come across a new Mastodon account and lists all the ones you have already seen. Very handy to get Mastodon handles of blog post authors.&lt;/p&gt;
+&lt;p&gt;One blog post that stood out this week was this excellent overview on &lt;a href=&quot;https://frontendatscale.com/blog/islands-architecture-state&quot;&gt;sharing state on sites with an &amp;quot;island&amp;quot; infrastructure&lt;/a&gt;. It feels similar to an architecture of a site that I was working on as a freelancer roughly 10 years ago, haha. But I&#39;m glad that a lot of the building blocks for these architectures are now much more standardised (e.g. web components).&lt;/p&gt;
+&lt;p&gt;Another interesting blog post is this one which explains &lt;a href=&quot;https://kettanaito.com/blog/one-thing-nobody-explained-to-you-about-typescript&quot;&gt;the purpose of &lt;code&gt;tsconfig.json&lt;/code&gt;&lt;/a&gt; . It&#39;s very well written and gives handy examples. It shows how to leverage multiple config files depending on the &amp;quot;context&amp;quot; of your TypeScript files (e.g. test vs frontend vs server context).&lt;/p&gt;
+&lt;p&gt;And, last but not least, I started using &lt;a href=&quot;https://www.usebruno.com/&quot;&gt;Bruno&lt;/a&gt; as my API test tool of choice. I&#39;m transitioning to a more backend-heavy task at the moment so I was looking for a nicer tool to running and inspecting API calls. Which, in Bruno, is a breeze. In fact, I liked Bruno so much, I contributed two PRs last week. One that &lt;a href=&quot;https://github.com/usebruno/bruno/pull/694&quot;&gt;fixes a CSS line-breaking issue&lt;/a&gt; and another one &lt;a href=&quot;https://github.com/usebruno/bruno/pull/750&quot;&gt;that makes Bruno (more) GDPR compliant&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;Entertainment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;📚 I&#39;m almost done with &lt;a href=&quot;https://en.wikipedia.org/wiki/Caliban%27s_War&quot;&gt;Caliban&#39;s War&lt;/a&gt;. For some reason I went through it much fast than Leviathan Wakes which took me some months. Now it took me just a couple weeks. The urge to re-watch The Expanse is growing with every page I&#39;m reading.&lt;/li&gt;
+&lt;li&gt;🍿 To wind down in the evening we started watching random &lt;a href=&quot;https://en.wikipedia.org/wiki/Parks_and_Recreation&quot;&gt;Parks and Recreation&lt;/a&gt; episodes. Man, that was such a great show all around.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Song of the week&lt;/h2&gt;
+&lt;p&gt;Just like &lt;a href=&quot;https://janmonschke.com/weeknotes/2023/04/&quot;&gt;last week&lt;/a&gt;, there is no song of the week this week. This time I want to recommend a &amp;quot;music&amp;quot; streaming service that I use every day at work. Listening to regular songs can distract me at times so I was looking for a more mellow alternative. I found &lt;a href=&quot;https://brain.fm&quot;&gt;Brain.fm&lt;/a&gt; to work very well for me. The songs, and the added &amp;quot;neural effect&amp;quot; do put me into focus mode quite quickly. I can highly recommend it 🎉&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Weeknotes 04/2023</title>
     <link href="/weeknotes/2023/04/"/>
