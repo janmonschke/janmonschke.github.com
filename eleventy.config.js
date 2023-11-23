@@ -170,7 +170,7 @@ function mapPosts(posts) {
           return aDate.getTime() - bDate.getTime();
         })
         .map((mention) => {
-          if (!mention.content) {
+          if (!mention.content || !mention.published) {
             mention.isReference = true;
             return mention;
           }
