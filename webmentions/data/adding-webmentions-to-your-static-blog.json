@@ -471,5 +471,32 @@
     "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "mention-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Kristof Zerbe",
+      "photo": "https://webmention.io/avatar/kiko.io/486cb707eb5e20e6bd3da0e9499d5a6f02e1d83ad474192fee34d31367af68da.png",
+      "url": "https://kiko.io"
+    },
+    "url": "https://kiko.io/notes/2024/rethinking-my-webmention-implementation/",
+    "published": "2024-01-01T00:00:00",
+    "wm-received": "2024-01-01T16:31:04Z",
+    "wm-id": 1761430,
+    "wm-source": "https://kiko.io/notes/2024/rethinking-my-webmention-implementation/",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog",
+    "wm-protocol": "webmention",
+    "name": "#Link |  Rethinking my Webmention Implementation",
+    "content": {
+      "html": "<p>To start the new year, I decided to overhaul <a href=\"https://kiko.io/post/Hexo-and-the-IndieWeb-Receiving-Webmentions/\">my Webmention implementation</a> in the next weeks, having already revised the display of incoming Webmentions and deleted the “good old” comments without replacement during my New Year’s vacation.</p>\n<p>I was triggered by a <strong>Jan Monschke</strong> who, almost exactly a year ago, described in great detail how he implemented #Webmentions on his GitHub-based blog and used its <a href=\"https://github.com/features/actions\">#Actions</a>. The local storage of the data is particularly relevant for me here, as I currently only load it in the post via JavaScript from my endpoint <a href=\"https://webmention.io/\">webmention.io</a>. If the site goes down, there is suboptimally nothing more to see…</p>\n<p>This will also be a good opportunity to finally integrate my Notes into the automatic Webmention sending (incl. setting the correct verbs such as <code>u-like-of</code>, <code>u-bookmark-of</code>, etc.), because at the moment I still do this manually via <a href=\"https://webmention.app/\">webmention.app</a>.</p>\n<p><strong>Let’s go</strong> … and a happy new year to everyone on the #IndieWeb</p>\n<p><a href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog\">&gt;&gt;&gt; janmonschke.com: Adding webmentions to your static blog</a></p>",
+      "text": "To start the new year, I decided to overhaul my Webmention implementation in the next weeks, having already revised the display of incoming Webmentions and deleted the “good old” comments without replacement during my New Year’s vacation.\nI was triggered by a Jan Monschke who, almost exactly a year ago, described in great detail how he implemented #Webmentions on his GitHub-based blog and used its #Actions. The local storage of the data is particularly relevant for me here, as I currently only load it in the post via JavaScript from my endpoint webmention.io. If the site goes down, there is suboptimally nothing more to see…\nThis will also be a good opportunity to finally integrate my Notes into the automatic Webmention sending (incl. setting the correct verbs such as u-like-of, u-bookmark-of, etc.), because at the moment I still do this manually via webmention.app.\nLet’s go … and a happy new year to everyone on the #IndieWeb\n>>> janmonschke.com: Adding webmentions to your static blog"
+    },
+    "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog",
+    "wm-property": "mention-of",
+    "wm-private": false,
+    "rels": {
+      "canonical": "https://kiko.io/notes/2024/rethinking-my-webmention-implementation/"
+    }
   }
 ]
