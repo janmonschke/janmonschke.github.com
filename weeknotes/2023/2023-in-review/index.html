@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Building a gpx editor with xstate and lit-html | Jan Monschke</title>
+    <title>Looking back at 2023 | Jan Monschke</title>
 
     <meta httpequiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,9 +14,9 @@
     
     <meta name="description" content="The portfolio and blog of Jan Monschke">
     <meta property="og:description" content="The portfolio and blog of Jan Monschke">
-    <meta property="article:published_time" content="Mon Nov 08 2021 00:00:00 GMT+0000 (Coordinated Universal Time)">
-    <meta property="og:image" content="https://janmonschke.com/img/content/MJxfkzLCRQ-600.jpeg">
-    <meta property="image" content="https://janmonschke.com/img/content/MJxfkzLCRQ-600.jpeg">
+    <meta property="article:published_time" content="Fri Jan 19 2024 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    
+    
 
     <link rel="webmention" href="https://webmention.io/janmonschke.com/webmention">
     <link rel="pingback" href="https://webmention.io/janmonschke.com/xmlrpc">
@@ -35,34 +35,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
-    <style>.likes {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .likes li {
-    margin-bottom: 0;
-  }
-
-  .like {
-    margin-right: 0.5em;
-  }
-
-  .like__image {
-    width: 40px;
-    height: 40px;
-    border-radius: 30%;
-    margin-bottom: 0.1em;
-    transition: scale linear 0.1s;
-  }
-
-  .like__image:hover {
-    scale: 1.33;
-  }
-.bio {
+    <style>.bio {
     display: flex;
     align-items: center;
   }
@@ -530,123 +503,173 @@ li p + ul {
       </header>
       <main><article>
   <header class="blogPost__header">
-    <h1 class="blogPost__title">Building a gpx editor with xstate and lit-html</h1>
-    <span class="blogPost__date">November 08, 2021</span>
+    <h1 class="blogPost__title">Looking back at 2023</h1>
+    <span class="blogPost__date">January 19, 2024</span>
   </header>
   
-  <section class="blogPost__content"><p>
-      <figure>
-        
-      <a href="/img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-1500.jpeg" target="_blank" aria-label="Click to open image in new window">
-        <picture><source type="image/avif" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-352.avif 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-705.avif 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-352.webp 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-705.webp 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-352.jpeg 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-705.jpeg 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="GPX editor screenshot " src="/img/content/2021-11-08-gps-editor-xstate-lit-html/0DxlRgEZkX-352.jpeg" width="1500" height="527"></picture>
-      </a>
-    
-        <figcaption class="picture__caption">GPX editor screenshot </figcaption>
-      </figure></p>
-<p>When <a href="https://aweekinthewoods.com/france/auvergne/">I go hiking</a>, I usually record the trip with this battery-efficient <a href="https://gpslogger.app/">GPS Logger app</a> 🏕. Battery-efficiency is important because there's often no possibility to charge my phone on a multi-day hike. The app let's me define custom intervals at which it records a GPS point. I usually set the interval to somewhere between 45 seconds and a minute. This resolution is accurate enough for recordings of walks and it does not add too much strain on my battery.</p>
-<p>The app is requesting a GPS fix at certain points in an interval and disables GPS in-between recordings. This sometimes results in inaccurate readings of elevation and GPS locations. At least in my case and on my current phone.This in turn means that when I upload the recording to a tour website like <a href="https://www.komoot.com/user/214500264344">komoot</a> the stats can be quite off and people that use my GPS recording might take wrong turns due to the inaccurate GPS 🛰.</p>
-<p>For that reason I built a GPX editor which allows me to adjust the recorded points and strip out the elevation values. The cool thing about komoot is that they add the elevation info to your route if you don't provide any. They are using topology data that is a more accurate than my phone's recording.</p>
-<p>My usual approach to building a small app like that would be to spin up <a href="https://create-react-app.dev/">create-react-app</a> and code away. In the case of this small editor it did feel like overkill. I was also interested in trying out a new kind of app setup. Due to my previous experience with <a href="https://xstate.js.org/docs/">XState</a> I wanted to use it to drive the business logic of the editor. For the rendering I wanted to use <a href="https://lit-html.polymer-project.org/guide">list-html</a> which is tiny and super easy-to-use templating library.</p>
-<p>The last new building-block of my setup was <a href="https://parceljs.org/">parcel</a>. Previously I had pretty much exclusively used <a href="https://webpack.js.org/">webpack</a> and I was in the mood for trying out something new. I was especially curious to see if parcel really required zero configuration (spoiler: It really did not need any configuration 🎉).</p>
+  <section class="blogPost__content"><p>Bye, bye 2023 👋</p>
+<ul>
+<li><a href="#2023-resolutions">2023 resolutions</a></li>
+<li><a href="#highlights">Highlights</a></li>
+<li><a href="#side-projects">Side Projects</a></li>
+<li><a href="#top-3-blog-posts">My top 3 blog posts</a></li>
+<li><a href="#favorite-books">Favorite books</a></li>
+<li><a href="#favorite-tv-shows">Favorite TV shows</a></li>
+<li><a href="#favorite-podcasts">Favorite podcasts</a></li>
+</ul>
+<h2><a name="2023-resolutions"></a>Resolutions for 2023</h2>
+<h3>Finish writing all hiking reports on my <a href="https://aweekinthewoods.com">hiking blog</a></h3>
+<p>I did not finish writing the &quot;two&quot; remaining reports. One is for a trip to the Lake Disctrict which should fit into a single post. The other one is about hiking the Kungsleden, which is more like a four part series. The hardest part is editing all the images. The text comes naturally after looking at the images. Hope to finish at least the Lake District one this year.</p>
+<p>Even though I did not write any content for the hiking blog, I did manage to spend time on improving the site (🚲🛖):</p>
+<ul>
+<li>I <a href="https://github.com/janmonschke/aweekinthewoods/pull/15">migrated the site to Eleventy</a> which reduced the site's size by A LOT. It is so much snappier now. It builds faster. Has a better dev experience. Saves a ton of bandwidth. God, I love <a href="https://www.11ty.dev/">Eleventy</a> &lt;3</li>
+<li>Created <a href="https://aweekinthewoods.com/scotland/west-highland-way/">a custom map (web)component</a>. This one is much smaller in size as the Google map, it's customized to my use case and I am able to provide the KML files as download now (<a href="https://github.com/janmonschke/aweekinthewoods/blob/b5bfecb1998f3f76312fd98faf1689d6bcdd70e9/_components/hike-map.webc">source</a>).</li>
+</ul>
+<h3>Write more weeknotes than in the previous year</h3>
+<p>I failed this goal. I published 5 weeknotes this year, the same amount as in the year before.</p>
+<p>I remember being very motivated to achieve this goal when I set it. But being back at work full-time, entertaining my son every free minute and just being exhausted from all that meant that I did not find the time during the week to write up my notes.</p>
+<p>I'm not sure I'll be able to write more notes this year but I'll try 🤞.</p>
+<h3>Reading 12 books this year</h3>
+<p>My regular reading goal was 25 before my son was born. I knew that I wouldn't have that much time this year so I reduced it to 12. I am happy to report that <a href="http://bookrastinating.com/user/jan/2023-in-the-books?key=0802fc987d184bce95ed21caddad45b1">I managed to read 15 books in total</a>.</p>
+<p>My goal for this year will be to slowly ramp up that number. I'm not setting a specific goal but it would be great to read more than 15 books this year.</p>
+<h2><a name="highlights"></a>Highlights</h2>
+<h3>Being on parental leave</h3>
+<p>A combination of a very generous parental leave policy at my current job and the general parental leave allowance in Germany allowed me to basically be on parental leave from November '22 until September '23. My wife and I worked a couple months part-time, so it wasn't all fulltime parental leave but it was a great decision to take so much time off together.</p>
+<p>I witnessed all of my son's major developments. From barrel-roling, to crawling to walking. Being together the three of us for so many months, we were able to spread the (mental) load as equal as possible. While it was never 50/50, we found a system that worked well for us.</p>
+<p>We also managed to travel to see our families. The little one loves riding long-distance trains. When he was a baby, he basically slept through it. Now that he can walk, he explores the train, makes friends with other kids and sometimes even manages to take a nap ;)</p>
+<p>Travelling with a kid is not the same as what it used to be, yet, we enjoyed it. It made us re-explore the places we were familiar with. First we were always looking for baby-friendly cafés to chill in and now we're exploring all the playgrounds we can find.</p>
+<h3>Getting a cargo bike was a great decision</h3>
+<p>This was probably the topic that I researched most this year. There are so many options out there. We were able to try out some bikes from friends and bike shops. There's only so much you can research upfront. Without trying out the bike, it's hard to know if it works for you and your family.</p>
+<p>We decided on a <a href="https://chike.de/e-kids/">tilting three wheel bike with a fixed cabin in the front</a>. The cabin is super comfy. It being closed, makes riding in winter very smooth. The tilting mechanism allows us to ride in a sportive way. It's our favorite bike now and we use it even without our son.</p>
+<h3>My French improved a lot this year.</h3>
+<p>We're raising our son bilingually. I speak German with him and my wife French. At the beginning of the year we would also add English to the mix, because that's the language that my wife and I were used to speak together. At some point we decided to try to speak only French/German when our son is around and to our surprise, this worked quite well. By doing this, I also noticed that I feel a lot more comfortable speaking French. (Note: I did speak a little French before, so I didn't start at zero)</p>
+<p>We went to France three times this year and every time I was more and more able to communicate without the help of my wife. I'm far from being fluent, but I feel like I'm on a good track to make significant improvements in my spoken French over the next couple of years.</p>
+<h3>Coffee setup <small>(aka becoming a coffee snob)</small></h3>
+<p>I'm happy to report that this year I've become a proper coffee snob ☕️🤓. My search for a good-enough but not over-the-top espresso setup was successful. Again, there were so many options and I spent so much time researching. Since our kitchen didn't have a lot of available space, it was clear from the start that I didn't even need to look at fancy machines.</p>
+<p>During my research, I found the niche of manual espresso makers. These typically only require you to add ground beans and hot water. Pressure is generated by pushing lever(s). The model I went for is the <a href="https://www.rok.coffee/espressogc">Rok Espresso GC</a> which hit that sweet spot in terms of budget and size. In true coffee snob passion, I spent more money on a manual grinder. I went with the <a href="https://1zpresso.coffee/j/">1zpresso J-Max S</a>, since that one works especially well for espresso. It took me a couple of tries to dial in the system but now I'm super happy with it.</p>
+<p>I even did go a step further and got myself a <a href="https://www.wacaco.com/products/picopresso">Wacaco Picopresso</a> to take with me when we're travelling. It's super handy and looks so tiny in my suitcase next to the gigantic grinder, haha. The Picopresso workflow is similar to the Rok workflow, so I didn't need to make a lot of changes. Instead of pushing levers, the Picopresso works has a hand pump to genereate pressure. I'm not 100% there yet in terms of results but the results are already impressive, coming from such a small machine.</p>
+<p><small>(Added bonus: The Picopresso saves us a ton of money and frustration in cities where they charge upwards of 6€ for a mediocre cappucino. I'm looking at you, Paris 👀)</small></p>
+<h2><a name="side-projects"></a>Side Projects</h2>
+<p>I didn't expect to actually have time to work on side projects this year. But every now and then I managed to squeeze in an hour or two in the evening or during nap time when I felt motivated. Neither projects that I worked on were new projects. They were all projects I wanted to finish/work on for a long time.</p>
+<h3><a href="https://quizzo.janmonschke.com">Quizzo</a></h3>
 <p>
       <figure>
         
-      <a href="/img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-1500.jpeg" target="_blank" aria-label="Click to open image in new window">
-        <picture><source type="image/avif" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-352.avif 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-705.avif 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-352.webp 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-705.webp 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-352.jpeg 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-705.jpeg 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="GPX editor diagram" src="/img/content/2021-11-08-gps-editor-xstate-lit-html/NI0jvNq0xx-352.jpeg" width="1500" height="506"></picture>
+      <a href="/img/content/weeknotes/2022/9O5HGwhmzh-1500.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/weeknotes/2022/9O5HGwhmzh-352.avif 352w, /img/content/weeknotes/2022/9O5HGwhmzh-705.avif 705w, /img/content/weeknotes/2022/9O5HGwhmzh-1500.avif 1500w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/weeknotes/2022/9O5HGwhmzh-352.webp 352w, /img/content/weeknotes/2022/9O5HGwhmzh-705.webp 705w, /img/content/weeknotes/2022/9O5HGwhmzh-1500.webp 1500w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/weeknotes/2022/9O5HGwhmzh-352.jpeg 352w, /img/content/weeknotes/2022/9O5HGwhmzh-705.jpeg 705w, /img/content/weeknotes/2022/9O5HGwhmzh-1500.jpeg 1500w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="" src="/img/content/weeknotes/2022/9O5HGwhmzh-352.jpeg" width="1500" height="962"></picture>
       </a>
     
-        <figcaption class="picture__caption">GPX editor diagram</figcaption>
+        <figcaption class="picture__caption"></figcaption>
       </figure></p>
-<p>The diagram above shows the application architecture. At the core of it is the state machine. It holds all of the application's state, it transitions based on user interaction and performs side-effects when necessary. Side-effects may also cause transitions e.g. in case of a file parsing error.</p>
-<p>The user interface reacts to the state machine's transitions. Depending on the current state, it will render the appropriate component. It also acts as the glue-code between user interaction and the machine:</p>
-<pre class="language-ts"><code class="language-ts">editor<span class="token punctuation">.</span><span class="token function">onTransition</span><span class="token punctuation">(</span><span class="token punctuation">(</span>state<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  <span class="token keyword">switch</span> <span class="token punctuation">(</span>state<span class="token punctuation">.</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">case</span> <span class="token string">"choose-gpx"</span><span class="token operator">:</span>
-      <span class="token keyword">const</span> <span class="token function-variable function">onFileSelected</span> <span class="token operator">=</span> <span class="token punctuation">(</span>file<span class="token punctuation">)</span> <span class="token operator">=></span>
-        machine<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">"FILE_SELECTED"</span><span class="token punctuation">,</span> file <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-      <span class="token keyword">return</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token function">ChooseFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span> onFileSelected <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> contentElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">case</span> <span class="token string">"export-gpx"</span><span class="token operator">:</span>
-      <span class="token keyword">return</span> <span class="token function">render</span><span class="token punctuation">(</span><span class="token function">Export</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> contentElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
-<p>For a given state of the machine, in this case <code>choose-gpx</code> and <code>export-gpx</code>, the application renders a different component. The application also defines callbacks for the components. These callbacks are executed on user interaction and they result in state transitions (and their side-effects e.g. file parsing).</p>
-<pre class="language-ts"><code class="language-ts"><span class="token keyword">type</span> <span class="token class-name">Props</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
-  <span class="token function-variable function">onFileSelected</span><span class="token operator">:</span> <span class="token punctuation">(</span>file<span class="token operator">:</span> File<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token keyword">void</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
-
-<span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">ChooseFile</span> <span class="token operator">=</span> <span class="token punctuation">(</span>props<span class="token operator">:</span> Props<span class="token punctuation">)</span> <span class="token operator">=></span>
-  html<span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string"> &lt;form>
-    &lt;label>
-      &lt;input
-        type="file"
-        @change=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token punctuation">(</span><span class="token parameter">event<span class="token operator">:</span> Event</span><span class="token punctuation">)</span> <span class="token operator">=></span>
-          props<span class="token punctuation">.</span><span class="token function">onFileSelected</span><span class="token punctuation">(</span>
-            <span class="token punctuation">(</span>event<span class="token punctuation">.</span>currentTarget <span class="token keyword">as</span> HTMLInputElement<span class="token punctuation">)</span><span class="token punctuation">.</span>files<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-          <span class="token punctuation">)</span><span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">
-      />
-      Select a .gpx file
-    &lt;/label>
-  &lt;/form></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span></code></pre>
-<p>Check out the <code>ChooseFile</code> component as an example. It renders a file input and calls the <code>onFileSelected</code> callback when a file gets selected. This is the same callback as we saw before in the application file. When the callback is invoked, the event is causing a transition of the state machine. Which in turn will then result in the render of a different component. Bonus: I like how this component almost looks like a React component ⚛.</p>
+<p>I started working on Quizzo in late 2022 while I was at React Finland. At that time, I was working on a virtual pub quiz that I wanted to play with my team at work. From previous quizzes, I knew that keeping track of the score was hard and cumbersome.</p>
+<p>Naturally, I started to work on a web app that would let me create a quiz, help me to allocate teams and keep track of points during the quiz. It worked well for the first quiz. I did keep a paper backup of the quiz around though, in case the app would fail.</p>
+<p>This year, I ran another pub quizz at work. In preparation, I found notes from the first quizz. Specifically, notes about what worked and didn't work when I ran the quizz. The main pain point was that I had to manually enter each team's answer. In our virtual quiz session, I would ask the team captains to DM me their answers which I then had to manually enter into the app. This became a problem especially for speed rounds where the first team to answer gets the points.</p>
+<p>My solution for this was to add a &quot;team&quot; page, where the each team's captain sees the current question and can enter their answer. Whenever the question changes, the page automatically refreshes and shows the next question. Answers are added to the quizz host's overview (see screenshot) in real-time. To my surprise, adding this functionality was pretty simple and the real-time component based on <a href="https://en.wikipedia.org/wiki/Server-sent_events">Server-sent events</a> prove to be reliable.</p>
+<p>Team captains are not required to sign in. The quizz's host sends each team captain a special url containing a secret token. The secret token authenticates the team captain to submit questions for only their team. The only person that needs to sign up is the quizz host. This was only necessary to have some basic protection against teams trying to send answers through the quizz host routes.</p>
+<p>After a bit of polishing, I published the project under <a href="https://quizzo.janmonschke.com">quizzo.janmonschke.com</a>. There's few documentation at the moment since I don't really expect people to use it. It's built for my use case of hosting remote quizzes and maybe showing friends/colleagues how to use it. The sign up is open, so everyone could technically use it. It shouldn't be too hard to figure out the flow. Maybe I find the time this year to add some rudimentary documentation.</p>
+<h3><a href="https://colorbattle.janmonschke.com">Colorbattle</a></h3>
 <p>
       <figure>
         
-      <a href="/img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-2000.jpeg" target="_blank" aria-label="Click to open image in new window">
-        <picture><source type="image/avif" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-352.avif 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-705.avif 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-1500.avif 1500w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-2000.avif 2000w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-352.webp 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-705.webp 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-1500.webp 1500w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-2000.webp 2000w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-352.jpeg 352w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-705.jpeg 705w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-1500.jpeg 1500w, /img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-2000.jpeg 2000w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="GPX editor state machine" src="/img/content/2021-11-08-gps-editor-xstate-lit-html/MJxfkzLCRQ-352.jpeg" width="2000" height="1276"></picture>
+      <a href="/img/content/weeknotes/2023/U7BcaI-Ab--705.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/weeknotes/2023/U7BcaI-Ab--352.avif 352w, /img/content/weeknotes/2023/U7BcaI-Ab--705.avif 705w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/weeknotes/2023/U7BcaI-Ab--352.webp 352w, /img/content/weeknotes/2023/U7BcaI-Ab--705.webp 705w" sizes="(max-width: 705px), 100vw"><source type="image/jpeg" srcset="/img/content/weeknotes/2023/U7BcaI-Ab--352.jpeg 352w, /img/content/weeknotes/2023/U7BcaI-Ab--705.jpeg 705w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="" src="/img/content/weeknotes/2023/U7BcaI-Ab--352.jpeg" width="705" height="929"></picture>
       </a>
     
-        <figcaption class="picture__caption">GPX editor state machine</figcaption>
+        <figcaption class="picture__caption"></figcaption>
       </figure></p>
-<p>This diagram shows all of the state machine's states, its transitions and side-effects. The XState visualizer at <a href="https://stately.ai/viz">stately.ai/viz</a> is just grat. You paste the machine's code and it will render an interactive diagram of your machine. It let's you play around with the transitions, send custom events and save it to your account in case you want to show it to someone else. Pretty much every time I'm writing a state machine, I start inside this visualizer. It makes prototyping a workflow super easy.</p>
-<p>And that is pretty much everything there is to say about the editor. It uses <a href="https://leafletjs.com/">Leaflet</a> as the map renderer and <a href="https://picturepan2.github.io/spectre/">spectre.css</a> as a light-weight CSS component framework.</p>
-<p>Overall I'm very happy with the current setup. I feel productive, the state machine adds a great structure and lit-html is a great renderer for small applications like this one. I will definitely reuse this stack in other applications.</p>
-<p>If you are insterested in trying out the editor yourself, you can find it on <a href="https://janmonschke.com/gpx-editor">https://janmonschke.com/gpx-editor</a>. The code is up on GitHub at <a href="https://github.com/janmonschke/gpx-editor">janmonschke/gpx-editor</a>.</p>
+<p>Most of the game was finished already in 2022 but it was a little rough around the edges. I spent some time cleaning up the UI, added better onboarding and a new daily challenge that gives players a unique challenge each day.</p>
+<p>Like Quizzo, this game also relies on real-time communication. Given the nature of this being a game, it needed a &quot;presence&quot; checker. Using SSE wasn't an option in this case, so I used websockets. They're a little more fiddly than SSE, so it took some time to get the server-client communication right. I've played many rounds with friends since then and haven't encounctered any issues so far.</p>
+<p>I also moved the app off of Heroku and it's now hosted on <a href="https://railway.app?referralCode=aaNq2D">Railway</a> (which I love btw!)</p>
+<p>The game can be played here: <a href="https://colorbattle.janmonschke.com/">colorbattle.janmonschke.com</a> 🕹️</p>
+<h3><a href="https://aweekinthewoods.com">A week in the woods</a></h3>
+<p>This is my hiking blog that I mentioned above. This year, I managed to migrate the blog from Gatsby to <a href="https://www.11ty.dev/">Eleventy</a>, create a custom hiking map and move it off of Google fonts.</p>
+<p>Maybe I'll managae to work on the content this year...maybe...</p>
+<h2><a name="top-3-blog-posts"></a>My top three blog posts</h2>
+<p>Looking at my <a href="https://withcabin.com/">Cabin stats</a>, these are my site's top posts this year:</p>
+<ul>
+<li><a href="/changing-my-online-identity/">Changing my online identity</a>
+<ul>
+<li>My first post this year in which I explain why I deleted my Twitter account and changed my main online persona after switching to Mastodon. Looking at the current state of Twitter, I still stand by what I wrote and am happy to have found a new community ❤️</li>
+</ul>
+</li>
+<li><a href="/adding-webmentions-to-your-static-blog/">Adding webmentions to your static blog</a>
+<ul>
+<li>This one was published just a couple of weeks after the online persona post. I still use an architecture that is very similar to the one I explain in this post. However, I migrated this blog to Eleventy, so the Gatsby part of that post doesn't apply anymore. I should really find the time to write an updated post that explains how to use the system in Eleventy.</li>
+</ul>
+</li>
+<li><a href="/building-a-minimal-i18n-library/">Building a minimal i18n library</a>
+<ul>
+<li>This post is from 2019 and every once in a while it gets picked up in blogs or newsletters. The i18n library I am describing in this post is meant for tiny projects. It's super simple to use and doesn't require build steps which some people seem to like over the more complex alternatives out there. I'm still proud of it and I am using it in many of my side projects. However, I would still not recommend it for production usage in <em>actual</em> products.</li>
+</ul>
+</li>
+</ul>
+<h2><a name="favorite-books"></a>Favorite books</h2>
+<p>As mentioned before, I managed to read 15 books this year. Three more than I set my goal to. I'm hoping to read the same amount or more this year. My favorite books this year were:</p>
+<ul>
+<li><a href="https://bookrastinating.com/book/14342/s/project-hail-mary">Project Hail Mary</a>
+<ul>
+<li>I loved <code>The Martian</code> and <code>Artemis</code> was okay. <code>Project Hail Mary</code> I might like even more than The Martian. It's a very unusual &quot;first contact scenario&quot; with a very witty main character. Style-wise it's very similar to The Martian. Which is probably why I liked it so much. I read that they're producing the movie this year and Ryan Gosling will be the main character. It'll be fun to see him in this very nerdy role.</li>
+</ul>
+</li>
+<li><a href="https://bookrastinating.com/book/28931/s/the-kaiju-preservation-society">Kaiju Preservation Society</a>
+<ul>
+<li>This one hit me by surprise. It was so funny and weird. It had parallel universes in it but didn't feel too SciFi-y. Probably also the first book that I read that talks about the Covid pandemic.</li>
+</ul>
+</li>
+<li><a href="https://bookrastinating.com/book/220/s/leviathan-wakes">Leviathan Wakes</a>
+<ul>
+<li>A couple years after <code>The Expanse</code> finished/was cancelled, I decided it's time to find out how the story continues. The books are great, possibly better than the show (and its sometimes sub-par acting). It's fun to compare the show's arc to the book's arc and to be surprised by how much deeper the books are going.</li>
+</ul>
+</li>
+<li><a href="https://bookrastinating.com/book/41371/s/artifact-space">Artifact Space</a>
+<ul>
+<li><code>Artifact Space</code> is the promising beginning of a space opera series. The characters are very well written, the tech is believable. It took me some time to get into but once it got me, I didn't want to put it down.</li>
+</ul>
+</li>
+</ul>
+<p>A complete list of all the books I've read in 2023 can be found on <a href="https://bookrastinating.com/user/jan/2023-in-the-books?key=0802fc987d184bce95ed21caddad45b1">BookWyrm</a>.</p>
+<h2><a name="favorite-tv-shows"></a> Favorite TV shows</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Ted_Lasso">Ted Lasso</a>
+<ul>
+<li>Even though season three (the final season) wasn't as strong as the previous two, I really enjoyed this one. The show makers found a good way to finish it. The episode in Amsterdam, as cheesy as some people find it, was my favorite.</li>
+</ul>
+</li>
+<li><a href="https://en.wikipedia.org/wiki/Sex_Education_(TV_series)">Sex Education</a>
+<ul>
+<li>Another final season this year. This one had a weak start but then it got stronger. The end was sound. I related strongly with one of the main character's struggles this season since a very similar thing happened to me this year...</li>
+</ul>
+</li>
+<li>We didn't really watch a lot of new shows this year. In the early winter months we started (and finished) a <a href="https://en.wikipedia.org/wiki/Friends">Friends</a> marathon. The summer months we rewatched <a href="https://en.wikipedia.org/wiki/Brooklyn_Nine-Nine">Brooklyn 99</a>.</li>
+<li>Somehow we didn't watch the final season (<em>another</em> final season...) of <a href="https://en.wikipedia.org/wiki/The_Marvelous_Mrs._Maisel">The Marvelous Mrs. Maisel</a>. It's very high up on our list for this year though.</li>
+</ul>
+<h2><a name="favorite-podcasts"></a>Favorite podcasts</h2>
+<ul>
+<li><a href="https://www.techwontsave.us">Tech Won't Save Us</a>
+<ul>
+<li>I really only got into this podcast this year and I caught up quickly with older episodes. The research that's put into each episode and the depth of topics is outstanding. This <a href="https://www.techwontsave.us/episode/189_elon_musk_unmasked_origins_of_an_oligarch_part_1">four part series on the evil that is Elon Musk</a> is a great starting point to get into this podcast.</li>
+</ul>
+</li>
+<li><a href="https://www.20k.org">20k hertz</a>
+<ul>
+<li>A rather recent find but I'm already caught up with all episodes of 2023. This podcast goes into detail on sounds/jingles/audio tech such as this episode on the <a href="https://www.20k.org/episodes/wilhelmscreamremix">Wilhem scream</a> or this <a href="https://www.20k.org/episodes/zeldabeep">Zelda mini series</a> that brought me straight back to my childhood.</li>
+</ul>
+</li>
+<li><a href="https://darknetdiaries.com">Darknet Diaries</a>
+<ul>
+<li>Darknet Diaries is still my favorite podcast and it delivered again this year. It started off with a longer break but then came back with great episodes. My favorite one was <a href="https://darknetdiaries.com/episode/133/">I'm the real Connor</a>.</li>
+</ul>
+</li>
+</ul>
 </section>
 </article>
 <aside>
-  <div>
-    <h3>Likes</h3>
-    <likes likes="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"><ul class="likes">
-  <li>
-    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/unsoundscapes" class="like">
-      <img src="https://webmention.io/avatar/pbs.twimg.com/93e851d4a3e56f1185db85a9ea347b6928e73bc47d25c56c3d61ec8e18af5ca0.jpg" alt="アンドレイ" title="アンドレイ" loading="lazy" class="like__image">
-    </a>
-  </li>
-<li>
-    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/aldovelco" class="like">
-      <img src="https://webmention.io/avatar/pbs.twimg.com/65c61aaa5f0d1173479673ca3e61493316d7ce08d539f83b77640588bd1aa347.jpg" alt="Aldo Velasco" title="Aldo Velasco" loading="lazy" class="like__image">
-    </a>
-  </li>
-<li>
-    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/gryzzly" class="like">
-      <img src="https://webmention.io/avatar/pbs.twimg.com/1cea001225e316fea0cd64321f597ce8c13088979442312bfe3f93b43137ea72.jpg" alt="🇺🇦 @gryzzly@mastodon.social" title="🇺🇦 @gryzzly@mastodon.social" loading="lazy" class="like__image">
-    </a>
-  </li>
-<li>
-    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/BowlingX" class="like">
-      <img src="https://webmention.io/avatar/pbs.twimg.com/31c03c80db185540a2b48c37f839a8f710ec5b5e46881406a8631a1142963caa.jpg" alt="David Heidrich" title="David Heidrich" loading="lazy" class="like__image">
-    </a>
-  </li>
-<li>
-    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/a_kovalev" class="like">
-      <img src="https://webmention.io/avatar/pbs.twimg.com/0959c64dbbe010a9916983c1778b91d07feaa1a919f7221ce002f6343cee00f7.jpg" alt="Sasha K" title="Sasha K" loading="lazy" class="like__image">
-    </a>
-  </li>
-<li>
-    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://twitter.com/stefanjudis" class="like">
-      <img src="https://webmention.io/avatar/pbs.twimg.com/2ba9a47d3ee6152babbedde03f3aa501709fa131fd662c70cfd9c4ee0aca30b6.jpg" alt="Stefan Judis" title="Stefan Judis" loading="lazy" class="like__image">
-    </a>
-  </li>
-</ul>
-
-</likes>
-  </div>
+  
   
 </aside>
 <footer class="blogPost__footer">
   <hr>
-  <p>🍅 It took 6 pomodoros to write this post 🍅</p>
+  
   <bio showimage="true"><aside class="bio">
   <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
   <span>
@@ -674,11 +697,9 @@ li p + ul {
   <nav>
     <span class="blogPost__nacvigationTitle">Read more:</span>
     <ul class="blogPost__navigation">
+      
       <li>
-        <a href="/changing-my-online-identity/" rel="prev">← <span>Changing my online identity</span></a>
-      </li>
-      <li>
-        <a href="/flexible-color-definitions-in-design-systems/" rel="next"><span>Flexible color definitions in design systems</span> →</a>
+        <a href="/weeknotes/2023/05/" rel="next"><span>Weeknotes 05/2023</span> →</a>
       </li>
     </ul>
   </nav>
