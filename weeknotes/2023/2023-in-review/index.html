@@ -35,7 +35,34 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
-    <style>.bio {
+    <style>.likes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .likes li {
+    margin-bottom: 0;
+  }
+
+  .like {
+    margin-right: 0.5em;
+  }
+
+  .like__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-bottom: 0.1em;
+    transition: scale linear 0.1s;
+  }
+
+  .like__image:hover {
+    scale: 1.33;
+  }
+.bio {
     display: flex;
     align-items: center;
   }
@@ -664,7 +691,18 @@ li p + ul {
 </section>
 </article>
 <aside>
-  
+  <div>
+    <h3>Likes</h3>
+    <likes likes="[object Object]"><ul class="likes">
+  <li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://mastodon.world/@hamatti" class="like">
+      <img src="https://webmention.io/avatar/media.social.lol/4681b01a570ac17b6a3f8ec557578ff027e45fe9d79e5af6b39145bcece82dda.jpg" alt="Juhis" title="Juhis" loading="lazy" class="like__image">
+    </a>
+  </li>
+</ul>
+
+</likes>
+  </div>
   
 </aside>
 <footer class="blogPost__footer">
