@@ -52,3 +52,28 @@ blockquote {
 video {
   width: 100%;
 }
+
+details {
+  margin-bottom: 1.6em;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+  margin-bottom: 0.3em;
+}
+
+/* Sanitize markdown list formatting */
+ul p,
+ul li {
+  margin-bottom: 0.3em;
+}
+
+/* Make sure that lists are not too far away from previous paragraphs */
+p + ul {
+  margin-top: -1em;
+}
+/* But not for nested lists */
+li p + ul {
+  margin-top: 0;
+}

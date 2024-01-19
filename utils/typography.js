@@ -9,11 +9,12 @@ StAnnes.overrideThemeStyles = ({ rhythm }) => ({
     color: "#007acc",
   },
   p: {
-    marginBottom: rhythm(1),
+    marginTop: rhythm(0.7),
+    marginBottom: rhythm(0.7),
   },
   "h2,h3,h4": {
-    marginBottom: rhythm(1 / 2),
-    marginTop: rhythm(1 / 2),
+    marginBottom: rhythm(0.7),
+    marginTop: rhythm(1),
   },
 });
 
