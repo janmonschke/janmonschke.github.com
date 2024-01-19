@@ -1,0 +1,21 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Juhis",
+      "photo": "https://webmention.io/avatar/media.social.lol/4681b01a570ac17b6a3f8ec557578ff027e45fe9d79e5af6b39145bcece82dda.jpg",
+      "url": "https://mastodon.world/@hamatti"
+    },
+    "url": "https://social.lol/@janmon/111782938581033610#favorited-by-109330488420991066",
+    "published": null,
+    "wm-received": "2024-01-19T18:18:54Z",
+    "wm-id": 1769238,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111782938581033610/109330488420991066",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
