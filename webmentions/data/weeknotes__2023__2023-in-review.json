@@ -17,5 +17,43 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jaydeep Godara",
+      "photo": "https://webmention.io/avatar/media.social.lol/02fef60b26458a487e65c65a4feb17ed94fadb6a5b96f98fd16be36f63f34c8a.png",
+      "url": "https://fosstodon.org/@jaydeepgo"
+    },
+    "url": "https://social.lol/@janmon/111782938581033610#favorited-by-109320780203660289",
+    "published": null,
+    "wm-received": "2024-01-20T11:03:22Z",
+    "wm-id": 1769441,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111782938581033610/109320780203660289",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sona",
+      "photo": "https://webmention.io/avatar/media.social.lol/d7e72ac74df31ccd73c2b27d1d493057e55e8ca91a8614447b6497e3550839a3.jpg",
+      "url": "https://mastodon.world/@sonasoeun"
+    },
+    "url": "https://social.lol/@janmon/111782938581033610#favorited-by-109613091779956834",
+    "published": null,
+    "wm-received": "2024-01-20T11:03:22Z",
+    "wm-id": 1769442,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111782938581033610/109613091779956834",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
