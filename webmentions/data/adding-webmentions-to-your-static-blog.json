@@ -498,5 +498,27 @@
     "rels": {
       "canonical": "https://kiko.io/notes/2024/rethinking-my-webmention-implementation/"
     }
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "",
+      "photo": "",
+      "url": ""
+    },
+    "url": "https://www.bobmonsour.com/posts/adding-webmentions-to-my-site/",
+    "published": null,
+    "wm-received": "2024-01-20T21:29:16Z",
+    "wm-id": 1769686,
+    "wm-source": "https://www.bobmonsour.com/posts/adding-webmentions-to-my-site/",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
+    "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "mention-of",
+    "wm-private": false,
+    "rels": {
+      "canonical": "https://www.bobmonsour.com/posts/adding-webmentions-to-my-site/"
+    }
   }
 ]
