@@ -55,5 +55,47 @@
     "like-of": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://webmention.io/avatar/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/111788273698735259",
+    "published": "2024-01-20T12:28:08+00:00",
+    "wm-received": "2024-01-20T12:56:13Z",
+    "wm-id": 1769469,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/111782938581033610/111788273698735259",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p>Time to first CSS bug report by <span class=\"h-card\"><a href=\"https://mastodon.social/@mrflix\" class=\"u-url\">@<span>mrflix</span></a></span> : 21 hours ????</p>",
+      "text": "Time to first CSS bug report by @mrflix : 21 hours ????"
+    },
+    "in-reply-to": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Pedro Piñera",
+      "photo": "https://webmention.io/avatar/media.social.lol/011ff6ee3223d4b530d79dfa668231515ea9f731fb734781af00f01107ac8e5a.jpg",
+      "url": "https://mastodon.social/@pepicrft"
+    },
+    "url": "https://social.lol/@janmon/111782938581033610#favorited-by-109891672460550381",
+    "published": null,
+    "wm-received": "2024-01-20T12:56:15Z",
+    "wm-id": 1769470,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/111782938581033610/109891672460550381",
+    "wm-target": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2023/2023-in-review/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
