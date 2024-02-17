@@ -520,5 +520,27 @@
     "rels": {
       "canonical": "https://www.bobmonsour.com/posts/adding-webmentions-to-my-site/"
     }
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "",
+      "photo": "",
+      "url": ""
+    },
+    "url": "https://www.rousette.org.uk/archives/some-blog-housekeeping/",
+    "published": null,
+    "wm-received": "2024-02-17T16:28:16Z",
+    "wm-id": 1782089,
+    "wm-source": "https://www.rousette.org.uk/archives/some-blog-housekeeping/",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/#fnref3",
+    "wm-protocol": "webmention",
+    "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/#fnref3",
+    "wm-property": "mention-of",
+    "wm-private": false,
+    "rels": {
+      "canonical": "https://www.rousette.org.uk/archives/some-blog-housekeeping/"
+    }
   }
 ]
