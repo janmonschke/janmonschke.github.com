@@ -175,6 +175,10 @@ function mapPosts(posts) {
             return mention;
           }
           mention.enrichedContent = replaceUrlsAndAtMentions(mention.content);
+          mention.enrichedContent =
+            mention.enrichedContent.length > 300
+              ? mention.enrichedContent.substring(0, 300) + "…"
+              : mention.enrichedContent;
           mention.publishedDisplay = format(
             parseISO(mention.published),
             "yyyy/MM/dd hh:mm"
