@@ -1,16 +1,8 @@
 ---
 title: Pi-hole & Tailscale, my gateway into self-hosting
+permalink: pi-hole-tailscale-my-gateway-into-self-hosting/
 tags: post
-permalink: pi-hole-tailscale-my-gateway-into-self-hosting
-keywords:
-  [
-    "pi-hole",
-    "tailscale",
-    "raspberry pi",
-    "self-hosting",
-    "privacy",
-    "ad-blocking"
-  ]
+keywords: ["pi-hole", "tailscale", "raspberry pi", "self-hosting", "privacy", "ad-blocking"]
 date: 2025-05-31
 pomodoros: 9
 ---
