@@ -1,7 +1,7 @@
 ---
 title: Pi-hole & Tailscale, my gateway into self-hosting
 tags: post
-permalink: pi-hole-Tailscale-my-gateway-into-self-hosting
+permalink: pi-hole-tailscale-my-gateway-into-self-hosting
 keywords:
   [
     "pi-hole",
