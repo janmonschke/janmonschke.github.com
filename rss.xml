@@ -4,11 +4,67 @@
   <subtitle>Blog posts from janmonschke.com</subtitle>
   <link href="rss.xml" rel="self"/>
   <link href=""/>
-  <updated>2023-01-30T00:00:00Z</updated>
+  <updated>2025-05-31T00:00:00Z</updated>
   <id></id>
   <author>
     <name>Jan Monschke</name>
   </author>
+  <entry>
+    <title>Pi-hole &amp; Tailscale, my gateway into self-hosting</title>
+    <link href="/pi-hole-Tailscale-my-gateway-into-self-hosting"/>
+    <updated>2025-05-31T00:00:00Z</updated>
+    <id>/pi-hole-Tailscale-my-gateway-into-self-hosting</id>
+    <content xml:lang="" type="html">&lt;h3&gt;👋 Personal context&lt;/h3&gt;
+&lt;p&gt;I wouldn&#39;t call myself a homelab/self-hosting enthusiast. To me, these movements were always intertwined with setting up or interacting with &amp;quot;smart&amp;quot; devices. If you know me, you know that I&#39;ve gone out of my way to make sure that none of our appliances at home are, in any way, &amp;quot;smart&amp;quot;. Think internet-connected dishwasher. The idea that a broken OTA update or a shut-down activation server could brick my dish washer was never really appealing to me. And that&#39;s not taking into account the privacy implications with some of those devices.&lt;/p&gt;
+&lt;p&gt;However, in recent conversations with friends and coworkers, I was introduced to a different side of the self-hosting movement. The side that focuses on privacy and a sense of ownership.&lt;/p&gt;
+&lt;p&gt;Around the same time was reading &lt;a href=&quot;https://matanabudy.com/achieving-great-privacy-with-safari/&quot;&gt;this post by Matan Abudy&lt;/a&gt; in which he describes how he set hardened his browser&#39;s privacy. Also, &lt;a href=&quot;https://coppolaemilio.com/entries/i-left-spotify-what-happened-next/&quot;&gt;this post by Emilio Coppola&lt;/a&gt; describing how he set up a private music streaming app sparked more interest. The latter one included a hat-tip to &lt;a href=&quot;https://www.youtube.com/c/JeffGeerling&quot;&gt;Jeff Geerling&lt;/a&gt; who&#39;s content I&#39;ve been catching up since then.&lt;/p&gt;
+&lt;p&gt;I guess those blog posts then motivated me to excavate my old Raspberry Pi 3 (Model B) one early morning with the goal to install &lt;a href=&quot;https://pi-hole.net/&quot;&gt;Pi-hole&lt;/a&gt;. Thus, starting a whole flurry of other self-hosting projects.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Info:&lt;/strong&gt; &lt;code&gt;Pi-hole&lt;/code&gt; is a piece of software that blocks ads/trackers on DNS level which therefore does not require another extension to run in your browser/mobile device. When possible, I still use a browser extension to block unwanted content, so Pi-hole mostly helps me to stop tracking/ads on my mobile phone.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;h3&gt;🥧 Preparing the Raspberry Pi&lt;/h3&gt;
+&lt;p&gt;Luckily my Raspberry Pi still had an SD card inserted, so I didn&#39;t need to search for one in the depth of my tech storage box.&lt;/p&gt;
+&lt;p&gt;I used the &lt;a href=&quot;https://www.raspberrypi.com/software/&quot;&gt;Raspberry Pi Imager&lt;/a&gt; to flash Raspberry Pi OS Lite onto the card. In my case I didn&#39;t need a desktop environment for the OS, if you prefer that, select the regular Raspberry Pi OS instead.&lt;/p&gt;
+&lt;p&gt;Since I want to use SSH to setup the Pi later, I also selected &lt;code&gt;Enable SSH&lt;/code&gt; in the &lt;code&gt;Advanced Settings&lt;/code&gt; menu. You can enter a desired username and password and go back to the main settings. In case you want the Pi to connect via Wi-Fi, you need to set that up in the settings before flashing as well. However, it&#39;s advised to use a wired connection for Pi-Hole setups.&lt;/p&gt;
+&lt;p&gt;Once the image is written to the card, you can insert it into your Pi, connect connect your ethernet cable, a power source and you&#39;re ready to SSH into it:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;ssh&lt;/span&gt; your-username@pihole.local&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Tip:&lt;/strong&gt; &lt;code&gt;pihole.local&lt;/code&gt; is the hostname that I chose, it might be different for you. If &lt;code&gt;.local&lt;/code&gt; hostname resolution doesn’t work, check your router for the Pi’s IP address or use &lt;code&gt;nmap&lt;/code&gt; to find it and use the ip to ssh into the Pi.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;🥧🕳️ Installing Pi-hole&lt;/h3&gt;
+&lt;p&gt;Before running the Pi-hole installer, I made sure the Pi had a static IP. I set a static IP for the Pi in my router&#39;s interface and followed [Jeff Gerling&#39;s guide on setting a static IP from the command line](&lt;a href=&quot;https://www.jeffgeerling.com/blog/2024/set-static-ip-address-nmtui-on-raspberry-pi-os-12-bookworm&quot;&gt;https://www.jeffgeerling.com/blog/2024/set-static-ip-address-nmtui-on-raspberry-pi-os-12-bookworm&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-sSL&lt;/span&gt; https://install.pi-hole.net &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The Pi-hole installer walks you through a couple steps that are well explained. It helps you to choose an upstream DNS provider and configure the web admin interface.&lt;/p&gt;
+&lt;p&gt;Once the installer is finished, you will be able to access the web interface from &lt;code&gt;https://pihole.local/admin&lt;/code&gt;. Your browser might complain about an invalid HTTPS certificate but you can ignore that. And that&#39;s already it, Pi-hole is running on the Pi and you can use the web interface to make changes to the setup.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Tip:&lt;/strong&gt; I noticed that Pi-hole was running much smoother (in my setup) when setting &lt;code&gt;MAXDBDAYS=1&lt;/code&gt; in &lt;code&gt;/etc/pihole/pihole-FTL.conf&lt;/code&gt; (might need to create the file before). Setting that var requires a restart of &lt;code&gt;pihole-FTL&lt;/code&gt; with &lt;code&gt;sudo systemctl restart pihole-FTL&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The usual next step is to change individual devices&#39; DNS settings to use our Pi-hole server for DNS resolution in order to block ads/trackers. That&#39;s a very reasonable setup and if you&#39;re happy doing that, you can stop reading now. However, I wanted an &amp;quot;easier&amp;quot; way to use DNS blocking on all devices in my network AND outside my network. And that&#39;s where &lt;a href=&quot;https://tailscale.com&quot;&gt;Tailscale&lt;/a&gt; comes in.&lt;/p&gt;
+&lt;h3&gt;🌐 Introducing Tailscale into the mix&lt;/h3&gt;
+&lt;p&gt;Tailscale is a free-to-use mesh VPN software that allows you to connect to your registered machines no matter where you are in the world. It achieves this in a way that does not require you to enable port forwarding or opening up your router to requests from outside your network (this explanation contains a ton of shortcuts, I know).&lt;/p&gt;
+&lt;p&gt;More importantly, Tailscale allows you to define one of your connected machines as DNS servers. This means that all devices in your (mesh-) network will connect to the internet through this one machine. In our case, that will be the Pi-hole we just set up.&lt;/p&gt;
+&lt;p&gt;The first step in our setup is to install Tailscale on the Pi. Run the following command in your SSH session:&lt;/p&gt;
+&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;curl&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-fsSL&lt;/span&gt; https://tailscale.com/install.sh &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sh&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;sudo&lt;/span&gt; tailscale up&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That will install Tailscale and ask you to sign up for the service. It&#39;s free-to-use for personal use. With the personal account, you&#39;ll be able to set Tailscale up on up to 100 devices (they call them machines) and have 3 users access the network.&lt;/p&gt;
+&lt;p&gt;Now that you have your own Tailscale network with the Pi connected to it, you can set the define as your network&#39;s DNS server:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Log into the admin panel&lt;/li&gt;
+&lt;li&gt;Go to Machines and copy your Pi&#39;s Tailscale IP&lt;/li&gt;
+&lt;li&gt;Go to &lt;code&gt;DNS&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Make sure that &lt;code&gt;MagicDNS&lt;/code&gt; is turned on&lt;/li&gt;
+&lt;li&gt;And then in &lt;code&gt;Nameservers&lt;/code&gt;, past your Pi&#39;s IP into &lt;code&gt;Global nameservers&lt;/code&gt; and enable &lt;code&gt;Override DNS servers&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And that is it. Go ahead and add install Tailscale on your phone, your computer, any device really. All connected devices now benefit from ad-/tracker-blocking of your Pi-hole server.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡 &lt;strong&gt;Tip:&lt;/strong&gt; If you ever encounter issues connecting to the internet from a Tailscale-connected device, make sure your Pi-hole server is okay. And if it&#39;s somehow in a weird state, disable Tailscale and your device&#39;s internet connection will work again (assuming the Pi-hole server was the culprit of course).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;☕️ Final Thoughts&lt;/h3&gt;
+&lt;p&gt;I’ve been running this setup for a few weeks now and I love it. I&#39;m still using ad-blocker extensions where I can as another layer of protection (since Pi-hole cannot catch &#39;em all). One look at the Pi-hole dashboard however, shows me how many trackers/ads still get blocked. Most of them seem to come from mobile/desktop applications.&lt;/p&gt;
+&lt;p&gt;It was a fun weekend project setting up Pi-hole and Tailscale but it&#39;s only the beginning of the story. I went on to self-host an RSS reader, a password manager and a replacement for Google Photos. But those are stories for another time.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Adding webmentions to your static blog</title>
     <link href="/adding-webmentions-to-your-static-blog/"/>

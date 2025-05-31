@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Blog | Jan Monschke</title>
+    <title>Pi-hole &amp; Tailscale, my gateway into self-hosting | Jan Monschke</title>
 
     <meta httpequiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,7 +14,7 @@
     
     <meta name="description" content="The portfolio and blog of Jan Monschke">
     <meta property="og:description" content="The portfolio and blog of Jan Monschke">
-    
+    <meta property="article:published_time" content="Sat May 31 2025 00:00:00 GMT+0000 (Coordinated Universal Time)">
     
     
 
@@ -73,90 +73,196 @@
       margin-bottom: 0.8rem;
     }
   }
-.index__bioContainer {
-      margin-bottom: 1.28em;
-    }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
 
-    .index__nav {
-      display: flex;
-      flex-direction: row;
-      margin-bottom: 1.28rem;
-      font-size: 1.12rem;
-    }
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
 
-    .index__navBtn {
-      border: none;
-      background: transparent;
-      outline: none;
-      cursor: pointer;
-      color: #007acc;
-      margin-right: 1rem;
-    }
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
 
-    .index__navBtn:first-child {
-      padding-left: 0;
-    }
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
 
-    .index__sectionHeadline {
-      display: flex;
-      align-items: baseline;
-      margin-bottom: 0.8rem;
-    }
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
 
-    .index__sectionHeadline h2,
-    .index__rssIcon {
-      margin: 0;
-    }
+  .blogPost__nacvigationTitle {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
 
-    .index__rssIcon {
-      margin-left: 0.32rem;
-    }
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+  }
 
-    .index__listContainer {
-      margin-bottom: 1.6rem;
-    }
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
+  }
 
-    .index__postList,
-    .index__talksList {
-      list-style-type: none;
-      margin: 0;
-    }
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
 
-    .index__postList li {
-      margin: 0;
-    }
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
 
-    .index__postListItem {
-      margin-top: 0.32rem;
-      margin-bottom: 0px;
-      font-weight: normal;
-      font-size: 1.07177rem;
-      line-height: 1.6rem;
-    }
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
 
-    .index__moreLink {
-      margin-top: 0.64rem;
-      font-size: 0.96rem;
-      display: flex;
-      justify-content: flex-end;
-    }
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
 
-    .index__weeknoteNote {
-      margin-bottom: 1rem;
-    }
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
 
-    .index__talksList > li {
-      margin-bottom: 1.6rem;
-    }
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
 
-    .index__talkTitle {
-      font-size: 1.12rem;
-      font-weight: 500;
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
     }
+  }
 
-    .index__talkConfList li {
-      margin: 0.16rem;
-    }
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
 .Layout__titleContainer,
   .Layout__homeLink {
     display: flex;
@@ -373,22 +479,94 @@ li p + ul {
   <body>
     <div class="base">
       <header>
-        <div class="Layout__titleContainer">
+        <div class="Layout__titleContainer m-small">
   <div class="h-card">
     <a href="/" class="Layout__homeLink u-url">
       <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px"><img loading="eager" decoding="async" src="/img/content/hQbkMv3lT7-90.jpeg" alt width="180" height="180" class="Layout__titleProfile u-photo"></picture>
-      <h1 class="Layout__title p-name">Jan Monschke</h1>
       
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
     </a>
   </div>
-  
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
 </div>
 
 
       </header>
-      <main><div class="index__bioContainer">
-  <bio><aside class="bio">
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Pi-hole &amp; Tailscale, my gateway into self-hosting</h1>
+    <span class="blogPost__date">May 31, 2025</span>
+  </header>
   
+  <section class="blogPost__content"><h3>👋 Personal context</h3>
+<p>I wouldn't call myself a homelab/self-hosting enthusiast. To me, these movements were always intertwined with setting up or interacting with &quot;smart&quot; devices. If you know me, you know that I've gone out of my way to make sure that none of our appliances at home are, in any way, &quot;smart&quot;. Think internet-connected dishwasher. The idea that a broken OTA update or a shut-down activation server could brick my dish washer was never really appealing to me. And that's not taking into account the privacy implications with some of those devices.</p>
+<p>However, in recent conversations with friends and coworkers, I was introduced to a different side of the self-hosting movement. The side that focuses on privacy and a sense of ownership.</p>
+<p>Around the same time was reading <a href="https://matanabudy.com/achieving-great-privacy-with-safari/">this post by Matan Abudy</a> in which he describes how he set hardened his browser's privacy. Also, <a href="https://coppolaemilio.com/entries/i-left-spotify-what-happened-next/">this post by Emilio Coppola</a> describing how he set up a private music streaming app sparked more interest. The latter one included a hat-tip to <a href="https://www.youtube.com/c/JeffGeerling">Jeff Geerling</a> who's content I've been catching up since then.</p>
+<p>I guess those blog posts then motivated me to excavate my old Raspberry Pi 3 (Model B) one early morning with the goal to install <a href="https://pi-hole.net/">Pi-hole</a>. Thus, starting a whole flurry of other self-hosting projects.</p>
+<blockquote>
+<p>💡 <strong>Info:</strong> <code>Pi-hole</code> is a piece of software that blocks ads/trackers on DNS level which therefore does not require another extension to run in your browser/mobile device. When possible, I still use a browser extension to block unwanted content, so Pi-hole mostly helps me to stop tracking/ads on my mobile phone.</p>
+</blockquote>
+<hr>
+<h3>🥧 Preparing the Raspberry Pi</h3>
+<p>Luckily my Raspberry Pi still had an SD card inserted, so I didn't need to search for one in the depth of my tech storage box.</p>
+<p>I used the <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a> to flash Raspberry Pi OS Lite onto the card. In my case I didn't need a desktop environment for the OS, if you prefer that, select the regular Raspberry Pi OS instead.</p>
+<p>Since I want to use SSH to setup the Pi later, I also selected <code>Enable SSH</code> in the <code>Advanced Settings</code> menu. You can enter a desired username and password and go back to the main settings. In case you want the Pi to connect via Wi-Fi, you need to set that up in the settings before flashing as well. However, it's advised to use a wired connection for Pi-Hole setups.</p>
+<p>Once the image is written to the card, you can insert it into your Pi, connect connect your ethernet cable, a power source and you're ready to SSH into it:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">ssh</span> your-username@pihole.local</code></pre>
+<blockquote>
+<p>💡 <strong>Tip:</strong> <code>pihole.local</code> is the hostname that I chose, it might be different for you. If <code>.local</code> hostname resolution doesn’t work, check your router for the Pi’s IP address or use <code>nmap</code> to find it and use the ip to ssh into the Pi.</p>
+</blockquote>
+<h3>🥧🕳️ Installing Pi-hole</h3>
+<p>Before running the Pi-hole installer, I made sure the Pi had a static IP. I set a static IP for the Pi in my router's interface and followed [Jeff Gerling's guide on setting a static IP from the command line](<a href="https://www.jeffgeerling.com/blog/2024/set-static-ip-address-nmtui-on-raspberry-pi-os-12-bookworm">https://www.jeffgeerling.com/blog/2024/set-static-ip-address-nmtui-on-raspberry-pi-os-12-bookworm</a>.</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-sSL</span> https://install.pi-hole.net <span class="token operator">|</span> <span class="token function">bash</span></code></pre>
+<p>The Pi-hole installer walks you through a couple steps that are well explained. It helps you to choose an upstream DNS provider and configure the web admin interface.</p>
+<p>Once the installer is finished, you will be able to access the web interface from <code>https://pihole.local/admin</code>. Your browser might complain about an invalid HTTPS certificate but you can ignore that. And that's already it, Pi-hole is running on the Pi and you can use the web interface to make changes to the setup.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> I noticed that Pi-hole was running much smoother (in my setup) when setting <code>MAXDBDAYS=1</code> in <code>/etc/pihole/pihole-FTL.conf</code> (might need to create the file before). Setting that var requires a restart of <code>pihole-FTL</code> with <code>sudo systemctl restart pihole-FTL</code>.</p>
+</blockquote>
+<p>The usual next step is to change individual devices' DNS settings to use our Pi-hole server for DNS resolution in order to block ads/trackers. That's a very reasonable setup and if you're happy doing that, you can stop reading now. However, I wanted an &quot;easier&quot; way to use DNS blocking on all devices in my network AND outside my network. And that's where <a href="https://tailscale.com">Tailscale</a> comes in.</p>
+<h3>🌐 Introducing Tailscale into the mix</h3>
+<p>Tailscale is a free-to-use mesh VPN software that allows you to connect to your registered machines no matter where you are in the world. It achieves this in a way that does not require you to enable port forwarding or opening up your router to requests from outside your network (this explanation contains a ton of shortcuts, I know).</p>
+<p>More importantly, Tailscale allows you to define one of your connected machines as DNS servers. This means that all devices in your (mesh-) network will connect to the internet through this one machine. In our case, that will be the Pi-hole we just set up.</p>
+<p>The first step in our setup is to install Tailscale on the Pi. Run the following command in your SSH session:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">-fsSL</span> https://tailscale.com/install.sh <span class="token operator">|</span> <span class="token function">sh</span>
+<span class="token function">sudo</span> tailscale up</code></pre>
+<p>That will install Tailscale and ask you to sign up for the service. It's free-to-use for personal use. With the personal account, you'll be able to set Tailscale up on up to 100 devices (they call them machines) and have 3 users access the network.</p>
+<p>Now that you have your own Tailscale network with the Pi connected to it, you can set the define as your network's DNS server:</p>
+<ol>
+<li>Log into the admin panel</li>
+<li>Go to Machines and copy your Pi's Tailscale IP</li>
+<li>Go to <code>DNS</code></li>
+<li>Make sure that <code>MagicDNS</code> is turned on</li>
+<li>And then in <code>Nameservers</code>, past your Pi's IP into <code>Global nameservers</code> and enable <code>Override DNS servers</code></li>
+</ol>
+<p>And that is it. Go ahead and add install Tailscale on your phone, your computer, any device really. All connected devices now benefit from ad-/tracker-blocking of your Pi-hole server.</p>
+<blockquote>
+<p>💡 <strong>Tip:</strong> If you ever encounter issues connecting to the internet from a Tailscale-connected device, make sure your Pi-hole server is okay. And if it's somehow in a weird state, disable Tailscale and your device's internet connection will work again (assuming the Pi-hole server was the culprit of course).</p>
+</blockquote>
+<h3>☕️ Final Thoughts</h3>
+<p>I’ve been running this setup for a few weeks now and I love it. I'm still using ad-blocker extensions where I can as another layer of protection (since Pi-hole cannot catch 'em all). One look at the Pi-hole dashboard however, shows me how many trackers/ads still get blocked. Most of them seem to come from mobile/desktop applications.</p>
+<p>It was a fun weekend project setting up Pi-hole and Tailscale but it's only the beginning of the story. I went on to self-host an RSS reader, a password manager and a replacement for Google Photos. But those are stories for another time.</p>
+</section>
+</article>
+<aside>
+  
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  <p>🍅 It took 9 pomodoros to write this post 🍅</p>
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><source type="image/jpeg" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw"><img loading="lazy" decoding="async" src="/img/content/hQbkMv3lT7-80.jpeg" alt="Jan Monschke" width="160" height="160" class="bio__authorImage"></picture>
   <span>
     Hi, I'm Jan 👋 <br class="bio__introSeparator">I am a software engineer
     working for
@@ -409,274 +587,20 @@ li p + ul {
   </span>
 </aside>
 
-</bio></div>
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      
+      <li>
+        <a href="/adding-webmentions-to-your-static-blog/" rel="next"><span>Adding webmentions to your static blog</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
 
-<nav aria-hidden class="index__nav">
-  <a href="#blogposts" class="index__navBtn"> Blog posts </a>
-  <a href="#weeknotes" class="index__navBtn"> Weeknotes </a>
-  <a href="#talks" class="index__navBtn"> Talks </a>
-</nav>
 
-<div class="posts index__listContainer">
-  <span class="index__sectionHeadline">
-    <h2><a name="blogposts"></a>Posts</h2>
-    <a href="/rss.xml" aria-label="Blog post RSS feed">
-      <img src="/assets/images/rss.svg" alt="Blog post RSS feed" class="index__rssIcon">
-    </a>
-  </span>
-  <ul class="index__postList">
-    <li>
-      <h3 class="index__postListItem">
-        <a href="/pi-hole-Tailscale-my-gateway-into-self-hosting">
-          <span style="color: initial">May 31, 2025</span>:
-          <span class="index__blogPostTitle">Pi-hole &amp; Tailscale, my gateway into self-hosting</span>
-        </a>
-      </h3>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/adding-webmentions-to-your-static-blog/">
-          <span style="color: initial">Jan 30, 2023</span>:
-          <span class="index__blogPostTitle">Adding webmentions to your static blog</span>
-        </a>
-      </h3>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/changing-my-online-identity/">
-          <span style="color: initial">Jan 01, 2023</span>:
-          <span class="index__blogPostTitle">Changing my online identity</span>
-        </a>
-      </h3>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/building-a-gpx-editor-with-xstate-and-lit-html/">
-          <span style="color: initial">Nov 08, 2021</span>:
-          <span class="index__blogPostTitle">Building a gpx editor with xstate and lit-html</span>
-        </a>
-      </h3>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/flexible-color-definitions-in-design-systems/">
-          <span style="color: initial">May 19, 2021</span>:
-          <span class="index__blogPostTitle">Flexible color definitions in design systems</span>
-        </a>
-      </h3>
-    </li>
-  </ul>
-  <a href="/blog" class="index__moreLink">→ More blog posts</a>
-</div>
-
-<div class="weeknotes index__listContainer">
-  <span class="index__sectionHeadline">
-    <h2><a name="weeknotes"></a>Weeknotes</h2>
-    <a href="/weeknotes.xml" aria-label="Weeknotes RSS feed">
-      <img src="/assets/images/rss.svg" alt="Weeknotes RSS feed" class="index__rssIcon">
-    </a>
-  </span>
-  <p class="index__weeknoteNote">
-    Weeknotes are shorter, more regular and more personal blog posts that I
-    publish on a weekly basis. Expect to read about updates of side projects,
-    books that I like to read, food, living in Berlin and general life things.
-  </p>
-  <ul class="index__postList">
-    <li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/2023-in-review/">Looking back at 2023</a>
-      </h3>
-      <small>#2023 · #year in review</small>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/05/">Weeknotes 05/2023</a>
-      </h3>
-      <small>#baby's first steps · #language · #refactoring · #i18n · #bruno</small>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/04/">Weeknotes 04/2023</a>
-      </h3>
-      <small>#playgrounds · #pumpkin spice latte · #music app · #sonoma</small>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/03/">Weeknotes 03/2023</a>
-      </h3>
-      <small>#boars · #cargo bike · #pumpkin spice · #colorbattle · #ginger root</small>
-    </li>
-<li>
-      <h3 class="index__postListItem">
-        <a href="/weeknotes/2023/02/">Weeknotes 02/2023</a>
-      </h3>
-      <small>#night train · #cargo bike · #side project · #painkiller · #canned coffee</small>
-    </li>
-  </ul>
-  <a href="/weeknotes" class="index__moreLink">→ All weeknotes</a>
-</div>
-
-<div class="talks index__listContainer">
-  <span class="index__sectionHeadline">
-    <h2><a name="talks"></a>Talks</h2>
-  </span>
-  <ul class="index__talksList">
-    <li>
-      <span class="index__talkTitle">
-        <span>Memory management in modern web applications</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="https://docs.google.com/presentation/d/13t9XpHWtNi498LkU3gTYNYkd6np5015EZmGaVsoEH_c/edit?usp=sharing">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=dtDELTziIUo">Frontend Con 2018 · Warsaw, Poland</a>
-          
-        </li>
-<li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=XtcGHhhGoZw">ReactNotAConf 2018 · Sofia, Bulgaria</a>
-          
-        </li>
-<li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=aaGacO-Yybs">ReactFest 2018 · London, UK</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Prototyping with React Native @ SoundCloud</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/prototyping-at-soundcloud/">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          
-          <span>AgentConf 2017 · Dornbirn, Austria</span>
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>How it's made: our opening of JSConf EU 2017</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="https://nestedloops.github.io/jsconf-2017-presentation/">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=NpKLt_YO3o8">JSConf EU 2017 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>🎶 Nested Loops: PEOPLE GOT MAD</span>
-
-        
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=lCn-XCASn98">JSConf EU 2017 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Building collaborative &amp; realtime applications with diffsync</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/diffsync-presentation">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=YFaSK-W6u-E">Frontend Union Conf 2015 · Moscow, Russia</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>🎶 Nested Loops: JavaScript, what are you?</span>
-
-        
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=lJ1kY-CSpBk">JSConf EU 2015 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Using the web for music production and live performances</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/JSConf2014">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=cqtBpCqgOgM">JSConf EU 2014 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Building a collaborative audio editor based on the Web Audio API</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/Building-a-collaborative-web-audio-editor">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://medias.ircam.fr/x7bde3a">Web Audio Conference 2015 · Paris, France</a>
-          
-        </li>
-<li>
-          <a rel="noopener noreferrer" target="_blank" href="https://vimeo.com/96477738">ScotlandJS 2014 · Edinburgh, Scotland</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Making music with JavaScript and Gamepads</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/Music-with-JS-and-Gamepads">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          <a rel="noopener noreferrer" target="_blank" href="https://www.youtube.com/watch?v=0MigafMWLh0">RejectJS 2013 · Berlin, Germany</a>
-          
-        </li>
-      </ul>
-    </li>
-<li>
-      <span class="index__talkTitle">
-        <span>Genetic Algorithms in JavaScript</span>
-
-        <a rel="noopener noreferrer" target="_blank" href="/Genetic-Algorithms/presentation">(Slides)</a>
-      </span>
-
-      <ul class="index__talkConfList">
-        <li>
-          
-          <span>BerlinJS 2012 · Berlin, Germany</span>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  
-</div>
 </main>
     </div>
     <style></style>
