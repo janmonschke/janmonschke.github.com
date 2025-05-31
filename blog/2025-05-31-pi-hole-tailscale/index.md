@@ -38,7 +38,7 @@ ssh your-username@pihole.local
 
 ### 🥧🕳️ Installing Pi-hole
 
-Before running the Pi-hole installer, I made sure the Pi had a static IP. I set a static IP for the Pi in my router's interface and followed [Jeff Gerling's guide on setting a static IP from the command line](https://www.jeffgeerling.com/blog/2024/set-static-ip-address-nmtui-on-raspberry-pi-os-12-bookworm.
+Before running the Pi-hole installer, I made sure the Pi had a static IP. I set a static IP for the Pi in my router's interface and followed [Jeff Gerling's guide on setting a static IP from the command line](https://www.jeffgeerling.com/blog/2024/set-static-ip-address-nmtui-on-raspberry-pi-os-12-bookworm].
 
 ```bash
 curl -sSL https://install.pi-hole.net | bash
