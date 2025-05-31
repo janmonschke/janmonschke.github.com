@@ -11,9 +11,9 @@
   </author>
   <entry>
     <title>Pi-hole &amp; Tailscale, my gateway into self-hosting</title>
-    <link href="/pi-hole-tailscale-my-gateway-into-self-hosting"/>
+    <link href="/pi-hole-tailscale-my-gateway-into-self-hosting/"/>
     <updated>2025-05-31T00:00:00Z</updated>
-    <id>/pi-hole-tailscale-my-gateway-into-self-hosting</id>
+    <id>/pi-hole-tailscale-my-gateway-into-self-hosting/</id>
     <content xml:lang="" type="html">&lt;h3&gt;👋 Personal context&lt;/h3&gt;
 &lt;p&gt;I wouldn&#39;t call myself a homelab/self-hosting enthusiast. To me, these movements were always intertwined with setting up or interacting with &amp;quot;smart&amp;quot; devices. If you know me, you know that I&#39;ve gone out of my way to make sure that none of our appliances at home are, in any way, &amp;quot;smart&amp;quot;. Think internet-connected dishwasher. The idea that a broken OTA update or a shut-down activation server could brick my dish washer was never really appealing to me. And that&#39;s not taking into account the privacy implications with some of those devices.&lt;/p&gt;
 &lt;p&gt;However, in recent conversations with friends and coworkers, I was introduced to a different side of the self-hosting movement. The side that focuses on privacy and a sense of ownership.&lt;/p&gt;
