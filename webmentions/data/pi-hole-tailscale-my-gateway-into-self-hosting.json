@@ -302,5 +302,43 @@
     "repost-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
     "wm-property": "repost-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Chris Adams",
+      "photo": "https://avatars.webmention.io/media.social.lol/a29bcebc84c6ef21acd37379f72f1a274066d76f3dd2f4811ead4d54b09f73e5.jpg",
+      "url": "https://mastodon.social/@mrchrisadams"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109293041415376158",
+    "published": null,
+    "wm-received": "2025-06-01T07:27:08Z",
+    "wm-id": 1915078,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109293041415376158",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "hypebot",
+      "photo": "https://avatars.webmention.io/media.social.lol/6494faa7fd4b434b1d6c98d4188c629d1dcee904393014a33ec8607c9477b6c9.gif",
+      "url": "https://foreveryou.ng/@hb"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#reblogged-by-114479714565611881",
+    "published": null,
+    "wm-received": "2025-06-01T07:27:14Z",
+    "wm-id": 1915079,
+    "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/114606461182049655/114479714565611881",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "repost-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "repost-of",
+    "wm-private": false
   }
 ]
