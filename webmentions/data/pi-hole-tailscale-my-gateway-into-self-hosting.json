@@ -435,5 +435,24 @@
     "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Henry",
+      "photo": "https://avatars.webmention.io/media.social.lol/2d3c63a237690d230a534d120e4ee48813a409195bf4cb061af204bc8d1fe63e.jpg",
+      "url": "https://social.lol/@hl"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109604777636002090",
+    "published": null,
+    "wm-received": "2025-06-01T09:21:13Z",
+    "wm-id": 1915085,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109604777636002090",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
