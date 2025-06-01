@@ -35,7 +35,34 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
-    <style>.bio {
+    <style>.likes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .likes li {
+    margin-bottom: 0;
+  }
+
+  .like {
+    margin-right: 0.5em;
+  }
+
+  .like__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-bottom: 0.1em;
+    transition: scale linear 0.1s;
+  }
+
+  .like__image:hover {
+    scale: 1.33;
+  }
+.bio {
     display: flex;
     align-items: center;
   }
@@ -559,7 +586,43 @@ li p + ul {
 </section>
 </article>
 <aside>
-  
+  <div>
+    <h3>Likes</h3>
+    <likes likes="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"><ul class="likes">
+  <li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://mastodon.social/@rrmutt" class="like">
+      <img src="https://avatars.webmention.io/media.social.lol/5dcda9584f54f2e2acfa8df6943e8f29ca4defdf9c1e3d8e9f9c2cb47d8ef1dd.jpg" alt="rrmutt" title="rrmutt" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://chaos.social/@e_es" class="like">
+      <img src="https://avatars.webmention.io/media.social.lol/fea82a1efb34c762997a8e50d00a2d20a5d236590f1603d7a2c09808fa11b6b0.png" alt="e_es" title="e_es" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://mastodon.berlin/@mrc" class="like">
+      <img src="https://avatars.webmention.io/media.social.lol/87042648575d2aa2de2c2d66533c63431eec95a82ee47094bc6eb526ec39a356.jpg" alt="Márton Salomváry" title="Márton Salomváry" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://hachyderm.io/@train" class="like">
+      <img src="https://avatars.webmention.io/media.social.lol/af8bbf68b8d4b5a1326feb2333e7e145aea63f6f8f60e4734095cb0682c96bb2.jpg" alt="ItzTrain" title="ItzTrain" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://kolektiva.social/@gribnoysup" class="like">
+      <img src="https://avatars.webmention.io/media.social.lol/bf2005aa93217fe53970b0c42ee279c7a259ea549967c1c0032857acee441cad.jpg" alt="Sergey Petushkov" title="Sergey Petushkov" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://hachyderm.io/@itdude" class="like">
+      <img src="https://avatars.webmention.io/media.social.lol/7f0cae08c32a0a0b51bffb1de9f7f85b75dc96b0f6fb05ecca38563959bebb37.jpg" alt="IT Dude" title="IT Dude" loading="lazy" class="like__image">
+    </a>
+  </li>
+</ul>
+
+</likes>
+  </div>
   
 </aside>
 <footer class="blogPost__footer">
