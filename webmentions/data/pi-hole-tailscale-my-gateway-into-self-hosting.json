@@ -549,5 +549,24 @@
     "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Bastian Greshake Tzovaras",
+      "photo": "https://avatars.webmention.io/media.social.lol/e00adb966cb76f3609cc4c426d914bbbcf05d34c696320e17a6d7e3dfe43a1e1.jpg",
+      "url": "https://scholar.social/@gedankenstuecke"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109326935592139204",
+    "published": null,
+    "wm-received": "2025-06-01T15:00:38Z",
+    "wm-id": 1915145,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109326935592139204",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
