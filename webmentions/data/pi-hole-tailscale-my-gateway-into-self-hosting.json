@@ -492,5 +492,24 @@
     "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Eugen Pirogoff",
+      "photo": "https://avatars.webmention.io/media.social.lol/b41685475f86c4afc5efe3dbf60bc473e1c15b29824145bbe0d36f6736635ecb.jpg",
+      "url": "https://chaos.social/@eugenpirogoff"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109613091593348407",
+    "published": null,
+    "wm-received": "2025-06-01T10:55:46Z",
+    "wm-id": 1915102,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109613091593348407",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
