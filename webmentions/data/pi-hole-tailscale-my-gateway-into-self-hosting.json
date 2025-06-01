@@ -169,5 +169,119 @@
     "repost-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
     "wm-property": "repost-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan Lehnardt :couchdb:",
+      "photo": "https://avatars.webmention.io/media.social.lol/d1630de1028ec04a96edcda4ee4b4be17305c7a4869045167c37e2124cbc7960.jpg",
+      "url": "https://narrativ.es/@janl"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109728129375271593",
+    "published": null,
+    "wm-received": "2025-06-01T06:49:42Z",
+    "wm-id": 1915070,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109728129375271593",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jack Rusher",
+      "photo": "https://avatars.webmention.io/media.social.lol/4f6280f6f91d1a5966217df400aa6e8f847d79a344f5ee0378436f78c9e94bc2.jpg",
+      "url": "https://berlin.social/@jack"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109542058438318681",
+    "published": null,
+    "wm-received": "2025-06-01T06:49:46Z",
+    "wm-id": 1915071,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109542058438318681",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Felix Niklas",
+      "photo": "https://avatars.webmention.io/media.social.lol/a14add67abb2b34f44d35cdef98021c3a9fd37e72a2724cdcc183c4d65543043.jpg",
+      "url": "https://mastodon.social/@mrflix"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109298379160918805",
+    "published": null,
+    "wm-received": "2025-06-01T06:49:47Z",
+    "wm-id": 1915072,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109298379160918805",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Yves Van Goethem :firefox:",
+      "photo": "https://avatars.webmention.io/media.social.lol/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg",
+      "url": "https://indieweb.social/@yvg"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109376047652333124",
+    "published": null,
+    "wm-received": "2025-06-01T06:49:48Z",
+    "wm-id": 1915073,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109376047652333124",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Markus ????????????️‍????",
+      "photo": "https://avatars.webmention.io/media.social.lol/56b173208dd0870a3974e593b9ab2c72cb10fd56120c9e4dec82546c81f5e9fe.jpg",
+      "url": "https://norden.social/@mnord"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-111653694175917049",
+    "published": null,
+    "wm-received": "2025-06-01T06:49:58Z",
+    "wm-id": 1915074,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/111653694175917049",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan Lehnardt :couchdb:",
+      "photo": "https://avatars.webmention.io/media.social.lol/d1630de1028ec04a96edcda4ee4b4be17305c7a4869045167c37e2124cbc7960.jpg",
+      "url": "https://narrativ.es/@janl"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#reblogged-by-109728129375271593",
+    "published": null,
+    "wm-received": "2025-06-01T06:49:58Z",
+    "wm-id": 1915075,
+    "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/114606461182049655/109728129375271593",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "repost-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "repost-of",
+    "wm-private": false
   }
 ]
