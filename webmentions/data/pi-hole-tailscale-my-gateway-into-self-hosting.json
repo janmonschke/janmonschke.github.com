@@ -416,5 +416,24 @@
     "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Christian Tietze",
+      "photo": "https://avatars.webmention.io/media.social.lol/e87877fbf8e816828513d5c72bb836f5f99934f2187ab4b0ce90944ed83d6141.jpg",
+      "url": "https://mastodon.social/@ctietze"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109007516149582527",
+    "published": null,
+    "wm-received": "2025-06-01T08:53:50Z",
+    "wm-id": 1915084,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109007516149582527",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
