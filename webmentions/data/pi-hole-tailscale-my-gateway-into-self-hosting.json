@@ -340,5 +340,62 @@
     "repost-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
     "wm-property": "repost-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Tim Riley",
+      "photo": "https://avatars.webmention.io/media.social.lol/db03071e9ffdd9d17170e52860e7bda7f1b0501ee87f80eaaa47e091686e8cfd.png",
+      "url": "https://ruby.social/@timriley"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-109282579480331697",
+    "published": null,
+    "wm-received": "2025-06-01T08:01:25Z",
+    "wm-id": 1915080,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/109282579480331697",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "cacher",
+      "photo": "https://avatars.webmention.io/media.social.lol/3a2090c4e61ec523992f011bfd0e9cba7b11d6e676f6bc478737a89e0f6a2299.jpg",
+      "url": "https://hachyderm.io/@cacher"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#favorited-by-112169654344298148",
+    "published": null,
+    "wm-received": "2025-06-01T08:01:30Z",
+    "wm-id": 1915081,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/114606461182049655/112169654344298148",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sergey Petushkov",
+      "photo": "https://avatars.webmention.io/media.social.lol/bf2005aa93217fe53970b0c42ee279c7a259ea549967c1c0032857acee441cad.jpg",
+      "url": "https://kolektiva.social/@gribnoysup"
+    },
+    "url": "https://social.lol/@janmon/114606461182049655#reblogged-by-109514778136637038",
+    "published": null,
+    "wm-received": "2025-06-01T08:01:30Z",
+    "wm-id": 1915082,
+    "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/114606461182049655/109514778136637038",
+    "wm-target": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-protocol": "webmention",
+    "repost-of": "https://janmonschke.com/pi-hole-tailscale-my-gateway-into-self-hosting/",
+    "wm-property": "repost-of",
+    "wm-private": false
   }
 ]
