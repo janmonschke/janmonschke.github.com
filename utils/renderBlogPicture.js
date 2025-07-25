@@ -48,8 +48,8 @@ module.exports = function renderBlogPicture({
   });
 
   if (linkToImage) {
-    const biggestJpeg = metadata.jpeg[metadata.jpeg.length - 1];
-    const biggestSvg = metadata.svg[metadata.svg.length - 1];
+    const biggestJpeg = metadata.jpeg?.[metadata.jpeg.length - 1];
+    const biggestSvg = metadata.svg?.[metadata.svg.length - 1];
     const imageLinkHref = biggestJpeg ? biggestJpeg.url : biggestSvg.url;
     imageMarkup = `
       <a href="${imageLinkHref}" target="_blank" aria-label="Click to open image in new window">
