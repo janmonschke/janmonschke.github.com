@@ -300,7 +300,7 @@ li p + ul {
 
       </header>
       <main>
-<all-posts-list title="All weeknotes" rssurl="/weeknotes.xml" posts="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" sub="function sub(post) {
+<all-posts-list title="All weeknotes" rssurl="/weeknotes.xml" posts="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" sub="function sub(post) {
     return post.data.keywords.map((keyword) => `#${keyword}`).join(&quot; · &quot;);
   }"><header class="allPostsList__header">
   <h2>All weeknotes</h2>
@@ -311,6 +311,12 @@ li p + ul {
 <main>
   <ul class="allPostsList__list">
     <li>
+      <h3 class="allPostsList__postTitle">
+        <a href="/weeknotes/2025/2025-bye-bye/">Looking back at 2025</a>
+      </h3>
+      <small>#2025 · #year in review</small>
+    </li>
+<li>
       <h3 class="allPostsList__postTitle">
         <a href="/weeknotes/2023/2023-in-review/">Looking back at 2023</a>
       </h3>
