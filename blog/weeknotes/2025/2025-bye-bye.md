@@ -3,6 +3,8 @@ title: Looking back at 2025
 tags: weeknote
 keywords: ["2025", "year in review"]
 date: 2026-01-27
+image: chike_summer.png
+hideImage: true
 ---
 
 Bye, bye 2025 👋 
