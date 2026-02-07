@@ -6,7 +6,8 @@ module.exports = {
   },
 
   render(data) {
-    let html = `<h2>Cafe recommendations</h2>\n<ul>\n`;
+    let html = `<link rel="stylesheet" href="/coffee/cafes/cafes.css" />\n`;
+    html += `<h2>Cafe recommendations</h2>\n<ul class="cafeList">\n`;
     const cafeData = data.cafes;
     for (const country in cafeData.countries) {
       const cities = cafeData.countries[country].cities;

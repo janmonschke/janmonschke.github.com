@@ -8,6 +8,7 @@ layout: layouts/base.webc
 eleventyComputed:
   title: "Cafe recommendations in {{ allCities[cityId].name }}"
 ---
+<link href="/coffee/cafes/cafes.css" rel="stylesheet"></link>
 
 {% set city = allCities[cityId] %}
 
@@ -19,7 +20,7 @@ eleventyComputed:
 <coffee-map></coffee-map>
 {% endrenderTemplate %}
 
-<ul>
+<ul class="cafeList">
 {% for cafe in city.cafes %}
   <li>
     <h3>{{ cafe.name }}</h3>
