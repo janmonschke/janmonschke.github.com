@@ -29,11 +29,12 @@ window.customElements.define(
         const googleMapsLink = cafe.links
           .filter((link) => link.type === "google_maps")
           .pop();
-        const linkEnd = googleMapsLink ? "</a>" : "";
-        console.log(googleMapsLink);
+
         const linkStart = googleMapsLink
           ? "<a href='" + googleMapsLink.link + "' target='_blank'>"
           : "";
+        const linkEnd = googleMapsLink ? "</a>" : "";
+
         const note = cafe.note ? "<p>" + cafe.note + "</p>" : "";
         marker
           .addTo(map)
