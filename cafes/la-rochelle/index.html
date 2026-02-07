@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Cafe recommendations in La Rochelle | Jan Monschke</title>
+
+    <meta httpequiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jan Monschke - Developer Blog">
+    <meta property="article:author" content="Jan Monschke">
+    
+    
+    <meta name="description" content="The portfolio and blog of Jan Monschke">
+    <meta property="og:description" content="The portfolio and blog of Jan Monschke">
+    
+    
+    
+
+    <link rel="webmention" href="https://webmention.io/janmonschke.com/webmention">
+    <link rel="pingback" href="https://webmention.io/janmonschke.com/xmlrpc">
+
+    <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
+
+    <link rel="me" href="https://social.lol/@janmon">
+    <link rel="me" href="https://github.com/janmonschke">
+
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Weeknotes" href="/weeknotes.xml">
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Blog posts" href="/rss.xml">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <style>coffee-map {
+    display: block;
+  }
+
+  coffee-map .coffee-map__container {
+    height: 400px;
+  }
+
+  coffee-map .leaflet-container a {
+    background-image: none;
+  }
+.Layout__titleContainer,
+  .Layout__homeLink {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Layout__titleProfile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 1.2em;
+    margin-bottom: 0;
+  }
+  .m-small .Layout__titleProfile {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+  }
+
+  .Layout__title {
+    margin: 0;
+  }
+
+  .Layout__title,
+  .Layout__menuLink {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Layout__titleContainer:not(.m-small) .Layout__title {
+    font-size: 1.7411rem;
+    line-height: 2.4rem;
+  }
+
+  .Layout__menuLink {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .Layout__menuLink:hover,
+  .Layout__menuLink:active {
+    text-decoration: underline;
+  }
+
+  .Layout__menuContainer {
+    margin-left: auto;
+  }
+
+  .Layout__menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+
+  .Layout__menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  @media (max-width: 400px) {
+    .Layout__titleContainer {
+      flex-direction: column;
+    }
+
+    .Layout__menuContainer {
+      margin-left: initial;
+    }
+
+    .m-small .Layout__titleProfile {
+      width: 50px;
+      height: 50px;
+    }
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.8em;
+    }
+  }
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Source Sans Pro',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Source Sans Pro',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:1.12rem;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.12rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:0;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:1.8rem;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.59);border-left:0.6rem solid;border-color:#fcea0e;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li &gt; ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li &gt; ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li &gt; p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#007acc;text-decoration:none;}a:hover,a:active{color:hsla(0,0%,0%,0.8);}h1,h2,h3,h4,h5,h6{margin-top:3.2rem;}blockquote &gt; :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.6rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.2rem;margin-right:0;border-left:0.3rem solid;border-color:#fcea0e;padding-left:0.9rem;}}h2,h3,h4{margin-bottom:1.12rem;margin-top:1.6rem;}
+/* source-sans-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-sans-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-sans-pro-latin-400-normal.woff") format("woff");
+  }
+  /* source-serif-pro-latin-ext-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* source-serif-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 41.6rem;
+  padding: 2.4rem 1.2rem;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.96rem;
+  margin-top: 0.96rem;
+  width: 75%;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Custom overrides */
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f03d;
+  margin: 1.2em 0;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: #f1f2f4;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}
+
+video {
+  width: 100%;
+}
+
+details {
+  margin-bottom: 1.6em;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+  margin-bottom: 0.3em;
+}
+
+/* Sanitize markdown list formatting */
+ul p,
+ul li {
+  margin-bottom: 0.3em;
+}
+
+/* Make sure that lists are not too far away from previous paragraphs */
+p + ul {
+  margin-top: -1em;
+}
+/* But not for nested lists */
+li p + ul {
+  margin-top: 0;
+}
+.picture {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  color: #000;
+}
+
+.picture__caption {
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+}</style>
+  </head>
+
+  <body>
+    <div class="base">
+      <header>
+        <div class="Layout__titleContainer m-small">
+  <div class="h-card">
+    <a href="/" class="Layout__homeLink u-url">
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><img src="/img/content/hQbkMv3lT7-90.jpeg" loading="eager" decoding="async" alt width="180" height="180" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px" class="Layout__titleProfile u-photo"></picture>
+      
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
+    </a>
+  </div>
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+      </header>
+      <main>
+
+
+<h2>La Rochelle</h2>
+
+<script>window.__cafes = [{"name":"L'Amusette","address":"26 Rue Thiers, 17000 La Rochelle","coordinates":{"lat":46.161292531655896,"lng":-1.1481956245244704},"links":[{"type":"google_maps","link":"https://maps.app.goo.gl/csSiXqSJWEMF7PHx7"},{"type":"instagram","link":"https://www.instagram.com/lamusette.cafe/"}]},{"name":"Chez Albert","address":"3 Rue Gargoulleau, 17000 La Rochelle, France","coordinates":{"lat":46.161842786549805,"lng":-1.1503288146951507},"links":[{"type":"google_maps","link":"https://maps.app.goo.gl/uLVWjkXN1pbK7Gmi9"}]},{"name":"Au Chalet","address":"5 Rue des Cloutiers, 17000 La Rochelle, France","coordinates":{"lat":46.16222434894007,"lng":-1.1489844722825224},"links":[{"type":"google_maps","link":"https://maps.app.goo.gl/xhNvynNw8jnF3ED47"},{"type":"instagram","link":"https://www.instagram.com/auchalet.lr/"}]},{"name":"L'Optimist Café","address":"23 Rue Amelot, 17000 La Rochelle, France","coordinates":{"lat":46.160523546859956,"lng":-1.1479343681732521},"links":[{"type":"google_maps","link":"https://maps.app.goo.gl/fxZxhgnZPJDXgYZo9"},{"type":"website","link":"https://www.loptimistcafe.com/"}]},{"name":"Paradox - Café Et Yoga","address":"29 Quai Maubec, 17000 La Rochelle, France","coordinates":{"lat":46.159142848841746,"lng":-1.1481714043850764},"links":[{"type":"google_maps","link":"https://maps.app.goo.gl/seQ9ivZ5MxnV5xAM6"},{"type":"website","link":"https://paradox-larochelle.fr/"}]}]</script>
+
+<coffee-map>
+<link rel="stylesheet" href="/assets/css/leaflet-1.9.3.css">
+<script src="/assets/js/leaflet-1.9.3.js"></script>
+<script src="/assets/js/coffee-map.js"></script>
+</coffee-map>
+
+
+<ul>
+
+  <li>
+    <h3>L&#39;Amusette</h3>
+    
+      <p>26 Rue Thiers, 17000 La Rochelle</p>
+    
+    
+      <p>
+        
+          
+            <a href="https://maps.app.goo.gl/csSiXqSJWEMF7PHx7">Google Maps</a>
+          
+           | 
+        
+          
+            <a href="https://www.instagram.com/lamusette.cafe/">Instagram</a>
+          
+          
+        
+      </p>
+    
+  </li>
+
+  <li>
+    <h3>Chez Albert</h3>
+    
+      <p>3 Rue Gargoulleau, 17000 La Rochelle, France</p>
+    
+    
+      <p>
+        
+          
+            <a href="https://maps.app.goo.gl/uLVWjkXN1pbK7Gmi9">Google Maps</a>
+          
+          
+        
+      </p>
+    
+  </li>
+
+  <li>
+    <h3>Au Chalet</h3>
+    
+      <p>5 Rue des Cloutiers, 17000 La Rochelle, France</p>
+    
+    
+      <p>
+        
+          
+            <a href="https://maps.app.goo.gl/xhNvynNw8jnF3ED47">Google Maps</a>
+          
+           | 
+        
+          
+            <a href="https://www.instagram.com/auchalet.lr/">Instagram</a>
+          
+          
+        
+      </p>
+    
+  </li>
+
+  <li>
+    <h3>L&#39;Optimist Café</h3>
+    
+      <p>23 Rue Amelot, 17000 La Rochelle, France</p>
+    
+    
+      <p>
+        
+          
+            <a href="https://maps.app.goo.gl/fxZxhgnZPJDXgYZo9">Google Maps</a>
+          
+           | 
+        
+          
+            <a href="https://www.loptimistcafe.com/">website</a>
+          
+          
+        
+      </p>
+    
+  </li>
+
+  <li>
+    <h3>Paradox - Café Et Yoga</h3>
+    
+      <p>29 Quai Maubec, 17000 La Rochelle, France</p>
+    
+    
+      <p>
+        
+          
+            <a href="https://maps.app.goo.gl/seQ9ivZ5MxnV5xAM6">Google Maps</a>
+          
+           | 
+        
+          
+            <a href="https://paradox-larochelle.fr/">website</a>
+          
+          
+        
+      </p>
+    
+  </li>
+
+</ul>
+
+<p><a href="/cafes">Back to cafe city list</a></p>
+</main>
+    </div>
+    <style></style>
+    <script></script>
+    <script type="module"></script>
+    <script defer src="https://selfless-exploration.up.railway.app/script.js" data-website-id="0e84bbda-bef6-4002-a346-ce1b46dd0ce9"></script>
+  
+
+
+
+
+
+</body>
+</html>
