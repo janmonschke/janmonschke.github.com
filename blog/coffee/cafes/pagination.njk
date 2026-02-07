@@ -23,11 +23,17 @@ eleventyComputed:
 {% for cafe in city.cafes %}
   <li>
     <h3>{{ cafe.name }}</h3>
-    {% if cafe.address %}
-      <p>{{ cafe.address }}</p>
+
+    {% if cafe.note %}
+      <blockquote>{{cafe.note}}</blockquote>
     {% endif %}
+
+    {% if cafe.address %}
+      <div>{{ cafe.address }}</div>
+    {% endif %}
+
     {% if cafe.links and cafe.links.length %}
-      <p>
+      <div>
         {% for link in cafe.links %}
           {% if link.type == "google_maps" %}
             <a href="{{ link.link }}">Google Maps</a>
@@ -38,7 +44,7 @@ eleventyComputed:
           {% endif %}
           {% if not loop.last %} | {% endif %}
         {% endfor %}
-      </p>
+      <div>
     {% endif %}
   </li>
 {% endfor %}
