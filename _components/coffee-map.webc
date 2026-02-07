@@ -1,0 +1,16 @@
+<style>
+  coffee-map {
+    display: block;
+  }
+
+  coffee-map .coffee-map__container {
+    height: 400px;
+  }
+
+  coffee-map .leaflet-container a {
+    background-image: none;
+  }
+</style>
+<link rel="stylesheet" href="/assets/css/leaflet-1.9.3.css" webc:keep />
+<script src="/assets/js/leaflet-1.9.3.js" webc:keep></script>
+<script src="/assets/js/coffee-map.js" webc:keep></script>
