@@ -1,15 +1,15 @@
 ---
 pagination:
-  data: cafes.cities
+  data: allCities
   size: 1
   alias: cityId
 permalink: "cafes/{{ cityId }}/"
 layout: layouts/base.webc
 eleventyComputed:
-  title: "Cafe recommendations in {{ cafes.cities[cityId].name }}"
+  title: "Cafe recommendations in {{ allCities[cityId].name }}"
 ---
 
-{% set city = cafes.cities[cityId] %}
+{% set city = allCities[cityId] %}
 
 <h2>{{ city.name }}</h2>
 

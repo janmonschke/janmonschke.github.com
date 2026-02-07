@@ -34,6 +34,7 @@ window.customElements.define(
         const linkStart = googleMapsLink
           ? "<a href='" + googleMapsLink.link + "' target='_blank'>"
           : "";
+        const note = cafe.note ? "<p>" + cafe.note + "</p>" : "";
         marker
           .addTo(map)
           .bindPopup(
@@ -42,7 +43,8 @@ window.customElements.define(
               "</strong>" +
               linkStart +
               (cafe.address ? "<br>" + cafe.address : "") +
-              linkEnd,
+              linkEnd +
+              note,
           );
         bounds.extend(marker.getLatLng());
       });
