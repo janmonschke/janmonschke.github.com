@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Music archaeology | Jan Monschke</title>
+
+    <meta httpequiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jan Monschke - Developer Blog">
+    <meta property="article:author" content="Jan Monschke">
+    
+    
+    <meta name="description" content="The portfolio and blog of Jan Monschke">
+    <meta property="og:description" content="The portfolio and blog of Jan Monschke">
+    <meta property="article:published_time" content="Fri May 29 2026 00:00:00 GMT+0000 (Coordinated Universal Time)">
+    <meta property="og:image" content="https://janmonschke.com/img/content/68OpHxYfqR-600.jpeg">
+    <meta property="image" content="https://janmonschke.com/img/content/68OpHxYfqR-600.jpeg">
+
+    <link rel="webmention" href="https://webmention.io/janmonschke.com/webmention">
+    <link rel="pingback" href="https://webmention.io/janmonschke.com/xmlrpc">
+
+    <link rel="preload" as="font" href="/assets/fonts/source-sans-pro-latin-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="/assets/fonts/source-serif-pro-latin-400-normal.woff2" crossorigin="anonymous">
+
+    <link rel="me" href="https://social.lol/@janmon">
+    <link rel="me" href="https://github.com/janmonschke">
+
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Weeknotes" href="/weeknotes.xml">
+    <link rel="alternate" type="application/rss+xml" title="janmonschke.com - Blog posts" href="/rss.xml">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    
+    <style>.bio {
+    display: flex;
+    align-items: center;
+  }
+  .bio__introSeparator {
+    display: none;
+  }
+  .bio picture {
+    width: 80px;
+    height: 80px;
+    margin-right: 0.725em;
+    flex-shrink: 0;
+  }
+  .bio__authorImage {
+    margin: 0;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    max-width: initial;
+  }
+
+  @media (max-width: 450px) {
+    .bio__introSeparator {
+      display: initial;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .bio {
+      flex-direction: column;
+    }
+
+    .bio picture {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.8rem;
+    }
+  }
+.blogPost__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .blogPost__title {
+    margin-top: 1.45rem;
+    margin-bottom: 0;
+  }
+
+  .blogPost__date {
+    font-size: 0.91rem;
+  }
+
+  .blogPost__coverImage {
+    margin-bottom: 1.45rem;
+  }
+
+  .blogPost__content iframe {
+    border: 0;
+    height: 400px;
+    margin-bottom: 4px;
+    width: 100%;
+  }
+
+  .blogPost__nacvigationTitle {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: hsla(0, 0%, 0%, 1);
+    font-family: "Source Serif Pro", sans-serif;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 1rem;
+    line-height: 1.1;
+  }
+
+  .blogPost__navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+  }
+
+  .blogPost__navigation li {
+    margin-bottom: 1rem;
+  }
+
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  pre[class*="language-"]::-moz-selection,
+  pre[class*="language-"] ::-moz-selection,
+  code[class*="language-"]::-moz-selection,
+  code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  pre[class*="language-"]::selection,
+  pre[class*="language-"] ::selection,
+  code[class*="language-"]::selection,
+  code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+  }
+
+  @media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      text-shadow: none;
+    }
+  }
+
+  /* Code blocks */
+  pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+  }
+
+  :not(pre) > code[class*="language-"],
+  pre[class*="language-"] {
+    background: #f5f2f0;
+  }
+
+  /* Inline code */
+  :not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    border-radius: 0.3em;
+    white-space: normal;
+  }
+
+  .token.comment,
+  .token.prolog,
+  .token.doctype,
+  .token.cdata {
+    color: slategray;
+  }
+
+  .token.punctuation {
+    color: #999;
+  }
+
+  .token.namespace {
+    opacity: 0.7;
+  }
+
+  .token.property,
+  .token.tag,
+  .token.boolean,
+  .token.number,
+  .token.constant,
+  .token.symbol,
+  .token.deleted {
+    color: #905;
+  }
+
+  .token.selector,
+  .token.attr-name,
+  .token.string,
+  .token.char,
+  .token.builtin,
+  .token.inserted {
+    color: #690;
+  }
+
+  .token.operator,
+  .token.entity,
+  .token.url,
+  .language-css .token.string,
+  .style .token.string {
+    color: #9a6e3a;
+    /* This background color was intended by the author of this theme. */
+    background: hsla(0, 0%, 100%, 0.5);
+  }
+
+  .token.atrule,
+  .token.attr-value,
+  .token.keyword {
+    color: #07a;
+  }
+
+  .token.function,
+  .token.class-name {
+    color: #dd4a68;
+  }
+
+  .token.regex,
+  .token.important,
+  .token.variable {
+    color: #e90;
+  }
+
+  .token.important,
+  .token.bold {
+    font-weight: bold;
+  }
+  .token.italic {
+    font-style: italic;
+  }
+
+  .token.entity {
+    cursor: help;
+  }
+.Layout__titleContainer,
+  .Layout__homeLink {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .Layout__titleProfile {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-right: 1.2em;
+    margin-bottom: 0;
+  }
+  .m-small .Layout__titleProfile {
+    width: 60px;
+    height: 60px;
+    margin-right: 1em;
+  }
+
+  .Layout__title {
+    margin: 0;
+  }
+
+  .Layout__title,
+  .Layout__menuLink {
+    position: relative;
+    display: inline-block;
+  }
+
+  .Layout__titleContainer:not(.m-small) .Layout__title {
+    font-size: 1.7411rem;
+    line-height: 2.4rem;
+  }
+
+  .Layout__menuLink {
+    color: #333;
+    font-size: 0.8rem;
+  }
+  .Layout__menuLink:hover,
+  .Layout__menuLink:active {
+    text-decoration: underline;
+  }
+
+  .Layout__menuContainer {
+    margin-left: auto;
+  }
+
+  .Layout__menu {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+  }
+
+  .Layout__menu li:not(:last-child) {
+    margin-right: 1em;
+  }
+
+  @media (max-width: 400px) {
+    .Layout__titleContainer {
+      flex-direction: column;
+    }
+
+    .Layout__menuContainer {
+      margin-left: initial;
+    }
+
+    .m-small .Layout__titleProfile {
+      width: 50px;
+      height: 50px;
+    }
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.6em;
+    }
+  }
+
+  @media (max-width: 374px) {
+    .Layout__menu li:not(:last-child) {
+      margin-right: 0.8em;
+    }
+  }
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:112.5%/1.6 'Source Sans Pro',sans-serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:'Source Sans Pro',sans-serif;font-weight:400;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:2rem;line-height:1.1;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.51572rem;line-height:1.1;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1.31951rem;line-height:1.1;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.1;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.87055rem;line-height:1.1;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;color:hsla(0,0%,0%,1);font-family:'Source Serif Pro',sans-serif;font-weight:600;text-rendering:optimizeLegibility;font-size:0.81225rem;line-height:1.1;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}ul{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.6rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}p{margin-left:0;margin-right:0;margin-top:1.12rem;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.12rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:0.85rem;line-height:1.6rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1rem;line-height:1.6rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}blockquote{margin-left:0;margin-right:1.6rem;margin-top:0;padding-bottom:0;padding-left:1.8rem;padding-right:0;padding-top:0;margin-bottom:1.6rem;font-size:1.1487rem;line-height:1.6rem;color:hsla(0,0%,0%,0.59);border-left:0.6rem solid;border-color:#fcea0e;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.6rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.6rem;}b{font-weight:700;}strong{font-weight:700;}dt{font-weight:700;}th{font-weight:700;}li{margin-bottom:calc(1.6rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li &gt; ol{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}li &gt; ul{margin-left:1.6rem;margin-bottom:calc(1.6rem / 2);margin-top:calc(1.6rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li &gt; p{margin-bottom:calc(1.6rem / 2);}code{font-size:0.85rem;line-height:1.6rem;}kbd{font-size:0.85rem;line-height:1.6rem;}samp{font-size:0.85rem;line-height:1.6rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:"tnum";-moz-font-feature-settings:"tnum";-ms-font-feature-settings:"tnum";-webkit-font-feature-settings:"tnum";padding-left:1.06667rem;padding-right:1.06667rem;padding-top:0.8rem;padding-bottom:calc(0.8rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}a{color:#007acc;text-decoration:none;}a:hover,a:active{color:hsla(0,0%,0%,0.8);}h1,h2,h3,h4,h5,h6{margin-top:3.2rem;}blockquote &gt; :last-child{margin-bottom:0;}blockquote cite{font-size:1rem;line-height:1.6rem;color:hsla(0,0%,0%,0.8);font-weight:400;}blockquote cite:before{content:"— ";}@media only screen and (max-width:480px){blockquote{margin-left:-1.2rem;margin-right:0;border-left:0.3rem solid;border-color:#fcea0e;padding-left:0.9rem;}}h2,h3,h4{margin-bottom:1.12rem;margin-top:1.6rem;}
+/* source-sans-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-sans-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-sans-pro-latin-400-normal.woff") format("woff");
+  }
+  /* source-serif-pro-latin-ext-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-ext-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* source-serif-pro-latin-400-normal*/
+  @font-face {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("/assets/fonts/source-serif-pro-latin-400-normal.woff2")
+        format("woff2"),
+      url("/assets/fonts/source-serif-pro-all-400-normal.woff") format("woff");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212,
+      U+2215, U+FEFF, U+FFFD;
+  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.base {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 41.6rem;
+  padding: 2.4rem 1.2rem;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.96rem;
+  margin-top: 0.96rem;
+  width: 75%;
+  background-color: rgb(238, 238, 238);
+}
+
+/* Custom overrides */
+/* Code blocks */
+pre[class*="language-"] {
+  font-size: 0.9em;
+  overflow: auto;
+  padding: 1rem;
+  background: #f5f2f03d;
+  margin: 1.2em 0;
+  border-radius: 0.25rem;
+}
+
+/* Inline code */
+:not(pre) > code {
+  font-size: 0.9em;
+  border-radius: 0.3em;
+  background: #f1f2f4;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+blockquote {
+  font-size: 0.9em;
+  border-color: #007acc;
+  border-width: 0.3em;
+}
+
+video {
+  width: 100%;
+}
+
+details {
+  margin-bottom: 1.6em;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+  margin-bottom: 0.3em;
+}
+
+/* Sanitize markdown list formatting */
+ul p,
+ul li {
+  margin-bottom: 0.3em;
+}
+
+/* Make sure that lists are not too far away from previous paragraphs */
+p + ul {
+  margin-top: -1em;
+}
+/* But not for nested lists */
+li p + ul {
+  margin-top: 0;
+}
+.picture {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  color: #000;
+}
+
+.picture__caption {
+  display: block;
+  margin-top: 0.5em;
+  text-align: center;
+}</style>
+  </head>
+
+  <body>
+    <div class="base">
+      <header>
+        <div class="Layout__titleContainer m-small">
+  <div class="h-card">
+    <a href="/" class="Layout__homeLink u-url">
+      <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-90.avif 90w, /img/content/hQbkMv3lT7-180.avif 180w" sizes="90px"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-90.webp 90w, /img/content/hQbkMv3lT7-180.webp 180w" sizes="90px"><img src="/img/content/hQbkMv3lT7-90.jpeg" loading="eager" decoding="async" alt width="180" height="180" srcset="/img/content/hQbkMv3lT7-90.jpeg 90w, /img/content/hQbkMv3lT7-180.jpeg 180w" sizes="90px" class="Layout__titleProfile u-photo"></picture>
+      
+      <h3 class="Layout__title p-name">Jan Monschke</h3>
+    </a>
+  </div>
+  <nav class="Layout__menuContainer">
+    <ul class="Layout__menu">
+      <li>
+        <a href="/blog" class="Layout__menuLink"> Blog </a>
+      </li>
+      <li>
+        <a href="/weeknotes" class="Layout__menuLink"> Weeknotes </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+
+      </header>
+      <main><article>
+  <header class="blogPost__header">
+    <h1 class="blogPost__title">Music archaeology</h1>
+    <span class="blogPost__date">May 29, 2026</span>
+  </header>
+  <aside class="blogPost__coverImage"><picture><source type="image/avif" srcset="/img/content/2026-05-29-music-archaeology/68OpHxYfqR-352.avif 352w, /img/content/2026-05-29-music-archaeology/68OpHxYfqR-705.avif 705w, /img/content/2026-05-29-music-archaeology/68OpHxYfqR-920.avif 920w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2026-05-29-music-archaeology/68OpHxYfqR-352.webp 352w, /img/content/2026-05-29-music-archaeology/68OpHxYfqR-705.webp 705w, /img/content/2026-05-29-music-archaeology/68OpHxYfqR-920.webp 920w" sizes="(max-width: 705px), 100vw"><img alt loading="eager" decoding="auto" src="/img/content/2026-05-29-music-archaeology/68OpHxYfqR-352.jpeg" width="920" height="920" srcset="/img/content/2026-05-29-music-archaeology/68OpHxYfqR-352.jpeg 352w, /img/content/2026-05-29-music-archaeology/68OpHxYfqR-705.jpeg 705w, /img/content/2026-05-29-music-archaeology/68OpHxYfqR-920.jpeg 920w" sizes="(max-width: 705px), 100vw" class="picture"></picture></aside>
+  <section class="blogPost__content"><p>This is a story about music, backups, nostalgia and, I guess, the iPod touch.</p>
+<h2>How it started</h2>
+<p>For the last weeks I've been doing, what I call, <em>music archaeology</em>. It started with another Bandcamp Friday<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. I was perusing my music library and for the first time in a long time, I scrolled all the way down. There it was, Circuit imprimé by <a href="https://turnsteak.bandcamp.com/">Turnsteak</a> <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>, this album that I had long forgotten about, my very first bandcamp purchase from all the way back in <strong>2010</strong>. My second purchase was 5 years after that in 2015.</p>
+<p>I was immediately struck with a deep feeling of nostalgia. When I bought this album I was writing my bachelor's thesis and working and studying in parallel. 2010 was the year that The Glitch Mob released <a href="https://en.wikipedia.org/wiki/Drink_the_Sea">Drink the Sea</a>. An album that started a whole extension to my musical taste. I listened to it non-stop and my nightly MySpace crawls included more and more &quot;glitchy&quot; artists.</p>
+<p>It was on one of those crawls that I came along artists such as <a href="https://brokenhaze.bandcamp.com/">Broken Haze</a> from Japan and bespoke <a href="https://turnsteak.bandcamp.com/">Turnsteak</a> from France. <a href="https://brokenhazejp.bandcamp.com/album/raid-system">Broken Haze's album &quot;raid system&quot;</a> (especially the track &quot;rebuild&quot;) and Turnsteak's EP &quot;pollution sonore&quot; (especially &quot;Yoga mudra&quot;) were my favorites.</p>
+<p>You might wonder, why did I not link to the &quot;pollution sonore&quot; EP above? It's because I could not find it <strong>anywhere</strong> (on the internet). And that's how my archaeology expedition began.</p>
+<h2>MySpace</h2>
+<p>If my memory serves me well, the EP had never been available on Bandcamp. It must've been available on Turnsteak's MySpace page. A quick search in the internet archive <a href="https://web.archive.org/web/20110914065825/http://www.myspace.com/turnsteak">revealed an available snapshot from September 2011</a> that mentions a free download link of the EP!</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2026-05-29-music-archaeology/FwysDZDTup-1058.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2026-05-29-music-archaeology/FwysDZDTup-352.avif 352w, /img/content/2026-05-29-music-archaeology/FwysDZDTup-705.avif 705w, /img/content/2026-05-29-music-archaeology/FwysDZDTup-1058.avif 1058w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2026-05-29-music-archaeology/FwysDZDTup-352.webp 352w, /img/content/2026-05-29-music-archaeology/FwysDZDTup-705.webp 705w, /img/content/2026-05-29-music-archaeology/FwysDZDTup-1058.webp 1058w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Myspace page that says 'Download free EP &quot;Pollution Sonore&quot; 06/2010" src="/img/content/2026-05-29-music-archaeology/FwysDZDTup-352.jpeg" width="1058" height="978" srcset="/img/content/2026-05-29-music-archaeology/FwysDZDTup-352.jpeg 352w, /img/content/2026-05-29-music-archaeology/FwysDZDTup-705.jpeg 705w, /img/content/2026-05-29-music-archaeology/FwysDZDTup-1058.jpeg 1058w" sizes="(max-width: 705px), 100vw"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Myspace page that says 'Download free EP "Pollution Sonore" 06/2010</figcaption>
+      </figure></p>
+<p>Of course that link has long been dead and &quot;<a href="http://msplinks.com">msplinks.com</a>&quot; links are not archived. Even if, I doubt they would have archived random zips of mp3s at that point. So MySpace was a dead end, I needed to look somewhere else.</p>
+<h2>My first MacBook</h2>
+<p>
+      <figure>
+        
+      <a href="/img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-1000.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-352.avif 352w, /img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-705.avif 705w, /img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-1000.avif 1000w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-352.webp 352w, /img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-705.webp 705w, /img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-1000.webp 1000w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="A Macbook Pro with plenty of stickers" src="/img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-352.jpeg" width="1000" height="753" srcset="/img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-352.jpeg 352w, /img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-705.jpeg 705w, /img/content/2026-05-29-music-archaeology/9Wl5UFhq_s-1000.jpeg 1000w" sizes="(max-width: 705px), 100vw"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">A Macbook Pro with plenty of stickers</figcaption>
+      </figure></p>
+<p>2010 was also the year that I was able to afford my very first Macbook Pro. I remember that I got a hefty student discount and a <strong>FREE</strong> iPod touch on top. That MacBook still sits in my basement, untouched for many years now. If I had the album anywhere, it would be on that laptop. So I dug deep in my cable box for the correct charger and revived the Macbook's battery. Well, the battery is not charging anymore. The battery is pretty much dead but at least it's not swollen.</p>
+<p>iTunes took 5 minutes to open up...and BOOM, there it was:</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-1000.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-352.avif 352w, /img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-705.avif 705w, /img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-1000.avif 1000w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-352.webp 352w, /img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-705.webp 705w, /img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-1000.webp 1000w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="iTunes showing the EP Pollution Sonore" src="/img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-352.jpeg" width="1000" height="753" srcset="/img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-352.jpeg 352w, /img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-705.jpeg 705w, /img/content/2026-05-29-music-archaeology/ZM0FgYw_XL-1000.jpeg 1000w" sizes="(max-width: 705px), 100vw"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">iTunes showing the EP Pollution Sonore</figcaption>
+      </figure></p>
+<p>I connected my headphones, put up the volume, started the first track...and...nothing. What? I should've looked closer. The tracks in the album have a little exclamation mark in front. It means their metadata was found but not the actual mp3s. Now that was disappointing. It felt like the album cover on the screen was taunting me.</p>
+<p>What happened to the files? It didn't take long for me to realize that I had deleted my music archive from the laptop when I gave it to my wife. But I'm not someone to just remove files, especially music archives. I must've saved them to one of my external hard disks.</p>
+<h2>(not a) Backup</h2>
+<p>Once more I dug deep in my tech box in the basement and pulled out an external hard drive and some USB cables that seemed to fit. One thing was alarming though.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2026-05-29-music-archaeology/C_w1S1pJcA-1000.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2026-05-29-music-archaeology/C_w1S1pJcA-352.avif 352w, /img/content/2026-05-29-music-archaeology/C_w1S1pJcA-705.avif 705w, /img/content/2026-05-29-music-archaeology/C_w1S1pJcA-1000.avif 1000w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2026-05-29-music-archaeology/C_w1S1pJcA-352.webp 352w, /img/content/2026-05-29-music-archaeology/C_w1S1pJcA-705.webp 705w, /img/content/2026-05-29-music-archaeology/C_w1S1pJcA-1000.webp 1000w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Hard drive with post-it note that says &quot;broken&quot;" src="/img/content/2026-05-29-music-archaeology/C_w1S1pJcA-352.jpeg" width="1000" height="753" srcset="/img/content/2026-05-29-music-archaeology/C_w1S1pJcA-352.jpeg 352w, /img/content/2026-05-29-music-archaeology/C_w1S1pJcA-705.jpeg 705w, /img/content/2026-05-29-music-archaeology/C_w1S1pJcA-1000.jpeg 1000w" sizes="(max-width: 705px), 100vw"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Hard drive with post-it note that says "broken"</figcaption>
+      </figure></p>
+<p>The hard drive had a &quot;broken&quot; post-it on it. Uh oh. Nevertheless, I connected the drive and the disk started spinning. The drive never mounted though. I'm no expert in disk recovery but it sounded like the only backup of my music collection is actually gone. Disk recovery services are quoting several hundred Euros for just an analysis without data recovery. That seemed like too much to potentially recover old music.</p>
+<p>And yes, now's the time where everyone will scream that an external hard drive is no real backup. Yes, yes, I know. I've since learned my lesson and have been following the <a href="https://www.backblaze.com/blog/the-3-2-1-backup-strategy/">3-2-1 backup strategy</a> for all important data.</p>
+<p>At first this felt like the end of the investigation but then my eyes focused on the iPod touch in my tech box. What were the chances that the album was on that old iPod?</p>
+<h2>How to destroy an iPod touch</h2>
+<p>I was lucky enough to find an old iPod cable (this is a 2nd gen iPod touch after all) and connected it to my Macbook Pro. I frantically searched through the library and there it was again, the album was on the iPod! But, how do you get your music off of an iPod touch? Unlike the iPod classic, the iPod touch doesn't mount as a regular hard drive. It uses some sort of proprietary protocol.</p>
+<p>I tried out some open source applications (<a href="https://github.com/TheRealSavi/iOpenPod">iOpenPod</a>, <a href="https://github.com/jvgomg/podkit">podkit</a>) but they don't support the iPod touch. A trial of a paid software also didn't work.</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2026-05-29-music-archaeology/v_hDViD0YX-1000.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2026-05-29-music-archaeology/v_hDViD0YX-352.avif 352w, /img/content/2026-05-29-music-archaeology/v_hDViD0YX-705.avif 705w, /img/content/2026-05-29-music-archaeology/v_hDViD0YX-1000.avif 1000w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2026-05-29-music-archaeology/v_hDViD0YX-352.webp 352w, /img/content/2026-05-29-music-archaeology/v_hDViD0YX-705.webp 705w, /img/content/2026-05-29-music-archaeology/v_hDViD0YX-1000.webp 1000w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt="Screenshot of the page that offers downloading the jailbreak app" src="/img/content/2026-05-29-music-archaeology/v_hDViD0YX-352.jpeg" width="1000" height="753" srcset="/img/content/2026-05-29-music-archaeology/v_hDViD0YX-352.jpeg 352w, /img/content/2026-05-29-music-archaeology/v_hDViD0YX-705.jpeg 705w, /img/content/2026-05-29-music-archaeology/v_hDViD0YX-1000.jpeg 1000w" sizes="(max-width: 705px), 100vw"></picture>
+      </a>
+    
+        <figcaption class="picture__caption">Screenshot of the page that offers downloading the jailbreak app</figcaption>
+      </figure></p>
+<p>The only way to get to those files was to jailbreak the iPod touch and install an app to transfer the files. I had never jailbroken an iPod before and wasn't even sure you could still jailbreak a 2nd gen iPod touch today. Luckily I had my trusty old Macbook at hand. It was able to run the jailbreak tool. I will not link to the tool, if you want to find it, it's not too hard to find.</p>
+<p>Long story short...it didn't work and it wiped my iPod touch. I'm not sure what went wrong. It might have been me pressing the buttons wrong, it might've been a bug in the tool. In any case, the files were gone and, this is becoming a recurring theme, I did not back up the iPod before attempting to jailbreak it....whyyyyyyy did I not back it up...</p>
+<p>Again, I thought this had been the end. I had just deleted my only remaining copy of that EP.</p>
+<h2>Why not ask the band?</h2>
+<p>Like seriously, why not just ask the band if they still have the EP? It turns out that I still had an email from <strong>16 years</strong> ago from when the band thanked me for buying one of their albums on bandcamp. Surely that email address is defunct by now, right?</p>
+<p>I gave it a shot anyways and asked if they were able to still sell me the EP. Not expecting an answer I closed this chapter and was surprised to have an answer the <strong>next day</strong> including a link for a free download of the EP.</p>
+<p>It's hard to describe how happy this made me. Listening to those glitchy tunes bubbled up so many memories from back when I was a working student. The music and the memories will be forever connected. Did the EP live up to my, at this point gigantic, expectations? Kind of. It's hard to say honestly. My music taste has changed a lot since then but that didn't prevent me from listening to the EP all day.</p>
+<h2>What did I learn?</h2>
+<ul>
+<li>I should really work on my backup strategy. Since working on this post I have set up automated on- and offsite backups of my NAS. I spent the time foraging through old hard-drives for music and added them all to the backup.</li>
+<li>I finally downloaded all my music from Bandcamp so I don't run into the same situation again, should they ever shut down the site. In the process I also bought a bunch more albums that I usually stream from Qobuz.</li>
+<li>I learned that you can save a lot of time and nerves by asking humans first instead of going down the rabbit hole of reviving old hard drives and destroying an iPod touch.</li>
+</ul>
+<h2>Bonus</h2>
+<p>While I cannot share the EP here, I want to share this live recording of Turnsteak's Japan tour in 2010: <a href="https://www.youtube.com/watch?v=xXGGxA7niVU">https://www.youtube.com/watch?v=xXGGxA7niVU</a>. It's their song &quot;Better than Amanda&quot; from bespoke EP.</p>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js"></script>
+<p><lite-youtube videoid="xXGGxA7niVU"></lite-youtube></p>
+<p>If you want to reach out to the band and get yourself a copy of the EP, you'll find their email address on the back cover of the EP:</p>
+<p>
+      <figure>
+        
+      <a href="/img/content/2026-05-29-music-archaeology/hDhjYMUcK_-1000.jpeg" target="_blank" aria-label="Click to open image in new window">
+        <picture><source type="image/avif" srcset="/img/content/2026-05-29-music-archaeology/hDhjYMUcK_-352.avif 352w, /img/content/2026-05-29-music-archaeology/hDhjYMUcK_-705.avif 705w, /img/content/2026-05-29-music-archaeology/hDhjYMUcK_-1000.avif 1000w" sizes="(max-width: 705px), 100vw"><source type="image/webp" srcset="/img/content/2026-05-29-music-archaeology/hDhjYMUcK_-352.webp 352w, /img/content/2026-05-29-music-archaeology/hDhjYMUcK_-705.webp 705w, /img/content/2026-05-29-music-archaeology/hDhjYMUcK_-1000.webp 1000w" sizes="(max-width: 705px), 100vw"><img class="picture" loading="lazy" decoding="async" alt=" " src="/img/content/2026-05-29-music-archaeology/hDhjYMUcK_-352.jpeg" width="1000" height="1000" srcset="/img/content/2026-05-29-music-archaeology/hDhjYMUcK_-352.jpeg 352w, /img/content/2026-05-29-music-archaeology/hDhjYMUcK_-705.jpeg 705w, /img/content/2026-05-29-music-archaeology/hDhjYMUcK_-1000.jpeg 1000w" sizes="(max-width: 705px), 100vw"></picture>
+      </a>
+    
+        <figcaption class="picture__caption"> </figcaption>
+      </figure></p>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>On Bandcamp Friday, Bandcamp waives the artist fees, so buying music on those days is even more beneficial for artists <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>The album has apparently been taken down/been privated by the artist and it only shows up for those who bought it. <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+</section>
+</article>
+<aside>
+  
+  
+</aside>
+<footer class="blogPost__footer">
+  <hr>
+  <p>🍅 It took 8 pomodoros to write this post 🍅</p>
+  <bio showimage="true"><aside class="bio">
+  <picture><source type="image/avif" srcset="/img/content/hQbkMv3lT7-80.avif 80w, /img/content/hQbkMv3lT7-160.avif 160w" sizes="100vw"><source type="image/webp" srcset="/img/content/hQbkMv3lT7-80.webp 80w, /img/content/hQbkMv3lT7-160.webp 160w" sizes="100vw"><img src="/img/content/hQbkMv3lT7-80.jpeg" loading="lazy" decoding="async" alt="Jan Monschke" width="160" height="160" srcset="/img/content/hQbkMv3lT7-80.jpeg 80w, /img/content/hQbkMv3lT7-160.jpeg 160w" sizes="100vw" class="bio__authorImage"></picture>
+  <span>
+    Hi, I'm Jan 👋 <br class="bio__introSeparator">I am a software engineer
+    working for
+    <a rel="noopener noreferrer" target="_blank" href="https://elastic.co">Elastic</a>
+    in Berlin. You can find me on
+    <a rel="noopener noreferrer" target="_blank" href="https://social.lol/@janmon">
+      🐘 Mastodon
+    </a>
+    ,
+    <a rel="noopener noreferrer" target="_blank" href="https://github.com/janmonschke">
+      💻 GitHub
+    </a>
+    and
+    <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/jan-monschke-aa6a249a/">
+      💼 LinkedIn
+    </a>
+    .
+  </span>
+</aside>
+
+</bio>
+  <hr>
+  <nav>
+    <span class="blogPost__nacvigationTitle">Read more:</span>
+    <ul class="blogPost__navigation">
+      
+      <li>
+        <a href="/pi-hole-tailscale-my-gateway-into-self-hosting/" rel="next"><span>Pi-hole &amp; Tailscale, my gateway into self-hosting</span> →</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+</main>
+    </div>
+    <style></style>
+    <script></script>
+    <script type="module"></script>
+    
+  
+
+
+
+
+
+</body>
+</html>

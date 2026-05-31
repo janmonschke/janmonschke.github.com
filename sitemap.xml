@@ -315,8 +315,16 @@
     
        
         <url>
+            <loc>/music-archaeology/</loc>
+            <lastmod>2026-05-29T00:00:00.000Z</lastmod>
+            <changefreq>monthly</changefreq>
+        </url>
+        
+    
+       
+        <url>
             <loc>/blog/</loc>
-            <lastmod>2026-02-07T16:07:21.245Z</lastmod>
+            <lastmod>2026-05-31T18:38:42.770Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
@@ -324,7 +332,7 @@
        
         <url>
             <loc>/cafes/</loc>
-            <lastmod>2026-02-07T16:07:21.245Z</lastmod>
+            <lastmod>2026-05-31T18:38:42.771Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
@@ -332,7 +340,7 @@
        
         <url>
             <loc>/cafes/la-rochelle/</loc>
-            <lastmod>2026-02-07T16:07:21.245Z</lastmod>
+            <lastmod>2026-05-31T18:38:42.771Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
@@ -340,7 +348,7 @@
        
         <url>
             <loc>/</loc>
-            <lastmod>2026-02-07T16:07:21.246Z</lastmod>
+            <lastmod>2026-05-31T18:38:42.771Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
@@ -348,7 +356,7 @@
        
         <url>
             <loc>/projects/backbone-couchdb.html</loc>
-            <lastmod>2026-02-07T16:07:21.246Z</lastmod>
+            <lastmod>2026-05-31T18:38:42.771Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
@@ -356,7 +364,7 @@
        
         <url>
             <loc>/projects/diffsync.html</loc>
-            <lastmod>2026-02-07T16:07:21.246Z</lastmod>
+            <lastmod>2026-05-31T18:38:42.771Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
@@ -364,7 +372,7 @@
        
         <url>
             <loc>/projects/geomock.html</loc>
-            <lastmod>2026-02-07T16:07:21.246Z</lastmod>
+            <lastmod>2026-05-31T18:38:42.771Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         
@@ -372,7 +380,7 @@
        
         <url>
             <loc>/weeknotes/</loc>
-            <lastmod>2026-02-07T16:07:21.246Z</lastmod>
+            <lastmod>2026-05-31T18:38:42.771Z</lastmod>
             <changefreq>monthly</changefreq>
         </url>
         

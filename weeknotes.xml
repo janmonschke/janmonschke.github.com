@@ -360,7 +360,7 @@
 &lt;/ul&gt;
 &lt;h2&gt;Video of the week&lt;/h2&gt;
 &lt;p&gt;No song of the week this time since I didn&#39;t have time to listen to a lot of new music. But here&#39;s one of my favorite clips of the show &lt;code&gt;Toast of London&lt;/code&gt;.&lt;/p&gt;
-&lt;script type=&quot;module&quot; src=&quot;https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;module&quot; src=&quot;https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1/lite-youtube.min.js&quot;&gt;&lt;/script&gt;
 &lt;p&gt;&lt;lite-youtube videoid=&quot;grp-hFT2_u0&quot;&gt;&lt;/lite-youtube&gt;&lt;/p&gt;
 </content>
   </entry>
