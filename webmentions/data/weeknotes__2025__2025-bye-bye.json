@@ -1,0 +1,86 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Yves Van Goethem :firefox:",
+      "photo": "https://avatars.webmention.io/media.social.lol/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg",
+      "url": "https://indieweb.social/@yvg"
+    },
+    "url": "https://social.lol/@janmon/115973602748741262#favorited-by-109376047652333124",
+    "published": null,
+    "wm-received": "2026-01-28T17:44:12Z",
+    "wm-id": 1971390,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/115973602748741262/109376047652333124",
+    "wm-target": "https://janmonschke.com/weeknotes/2025/2025-bye-bye/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2025/2025-bye-bye/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Sona",
+      "photo": "https://avatars.webmention.io/media.social.lol/705cefa1e0cc59b652db90a1b594483e53232953bb279e89c5e33dcf9a409df1.jpg",
+      "url": "https://mastodon.social/@sonasoeun"
+    },
+    "url": "https://social.lol/@janmon/115973602748741262#favorited-by-113114866072961656",
+    "published": null,
+    "wm-received": "2026-01-31T20:34:42Z",
+    "wm-id": 1971973,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/115973602748741262/113114866072961656",
+    "wm-target": "https://janmonschke.com/weeknotes/2025/2025-bye-bye/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/weeknotes/2025/2025-bye-bye/",
+    "wm-property": "like-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://avatars.webmention.io/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/116050404118257521",
+    "published": "2026-02-11T05:43:57+00:00",
+    "wm-received": "2026-02-11T06:04:23Z",
+    "wm-id": 1975044,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/115973602748741262/116050404118257521",
+    "wm-target": "https://janmonschke.com/weeknotes/2025/2025-bye-bye/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p>Okay, I just got the result for my French language skill placement test and it came back as B2 ????????????????????‍????</p><p>In my post I'm mentioning that I'll increase my skill to the next level this year but there's no way I'll get to C1 ???? I should probably work to get more manifested in B2 .</p>",
+      "text": "Okay, I just got the result for my French language skill placement test and it came back as B2 ????????????????????‍????\n\nIn my post I'm mentioning that I'll increase my skill to the next level this year but there's no way I'll get to C1 ???? I should probably work to get more manifested in B2 ."
+    },
+    "in-reply-to": "https://janmonschke.com/weeknotes/2025/2025-bye-bye/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Jan",
+      "photo": "https://avatars.webmention.io/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg",
+      "url": "https://social.lol/@janmon"
+    },
+    "url": "https://social.lol/@janmon/115978012132480087",
+    "published": "2026-01-29T10:53:43+00:00",
+    "wm-received": "2026-02-11T06:04:42Z",
+    "wm-id": 1975045,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/115973602748741262/115978012132480087",
+    "wm-target": "https://janmonschke.com/weeknotes/2025/2025-bye-bye/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://indieweb.social/@yvg\" class=\"u-url\">@<span>yvg</span></a></span> one hidden panel in that post is enough ????</p>",
+      "text": "@yvg one hidden panel in that post is enough ????"
+    },
+    "in-reply-to": "https://janmonschke.com/weeknotes/2025/2025-bye-bye/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  }
+]

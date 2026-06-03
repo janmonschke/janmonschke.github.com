@@ -630,5 +630,59 @@
     "rels": {
       "canonical": "https://isellsoap.net/likes/2025-05-22-14-03-45/"
     }
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "fretchen",
+      "photo": "https://avatars.webmention.io/cdn.bsky.app/6fcc285d8e43252dd8ef6054bd90f523cf917b0d2a5b513538d49db32140d52a.jpg",
+      "url": "https://bsky.app/profile/fretchen.eu"
+    },
+    "url": "https://bsky.app/profile/fretchen.eu/post/3m3i3xgd2dc2w",
+    "published": "2025-10-18T15:26:52+00:00",
+    "wm-received": "2025-10-18T15:49:23Z",
+    "wm-id": 1948045,
+    "wm-source": "https://brid.gy/comment/bluesky/did:plc:t3362qxvovwfdx6fhw4ux642/at%253A%252F%252Fdid%253Aplc%253At3362qxvovwfdx6fhw4ux642%252Fapp.bsky.feed.post%252F3m3i3uihe622w/at%253A%252F%252Fdid%253Aplc%253At3362qxvovwfdx6fhw4ux642%252Fapp.bsky.feed.post%252F3m3i3xgd2dc2w",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "It would be cool if someone could try this out for this \"hello world\" blog post. Just write something on Bluesky or like it with this link and sooner or later your comment will show up below the post:\n\n<a href=\"https://www.fretchen.eu/blog/0/\">www.fretchen.eu/blog/0/</a>\n<a class=\"u-mention\" href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog/\"></a>",
+      "text": "It would be cool if someone could try this out for this \"hello world\" blog post. Just write something on Bluesky or like it with this link and sooner or later your comment will show up below the post:\n\nwww.fretchen.eu/blog/0/"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "",
+      "photo": "",
+      "url": ""
+    },
+    "url": "https://janmonschke.com/adding-webmentions-to-your-static-blog",
+    "published": "2023-03-01T14:29:44+00:00",
+    "wm-received": "2026-03-01T19:04:51Z",
+    "wm-id": 1980014,
+    "wm-source": "https://www.trovster.com/links/a/uvs2g9",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog",
+    "wm-protocol": "webmention",
+    "name": "Adding webmentions to your static blog",
+    "summary": {
+      "content-type": "text/plain",
+      "value": "Blogs are using webmentions to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they’re linking to them.\njanmonschke.com/adding-webmentions-to-your-static-blog"
+    },
+    "content": {
+      "html": "<blockquote>\n<p>Blogs are using webmentions to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they’re linking to them.</p>\n</blockquote>\n\n            \n            <p><a href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog\" class=\"u-url u-bookmark-of\">janmonschke.com/adding-webmentions-to-your-static-blog</a></p>",
+      "text": "Blogs are using webmentions to gather mentions/likes/reposts from all over the internet. Webmentions are a (recommended) standard that allows sites to notify other sites that they’re linking to them.\n\n\n            \n            janmonschke.com/adding-webmentions-to-your-static-blog"
+    },
+    "bookmark-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog",
+    "wm-property": "bookmark-of",
+    "wm-private": false,
+    "rels": {
+      "canonical": "https://www.trovster.com/links/a/uvs2g9"
+    }
   }
 ]

@@ -1,0 +1,86 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Yves Van Goethem :firefox:",
+      "photo": "https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg",
+      "url": "https://indieweb.social/@yvg"
+    },
+    "url": "https://indieweb.social/@yvg/116670715468477736",
+    "published": "2026-05-31T18:57:17+00:00",
+    "wm-received": "2026-05-31T22:37:00Z",
+    "wm-id": 1999729,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/116670669063013931/116670715506647979",
+    "wm-target": "https://janmonschke.com/music-archaeology/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> That’s a fun story :D Reminds me I should go dig up again my drives 😅</p>",
+      "text": "@janmon That’s a fun story :D Reminds me I should go dig up again my drives 😅"
+    },
+    "in-reply-to": "https://janmonschke.com/music-archaeology/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Chris Lowis",
+      "photo": "https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/80127754d02422a8f04bc7a955c6338a235a7c98bd25fd4385be78fa9c07a820.jpg",
+      "url": "https://ruby.social/@chrislowis"
+    },
+    "url": "https://ruby.social/@chrislowis/116670987697963101",
+    "published": "2026-05-31T20:06:30+00:00",
+    "wm-received": "2026-05-31T22:37:02Z",
+    "wm-id": 1999730,
+    "wm-source": "https://brid.gy/comment/mastodon/@janmon@social.lol/116670669063013931/116670987746432558",
+    "wm-target": "https://janmonschke.com/music-archaeology/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> great story!</p>",
+      "text": "@janmon great story!"
+    },
+    "in-reply-to": "https://janmonschke.com/music-archaeology/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Music Channel",
+      "photo": "https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/53dcc6ece2e0abd79a8aa637b9109d33bab0fa02e6536db85fd6c18ebc662722.png",
+      "url": "https://newsmast.community/@music"
+    },
+    "url": "https://social.lol/@janmon/116670669063013931#reblogged-by-111654090619798341",
+    "published": null,
+    "wm-received": "2026-05-31T22:37:10Z",
+    "wm-id": 1999731,
+    "wm-source": "https://brid.gy/repost/mastodon/@janmon@social.lol/116670669063013931/111654090619798341",
+    "wm-target": "https://janmonschke.com/music-archaeology/",
+    "wm-protocol": "webmention",
+    "repost-of": "https://janmonschke.com/music-archaeology/",
+    "wm-property": "repost-of",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Yves Van Goethem :firefox:",
+      "photo": "https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg",
+      "url": "https://indieweb.social/@yvg"
+    },
+    "url": "https://social.lol/@janmon/116670669063013931#favorited-by-109376047652333124",
+    "published": null,
+    "wm-received": "2026-05-31T22:37:14Z",
+    "wm-id": 1999732,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/116670669063013931/109376047652333124",
+    "wm-target": "https://janmonschke.com/music-archaeology/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/music-archaeology/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
