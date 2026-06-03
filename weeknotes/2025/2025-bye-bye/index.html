@@ -35,7 +35,83 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
-    <style>.bio {
+    <style>.likes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .likes li {
+    margin-bottom: 0;
+  }
+
+  .like {
+    margin-right: 0.5em;
+  }
+
+  .like__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-bottom: 0.1em;
+    transition: scale linear 0.1s;
+  }
+
+  .like__image:hover {
+    scale: 1.33;
+  }
+.mentions {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .mentions__item {
+    margin-bottom: 1.5em;
+  }
+
+  .mention,
+  .reference {
+    display: flex;
+  }
+
+  .mention__authorImageLink,
+  .reference__authorImageLink {
+    flex-shrink: 0;
+    margin-right: 0.8em;
+  }
+
+  .mention__image,
+  .reference__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+  }
+
+  .mention__authorLink {
+    display: block;
+    margin-bottom: 0.1em;
+  }
+
+  .mention__content,
+  .reference__content {
+    margin-bottom: 0.1em;
+  }
+
+  .reference {
+    align-items: center;
+  }
+
+  .reference__image {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(156, 252, 248, 1) 11.2%,
+      rgba(110, 123, 251, 1) 91.1%
+    );
+  }
+.bio {
     display: flex;
     align-items: center;
   }
@@ -632,8 +708,68 @@ li p + ul {
 </section>
 </article>
 <aside>
-  
-  
+  <div>
+    <h3>Likes</h3>
+    <likes likes="[object Object],[object Object]"><ul class="likes">
+  <li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://indieweb.social/@yvg" class="like">
+      <img src="https://avatars.webmention.io/media.social.lol/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg" alt="Yves Van Goethem :firefox:" title="Yves Van Goethem :firefox:" loading="lazy" class="like__image">
+    </a>
+  </li>
+<li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://mastodon.social/@sonasoeun" class="like">
+      <img src="https://avatars.webmention.io/media.social.lol/705cefa1e0cc59b652db90a1b594483e53232953bb279e89c5e33dcf9a409df1.jpg" alt="Sona" title="Sona" loading="lazy" class="like__image">
+    </a>
+  </li>
+</ul>
+
+</likes>
+  </div>
+  <div>
+    <h3>Mentions</h3>
+    <mentions mentions="[object Object],[object Object]"><ul class="mentions">
+  <li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon" class="mention__authorImageLink">
+        <img src="https://avatars.webmention.io/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon">Jan</a>
+        </strong>
+        <div class="mention__content"><a href="https://indieweb.social/@yvg" rel="nofollow ugc" target="_blank">@yvg</a> one hidden panel in that post is enough ????</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon/115978012132480087">2026/01/29 10:53</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon" class="mention__authorImageLink">
+        <img src="https://avatars.webmention.io/media.social.lol/94385a86d0a91df34c7b3f23d9433008ded38e5424efc65946b2e9fa4d288a77.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon">Jan</a>
+        </strong>
+        <div class="mention__content">Okay, I just got the result for my French language skill placement test and it came back as B2 ????????????????????‍????
+
+In my post I'm mentioning that I'll increase my skill to the next level this year but there's no way I'll get to C1 ???? I should probably work to get more manifested in B2 .</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://social.lol/@janmon/116050404118257521">2026/02/11 05:43</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+</ul>
+
+</mentions>
+  </div>
 </aside>
 <footer class="blogPost__footer">
   <hr>

@@ -35,7 +35,83 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
     
-    <style>.bio {
+    <style>.likes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .likes li {
+    margin-bottom: 0;
+  }
+
+  .like {
+    margin-right: 0.5em;
+  }
+
+  .like__image {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-bottom: 0.1em;
+    transition: scale linear 0.1s;
+  }
+
+  .like__image:hover {
+    scale: 1.33;
+  }
+.mentions {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .mentions__item {
+    margin-bottom: 1.5em;
+  }
+
+  .mention,
+  .reference {
+    display: flex;
+  }
+
+  .mention__authorImageLink,
+  .reference__authorImageLink {
+    flex-shrink: 0;
+    margin-right: 0.8em;
+  }
+
+  .mention__image,
+  .reference__image {
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
+  }
+
+  .mention__authorLink {
+    display: block;
+    margin-bottom: 0.1em;
+  }
+
+  .mention__content,
+  .reference__content {
+    margin-bottom: 0.1em;
+  }
+
+  .reference {
+    align-items: center;
+  }
+
+  .reference__image {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(156, 252, 248, 1) 11.2%,
+      rgba(110, 123, 251, 1) 91.1%
+    );
+  }
+.bio {
     display: flex;
     align-items: center;
   }
@@ -613,8 +689,61 @@ li p + ul {
 </section>
 </article>
 <aside>
-  
-  
+  <div>
+    <h3>Likes</h3>
+    <likes likes="[object Object]"><ul class="likes">
+  <li>
+    <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://indieweb.social/@yvg" class="like">
+      <img src="https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg" alt="Yves Van Goethem :firefox:" title="Yves Van Goethem :firefox:" loading="lazy" class="like__image">
+    </a>
+  </li>
+</ul>
+
+</likes>
+  </div>
+  <div>
+    <h3>Mentions</h3>
+    <mentions mentions="[object Object],[object Object]"><ul class="mentions">
+  <li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://indieweb.social/@yvg" class="mention__authorImageLink">
+        <img src="https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://indieweb.social/@yvg">Yves Van Goethem :firefox:</a>
+        </strong>
+        <div class="mention__content"><a href="https://social.lol/@janmon" rel="nofollow ugc" target="_blank">@janmon</a> That’s a fun story :D Reminds me I should go dig up again my drives 😅</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://indieweb.social/@yvg/116670715468477736">2026/05/31 06:57</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+<li class="mentions__item">
+    <div class="mention">
+      <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://ruby.social/@chrislowis" class="mention__authorImageLink">
+        <img src="https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/80127754d02422a8f04bc7a955c6338a235a7c98bd25fd4385be78fa9c07a820.jpg" alt loading="lazy" aria-hidden class="mention__image">
+      </a>
+      <div>
+        <strong class="mention__authorLink">
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://ruby.social/@chrislowis">Chris Lowis</a>
+        </strong>
+        <div class="mention__content"><a href="https://social.lol/@janmon" rel="nofollow ugc" target="_blank">@janmon</a> great story!</div>
+        <small>
+          <a rel="noopener noreferrer nofollow ugc" target="_blank" href="https://ruby.social/@chrislowis/116670987697963101">2026/05/31 08:06</a>
+        </small>
+      </div>
+    </div>
+
+    
+  </li>
+</ul>
+
+</mentions>
+  </div>
 </aside>
 <footer class="blogPost__footer">
   <hr>
