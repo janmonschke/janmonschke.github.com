@@ -439,7 +439,7 @@
     "wm-protocol": "webmention",
     "content": {
       "html": "<p><span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> ooh nice, I’ll have to have a play around with that! Thanks, I’ll look out for your post too 😬</p>\n<a class=\"u-mention\" href=\"https://brid.gy/\"></a>",
-      "text": "@janmon ooh nice, I’ll have to have a play around with that! Thanks, I���ll look out for your post too 😬"
+      "text": "@janmon ooh nice, I’ll have to have a play around with that! Thanks, I’ll look out for your post too 😬"
     },
     "in-reply-to": "https://janmonschke.com/changing-my-online-identity/",
     "wm-property": "in-reply-to",
