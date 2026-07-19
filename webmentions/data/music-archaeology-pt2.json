@@ -1,0 +1,21 @@
+[
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Yves Van Goethem :firefox:",
+      "photo": "https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg",
+      "url": "https://indieweb.social/@yvg"
+    },
+    "url": "https://social.lol/@janmon/116946870114185755#favorited-by-109376047652333124",
+    "published": null,
+    "wm-received": "2026-07-19T14:21:52Z",
+    "wm-id": 2012656,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/116946870114185755/109376047652333124",
+    "wm-target": "https://janmonschke.com/music-archaeology-pt2/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/music-archaeology-pt2/",
+    "wm-property": "like-of",
+    "wm-private": false
+  }
+]
