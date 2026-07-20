@@ -17,5 +17,24 @@
     "like-of": "https://janmonschke.com/music-archaeology-pt2/",
     "wm-property": "like-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Henry",
+      "photo": "https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/2d3c63a237690d230a534d120e4ee48813a409195bf4cb061af204bc8d1fe63e.jpg",
+      "url": "https://social.lol/@hl"
+    },
+    "url": "https://social.lol/@janmon/116946870114185755#favorited-by-109604777636002090",
+    "published": null,
+    "wm-received": "2026-07-20T16:39:49Z",
+    "wm-id": 2012888,
+    "wm-source": "https://brid.gy/like/mastodon/@janmon@social.lol/116946870114185755/109604777636002090",
+    "wm-target": "https://janmonschke.com/music-archaeology-pt2/",
+    "wm-protocol": "webmention",
+    "like-of": "https://janmonschke.com/music-archaeology-pt2/",
+    "wm-property": "like-of",
+    "wm-private": false
   }
 ]
