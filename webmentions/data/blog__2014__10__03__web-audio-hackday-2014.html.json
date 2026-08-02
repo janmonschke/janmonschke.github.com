@@ -497,7 +497,7 @@
     "wm-protocol": "webmention",
     "content": {
       "html": "I wrote about the Web Audio Hackday in my blog &lt;3 The post also contains a video of all presentations! janmonschke.com/blog/2014/10/0…",
-      "text": "I wrote about the Web Audio Hackday in my blog <3 The post also contains a video of all presentations! janmonschke.com/blog/2014/10/0���"
+      "text": "I wrote about the Web Audio Hackday in my blog <3 The post also contains a video of all presentations! janmonschke.com/blog/2014/10/0…"
     },
     "repost-of": "https://janmonschke.com/blog/2014/10/03/web-audio-hackday-2014.html",
     "wm-property": "repost-of",
