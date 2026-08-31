@@ -684,5 +684,31 @@
     "rels": {
       "canonical": "https://www.trovster.com/links/a/uvs2g9"
     }
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Yves Van Goethem :firefox:",
+      "photo": "https://avatars.webmention.io/s3.eu-central-003.backblazeb2.com/319f4ea5015f348f09db74d1bc9571eee24d86eeef24b31a5528698d2744c538.jpg",
+      "url": "https://indieweb.social/@yvg"
+    },
+    "url": "https://indieweb.social/@yvg/117189999314598631",
+    "published": "2026-08-31T11:57:59+00:00",
+    "wm-received": "2026-08-31T21:04:56Z",
+    "wm-id": 2027675,
+    "wm-source": "https://brid.gy/post/mastodon/@janmon@social.lol/117189999396757467",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
+    "photo": [
+      "https://cdn.masto.host/indiewebsocial/media_attachments/files/117/189/994/675/243/286/original/6381ae2f59c57a96.png"
+    ],
+    "content": {
+      "html": "<p>2 years ago I started implementing Webmentions as <span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> described in his own blog: <a href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog/\"><span>https://</span><span>janmonschke.com/adding-webment</span><span>ions-to-your-static-blog/</span></a> </p><p>About half-way I forgot about it, but… bridgy has been running all this time, so the data has been collected!</p><p>Fast forward to today: <a href=\"https://yves.vg\"><span>https://</span><span>yves.vg</span><span></span></a> now utilises Webmentions and displays likes, boosts and mentions :)</p><p>Hooray federation!</p><p><a href=\"https://indieweb.social/tags/webmentions\">#<span>webmentions</span></a> <a href=\"https://indieweb.social/tags/indieweb\">#<span>indieweb</span></a> <a href=\"https://indieweb.social/tags/fediverse\">#<span>fediverse</span></a> <a href=\"https://indieweb.social/tags/blog\">#<span>blog</span></a></p>\n<a class=\"p-category\" href=\"https://social.lol/tags/blog\">blog</a>\n<a class=\"p-category\" href=\"https://social.lol/tags/fediverse\">fediverse</a>\n<a class=\"p-category\" href=\"https://social.lol/tags/indieweb\">indieweb</a>\n<a class=\"p-category\" href=\"https://social.lol/tags/webmentions\">webmentions</a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/blog\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/fediverse\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/indieweb\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/webmentions\"></a>\n<a class=\"u-mention\" href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog/\"></a>\n<a class=\"u-mention\" href=\"https://yves.vg/\"></a>",
+      "text": "2 years ago I started implementing Webmentions as @janmon described in his own blog: https://janmonschke.com/adding-webmentions-to-your-static-blog/ \n\nAbout half-way I forgot about it, but… bridgy has been running all this time, so the data has been collected!\n\nFast forward to today: https://yves.vg now utilises Webmentions and displays likes, boosts and mentions :)\n\nHooray federation!\n\n#webmentions #indieweb #fediverse #blog\nblog\nfediverse\nindieweb\nwebmentions"
+    },
+    "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "mention-of",
+    "wm-private": false
   }
 ]
