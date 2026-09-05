@@ -710,5 +710,51 @@
     "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "mention-of",
     "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Esteban Torres",
+      "photo": "https://avatars.webmention.io/files.mastodon.social/0da3f41c02752d7a97fcf9af18857e22f972b62a710cf694a8ab38cc575274f4.png",
+      "url": "https://mastodon.social/@esttorhe"
+    },
+    "url": "https://mastodon.social/@esttorhe/117219077409822141",
+    "published": "2026-09-05T15:12:56+00:00",
+    "wm-received": "2026-09-05T19:59:03Z",
+    "wm-id": 2029653,
+    "wm-source": "https://brid.gy/comment/mastodon/@esttorhe@mastodon.social/117189999423508728/117219077409822141",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://indieweb.social/@yvg\" class=\"u-url\">@<span>yvg</span></a></span> <span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> I couldn't stay away from the fun ^^ <a href=\"https://estebantorr.es/2026/09/joining-the-webmentions-bandwagon/\"><span>https://</span><span>estebantorr.es/2026/09/joining</span><span>-the-webmentions-bandwagon/</span></a></p>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/blog\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/fediverse\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/indieweb\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/webmentions\"></a>\n<a class=\"u-mention\" href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog/\"></a>\n<a class=\"u-mention\" href=\"https://yves.vg/\"></a>\n<a href=\"https://estebantorr.es/2026/09/joining-the-webmentions-bandwagon/\">Joining the Webmentions bandwagon — The mind of Esteban</a>",
+      "text": "@yvg @janmon I couldn't stay away from the fun ^^ https://estebantorr.es/2026/09/joining-the-webmentions-bandwagon/\n\n\n\n\n\n\nJoining the Webmentions bandwagon — The mind of Esteban"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
+  },
+  {
+    "type": "entry",
+    "author": {
+      "type": "card",
+      "name": "Esteban Torres",
+      "photo": "https://avatars.webmention.io/files.mastodon.social/0da3f41c02752d7a97fcf9af18857e22f972b62a710cf694a8ab38cc575274f4.png",
+      "url": "https://mastodon.social/@esttorhe"
+    },
+    "url": "https://mastodon.social/@esttorhe/117220145745984801",
+    "published": "2026-09-05T19:44:37+00:00",
+    "wm-received": "2026-09-05T19:59:06Z",
+    "wm-id": 2029656,
+    "wm-source": "https://brid.gy/comment/mastodon/@esttorhe@mastodon.social/117189999423508728/117220145745984801",
+    "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-protocol": "webmention",
+    "content": {
+      "html": "<p><span class=\"h-card\"><a href=\"https://indieweb.social/@yvg\" class=\"u-url\">@<span>yvg</span></a></span> <span class=\"h-card\"><a href=\"https://mastodon.social/@esttorhe\" class=\"u-url\">@<span>esttorhe</span></a></span> <span class=\"h-card\"><a href=\"https://social.lol/@janmon\" class=\"u-url\">@<span>janmon</span></a></span> I did pretty much the same for the avatars. <br />I hear you, my website was on GitHub up until a few months ago. Moved to cloudflare pages recently (I know I should host but is simple, it works and I'm lazy)</p>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/blog\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/fediverse\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/indieweb\"></a>\n<a class=\"u-mention\" href=\"https://indieweb.social/tags/webmentions\"></a>\n<a class=\"u-mention\" href=\"https://janmonschke.com/adding-webmentions-to-your-static-blog/\"></a>\n<a class=\"u-mention\" href=\"https://yves.vg/\"></a>",
+      "text": "@yvg @esttorhe @janmon I did pretty much the same for the avatars. \nI hear you, my website was on GitHub up until a few months ago. Moved to cloudflare pages recently (I know I should host but is simple, it works and I'm lazy)"
+    },
+    "in-reply-to": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
+    "wm-property": "in-reply-to",
+    "wm-private": false
   }
 ]
