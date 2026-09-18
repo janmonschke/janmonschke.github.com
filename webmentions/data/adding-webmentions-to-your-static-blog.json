@@ -562,6 +562,7 @@
     "wm-source": "https://www.rousette.org.uk/archives/some-blog-housekeeping/",
     "wm-target": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-protocol": "webmention",
+    "wm-fragment": "fnref3",
     "mention-of": "https://janmonschke.com/adding-webmentions-to-your-static-blog/",
     "wm-property": "mention-of",
     "wm-private": false,
